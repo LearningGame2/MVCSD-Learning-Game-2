@@ -1,3 +1,67 @@
+-----------------------------MEETING WITH PRINCIPAL 2/7-----------------------------
+Initial Questions
+
+How can we keep in touch with the class to give updates and receive feedback?
+	Should we give them HW?
+How much coding experience do they have?
+	How much do the kids know about this project?
+What are we looking to make by the end?
+When’s the first meeting w/ students?  Where’s the classroom?
+How to structure classroom meetings / connect w/ kids
+Are there mandatory subjects to cover?
+
+In the Classroom:
+Disclaimer!! We cannot do everything, we are learning too so we can’t promise what we can and cannot do. 
+Break into teams for 10 min, come up w ideas
+	3 teams?  13 kids — 4 each me & Connor, 5 teacher
+give kids pencil & paper -> present ideas
+	Public speaking, etc
+debate/vote on best ideas
+Collaborate with class to improve voted idea
+
+Answers 
+
+How many subjects?
+miranda brenneman: some gamers, quieter, bright kids
+is the learning the game?  (kahoot)
+	answer questions, then play —> study island
+kids have google docs/gmail
+
+Engage:
+meet in small groups
+talk about mistakes++, SHOW to class (thought process)
+when you’re given a task you don’t know how to do
+google hour of code, padcaster (green screen)
+
+mission:
+create game
+their ideas: what will it take?
+	Theme
+	break up according to that
+convo w/i group —> put onto class google doc, present?
+gallery of thoughts
+there ARE mandatory content standards
+google tools: can make slides, etc
+when to meet:
+Start tmrw
+they are out last week of march
+
+Intro
+initial activity
+show them something cool
+
+getting there:
+sign in @ office, go to library, sign waiver
+
+
+
+
+
+
+
+
+
+-----------------------------MEETING WITH KIDS 2/8-----------------------------
 Here are some ideas we came up with in the first meeting at Wiggin Street Elementary.
 
 Connor's Group...
@@ -79,3 +143,8 @@ Fun Components If Time:
 - various AIs
 - online, play other users
 - science games --> interactive
+
+most important part of a game is a reward — kids talked about getting in-game money for certain # of questions correct, can buy stuff from in-game store
+feedback: if get questions wrong, decrease difficulty, increase if right
+spaced repetition like a quizlet (when you get a question right, don’t immediately put it again!)
+levels?
