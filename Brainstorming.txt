@@ -39,6 +39,3 @@ Games the kids play:
 Other good ideas:
 - Questions get harder as game progresses (as you pass levels)
 - Bonuses for correct answer streaks
-
-Adding from Visual Studio - Mason
-
