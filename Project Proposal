@@ -1,1 +1,52 @@
-Project Proposal
+#Project Proposal
+
+
+We will be working with a 5th grade class at Wiggin St Elementary School.
+The goal of this project is to make a learning game for the students and with
+the students' input.  
+This means that our most involved customers will be the students, and
+they will have the most say in the making of the game after consideration
+of what is possible for us, but of course the principal Christy Grandstaff
+and the librarian and technology teacher Kerri Stetler will have final say
+in our product.
+
+The three of us met with Principal Grandstaff on Monday February 7 to discuss preparation
+for meeting with the class about long-term project goals and important details
+to keep in mind throughout.  In order to keep the kids engaged, she recommended
+splitting them up into small groups for the majority of the real work and
+customer evaluation, and that it was important for us to share about our
+learning process too — to teach the kids about or mistakes and take them
+behind the scenes of a long-term project, especially one building a complex
+system like we will be.  She also sent us the 5th grade curriculum standards
+for the State of Ohio, so we have some sense of what it is that the kids
+need to be taught or review through our game.
+
+Then, Connor and Sam went the next day to work with the class and found the kids
+to be very excited to share their ideas.  Before, we planned to use probably
+20 minutes of time for the first meeting, to introduce what we were doing and
+to maybe get a few ideas from the students, but after less than 10 minutes
+of introduction, the students split up into 2 groups of 6 and Connor and Sam took
+one each.  For almost the entirety of the rest of the period, the students didn't
+stop talking.  They were very excited to talk about their favorite subjects and
+what they liked and didn't like about the learning games they already play.
+
+Our first idea was to make a web-based game: either a website that any student
+could access from their Chromebook, or one that they could run locally on
+a desktop computer in a browser.  Making an app seems more difficult as we
+would probably have to spend more time on integration than for a website.
+This game is first and foremost a learning game, but it should also be fun.
+We're going to have to compete with a lot of other diversions for the fickle
+attention of 5th graders, and to do that we'll have to emphasize giving feedback
+to the player (what questions they get right or wrong, whether they want to
+increase or decrease the difficulty) to make it engaging and make it enjoyable
+to play with at least basic graphics — even we wouldn't want to review Quizlet
+or play Kahoot if it was just black and white text and boxes.
+
+Ideally, we would have two main types of data that we can think would be good
+to store at this stage.  First and most importantly would be a database or list
+of possible questions or problems to pose to the player, a math question to
+answer, or a physics problem to solve.  Second, it would be great to have a
+way to store the user's progress, either online or locally on their computer's
+server with some kind of cookies, so that when they finish a round of the game
+and want to save their progess, they can enter their name and see where it places
+among the highscores.
