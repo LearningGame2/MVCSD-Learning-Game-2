@@ -1,229 +1,94 @@
 
 const questions = [
+//Question 1
     {
-        question: "How many days makes a week ?",
-        optionA: "10 days",
-        optionB: "14 days",
-        optionC: "5 days",
-        optionD: "7 days",
+        question: "Round 4,725,143 to the nearest ten thousand",
+        optionA: "4,725,100",
+        optionB: "4,720,000",
+        optionC: "4,725,000",
+        optionD: "4,730,000",
         correctOption: "optionD"
     },
-
+//Question 2
     {
-        question: "How many players are allowed on a soccer pitch ?",
-        optionA: "10 players",
-        optionB: "11 players",
-        optionC: "9 players",
-        optionD: "12 players",
+        question: "Round 9,992,552 to the nearest ten thousand",
+        optionA: "1,000,0000",
+        optionB: "9,990,000",
+        optionC: "9,993,000",
+        optionD: "9,992,600",
         correctOption: "optionB"
     },
-
+//Question 3
     {
-        question: "Who was the first President of USA ?",
-        optionA: "Donald Trump",
-        optionB: "Barack Obama",
-        optionC: "Abraham Lincoln",
-        optionD: "George Washington",
+        question: "Round 8,157,114 to the nearest thousand",
+        optionA: "8,160,000",
+        optionB: "8,157,110",
+        optionC: "8,157,100",
+        optionD: "8,157,000",
         correctOption: "optionD"
     },
-
+//Question 4
     {
-        question: "30 days has ______ ?",
-        optionA: "January",
-        optionB: "December",
-        optionC: "June",
-        optionD: "August",
+        question: "Round 2,565,232 to the nearest tens digit",
+        optionA: "2,565,240",
+        optionB: "2,565,232",
+        optionC: "2,565,230",
+        optionD: "2,565,000",
         correctOption: "optionC"
     },
-
+//Question 5
     {
-        question: "How manay hours can be found in a day ?",
-        optionA: "30 hours",
-        optionB: "38 hours",
-        optionC: "48 hours",
-        optionD: "24 hours",
+        question: "Round 8,779,125 to the nearest hundred",
+        optionA: "8,779,000",
+        optionB: "8,779,125",
+        optionC: "8,779,130",
+        optionD: "8,779,100",
         correctOption: "optionD"
     },
-
+//Question 6
     {
-        question: "Which is the longest river in the world ?",
-        optionA: "River Nile",
-        optionB: "Long River",
-        optionC: "River Niger",
-        optionD: "Lake Chad",
+        question: "Round 387.5816 to the nearest hundredth",
+        optionA: "387.58",
+        optionB: "387.59",
+        optionC: "387.582",
+        optionD: "387.6",
         correctOption: "optionA"
     },
-
+//Question 7
     {
-        question: "_____ is the hottest Continent on Earth ?",
-        optionA: "Oceania",
-        optionB: "Antarctica",
-        optionC: "Africa",
-        optionD: "North America",
+        question: "Round 625.713 to the nearest tenth",
+        optionA: "626",
+        optionB: "630",
+        optionC: "625.7",
+        optionD: "625.71",
         correctOption: "optionC"
     },
-
+//Question 8
     {
-        question: "Which country is the largest in the world ?",
-        optionA: "Russia",
-        optionB: "Canada",
-        optionC: "Africa",
-        optionD: "Egypt",
+        question: "Round 740,411 to the nearest tens digit",
+        optionA: "740,410",
+        optionB: "740,400",
+        optionC: "740,000",
+        optionD: "740,411",
         correctOption: "optionA"
     },
-
+//Question 9
     {
-        question: "Which of these numbers is an odd number ?",
-        optionA: "Ten",
-        optionB: "Twelve",
-        optionC: "Eight",
-        optionD: "Eleven",
+        question: "Round 142.8444 to the nearest tenth",
+        optionA: "140",
+        optionB: "142.9",
+        optionC: "143",
+        optionD: "142.8",
         correctOption: "optionD"
     },
-
+//Question 10
     {
-        question: `"You Can't see me" is a popular saying by`,
-        optionA: "Eminem",
-        optionB: "Bill Gates",
-        optionC: "Chris Brown",
-        optionD: "John Cena",
+        question: "Round 9,071,411 to the nearest million",
+        optionA: "1,000,0000",
+        optionB: "9,100,000",
+        optionC: "9,070,000",
+        optionD: "9,000,000",
         correctOption: "optionD"
-    },
-
-    {
-        question: "Where is the world tallest building located ?",
-        optionA: "Africa",
-        optionB: "California",
-        optionC: "Dubai",
-        optionD: "Italy",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "The longest river in the United Kingdom is ?",
-        optionA: "River Severn",
-        optionB: "River Mersey",
-        optionC: "River Trent",
-        optionD: "River Tweed",
-        correctOption: "optionA"
-    },
-
-
-    {
-        question: "How many permanent teeth does a dog have ?",
-        optionA: "38",
-        optionB: "42",
-        optionC: "40",
-        optionD: "36",
-        correctOption: "optionB"
-    },
-
-    {
-        question: "Which national team won the football World cup in 2018 ?",
-        optionA: "England",
-        optionB: "Brazil",
-        optionC: "Germany",
-        optionD: "France",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "Which US state was Donald Trump Born ?",
-        optionA: "New York",
-        optionB: "California",
-        optionC: "New Jersey",
-        optionD: "Los Angeles",
-        correctOption: "optionA"
-    },
-
-    {
-        question: "How man states does Nigeria have ?",
-        optionA: "24",
-        optionB: "30",
-        optionC: "36",
-        optionD: "37",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "____ is the capital of Nigeria ?",
-        optionA: "Abuja",
-        optionB: "Lagos",
-        optionC: "Calabar",
-        optionD: "Kano",
-        correctOption: "optionA"
-    },
-
-    {
-        question: "Los Angeles is also known as ?",
-        optionA: "Angels City",
-        optionB: "Shining city",
-        optionC: "City of Angels",
-        optionD: "Lost Angels",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "What is the capital of Germany ?",
-        optionA: "Georgia",
-        optionB: "Missouri",
-        optionC: "Oklahoma",
-        optionD: "Berlin",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "How many sides does an hexagon have ?",
-        optionA: "Six",
-        optionB: "Sevene",
-        optionC: "Four",
-        optionD: "Five",
-        correctOption: "optionA"
-    },
-
-    {
-        question: "How many planets are currently in the solar system ?",
-        optionA: "Eleven",
-        optionB: "Seven",
-        optionC: "Nine",
-        optionD: "Eight",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "Which Planet is the hottest ?",
-        optionA: "Jupitar",
-        optionB: "Mercury",
-        optionC: "Earth",
-        optionD: "Venus",
-        correctOption: "optionB"
-    },
-
-    {
-        question: "where is the smallest bone in human body located?",
-        optionA: "Toes",
-        optionB: "Ears",
-        optionC: "Fingers",
-        optionD: "Nose",
-        correctOption: "optionB"
-    },
-
-    {
-        question: "How many hearts does an Octopus have ?",
-        optionA: "One",
-        optionB: "Two",
-        optionC: "Three",
-        optionD: "Four",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "How many teeth does an adult human have ?",
-        optionA: "28",
-        optionB: "30",
-        optionC: "32",
-        optionD: "36",
-        correctOption: "optionC"
     }
 
 ]
@@ -350,15 +215,15 @@ function handleEndGame() {
 
     // condition check for player remark and remark color
     if (playerScore <= 3) {
-        remark = "Bad Grades, Keep Practicing."
+        remark = "You can do better!"
         remarkColor = "red"
     }
     else if (playerScore >= 4 && playerScore < 7) {
-        remark = "Average Grades, You can do better."
+        remark = "Keep practicing!"
         remarkColor = "orange"
     }
     else if (playerScore >= 7) {
-        remark = "Excellent, Keep the good work going."
+        remark = "Excellent! Keep up the good work."
         remarkColor = "green"
     }
     const playerGrade = (playerScore / 10) * 100
