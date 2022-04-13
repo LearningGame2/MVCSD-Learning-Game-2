@@ -3,14 +3,7 @@
 
 USER= Game2
 
-all: PutCGI PutHTML
-
-PutCGI:
-		chmod 757 validate.js
-		cp validate.js /usr/lib/cgi-bin/$(USER)_validate.js
-
-		echo "Current contents of your cgi-bin directory: "
-		ls -l /usr/lib/cgi-bin/
+all: PutHTML
 
 PutHTML:
 		cp Connection.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
