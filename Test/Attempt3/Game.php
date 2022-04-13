@@ -11,7 +11,7 @@ include_once 'connection.php';
 <head>
     <meta charset="UTF-8">
     
-    <title>Game 
+    <title>BigGamerGuy 
     </title>
 </head>
 <body>
