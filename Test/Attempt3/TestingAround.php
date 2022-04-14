@@ -1,12 +1,14 @@
 <?php
 
+function connect() {
 $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
 if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     exit();
 }
-
+return $conn;
+}
 
 //Prompt and answer request functions
 
@@ -16,17 +18,21 @@ if (mysqli_connect_errno()) {
 //connection
 
   $prompt = "";
+    $conn = connect();
     $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
     if ($result = mysqli_query($conn, $sql)) {
      
         while ($row = mysqli_fetch_row($result)) {
-          $prompt = $row[1];
+
+	      $prompt = $row[1];
           
         }
         mysqli_free_result($result);
-      }
-      mysqli_close($con);
+      
+    mysqli_close($conn);
+
       return $prompt;
+      }
 }
 
 // function correctRequest($row){
@@ -156,7 +162,7 @@ function divide($a,$b){
   var phpadd= <?php echo add(1,2);?> //call the php add function
   var phpmult= <?php echo mult(1,2);?> //call the php mult function
   var phpdivide= <?php echo divide(1,2);?> //call the php divide function
-  var phpQuestion = <?php echo promptRequest(1); ?>
+  var phpQuestion = "<?php echo promptRequest(1); ?>"
   
   
 
