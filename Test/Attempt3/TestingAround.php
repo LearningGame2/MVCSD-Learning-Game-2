@@ -151,7 +151,8 @@ function divide($a,$b){
   var phpadd= <?php echo add(1,2);?> //call the php add function
   var phpmult= <?php echo mult(1,2);?> //call the php mult function
   var phpdivide= <?php echo divide(1,2);?> //call the php divide function
-  var phpQuestion = "<?php echo promptRequest(1); ?>"
+  var test = 1;
+  var phpQuestion = "<?php echo promptRequest(test); ?>"
   var phpCorrect = "<?php echo correctRequest(1); ?>"
   var phpWrong1 = "<?php echo wrong1Request(1); ?>"
   var phpWrong2 = "<?php echo wrong2Request(1); ?>"
