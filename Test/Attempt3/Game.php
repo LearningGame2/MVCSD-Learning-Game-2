@@ -1,7 +1,10 @@
 <?php
-include_once 'connection.php';
+$conn = new mysqli("localhost","fishell1","S219352","Game2");
 
-
+if ($conn -> connect_errno) {
+    echo "Failed to connect to MySQL: " . $conn -> connect_error;
+    exit();
+  }
 ?>
 
 
@@ -14,13 +17,17 @@ include_once 'connection.php';
     <title>BigGamerGuy 
     </title>
 </head>
+<h1>Playing Game</h1>
 <body>
-   <?php 
-        $sql = "SELECT * FROM QuestionDatabase;";
-        $result = mysqli_query($conn, $sql);
-        while ($row = mysqli_fetch_all($result,MYSQLI_ASSOC)){
-            echo $row['Prompt'];
-        }
+    
+   <?php
+      if ($result = $conn-> query("SELECT * FROM QuestionDatabase WHERE QuestionNumber = 1")) {
+        echo "Returned rows are: " . $result -> num_rows;
+        // Free result set
+        $result -> free_result();
+      }
+      
+      $mysqli -> close();
    ?>
 
 

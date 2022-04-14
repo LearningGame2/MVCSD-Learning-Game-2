@@ -1,0 +1,7 @@
+  $sql = "SELECT * FROM QuestionDatabase Where QuestionNumber = 1";
+        $result = mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_all($result,MYSQLI_ASSOC)){
+        
+
+
+        }
