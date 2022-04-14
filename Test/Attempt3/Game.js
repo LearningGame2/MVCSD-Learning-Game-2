@@ -105,7 +105,7 @@
 function fillQuestions(){    
   for (let i = 0; i < 10; i++) {
 
-    questions[i].question = promptRequest(RandNumbers[i]);
+    questions[i].question = "<?php echo promptRequest(RandNumbers[i]);?>"
 
     var j = Math.floor(Math.random()*4)+1;
 

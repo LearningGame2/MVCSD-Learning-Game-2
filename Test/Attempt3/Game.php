@@ -107,7 +107,6 @@ function wrong3Request($rowNumber){
           return $wrong3;
           }
 }
-
 ?>
 
 <head>
