@@ -6,12 +6,12 @@ if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     exit();
 }
-
+echo "<script>console.log('Connection Established' );</script>";
 
 //Prompt and answer request functions
 
   function promptRequest($rowNumber){
-
+    echo "<script>console.log('Function called' );</script>";
 
 //connection
 
@@ -21,7 +21,7 @@ if (mysqli_connect_errno()) {
      
         while ($row = mysqli_fetch_row($result)) {
           $prompt = $row[1];
-          echo "prompt is ", $prompt;
+          
         }
         mysqli_free_result($result);
       }
