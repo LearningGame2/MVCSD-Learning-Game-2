@@ -19,7 +19,7 @@ function pickQuestion(){
 
 function promptRequest($rowNumber){
   
-  
+  $prompt = "";
     $conn = connect();//Connect
     $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";//sql code
     if ($result = mysqli_query($conn, $sql)) {
