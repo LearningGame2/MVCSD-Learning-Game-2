@@ -18,7 +18,7 @@ if (mysqli_connect_errno()) {
     $sql = "SELECT Prompt FROM QuestionDatabase WHERE QuestionNumber = " . $row;
     if ($result = mysqli_query($conn, $sql)) {
         while ($row = mysqli_fetch_row($result)) {
-          $prompt = $row[0];
+          $prompt = $row;
         }
         mysqli_free_result($result);
       }
@@ -26,7 +26,7 @@ if (mysqli_connect_errno()) {
       mysqli_close($con);
       return $prompt;
 }
-
+/*
 function correctRequest($row){
   $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
@@ -114,7 +114,7 @@ if (mysqli_connect_errno()) {
     return $wrongResponse3;
 }
 
-
+*/
 
 
 
@@ -156,19 +156,21 @@ function divide($a,$b){
   var phpdivide= <?php echo divide(1,2);?> //call the php divide function
 
   var phpQuestion = <?php echo promptRequest(1); ?>
+  /*
   var phpCorrect = <?php echo correctRequest(1); ?>
   var phpWrong1 = <?php echo wrong1Request(1); ?>
   var phpWrong2 = <?php echo wrong2Request(1); ?>
   var phpWrong3 = <?php echo wrong3Request(1); ?>
+  */
 
 
 
   console.log(phpadd+" = phpadd");
   console.log("\nQuestion = "+ phpQuestion);
-  console.log("\nCorrect answer = "+ phpCorrect);
-  console.log("\nWrong1 = "+ phpWrong1);
-  console.log("\nWrong2 = "+ phpWrong2);
-  console.log("\nWrong3 = "+ phpWrong3);
+  // console.log("\nCorrect answer = "+ phpCorrect);
+  // console.log("\nWrong1 = "+ phpWrong1);
+  // console.log("\nWrong2 = "+ phpWrong2);
+  // console.log("\nWrong3 = "+ phpWrong3);
 
 </script>
 
