@@ -7,7 +7,7 @@
     </title>
 </head>
 <body>
-    <h1>Logged in</h1>
+    <h1>Logged in!!!</h1>
     <h2>Press button to play </h2>
     <button type ="submit" onclick = "goToGame()">Play</button>
     
