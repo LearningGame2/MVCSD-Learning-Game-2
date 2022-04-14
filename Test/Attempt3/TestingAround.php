@@ -152,7 +152,7 @@ function divide($a,$b){
   var phpmult= <?php echo mult(1,2);?> //call the php mult function
   var phpdivide= <?php echo divide(1,2);?> //call the php divide function
   var test = 1;
-  var phpQuestion = "<?php echo promptRequest(<script>document.writeln(test);</script>);?>"
+  var phpQuestion = "<?php echo promptRequest('<script>document.writeln(test);</script>');?>"
   var phpCorrect = "<?php echo correctRequest(1); ?>"
   var phpWrong1 = "<?php echo wrong1Request(1); ?>"
   var phpWrong2 = "<?php echo wrong2Request(1); ?>"
