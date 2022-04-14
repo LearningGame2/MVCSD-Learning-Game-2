@@ -143,11 +143,11 @@ function divide($a,$b){
 <head>
     <meta charset="UTF-8">
     
-    <title>FUCKCKKKKK
+    <title>TEST
     </title>
 </head>
 <body>
-    <h1>Fuckin Around!</h1>
+    <h1>Testin Around!</h1>
     <h2>Press button to play </h2>
    
     
