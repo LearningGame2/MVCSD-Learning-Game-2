@@ -21,10 +21,10 @@ if (mysqli_connect_errno()) {
 <body>
     
    <?php
-    $sql = "SELECT * FROM QuestionDatabase";
+    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = 3";
     if ($result = mysqli_query($conn, $sql)) {
         while ($row = mysqli_fetch_row($result)) {
-          printf ("%s (%s)\n", $row[0], $row[1]);
+          printf ("%s (%s) (%s)\n", $row[0], $row[1], $row[3]);
         }
         mysqli_free_result($result);
       }
