@@ -14,11 +14,13 @@ if (mysqli_connect_errno()) {
 }
 //connection
 
-
+  $prompt;
     $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
     if ($result = mysqli_query($conn, $sql)) {
+     
         while ($row = mysqli_fetch_row($result)) {
           $prompt = $row[1];
+          echo "prompt is ", $prompt;
         }
         mysqli_free_result($result);
       }
