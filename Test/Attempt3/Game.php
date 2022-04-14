@@ -20,8 +20,8 @@ if (mysqli_connect_errno()) {
 <h1>Playing Game</h1>
 <body>
     
-   <?php
-    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = 23";
+<?php
+    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = 3";
     if ($result = mysqli_query($conn, $sql)) {
         while ($row = mysqli_fetch_row($result)) {
           $prompt = $row[1];
