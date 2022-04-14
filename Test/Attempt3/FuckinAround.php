@@ -15,7 +15,7 @@ if (mysqli_connect_errno()) {
 
 //connection
 
-  $prompt;
+  $prompt = "";
     $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
     if ($result = mysqli_query($conn, $sql)) {
      
