@@ -21,7 +21,8 @@ if (mysqli_connect_errno()) {
 <body>
     
    <?php
-    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = 3";
+   $rowNumber = 23;
+    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
     if ($result = mysqli_query($conn, $sql)) {
         while ($row = mysqli_fetch_row($result)) {
           $prompt = $row[1];
