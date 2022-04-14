@@ -1,8 +1,8 @@
 <?php
-$conn = new mysqli("localhost","fishell1","S219352","Game2");
+$conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
-if ($conn -> connect_errno) {
-    echo "Failed to connect to MySQL: " . $conn -> connect_error;
+if (mysqli_connect_errno()) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
     exit();
   }
 ?>
@@ -21,13 +21,15 @@ if ($conn -> connect_errno) {
 <body>
     
    <?php
-      if ($result = $conn-> query("SELECT * FROM QuestionDatabase WHERE QuestionNumber = 1")) {
-        echo "Returned rows are: " . $result -> num_rows;
-        // Free result set
-        $result -> free_result();
+    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = 1";
+    if ($result = mysqli_query($con, $sql)) {
+        while ($row = mysqli_fetch_row($result)) {
+          printf ("%s (%s)\n", $row[0], $row[1]);
+        }
+        mysqli_free_result($result);
       }
-      echo $result;
-      $mysqli -> close();
+      
+      mysqli_close($con);
    ?>
 
 
