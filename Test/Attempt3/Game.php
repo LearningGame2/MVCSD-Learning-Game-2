@@ -16,7 +16,7 @@ include_once 'connection.php';
 </head>
 <body>
    <?php 
-        $sql = "SELECT * FROM QuestionDatabase";
+        $sql = "SELECT * FROM QuestionDatabase;";
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_all($result,MYSQLI_ASSOC)){
             echo $row['Prompt'];
