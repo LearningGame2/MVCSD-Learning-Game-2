@@ -1,102 +1,151 @@
 
-const questions = [
-    //Question 1
+    var RandNumbers = [];
+    for(let i = 1; i <10; i++){
+        RandNumbers[i]= Math.floor(Math.random() * 300);
+    }
+    
+    
+
+
+    const questions = [
+        //Question 1
+            {
+                question: "",
+                optionA: "",
+                optionB: "",
+                optionC: "",
+                optionD: "",
+                correctOption: ""
+            },
+        //Question 2
         {
-            question: "Round 4,725,143 to the nearest ten thousand",
-            optionA: "4,725,100",
-            optionB: "4,720,000",
-            optionC: "4,725,000",
-            optionD: "4,730,000",
-            correctOption: "optionD"
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
         },
-    //Question 2
+        //Question 3
         {
-            question: "Round 9,992,552 to the nearest ten thousand",
-            optionA: "1,000,0000",
-            optionB: "9,990,000",
-            optionC: "9,993,000",
-            optionD: "9,992,600",
-            correctOption: "optionB"
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
         },
-    //Question 3
+        //Question 4
         {
-            question: "Round 8,157,114 to the nearest thousand",
-            optionA: "8,160,000",
-            optionB: "8,157,110",
-            optionC: "8,157,100",
-            optionD: "8,157,000",
-            correctOption: "optionD"
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
         },
-    //Question 4
+        //Question 5
         {
-            question: "Round 2,565,232 to the nearest tens digit",
-            optionA: "2,565,240",
-            optionB: "2,565,232",
-            optionC: "2,565,230",
-            optionD: "2,565,000",
-            correctOption: "optionC"
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
         },
-    //Question 5
+        //Question 6
         {
-            question: "Round 8,779,125 to the nearest hundred",
-            optionA: "8,779,000",
-            optionB: "8,779,125",
-            optionC: "8,779,130",
-            optionD: "8,779,100",
-            correctOption: "optionD"
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
         },
-    //Question 6
+        //Question 7
         {
-            question: "Round 387.5816 to the nearest hundredth",
-            optionA: "387.58",
-            optionB: "387.59",
-            optionC: "387.582",
-            optionD: "387.6",
-            correctOption: "optionA"
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
         },
-    //Question 7
+        //Question 8
         {
-            question: "Round 625.713 to the nearest tenth",
-            optionA: "626",
-            optionB: "630",
-            optionC: "625.7",
-            optionD: "625.71",
-            correctOption: "optionC"
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
         },
-    //Question 8
+        //Question 9
         {
-            question: "Round 740,411 to the nearest tens digit",
-            optionA: "740,410",
-            optionB: "740,400",
-            optionC: "740,000",
-            optionD: "740,411",
-            correctOption: "optionA"
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
         },
-    //Question 9
+        //Question 10
         {
-            question: "Round 142.8444 to the nearest tenth",
-            optionA: "140",
-            optionB: "142.9",
-            optionC: "143",
-            optionD: "142.8",
-            correctOption: "optionD"
-        },
-    //Question 10
-        {
-            question: "Round 9,071,411 to the nearest million",
-            optionA: "1,000,0000",
-            optionB: "9,100,000",
-            optionC: "9,070,000",
-            optionD: "9,000,000",
-            correctOption: "optionD"
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
         }
-    
-    ]
-    
+        ];
+
+
+
+function fillQuestions(){    
+  for (let i = 0; i < 10; i++) {
+
+    questions[i].question = promptRequest(RandNumbers[i]);
+
+    var j = Math.floor(Math.random()*4)+1;
+
+    if(j = 1){
+        questions[i].optionA = correctRequest(RandNumbers[i]);
+        questions[i].optionB = wrong1Request(RandNumbers[i]);
+        questions[i].optionC = wrong2Request(RandNumbers[i]);
+        questions[i].optionD = wrong3Request(RandNumbers[i]);
+        questions[i].correctOption ="optionA";
+    }
+    if(j = 2){
+        questions[i].optionB = correctRequest(RandNumbers[i]);
+        questions[i].optionC = wrong1Request(RandNumbers[i]);
+        questions[i].optionD = wrong2Request(RandNumbers[i]);
+        questions[i].optionA = wrong3Request(RandNumbers[i]);
+        questions[i].correctOption = "optionB";
+    } 
+    if(j = 3){
+        questions[i].optionC = correctRequest(RandNumbers[i]);
+        questions[i].optionD = wrong1Request(RandNumbers[i]);
+        questions[i].optionA = wrong2Request(RandNumbers[i]);
+        questions[i].optionB = wrong3Request(RandNumbers[i]);
+        questions[i].correctOption = "optionC";
+    }
+    if(j = 4){
+        questions[i].optionD = correctRequest(RandNumbers[i]);
+        questions[i].optionA = wrong1Request(RandNumbers[i]);
+        questions[i].optionB = wrong2Request(RandNumbers[i]);
+        questions[i].optionC = wrong3Request(RandNumbers[i]);
+        questions[i].correctOption = "optionD";
+    }
+}
+    return questions
+}
+
     
     let shuffledQuestions = [] //empty array to hold shuffled selected questions out of all available questions
     
     function handleQuestions() {
+    questions = fillQuestions();
         //function to shuffle and push 10 questions to shuffledQuestions array
     //app would be dealing with 10questions per session
         while (shuffledQuestions.length <= 9) {
