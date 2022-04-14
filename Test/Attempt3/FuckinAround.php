@@ -1,17 +1,17 @@
 <?php
 
-
-
-//Prompt and answer request functions
-
-  function promptRequest($rowNumber){
-
-    $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
+$conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
 if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     exit();
 }
+
+//Prompt and answer request functions
+
+  function promptRequest($rowNumber){
+
+
 //connection
 
   $prompt;
@@ -25,7 +25,6 @@ if (mysqli_connect_errno()) {
         mysqli_free_result($result);
       }
       
-      mysqli_close($con);
       return $prompt;
 }
 /*
