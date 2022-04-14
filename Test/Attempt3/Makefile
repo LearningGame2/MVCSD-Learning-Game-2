@@ -13,6 +13,8 @@ PutHTML:
 		cp LoginStyle.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp validate.js /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp FuckinAround.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
+		cp Game.js /var/www/html/class/ssd/$(USER)/LGAttempt3/
+		cp Game.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
 
 		echo "Current contents of your HTML directory: "
 		ls -l /var/www/html/class/ssd/$(USER)/LGAttempt3/
