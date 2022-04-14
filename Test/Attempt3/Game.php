@@ -26,7 +26,7 @@ if ($conn -> connect_errno) {
         // Free result set
         $result -> free_result();
       }
-      
+      echo $result;
       $mysqli -> close();
    ?>
 
