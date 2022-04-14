@@ -25,7 +25,7 @@ echo "<script>console.log('Connection Established' );</script>";
         }
         mysqli_free_result($result);
       }
-      
+      mysqli_close($con);
       return $prompt;
 }
 
