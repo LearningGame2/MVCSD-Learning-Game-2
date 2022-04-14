@@ -30,8 +30,8 @@ if (mysqli_connect_errno()) {
           $wr2 = $row[4];
           $wr3 = $row[5];
           echo $prompt , ' is prompt\n';
-          echo $corr , 'is corr\n';
-          echo $wr1 , 'is wr1';
+          echo -e $corr , 'is corr\n';
+          echo -e $wr1 , 'is wr1';
           //printf ("%s (%s) (%s)\n", $row[0], $row[1], $row[3]);
         }
         mysqli_free_result($result);
