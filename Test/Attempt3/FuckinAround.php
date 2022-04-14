@@ -1,121 +1,122 @@
 <?php
 
-$conn = mysqli_connect("localhost","fishell1","S219352","Game2");
+// $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit();
-}
-
-//Prompt and answer request functions
-
-  function promptRequest($rowNumber){
+// if (mysqli_connect_errno()) {
+//     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+//     exit();
+// }
 
 
-//connection
+// //Prompt and answer request functions
 
-  $prompt;
-    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
-    if ($result = mysqli_query($conn, $sql)) {
+//   function promptRequest($rowNumber){
+
+
+// //connection
+
+//   $prompt;
+//     $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
+//     if ($result = mysqli_query($conn, $sql)) {
      
-        while ($row = mysqli_fetch_row($result)) {
-          $prompt = $row[1];
-          echo "prompt is ", $prompt;
-        }
-        mysqli_free_result($result);
-      }
+//         while ($row = mysqli_fetch_row($result)) {
+//           $prompt = $row[1];
+//           echo "prompt is ", $prompt;
+//         }
+//         mysqli_free_result($result);
+//       }
       
-      return $prompt;
-}
-/*
-function correctRequest($row){
-  $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
+//       return $prompt;
+// }
 
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit();
-}
-//Connection
+// function correctRequest($row){
+//   $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
+
+// if (mysqli_connect_errno()) {
+//     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+//     exit();
+// }
+// //Connection
 
 
-  $sql = "SELECT CorrectResponse FROM QuestionDatabase WHERE QuestionNumber = " . $row;
-  if ($result = mysqli_query($conn, $sql)) {
-      while ($row = mysqli_fetch_row($result)) {
-        $correctResponse = $row[0];
-      }
-      mysqli_free_result($result);
-    }
-    mysqli_close($con);
-    return $correctResponse;
-}
+//   $sql = "SELECT CorrectResponse FROM QuestionDatabase WHERE QuestionNumber = " . $row;
+//   if ($result = mysqli_query($conn, $sql)) {
+//       while ($row = mysqli_fetch_row($result)) {
+//         $correctResponse = $row[0];
+//       }
+//       mysqli_free_result($result);
+//     }
+//     mysqli_close($con);
+//     return $correctResponse;
+// }
 
-function wrong1Request($row){
-  $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
+// function wrong1Request($row){
+//   $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit();
-}
-//Connection
+// if (mysqli_connect_errno()) {
+//     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+//     exit();
+// }
+// //Connection
 
   
-  $sql = "SELECT WrongResponse1 FROM QuestionDatabase WHERE QuestionNumber = " . $row;
-  if ($result = mysqli_query($conn, $sql)) {
-      while ($row = mysqli_fetch_row($result)) {
-        $wrongResponse1 = $row[0];
-      }
-      mysqli_free_result($result);
-    }
+//   $sql = "SELECT WrongResponse1 FROM QuestionDatabase WHERE QuestionNumber = " . $row;
+//   if ($result = mysqli_query($conn, $sql)) {
+//       while ($row = mysqli_fetch_row($result)) {
+//         $wrongResponse1 = $row[0];
+//       }
+//       mysqli_free_result($result);
+//     }
     
-    mysqli_close($con);
-    return $wrongResponse1;
-}
+//     mysqli_close($con);
+//     return $wrongResponse1;
+// }
 
-function wrong2Request($row){
-  $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
+// function wrong2Request($row){
+//   $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit();
-}
-//Connection
+// if (mysqli_connect_errno()) {
+//     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+//     exit();
+// }
+// //Connection
 
   
-  $sql = "SELECT WrongResponse2 FROM QuestionDatabase WHERE QuestionNumber = " . $row;
-  if ($result = mysqli_query($conn, $sql)) {
-      while ($row = mysqli_fetch_row($result)) {
-        $wrongResponse2 = $row[0];
-      }
-      mysqli_free_result($result);
-    }
+//   $sql = "SELECT WrongResponse2 FROM QuestionDatabase WHERE QuestionNumber = " . $row;
+//   if ($result = mysqli_query($conn, $sql)) {
+//       while ($row = mysqli_fetch_row($result)) {
+//         $wrongResponse2 = $row[0];
+//       }
+//       mysqli_free_result($result);
+//     }
     
-    mysqli_close($con);
-    return $wrongResponse2;
-}
+//     mysqli_close($con);
+//     return $wrongResponse2;
+// }
 
-function wrong3Request($row){
-  $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
+// function wrong3Request($row){
+//   $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit();
-}
-//Connection
+// if (mysqli_connect_errno()) {
+//     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+//     exit();
+// }
+// //Connection
 
   
-  $sql = "SELECT WrongResponse3 FROM QuestionDatabase WHERE QuestionNumber = " . $row;
-  if ($result = mysqli_query($conn, $sql)) {
-      while ($row = mysqli_fetch_row($result)) {
-        $wrongResponse3 = $row[0];
-      }
-      mysqli_free_result($result);
-    }
+//   $sql = "SELECT WrongResponse3 FROM QuestionDatabase WHERE QuestionNumber = " . $row;
+//   if ($result = mysqli_query($conn, $sql)) {
+//       while ($row = mysqli_fetch_row($result)) {
+//         $wrongResponse3 = $row[0];
+//       }
+//       mysqli_free_result($result);
+//     }
   
-    mysqli_close($con);
-    return $wrongResponse3;
-}
+//     mysqli_close($con);
+//     return $wrongResponse3;
+// }
 
-*/
+
 
 
 
@@ -156,18 +157,18 @@ function divide($a,$b){
   var phpmult= <?php echo mult(1,2);?> //call the php mult function
   var phpdivide= <?php echo divide(1,2);?> //call the php divide function
 
-  var phpQuestion = <?php echo promptRequest(1); ?>
-  /*
-  var phpCorrect = <?php echo correctRequest(1); ?>
-  var phpWrong1 = <?php echo wrong1Request(1); ?>
-  var phpWrong2 = <?php echo wrong2Request(1); ?>
-  var phpWrong3 = <?php echo wrong3Request(1); ?>
-  */
+  // var phpQuestion = <?php echo promptRequest(1); ?>
+  
+  // var phpCorrect = <?php echo correctRequest(1); ?>
+  // var phpWrong1 = <?php echo wrong1Request(1); ?>
+  // var phpWrong2 = <?php echo wrong2Request(1); ?>
+  // var phpWrong3 = <?php echo wrong3Request(1); ?>
+  
 
 
 
   console.log(phpadd+" = phpadd");
-  console.log("\nQuestion = "+ phpQuestion);
+  // console.log("\nQuestion = "+ phpQuestion);
   // console.log("\nCorrect answer = "+ phpCorrect);
   // console.log("\nWrong1 = "+ phpWrong1);
   // console.log("\nWrong2 = "+ phpWrong2);
