@@ -21,7 +21,6 @@ if (mysqli_connect_errno()) {
 <body>
     
    <?php
-
     $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = 23";
     if ($result = mysqli_query($conn, $sql)) {
         while ($row = mysqli_fetch_row($result)) {
