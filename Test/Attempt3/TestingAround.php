@@ -22,16 +22,16 @@ return $conn;
     $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
     if ($result = mysqli_query($conn, $sql)) {
      
-        $row = mysqli_fetch_row($result);
+        while ($row = mysqli_fetch_row($result)) {
 
-	//      $prompt = $row[1];
+	      $prompt = $row[1];
           
-        
+        }
         mysqli_free_result($result);
-     
-     mysqli_close($conn);
+      
+    mysqli_close($conn);
 
-      return json_encode($row);
+      return $prompt;
       }
 }
 
@@ -162,15 +162,14 @@ function divide($a,$b){
   var phpadd= <?php echo add(1,2);?> //call the php add function
   var phpmult= <?php echo mult(1,2);?> //call the php mult function
   var phpdivide= <?php echo divide(1,2);?> //call the php divide function
-  var phpResult = '<?php echo promptRequest(1); ?>';
-  var results = phpResult.split();
+  var phpQuestion = "<?php echo promptRequest(1); ?>"
+  
   
 
 
 
   console.log(phpadd +" = phpadd");
-  console.log("\nresult = "+ results);
-  console.log("\nQuestion = "+ results[0]);
+  console.log("\nQuestion = "+ phpQuestion);
   // console.log("\nCorrect answer = "+ phpCorrect);
   // console.log("\nWrong1 = "+ phpWrong1);
   // console.log("\nWrong2 = "+ phpWrong2);
