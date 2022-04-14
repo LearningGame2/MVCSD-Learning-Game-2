@@ -30,7 +30,7 @@ function promptRequest($rowNumber){
       
     mysqli_close($conn);//close connection
 
-      echo "{$prompt}";
+      echo $prompt;
       }
 }
 
