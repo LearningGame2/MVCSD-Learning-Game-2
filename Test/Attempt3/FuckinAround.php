@@ -15,10 +15,10 @@ if (mysqli_connect_errno()) {
 //connection
 
 
-    $sql = "SELECT Prompt FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
+    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
     if ($result = mysqli_query($conn, $sql)) {
         while ($row = mysqli_fetch_row($result)) {
-          $prompt = $row;
+          $prompt = $row[1];
         }
         mysqli_free_result($result);
       }
