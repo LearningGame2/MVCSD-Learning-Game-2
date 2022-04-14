@@ -4,7 +4,7 @@
 
 //Prompt and answer request functions
 
-  function promptRequest($row){
+  function promptRequest($rowNumber){
 
     $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
@@ -15,7 +15,7 @@ if (mysqli_connect_errno()) {
 //connection
 
 
-    $sql = "SELECT Prompt FROM QuestionDatabase WHERE QuestionNumber = " . $row;
+    $sql = "SELECT Prompt FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
     if ($result = mysqli_query($conn, $sql)) {
         while ($row = mysqli_fetch_row($result)) {
           $prompt = $row;
