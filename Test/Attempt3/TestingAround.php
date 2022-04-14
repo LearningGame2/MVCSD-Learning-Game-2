@@ -16,6 +16,7 @@ return $conn;
 
 function promptRequest($rowNumber){
   $prompt = "";
+  echo "Worked";
     $conn = connect();//Connect
     $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";//sql code
     if ($result = mysqli_query($conn, $sql)) {
