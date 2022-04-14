@@ -1,33 +1,33 @@
 <?php
 
-// $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
+$conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
-// if (mysqli_connect_errno()) {
-//     echo "Failed to connect to MySQL: " . mysqli_connect_error();
-//     exit();
-// }
-
-
-// //Prompt and answer request functions
-
-//   function promptRequest($rowNumber){
+if (mysqli_connect_errno()) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    exit();
+}
 
 
-// //connection
+//Prompt and answer request functions
 
-//   $prompt;
-//     $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
-//     if ($result = mysqli_query($conn, $sql)) {
+  function promptRequest($rowNumber){
+
+
+//connection
+
+  $prompt;
+    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
+    if ($result = mysqli_query($conn, $sql)) {
      
-//         while ($row = mysqli_fetch_row($result)) {
-//           $prompt = $row[1];
-//           echo "prompt is ", $prompt;
-//         }
-//         mysqli_free_result($result);
-//       }
+        while ($row = mysqli_fetch_row($result)) {
+          $prompt = $row[1];
+          echo "prompt is ", $prompt;
+        }
+        mysqli_free_result($result);
+      }
       
-//       return $prompt;
-// }
+      return $prompt;
+}
 
 // function correctRequest($row){
 //   $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
@@ -156,14 +156,14 @@ function divide($a,$b){
   var phpadd= <?php echo add(1,2);?> //call the php add function
   var phpmult= <?php echo mult(1,2);?> //call the php mult function
   var phpdivide= <?php echo divide(1,2);?> //call the php divide function
-
+  var phpQuestion = <?php echo promptRequest(1); ?>
   
   
 
 
 
   console.log(phpadd +" = phpadd");
-  // console.log("\nQuestion = "+ phpQuestion);
+  console.log("\nQuestion = "+ phpQuestion);
   // console.log("\nCorrect answer = "+ phpCorrect);
   // console.log("\nWrong1 = "+ phpWrong1);
   // console.log("\nWrong2 = "+ phpWrong2);
