@@ -1,14 +1,29 @@
-  $sql = "SELECT * FROM QuestionDatabase Where QuestionNumber = 1";
-        $result = mysqli_query($conn, $sql);
-        while ($row = mysqli_fetch_all($result,MYSQLI_ASSOC)){
+Table of Contents:
+- Line 12: Old Stuff from Game/TestingAround.php
+- Line 24: TestingAround Archives
+- Line 38: Original Version of Game.php
+- Line 99: Working Code b4 JSON (from TestingAround.php?)
+- Line 290: Skon's JSON Code from Office Hours 4/14
+- Line 485: Connor's Quiz Questions
+
+
+
+  
+Old Stuff from Game/TestingAround.php:
+This is incomplete, doesn't really do anything
+$sql = "SELECT * FROM QuestionDatabase Where QuestionNumber = 1";
+  $result = mysqli_query($conn, $sql);
+  while ($row = mysqli_fetch_all($result,MYSQLI_ASSOC)){
         
 
-
-        }
-
+}
 
 
 
+
+TestingAround Archives:
+It seems that the <?php ?> wasn't being properly commented out in the JS, 
+when we took this out functionality improved.
     // var phpQuestion = <?php echo promptRequest(1); ?>
   
   // var phpCorrect = <?php echo correctRequest(1); ?>
@@ -17,17 +32,19 @@
   // var phpWrong3 = <?php echo wrong3Request(1); ?>
 
 
-  Original Game.php
 
-  <?php
-$conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit();
+
+Original Version of Game.php:
+
+<?php
+  $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
+
+  if (mysqli_connect_errno()) {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+      exit();
   }
 ?>
-
 
 
 <!DOCTYPE html>
@@ -79,11 +96,7 @@ if (mysqli_connect_errno()) {
 
 
 
-
-
-
-
-Working Code b4 JSON
+Working Code b4 JSON (from TestingAround.php?)
 
 
 <?php
@@ -211,9 +224,6 @@ return $conn;
 // }
 
 
-
-
-
     
 
 function add($a,$b){
@@ -272,7 +282,12 @@ function divide($a,$b){
 
 
 
-Skons json Code
+
+
+
+
+
+Skon's JSON Code from Office Hours 4/14
 
 <?php
 
@@ -399,9 +414,6 @@ return $conn;
 // }
 
 
-
-
-
     
 
 function add($a,$b){
@@ -470,8 +482,7 @@ function divide($a,$b){
 
 
 
-
-Connors Quiz Questions 
+Connor's Quiz Questions 
 const questions = [
     //Question 1
         {
