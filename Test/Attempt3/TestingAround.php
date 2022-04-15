@@ -79,10 +79,16 @@ function divide($a,$b){
 
 
 
-  var phpQuestion = "<?php echo promptRequest();?>"
+  var phpQuestion = '<?php echo promptRequest();?>'
+  var question = JSON.parse(phpQuestion);
   
 
   console.log(phpadd +" = phpadd");
+  console.log("Question: "+ question[1]);
+  console.log(question[2]);
+  console.log(question[3]);
+  console.log(question[4]);
+  console.log(question[5]);
   // console.log("\nCorrect answer = "+ phpCorrect);
   // console.log("\nWrong1 = "+ phpWrong1);
   // console.log("\nWrong2 = "+ phpWrong2);
