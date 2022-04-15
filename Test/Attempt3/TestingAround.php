@@ -10,8 +10,11 @@ if (mysqli_connect_errno()) {
 return $conn;
 }//Connection Function
 
+
+
+
 function pickQuestion(){
-  $QN = Math.floor(Math.random()*200)+1;
+  $QN = rand(1,300);
   return $QN;
 }
 
