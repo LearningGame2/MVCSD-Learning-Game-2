@@ -133,7 +133,98 @@ function promptRequest(){
 
 
 function fillQuestions(){ 
-    var questions = []; 
+    var questions = [
+        //Question 1
+            {
+                question: "",
+                optionA: "",
+                optionB: "",
+                optionC: "",
+                optionD: "",
+                correctOption: ""
+            },
+        //Question 2
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 3
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 4
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 5
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 6
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 7
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 8
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 9
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 10
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        }
+];  
 for (let i = 0; i < 10; i++) {
 
     var phpPrompt = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
