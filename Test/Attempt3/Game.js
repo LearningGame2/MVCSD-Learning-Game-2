@@ -97,7 +97,7 @@ function fillQuestions(){
 ];   
   for (let i = 0; i < 10; i++) {
 
-    var phpPrompt = '<?php echo promptRequest();?>';
+    var phpPrompt = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
     var prompt = JSON.parse(phpPrompt);
     console.log(prompt);
     questions[i].question = prompt[1];
