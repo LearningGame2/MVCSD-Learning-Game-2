@@ -80,8 +80,9 @@ function divide($a,$b){
 
 
   var phpQuestion = '<?php echo promptRequest();?>'
+  var phpQuestion2 = '<?php echo promptRequest();?>'
   var question = JSON.parse(phpQuestion);
-  
+  var question2 = JSON.parse(phpQuestion2);
 
   console.log(phpadd +" = phpadd");
   console.log("Question: "+ question[1]);
@@ -89,6 +90,11 @@ function divide($a,$b){
   console.log(question[3]);
   console.log(question[4]);
   console.log(question[5]);
+  console.log("Question 2: "+ question2[1]);
+  console.log(question2[2]);
+  console.log(question2[3]);
+  console.log(question2[4]);
+  console.log(question2[5]);
   // console.log("\nCorrect answer = "+ phpCorrect);
   // console.log("\nWrong1 = "+ phpWrong1);
   // console.log("\nWrong2 = "+ phpWrong2);
