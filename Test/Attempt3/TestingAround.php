@@ -14,105 +14,34 @@ return $conn;
 
 
 
-$rowNumber = rand(1,300);
+
 
 
 
 
 function promptRequest(){
+    
+  $rowNumber = rand(1,300);
   
-    $conn = connect();//Connect
-    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";//sql code
-    if ($result = mysqli_query($conn, $sql)) {
-     
-        while ($row = mysqli_fetch_row($result)) {
-
-	      $prompt = $row[1];
+  //connection
+  
+    $prompt = "";
+      $conn = connect();
+      $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
+      if ($result = mysqli_query($conn, $sql)) {
+       
+          $row = mysqli_fetch_row($result);
+  
+    //      $prompt = $row[1];
+            
           
+          mysqli_free_result($result);
+       
+       mysqli_close($conn);
+  
+        return json_encode($row);
         }
-        mysqli_free_result($result);
-      
-    mysqli_close($conn);//close connection
-
-      return $prompt;
-      }
-}
-
-function correctRequest(){
-  $correct = "";
-    $conn = connect();//Connect
-    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";//sql code
-    if ($result = mysqli_query($conn, $sql)) {
-     
-        while ($row = mysqli_fetch_row($result)) {
-
-	      $correct = $row[2];
-          
-        }
-        mysqli_free_result($result);
-      
-    mysqli_close($conn);//close connection
-
-      return $correct;
-      }
-}
-
-function wrong1Request(){
-  $wrong1 = "";
-    $conn = connect();//Connect
-    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";//sql code
-    if ($result = mysqli_query($conn, $sql)) {
-     
-        while ($row = mysqli_fetch_row($result)) {
-
-          $wrong1 = $row[3];
-          
-        }
-        mysqli_free_result($result);
-      
-    mysqli_close($conn);//close connection
-
-      return $wrong1;
-      }
-}
-
-function wrong2Request(){
-  $wrong2 = "";
-    $conn = connect();//Connect
-    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";//sql code
-    if ($result = mysqli_query($conn, $sql)) {
-     
-        while ($row = mysqli_fetch_row($result)) {
-
-          $wrong2 = $row[4];
-          
-        }
-        mysqli_free_result($result);
-      
-    mysqli_close($conn);//close connection
-
-      return $wrong2;
-      }
-}
-
-function wrong3Request(){
-  $wrong3 = "";
-    $conn = connect();//Connect
-    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";//sql code
-    if ($result = mysqli_query($conn, $sql)) {
-     
-        while ($row = mysqli_fetch_row($result)) {
-
-          $wrong3 = $row[5];
-          
-        }
-        mysqli_free_result($result);
-      
-    mysqli_close($conn);//close connection
-
-      return $wrong3;
-      }
-}
+  }
 
 
 
