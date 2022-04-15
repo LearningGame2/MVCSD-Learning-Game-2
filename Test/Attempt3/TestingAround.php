@@ -11,19 +11,10 @@ return $conn;
 }//Connection Function
 
 
-
-
-
-
-
-
-
-
 function promptRequest(){
     
   $rowNumber = rand(1,300);
-  
-  //connection
+
   
     $prompt = "";
       $conn = connect();
@@ -41,7 +32,7 @@ function promptRequest(){
   
         return json_encode($row);
         }
-  }
+}
 
 
 
@@ -89,15 +80,9 @@ function divide($a,$b){
 
 
   var phpQuestion = "<?php echo promptRequest();?>"
-  var phpCorrect = "<?php echo correctRequest(); ?>"
-  var phpWrong1 = "<?php echo wrong1Request(); ?>"
-  var phpWrong2 = "<?php echo wrong2Request(); ?>"
-  var phpWrong3 = "<?php echo wrong3Request(); ?>"
-  
   
 
   console.log(phpadd +" = phpadd");
-  console.log("\nQuestion = "+ phpQuestion + "\nCorrect Response= "+ phpCorrect +"\nWrong Answer 1 = "+ phpWrong1 +"\nWrong Answer 2 = "+ phpWrong2 +"\nWrong Answer 3 = "+ phpWrong3);
   // console.log("\nCorrect answer = "+ phpCorrect);
   // console.log("\nWrong1 = "+ phpWrong1);
   // console.log("\nWrong2 = "+ phpWrong2);
