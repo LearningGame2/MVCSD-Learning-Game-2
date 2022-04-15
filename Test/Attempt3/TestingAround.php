@@ -13,17 +13,16 @@ return $conn;
 
 
 
-function pickQuestion(){
-  $QN = rand(1,300);
-  return $QN;
-}
+
+$QN = rand(1,300);
 
 
 
-function promptRequest($rowNumber){
+
+function promptRequest(){
   
     $conn = connect();//Connect
-    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";//sql code
+    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$QN'";//sql code
     if ($result = mysqli_query($conn, $sql)) {
      
         while ($row = mysqli_fetch_row($result)) {
@@ -42,7 +41,7 @@ function promptRequest($rowNumber){
 function correctRequest($rowNumber){
   $correct = "";
     $conn = connect();//Connect
-    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";//sql code
+    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$QN'";//sql code
     if ($result = mysqli_query($conn, $sql)) {
      
         while ($row = mysqli_fetch_row($result)) {
@@ -61,7 +60,7 @@ function correctRequest($rowNumber){
 function wrong1Request($rowNumber){
   $wrong1 = "";
     $conn = connect();//Connect
-    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";//sql code
+    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$QN'";//sql code
     if ($result = mysqli_query($conn, $sql)) {
      
         while ($row = mysqli_fetch_row($result)) {
@@ -80,7 +79,7 @@ function wrong1Request($rowNumber){
 function wrong2Request($rowNumber){
   $wrong2 = "";
     $conn = connect();//Connect
-    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";//sql code
+    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$QN'";//sql code
     if ($result = mysqli_query($conn, $sql)) {
      
         while ($row = mysqli_fetch_row($result)) {
@@ -99,7 +98,7 @@ function wrong2Request($rowNumber){
 function wrong3Request($rowNumber){
   $wrong3 = "";
     $conn = connect();//Connect
-    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";//sql code
+    $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$QN'";//sql code
     if ($result = mysqli_query($conn, $sql)) {
      
         while ($row = mysqli_fetch_row($result)) {
@@ -159,12 +158,12 @@ function divide($a,$b){
   var phpdivide= <?php echo divide(1,2);?> //call the php divide function
 
 
-  var randnumberr = "<?php echo pickQuestion();?>"
-  var phpQuestion = "<?php echo promptRequest(pickQuestion());?>"
-  var phpCorrect = "<?php echo correctRequest(1); ?>"
-  var phpWrong1 = "<?php echo wrong1Request(1); ?>"
-  var phpWrong2 = "<?php echo wrong2Request(1); ?>"
-  var phpWrong3 = "<?php echo wrong3Request(1); ?>"
+
+  var phpQuestion = "<?php echo promptRequest();?>"
+  var phpCorrect = "<?php echo correctRequest(); ?>"
+  var phpWrong1 = "<?php echo wrong1Request(); ?>"
+  var phpWrong2 = "<?php echo wrong2Request(); ?>"
+  var phpWrong3 = "<?php echo wrong3Request(); ?>"
   
   
 
