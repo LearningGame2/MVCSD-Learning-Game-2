@@ -133,7 +133,7 @@ function promptRequest(){
 
 
 function fillQuestions(){ 
-    const questions = [
+    var questions = [
         //Question 1
             {
                 question: "",
