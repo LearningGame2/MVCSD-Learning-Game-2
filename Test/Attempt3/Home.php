@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Login Sucessful
+    <title>
+        Login Sucessful
     </title>
 </head>
 <body>
