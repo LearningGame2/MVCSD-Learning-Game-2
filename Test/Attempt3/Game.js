@@ -105,36 +105,39 @@
 function fillQuestions(){    
   for (let i = 0; i < 10; i++) {
 
-    questions[i].question = "<?php echo promptRequest(RandNumbers[i]);?>";
+    var phpPrompt = '<?php echo promptRequest();?>';
+    var prompt = JSON.parse(phpPrompt);
+
+    questions[i].question = prompt[1];
 
     var j = Math.floor(Math.random()*4)+1;
 
     if(j = 1){
-        questions[i].optionA = "<?php echo correctRequest(RandNumbers[i]);?>";
-        questions[i].optionB = "<?php echo wrong1Request(RandNumbers[i]);?>";
-        questions[i].optionC = "<?php echo wrong2Request(RandNumbers[i]);?>";
-        questions[i].optionD = "<?php echo wrong3Request(RandNumbers[i]);?>";
+        questions[i].optionA = prompt[2];
+        questions[i].optionB = prompt[3];
+        questions[i].optionC = prompt[4];
+        questions[i].optionD = prompt[5];
         questions[i].correctOption ="optionA";
     }
     if(j = 2){
-        questions[i].optionB = "<?php echo correctRequest(RandNumbers[i]);?>";
-        questions[i].optionC = "<?php echo wrong1Request(RandNumbers[i]);?>";
-        questions[i].optionD = "<?php echo wrong2Request(RandNumbers[i]);?>";
-        questions[i].optionA = "<?php echo wrong3Request(RandNumbers[i]);?>";
+        questions[i].optionA = prompt[5];
+        questions[i].optionB = prompt[2];
+        questions[i].optionC = prompt[3];
+        questions[i].optionD = prompt[4];
         questions[i].correctOption = "optionB";
     } 
     if(j = 3){
-        questions[i].optionC = "<?php echo correctRequest(RandNumbers[i]);?>";
-        questions[i].optionD = "<?php echo wrong1Request(RandNumbers[i]);?>";
-        questions[i].optionA = "<?php echo wrong2Request(RandNumbers[i]);?>";
-        questions[i].optionB = "<?php echo wrong3Request(RandNumbers[i]);?>";
+        questions[i].optionA = prompt[4];
+        questions[i].optionB = prompt[5];
+        questions[i].optionC = prompt[2];
+        questions[i].optionD = prompt[3];
         questions[i].correctOption = "optionC";
     }
     if(j = 4){
-        questions[i].optionD = "<?php echo correctRequest(RandNumbers[i]);?>";
-        questions[i].optionA = "<?php echo wrong1Request(RandNumbers[i]);?>";
-        questions[i].optionB = "<?php echo wrong2Request(RandNumbers[i]);?>";
-        questions[i].optionC = "<?php echo wrong3Request(RandNumbers[i]);?>";
+        questions[i].optionA = prompt[3];
+        questions[i].optionB = prompt[4];
+        questions[i].optionC = prompt[5];
+        questions[i].optionD = prompt[2];
         questions[i].correctOption = "optionD";
     }
 }
