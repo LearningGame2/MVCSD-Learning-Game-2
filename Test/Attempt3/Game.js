@@ -107,7 +107,7 @@ function fillQuestions(){
 
     var phpPrompt = '<?php echo promptRequest();?>';
     var prompt = JSON.parse(phpPrompt);
-
+    console.log(prompt);
     questions[i].question = prompt[1];
 
     var j = Math.floor(Math.random()*4)+1;
