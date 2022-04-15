@@ -4,7 +4,7 @@
 
 }
 body{
-    background-color: #ABEBC6;
+    background-color: black;
     background-size: cover;
     align-items:  center;
     justify-content: center;
@@ -13,24 +13,24 @@ body{
 }
 .container{
     position: relative;
-    margin-top: 100px;
+    margin-top: 150px;
     width: 450px;
-    height: auto;
-    background: #dedede;
+    height: 450px;
+    background: black;
     border-radius: 5px;
 }
 .label{
     padding: 20px 130px;
     font-size: 35px;
     font-weight: bold;
-    color: blue;
+    color: black;
 }
 .login_form{
     padding: 20px 40px;
 }
 .login_form .font{
     font-size: 18px;
-    color:blue;
+    color:white;
     margin: 5px 0;
 }
 .login_form input{
@@ -50,11 +50,11 @@ body{
     height: 45px;
     width: 365px;
     font-size: 20px;
-    color: blue;
+    color: white;
     outline: none;
     cursor: pointer;
     font-weight: bold;
-    background: #1A237E;
+    background: green;
     border-radius: 3px;
     border: 1px solid #3949AB;
     transition: .2s;
