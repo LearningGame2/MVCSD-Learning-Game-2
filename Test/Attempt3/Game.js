@@ -1,7 +1,7 @@
 
     var RandNumbers = [];
     for(let i = 1; i <10; i++){
-        RandNumbers[i]= Math.floor(Math.random() * 300);
+        RandNumbers[i]= Math.floor(Math.random() * 300)+1;
     }
     
     
@@ -105,36 +105,36 @@
 function fillQuestions(){    
   for (let i = 0; i < 10; i++) {
 
-    questions[i].question = "<?php echo promptRequest(RandNumbers[i]);?>"
+    questions[i].question = "<?php echo promptRequest(RandNumbers[i]);?>";
 
     var j = Math.floor(Math.random()*4)+1;
 
     if(j = 1){
-        questions[i].optionA = correctRequest(RandNumbers[i]);
-        questions[i].optionB = wrong1Request(RandNumbers[i]);
-        questions[i].optionC = wrong2Request(RandNumbers[i]);
-        questions[i].optionD = wrong3Request(RandNumbers[i]);
+        questions[i].optionA = "<?php echo correctRequest(RandNumbers[i]);?>";
+        questions[i].optionB = "<?php echo wrong1Request(RandNumbers[i]);?>";
+        questions[i].optionC = "<?php echo wrong2Request(RandNumbers[i]);?>";
+        questions[i].optionD = "<?php echo wrong3Request(RandNumbers[i]);?>";
         questions[i].correctOption ="optionA";
     }
     if(j = 2){
-        questions[i].optionB = correctRequest(RandNumbers[i]);
-        questions[i].optionC = wrong1Request(RandNumbers[i]);
-        questions[i].optionD = wrong2Request(RandNumbers[i]);
-        questions[i].optionA = wrong3Request(RandNumbers[i]);
+        questions[i].optionB = "<?php echo correctRequest(RandNumbers[i]);?>";
+        questions[i].optionC = "<?php echo wrong1Request(RandNumbers[i]);?>";
+        questions[i].optionD = "<?php echo wrong2Request(RandNumbers[i]);?>";
+        questions[i].optionA = "<?php echo wrong3Request(RandNumbers[i]);?>";
         questions[i].correctOption = "optionB";
     } 
     if(j = 3){
-        questions[i].optionC = correctRequest(RandNumbers[i]);
-        questions[i].optionD = wrong1Request(RandNumbers[i]);
-        questions[i].optionA = wrong2Request(RandNumbers[i]);
-        questions[i].optionB = wrong3Request(RandNumbers[i]);
+        questions[i].optionC = "<?php echo correctRequest(RandNumbers[i]);?>";
+        questions[i].optionD = "<?php echo wrong1Request(RandNumbers[i]);?>";
+        questions[i].optionA = "<?php echo wrong2Request(RandNumbers[i]);?>";
+        questions[i].optionB = "<?php echo wrong3Request(RandNumbers[i]);?>";
         questions[i].correctOption = "optionC";
     }
     if(j = 4){
-        questions[i].optionD = correctRequest(RandNumbers[i]);
-        questions[i].optionA = wrong1Request(RandNumbers[i]);
-        questions[i].optionB = wrong2Request(RandNumbers[i]);
-        questions[i].optionC = wrong3Request(RandNumbers[i]);
+        questions[i].optionD = "<?php echo correctRequest(RandNumbers[i]);?>";
+        questions[i].optionA = "<?php echo wrong1Request(RandNumbers[i]);?>";
+        questions[i].optionB = "<?php echo wrong2Request(RandNumbers[i]);?>";
+        questions[i].optionC = "<?php echo wrong3Request(RandNumbers[i]);?>";
         questions[i].correctOption = "optionD";
     }
 }

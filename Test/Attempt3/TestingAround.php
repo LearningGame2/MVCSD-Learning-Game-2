@@ -11,7 +11,7 @@ return $conn;
 }//Connection Function
 
 function pickQuestion(){
-  $QN = Math.floor(Math.random()*300)+1;
+  $QN = Math.floor(Math.random()*200)+1;
   return $QN;
 }
 
@@ -19,7 +19,6 @@ function pickQuestion(){
 
 function promptRequest($rowNumber){
   
-  $prompt = "";
     $conn = connect();//Connect
     $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";//sql code
     if ($result = mysqli_query($conn, $sql)) {
@@ -33,7 +32,7 @@ function promptRequest($rowNumber){
       
     mysqli_close($conn);//close connection
 
-      echo $prompt;
+      return $prompt;
       }
 }
 
@@ -155,8 +154,8 @@ function divide($a,$b){
   var phpadd= <?php echo add(1,2);?> //call the php add function
   var phpmult= <?php echo mult(1,2);?> //call the php mult function
   var phpdivide= <?php echo divide(1,2);?> //call the php divide function
-  var test = 1;
-  var phpQuestion = "<?php echo promptRequest(pickQuestion());?>"
+  var $test = 1;
+  var phpQuestion = "<?php echo promptRequest($test);?>"
   var phpCorrect = "<?php echo correctRequest(1); ?>"
   var phpWrong1 = "<?php echo wrong1Request(1); ?>"
   var phpWrong2 = "<?php echo wrong2Request(1); ?>"
