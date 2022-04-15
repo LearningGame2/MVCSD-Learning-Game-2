@@ -1,12 +1,8 @@
 
-    var RandNumbers = [];
-    for(let i = 1; i <10; i++){
-        RandNumbers[i]= Math.floor(Math.random() * 300)+1;
-    }
-    
-    
 
 
+
+function fillQuestions(){ 
     const questions = [
         //Question 1
             {
@@ -98,11 +94,7 @@
             optionD: "",
             correctOption: ""
         }
-        ];
-
-
-
-function fillQuestions(){    
+];   
   for (let i = 0; i < 10; i++) {
 
     var phpPrompt = '<?php echo promptRequest();?>';
@@ -112,28 +104,28 @@ function fillQuestions(){
 
     var j = Math.floor(Math.random()*4)+1;
 
-    if(j = 1){
+    if(j == 1){
         questions[i].optionA = prompt[2];
         questions[i].optionB = prompt[3];
         questions[i].optionC = prompt[4];
         questions[i].optionD = prompt[5];
         questions[i].correctOption ="optionA";
     }
-    if(j = 2){
+    if(j == 2){
         questions[i].optionA = prompt[5];
         questions[i].optionB = prompt[2];
         questions[i].optionC = prompt[3];
         questions[i].optionD = prompt[4];
         questions[i].correctOption = "optionB";
     } 
-    if(j = 3){
+    if(j == 3){
         questions[i].optionA = prompt[4];
         questions[i].optionB = prompt[5];
         questions[i].optionC = prompt[2];
         questions[i].optionD = prompt[3];
         questions[i].correctOption = "optionC";
     }
-    if(j = 4){
+    if(j == 4){
         questions[i].optionA = prompt[3];
         questions[i].optionB = prompt[4];
         questions[i].optionC = prompt[5];
@@ -145,9 +137,9 @@ function fillQuestions(){
 }
 
     
-    let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
+let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
     
-    function handleQuestions() {
+function handleQuestions() {
     questions = fillQuestions();
         //function to shuffle and push 10 questions to shuffledQuestions array
     //app would be dealing with 10questions per session
@@ -157,7 +149,7 @@ function fillQuestions(){
                 shuffledQuestions.push(random)
             }
         }
-    }
+}
     
     
     let questionNumber = 1 //holds the current question number
