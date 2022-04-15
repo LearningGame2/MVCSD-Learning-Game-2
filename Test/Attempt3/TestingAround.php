@@ -160,7 +160,7 @@ function divide($a,$b){
 
 
   var randnumberr = "<?php echo pickQuestion();?>"
-  var phpQuestion = "<?php echo promptRequest(1);?>"
+  var phpQuestion = "<?php echo promptRequest(pickQuestion());?>"
   var phpCorrect = "<?php echo correctRequest(1); ?>"
   var phpWrong1 = "<?php echo wrong1Request(1); ?>"
   var phpWrong2 = "<?php echo wrong2Request(1); ?>"
@@ -169,7 +169,7 @@ function divide($a,$b){
   
 
 
-
+  console.log("Random Row Generated = "+ randnumberr);
   console.log(phpadd +" = phpadd");
   console.log("\nQuestion = "+ phpQuestion + "\nCorrect Response= "+ phpCorrect +"\nWrong Answer 1 = "+ phpWrong1 +"\nWrong Answer 2 = "+ phpWrong2 +"\nWrong Answer 3 = "+ phpWrong3);
   // console.log("\nCorrect answer = "+ phpCorrect);
