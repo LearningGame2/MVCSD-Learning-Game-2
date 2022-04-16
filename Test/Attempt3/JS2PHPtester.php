@@ -57,7 +57,7 @@ function promptRequest()
             let phpQuestion = '<?php echo promptRequest();?>';
             var question = JSON.parse(phpQuestion);
             console.log(question[1] + " inside class, inside constructor");
-            
+
             this.qPrompt = question[1];
             // this.qAns = phpQuestion[2];
             // this.qResponse1 = phpQuestion[2]
@@ -70,6 +70,7 @@ function promptRequest()
 
     var q1 = new Question();
     console.log(q1.qPrompt + " = q1.qPrompt");
+    console.log("q1 done, now q2");
     var q2 = new Question();
     console.log(q2.qPrompt + " = q2.qPrompt");
 
