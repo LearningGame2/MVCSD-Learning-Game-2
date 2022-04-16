@@ -18,7 +18,6 @@ function promptRequest()
 {
     
       $rowNumber = rand(1,300);
-      echo "rowNumber is $rowNumber";
     
       
        // $prompt = "";
@@ -83,6 +82,14 @@ function promptRequest()
     let phpQuestion2 = '<?php echo promptRequest();?>';
     var question2 = JSON.parse(phpQuestion2);
     console.log(question2[1]);
+
+    console.log("trying to get diff outputs w/i for loop");
+    for (int i = 0; i < 5; i++)
+    {
+        let phpQuestionTime = '<?php echo promptRequest();?>';
+        let questionTime = JSON.parse(phpQuestionTime);
+        console.log(`the #${i} question is ${questionTime[1]}`);
+    }
 
 
 </script>
