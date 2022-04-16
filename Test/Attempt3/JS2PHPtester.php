@@ -20,7 +20,7 @@ function promptRequest()
       $rowNumber = rand(1,300);
     
       
-        $prompt = "";
+       // $prompt = "";
           $conn = connect();
           $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
             if ($result = mysqli_query($conn, $sql))
@@ -55,6 +55,7 @@ function promptRequest()
             //how to parse JSON into these things...?  maybe call a new function for each?  (bring those back in code?)
 
             let phpQuestion = '<?php echo promptRequest();?>';
+            console.log(phpQuestion + "= phpQuestion");
             var question = JSON.parse(phpQuestion);
             console.log(question[1] + " inside class, inside constructor");
 
