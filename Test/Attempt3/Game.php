@@ -118,7 +118,6 @@ function promptRequest(){
                     <label for="option-four" class="option" id="option-four-label"></label>
                 </span>
 
-
             </div>
 
             <div class="next-button-container">
@@ -148,9 +147,9 @@ class Question {
 
 
 //all this is not in any function:
-// let questions = [100];
-// let q1 = new Question;
-// console.log(q1.qPrompt+ "= q1.qPrompt");
+let questionsTestArr = [100];
+let q1 = new Question();
+console.log(q1.qPrompt+ "= q1.qPrompt");
 
 
 //class Questions {
@@ -194,7 +193,7 @@ class Question {
     function NextQuestion(index) {
         //handleQuestions()
 
-        const shuffledQuestions = fillQuestion();
+        const shuffledQuestions = fillQuestions();
 
         const currentQuestion = shuffledQuestions[index]
         document.getElementById("question-number").innerHTML = questionNumber
