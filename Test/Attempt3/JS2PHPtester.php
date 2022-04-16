@@ -45,7 +45,7 @@ function promptRequest()
 <body>
 <script>
     class Question {
-        //let qPrompt: "", qAns: "", qResponse1: "", qResponse2: "", qResponse3: "", qResponse4: "";
+        let qPrompt: "", qAns: "", qResponse1: "", qResponse2: "", qResponse3: "", qResponse4: "";
         constructor ()
         {
             //how to parse JSON into these things...?  maybe call a new function for each?  (bring those back in code?)
