@@ -141,7 +141,7 @@ class Question {
         this.qResponse2 = phpQuestion[3];
         this.qResponse3 = phpQuestion[4];
         this.qResponse4 = phpQuestion[5];
-        console.log("${qPrompt} is qPrompt}");
+        console.log("${qPrompt} is qPrompt");
     }
 }
 
@@ -154,15 +154,15 @@ console.log(q1.qPrompt+ "= q1.qPrompt");
 
 //class Questions {
     //this.questions = [100];
-    function fillQuestions {
+    function fillQuestions () {
         for (int i = 0; i < 100; i++) /* change the end condition to i < 100 if this works, then later when restructuring game, 
                                     set an if statement to change the array iterator to 20, 40, etc whatever level they move to * 20 */
         {
             
-            questions[i] = new Question();
+            questionsTestArr[i] = new Question();
 
         }
-        return questions;
+        return questionsTestArr;
     }
 //}
 
@@ -186,14 +186,14 @@ console.log(q1.qPrompt+ "= q1.qPrompt");
     let questionNumber = 1 //holds the current question number
     let playerScore = 0  //holds the player score
     let wrongAttempt = 0 //amount of wrong answers picked by player
+
+    const shuffledQuestions = fillQuestions();
     let indexNumber = 0 //will be used in displaying next question
     
     // function for displaying next question in the array to dom
     //also handles displaying players and quiz information to dom
     function NextQuestion(index) {
         //handleQuestions()
-
-        const shuffledQuestions = fillQuestions();
 
         const currentQuestion = shuffledQuestions[index]
         document.getElementById("question-number").innerHTML = questionNumber
