@@ -76,11 +76,11 @@ function promptRequest()
 
     console.log("test 1 of outside of obj class calls to promptRequest");
     let phpQuestion1 = '<?php echo promptRequest();?>';
-    var question1 = JSON.parse(phpQuestion);
+    var question1 = JSON.parse(phpQuestion1);
     console.log(question1[1]);
     console.log("test 2 of outside of obj class calls to promptRequest");
     let phpQuestion2 = '<?php echo promptRequest();?>';
-    var question2 = JSON.parse(phpQuestion);
+    var question2 = JSON.parse(phpQuestion2);
     console.log(question2[1]);
 
 
