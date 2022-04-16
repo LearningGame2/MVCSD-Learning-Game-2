@@ -52,12 +52,12 @@ function promptRequest()
             var phpQuestion = '<?php echo promptRequest();?>';
             var question = JSON.parse(phpQuestion);
             console.log(question[1]);
-            this.qPrompt = phpQuestion[1];
-            this.qAns = phpQuestion[2];
-            this.qResponse1 = phpQuestion[2]
-            this.qResponse2 = phpQuestion[3];
-            this.qResponse3 = phpQuestion[4];
-            this.qResponse4 = phpQuestion[5];
+            qPrompt = phpQuestion[1];
+            // this.qAns = phpQuestion[2];
+            // this.qResponse1 = phpQuestion[2]
+            // this.qResponse2 = phpQuestion[3];
+            // this.qResponse3 = phpQuestion[4];
+            // this.qResponse4 = phpQuestion[5];
             console.log("${qPrompt} is qPrompt");
         }
     }
