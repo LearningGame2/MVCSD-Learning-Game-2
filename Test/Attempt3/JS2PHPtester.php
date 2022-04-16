@@ -1,7 +1,6 @@
 <?php
 
 
-
 function connect() {
     $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
     
@@ -41,6 +40,7 @@ function promptRequest(){
 
 ?>
 
+<body>
 <script>
     class Question {
         qPrompt, qAns, qResponse1, qResponse2, qResponse3, qResponse4;
@@ -49,6 +49,7 @@ function promptRequest(){
             //how to parse JSON into these things...?  maybe call a new function for each?  (bring those back in code?)
             var phpQuestion = '<?php echo promptRequest();?>';
             var question = JSON.parse(phpQuestion);
+            console.log(question[1]);
             this.qPrompt = phpQuestion[1];
             this.qAns = phpQuestion[2];
             this.qResponse1 = phpQuestion[2]
@@ -63,3 +64,4 @@ function promptRequest(){
     console.log(q1.qPrompt + " = q1.qPrompt1");
 
 </script>
+</body>
