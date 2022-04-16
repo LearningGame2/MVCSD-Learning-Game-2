@@ -149,6 +149,8 @@ class Question {
 
 //all this is not in any function:
 let questions = [100];
+let q1 = new Question;
+console.log(q1.qPrompt+ "= q1.qPrompt");
 
 
 //class Questions {
@@ -168,17 +170,18 @@ let questions = [100];
     
 //let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
     
-function handleQuestions() {
-    questions = fillQuestions();
-        //function to shuffle and push 10 questions to shuffledQuestions array
-    //app would be dealing with 10questions per session
-        while (shuffledQuestions.length <= 9) {
-            const random = questions[Math.floor(Math.random() * questions.length)]
-            if (!shuffledQuestions.includes(random)) {
-                shuffledQuestions.push(random)
-            }
-        }
-}
+// //all this is not used at the moment (i believe?  doesn't seem to be called anywhere?   will comment out just in case)
+// function handleQuestions() {
+//     questions = fillQuestions();
+//         //function to shuffle and push 10 questions to shuffledQuestions array
+//     //app would be dealing with 10questions per session
+//         while (shuffledQuestions.length <= 9) {
+//             const random = questions[Math.floor(Math.random() * questions.length)]
+//             if (!shuffledQuestions.includes(random)) {
+//                 shuffledQuestions.push(random)
+//             }
+//         }
+// }
     
     
     let questionNumber = 1 //holds the current question number
