@@ -55,7 +55,6 @@ function promptRequest()
             //how to parse JSON into these things...?  maybe call a new function for each?  (bring those back in code?)
 
             let phpQuestion = '<?php echo promptRequest();?>';
-            console.log(phpQuestion + "= phpQuestion");
             var question = JSON.parse(phpQuestion);
             console.log(question[1] + " inside class, inside constructor");
 
@@ -74,6 +73,16 @@ function promptRequest()
     console.log("q1 done, now q2");
     var q2 = new Question();
     console.log(q2.qPrompt + " = q2.qPrompt");
+
+    console.log("test 1 of outside of obj class calls to promptRequest");
+    let phpQuestion1 = '<?php echo promptRequest();?>';
+    var question1 = JSON.parse(phpQuestion);
+    console.log(question1[1]);
+    console.log("test 2 of outside of obj class calls to promptRequest");
+    let phpQuestion2 = '<?php echo promptRequest();?>';
+    var question2 = JSON.parse(phpQuestion);
+    console.log(question2[1]);
+
 
 </script>
 </body>
