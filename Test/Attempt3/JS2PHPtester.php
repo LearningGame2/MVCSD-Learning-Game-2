@@ -58,7 +58,7 @@ function promptRequest()
             // this.qResponse2 = phpQuestion[3];
             // this.qResponse3 = phpQuestion[4];
             // this.qResponse4 = phpQuestion[5];
-            console.log("${qPrompt} is qPrompt");
+            console.log(`${qPrompt} is qPrompt`);
         }
     }
 
