@@ -84,7 +84,7 @@ function promptRequest()
     console.log(question2[1]);
 
     console.log("trying to get diff outputs w/i for loop");
-    for (int i = 0; i < 5; i++)
+    for (let i = 0; i < 5; i++)
     {
         let phpQuestionTime = '<?php echo promptRequest();?>';
         let questionTime = JSON.parse(phpQuestionTime);
