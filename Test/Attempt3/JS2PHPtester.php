@@ -63,7 +63,9 @@ function promptRequest()
     }
 
     let q1 = new Question();
-    console.log(q1.qPrompt + " = q1.qPrompt1");
+    console.log(q1.qPrompt + " = q1.qPrompt");
+    let q2 = new Question();
+    console.log(q2.qPrompt + " = q2.qPrompt");
 
 </script>
 </body>
