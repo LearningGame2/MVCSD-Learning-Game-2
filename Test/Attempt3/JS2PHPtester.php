@@ -52,7 +52,7 @@ function promptRequest()
             var phpQuestion = '<?php echo promptRequest();?>';
             var question = JSON.parse(phpQuestion);
             console.log(question[1]);
-            qPrompt = phpQuestion[1];
+            qPrompt = question[1];
             // this.qAns = phpQuestion[2];
             // this.qResponse1 = phpQuestion[2]
             // this.qResponse2 = phpQuestion[3];
