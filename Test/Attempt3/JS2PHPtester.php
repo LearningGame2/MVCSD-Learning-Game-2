@@ -54,7 +54,8 @@ function promptRequest()
         {
             //how to parse JSON into these things...?  maybe call a new function for each?  (bring those back in code?)
 
-            let phpQuestion = '<?php echo promptRequest();?>';
+            let phpQuestion = '';
+            phpQuestion = '<?php echo promptRequest();?>';
             var question = JSON.parse(phpQuestion);
             console.log(question[1] + " inside class, inside constructor");
 
