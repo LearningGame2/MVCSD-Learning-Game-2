@@ -128,146 +128,45 @@ function promptRequest(){
         </div>
     </main>
     <script>
-      
 
 
+class Question {
+    constructor (qPrompt, qAns, qResponse1, qResponse2, qResponse3, qResponse4)
+    {
+        //how to parse JSON into these things...?  maybe call a new function for each?  (bring those back in code?)
+        var phpQuestion = '<?php echo promptRequest();?>';
+        var question = JSON.parse(phpQuestion);
+        this.qPrompt = phpQuestion[1];
+        this.qAns = phpQuestion[2];
+        this.qResponse1 = phpQuestion[2]
+        this.qResponse2 = phpQuestion[3];
+        this.qResponse3 = phpQuestion[4];
+        this.qResponse4 = phpQuestion[5];
+        console.log("${qPrompt} is qPrompt}");
+    }
+}
 
-function fillQuestions(){ 
-    var questions = [
-        //Question 1
-            {
-                question: "",
-                optionA: "",
-                optionB: "",
-                optionC: "",
-                optionD: "",
-                correctOption: ""
-            },
-        //Question 2
+
+//all this is not in any function:
+let questions = [100];
+
+
+//class Questions {
+    //this.questions = [100];
+    function fillQuestions {
+        for (int i = 0; i < 5; i++) /* change the end condition to i < 100 if this works, then later when restructuring game, 
+                                    set an if statement to change the array iterator to 20, 40, etc whatever level they move to * 20 */
         {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 3
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 4
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 5
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 6
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 7
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 8
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 9
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 10
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
+            
+            questions[i] = new Question;
+
         }
-];  
-for (let i = 0; i < 10; i++) {
-
-    var phpPrompt = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
-    var prompt = JSON.parse(phpPrompt);
-    console.log(prompt);
-    questions[i].question = prompt[1];
-
-    var j = Math.floor(Math.random()*4)+1;
-
-    if(j == 1){
-        questions[i].optionA = prompt[2];
-        questions[i].optionB = prompt[3];
-        questions[i].optionC = prompt[4];
-        questions[i].optionD = prompt[5];
-        questions[i].correctOption ="optionA";
+        return questions;
     }
-    if(j == 2){
-        questions[i].optionA = prompt[5];
-        questions[i].optionB = prompt[2];
-        questions[i].optionC = prompt[3];
-        questions[i].optionD = prompt[4];
-        questions[i].correctOption = "optionB";
-    } 
-    if(j == 3){
-        questions[i].optionA = prompt[4];
-        questions[i].optionB = prompt[5];
-        questions[i].optionC = prompt[2];
-        questions[i].optionD = prompt[3];
-        questions[i].correctOption = "optionC";
-    }
-    if(j == 4){
-        questions[i].optionA = prompt[3];
-        questions[i].optionB = prompt[4];
-        questions[i].optionC = prompt[5];
-        questions[i].optionD = prompt[2];
-        questions[i].correctOption = "optionD";
-    }
-}
-    return questions;
-}
+//}
 
     
-let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
+//let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
     
 function handleQuestions() {
     questions = fillQuestions();
@@ -290,7 +189,10 @@ function handleQuestions() {
     // function for displaying next question in the array to dom
     //also handles displaying players and quiz information to dom
     function NextQuestion(index) {
-        handleQuestions()
+        //handleQuestions()
+
+        const shuffledQuestions = fillQuestion();
+
         const currentQuestion = shuffledQuestions[index]
         document.getElementById("question-number").innerHTML = questionNumber
         document.getElementById("player-score").innerHTML = playerScore
