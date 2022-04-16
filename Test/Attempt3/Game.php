@@ -148,9 +148,9 @@ class Question {
 
 
 //all this is not in any function:
-let questions = [100];
-let q1 = new Question;
-console.log(q1.qPrompt+ "= q1.qPrompt");
+// let questions = [100];
+// let q1 = new Question;
+// console.log(q1.qPrompt+ "= q1.qPrompt");
 
 
 //class Questions {
@@ -160,7 +160,7 @@ console.log(q1.qPrompt+ "= q1.qPrompt");
                                     set an if statement to change the array iterator to 20, 40, etc whatever level they move to * 20 */
         {
             
-            questions[i] = new Question;
+            questions[i] = new Question();
 
         }
         return questions;

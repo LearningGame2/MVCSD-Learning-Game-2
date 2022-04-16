@@ -22,7 +22,7 @@ main{
     justify-content: center;
     align-items: center;
     background-color: black;
-    background: url('../assets/background_image.jpg');
+    /*ERROR: background: url('../assets/background_image.jpg'); commented out because not loading and messing up the console*/
     background-color : black;
     background-repeat: no-repeat;
     background-size: cover;
