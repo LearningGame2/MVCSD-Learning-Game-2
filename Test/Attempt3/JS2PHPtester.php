@@ -46,7 +46,7 @@ function promptRequest()
 <script>
     class Question
     {
-        qPrompt: "";//, qAns: "", qResponse1: "", qResponse2: "", qResponse3: "", qResponse4: "";
+       // qPrompt: "";//, qAns: "", qResponse1: "", qResponse2: "", qResponse3: "", qResponse4: "";
 
         var phpQuestion = '<?php echo promptRequest();?>';
         var question = JSON.parse(phpQuestion);
