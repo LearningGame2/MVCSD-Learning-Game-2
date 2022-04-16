@@ -14,7 +14,8 @@ function connect() {
     
     
     
-function promptRequest(){
+function promptRequest()
+{
     
       $rowNumber = rand(1,300);
     
@@ -22,7 +23,8 @@ function promptRequest(){
         $prompt = "";
           $conn = connect();
           $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
-            if ($result = mysqli_query($conn, $sql)) {
+            if ($result = mysqli_query($conn, $sql))
+            {
            
                 $row = mysqli_fetch_row($result);
       
@@ -35,7 +37,7 @@ function promptRequest(){
       
                 return json_encode($row);
             }
-    }
+}
 
 
 ?>
@@ -43,7 +45,7 @@ function promptRequest(){
 <body>
 <script>
     class Question {
-        qPrompt, qAns, qResponse1, qResponse2, qResponse3, qResponse4;
+        qPrompt: "", qAns: "", qResponse1: "", qResponse2: "", qResponse3: "", qResponse4: "";
         constructor ()
         {
             //how to parse JSON into these things...?  maybe call a new function for each?  (bring those back in code?)
