@@ -48,14 +48,16 @@ function promptRequest()
     {
        // qPrompt: "";//, qAns: "", qResponse1: "", qResponse2: "", qResponse3: "", qResponse4: "";
 
-        let phpQuestion = '<?php echo promptRequest();?>';
-        var question = JSON.parse(phpQuestion);
-        console.log(question[1] + " inside class, outside constructor");
+  
 
         constructor ()
         {
             //how to parse JSON into these things...?  maybe call a new function for each?  (bring those back in code?)
 
+            let phpQuestion = '<?php echo promptRequest();?>';
+            var question = JSON.parse(phpQuestion);
+            console.log(question[1] + " inside class, inside constructor");
+            
             this.qPrompt = question[1];
             // this.qAns = phpQuestion[2];
             // this.qResponse1 = phpQuestion[2]
