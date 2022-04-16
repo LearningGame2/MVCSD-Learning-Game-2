@@ -154,7 +154,7 @@ let questions = [100];
 //class Questions {
     //this.questions = [100];
     function fillQuestions {
-        for (int i = 0; i < 5; i++) /* change the end condition to i < 100 if this works, then later when restructuring game, 
+        for (int i = 0; i < 100; i++) /* change the end condition to i < 100 if this works, then later when restructuring game, 
                                     set an if statement to change the array iterator to 20, 40, etc whatever level they move to * 20 */
         {
             
