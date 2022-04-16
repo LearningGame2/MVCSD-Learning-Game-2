@@ -44,14 +44,18 @@ function promptRequest()
 
 <body>
 <script>
-    class Question {
+    class Question
+    {
         qPrompt: "";//, qAns: "", qResponse1: "", qResponse2: "", qResponse3: "", qResponse4: "";
+
+        var phpQuestion = '<?php echo promptRequest();?>';
+        var question = JSON.parse(phpQuestion);
+        console.log(question[1] + " inside class, outside constructor");
+
         constructor ()
         {
             //how to parse JSON into these things...?  maybe call a new function for each?  (bring those back in code?)
-            var phpQuestion = '<?php echo promptRequest();?>';
-            var question = JSON.parse(phpQuestion);
-            console.log(question[1]);
+
             this.qPrompt = question[1];
             // this.qAns = phpQuestion[2];
             // this.qResponse1 = phpQuestion[2]
@@ -62,9 +66,9 @@ function promptRequest()
         }
     }
 
-    let q1 = new Question();
+    var q1 = new Question();
     console.log(q1.qPrompt + " = q1.qPrompt");
-    let q2 = new Question();
+    var q2 = new Question();
     console.log(q2.qPrompt + " = q2.qPrompt");
 
 </script>
