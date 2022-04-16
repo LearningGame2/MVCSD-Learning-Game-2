@@ -130,7 +130,8 @@ function promptRequest(){
 
 
 class Question {
-    constructor (qPrompt, qAns, qResponse1, qResponse2, qResponse3, qResponse4)
+    qPrompt, qAns, qResponse1, qResponse2, qResponse3, qResponse4;
+    constructor ()
     {
         //how to parse JSON into these things...?  maybe call a new function for each?  (bring those back in code?)
         var phpQuestion = '<?php echo promptRequest();?>';
