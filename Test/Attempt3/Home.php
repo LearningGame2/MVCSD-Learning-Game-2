@@ -21,7 +21,7 @@
       margin: 4px 2px;
       cursor: pointer;
       font-size: 24px;
-      height:200px;
+      height:100px;
       width:200px;
     }
     .button1 {
