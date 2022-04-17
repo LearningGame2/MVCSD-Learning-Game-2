@@ -27,12 +27,8 @@ $numOfUsers = mysqli_num_rows();
       $User[$x] = json_encod(mysqli_fetch_row($result));
       mysqli_free_result($result);
   }
-  return json_encode($User);
+  return $numOfUsers;
   }
-
-      
-
-
 
 }
 ?>
