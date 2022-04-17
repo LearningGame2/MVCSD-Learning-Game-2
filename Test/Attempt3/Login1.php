@@ -12,18 +12,12 @@ function connect() {
 function userLogInRequest(){
           $conn = connect();
           $sql = "SELECT * FROM UserDatabase";
-          if ($result = mysqli_query($conn, $sql)) {
-           
-            $row = mysqli_fetch_row($result);
+          $result = mysqli_query($conn, $sql)
+          $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+          return $data;
   
               
-            
-            mysqli_free_result($result);
-         
-         mysqli_close($conn);
-    
-          return json_encode($row);
-          }
+
 }
 
 
