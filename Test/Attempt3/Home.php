@@ -49,7 +49,9 @@
 
 <body style="background-color:black;">
   <h1 style="text-align:center; color:white;">
-    <font face="Arial;" size="+3;">MVCSD</font>
+    <span style="float:left; font-family:Copperplate">
+      MVCSD
+    </span>
     <span style="float:right; font-family:Copperplate">
       <a href="#">Home</a>
       &nbsp;
