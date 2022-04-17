@@ -38,12 +38,18 @@
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
+    .alignleft {
+	     float: left;
+     }
+     .alignright {
+	      float: right;
+      }
   </style>
 </head>
 
 <body style="background-color:black;">
   <h1 style="text-align:center; color:white;">
-    Logged in!
+    <div class="alightleft;"> MVCSD </div>
     <span style="float:right; font-family:Copperplate">
       <a href="#">Home</a>
       &nbsp;
