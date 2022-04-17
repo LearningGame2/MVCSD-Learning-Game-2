@@ -20,6 +20,7 @@
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
+      font-size: 24px;
     }
     .button1 {
       margin: 0;
@@ -56,9 +57,8 @@
 
 <body style="background-color:black;">
   <div style = "text-align:center; position:relative; top:500px; color:white;">
-     This div has relative positioning.
+     Press Button to Play
   </div>
-  <h2 style="text-align:center; color:white;">Press button to play </h2>
 
   <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
   <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>
