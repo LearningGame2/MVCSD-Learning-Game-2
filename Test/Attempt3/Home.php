@@ -49,9 +49,9 @@
 
 <body style="background-color:black;">
   <h1 style="text-align:center; color:white;">
-    <span style="float:left; font-family:Copperplate">
+    <h1 style="float:left; font-family:Copperplate">
       MVCSD
-    </span>
+    </h1>
     <span style="float:right; font-family:Copperplate">
       <a href="#">Home</a>
       &nbsp;
