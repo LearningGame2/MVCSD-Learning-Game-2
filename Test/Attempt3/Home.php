@@ -11,7 +11,7 @@
   <style>
     .button {
       text-align: center;
-      background-color: #4CAF50;
+      background-color: #197DDD;
       border: none;
       color: white;
       padding: 15px 32px;
@@ -41,9 +41,9 @@
   </style>
 </head>
 
-<body>
-  <h1 style="text-align:center;">Logged in!</h1>
-  <h2 style="text-align:center;">Press button to play </h2>
+<body style="background-color:black;">
+  <h1 style="text-align:center; color:white;">Logged in!</h1>
+  <h2 style="text-align:center; color:white;">Press button to play </h2>
 
   <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
   <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>
