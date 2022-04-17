@@ -48,23 +48,25 @@
 </head>
 
 <body style="background-color:black;">
-  <h1 style="text-align:center; color:white;">
-    <span style="float:left; font-family:Copperplate">
-      MVCSD
-    </span>
-    <span style="float:right; font-family:Copperplate">
-      <a href="#">Home</a>
-      &nbsp;
-      <a href="#">Log In</a>
-      &nbsp;
-      <a href="#">About</a>
-      &nbsp;
-      <a href="#">Contact</a>
-      &nbsp;
-      <a href="#">Info</a>
-      &nbsp;
-    </span>
-  </h1>
+  <div>
+    <h1 style="text-align:center; color:white;">
+      <span style="float:left; font-family:Copperplate">
+        MVCSD
+      </span>
+      <span style="float:right; font-family:Copperplate">
+        <a href="#">Home</a>
+        &nbsp;
+        <a href="#">Log In</a>
+        &nbsp;
+        <a href="#">About</a>
+        &nbsp;
+        <a href="#">Contact</a>
+        &nbsp;
+        <a href="#">Info</a>
+        &nbsp;
+      </span>
+    </h1>
+  </div>
 
   <h2 style="text-align:center; color:white;">Press button to play </h2>
 
