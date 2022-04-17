@@ -56,7 +56,7 @@
 </header>
 
 <body style="background-color:black;">
-  <div style = "text-align:center; position:relative; top:200px; font-size:40px; color:white;">
+  <div style = "text-align:center; position:relative; top:180px; font-size:48px; color:white;">
      Press Button to Play
   </div>
 
