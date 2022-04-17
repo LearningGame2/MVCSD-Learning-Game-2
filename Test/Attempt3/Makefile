@@ -9,7 +9,7 @@ PutHTML:
 		cp Connection.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Game.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Home.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
-		cp Login1.html /var/www/html/class/ssd/$(USER)/LGAttempt3/
+		cp Login1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp LoginStyle.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp validate.js /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp TestingAround.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
