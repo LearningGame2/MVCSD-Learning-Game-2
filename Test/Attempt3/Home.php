@@ -41,6 +41,14 @@
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
+    .button1:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .button1:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
     header.page-header {
     display: flex;
     height: 50px;
