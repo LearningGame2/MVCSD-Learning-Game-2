@@ -38,13 +38,11 @@
       transform: translate(-50%, -50%);
     }
     header.page-header {
-    background: no-repeat left/cover url(/media/examples/puppy-header-logo.jpg);
     display: flex;
-    height: 120px;
+    height: 50px;
     min-width: 120px;
     align-items: center;
-    color: #fff;
-    text-shadow: #000 0 0 .2em;
+    color: black;
     }
   </style>
 </head>
