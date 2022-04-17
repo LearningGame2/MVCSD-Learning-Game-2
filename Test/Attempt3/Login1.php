@@ -12,8 +12,18 @@ function connect() {
 
 
 function userLogInRequest(){
-  $Penis = "sex";
-  return $Penis;
+  
+
+  $conn = connect();
+  mysqli_close($conn);
+  
+
+  $penis = "sex";
+  return $penis;
+
+      
+
+
 
 }
 ?>
