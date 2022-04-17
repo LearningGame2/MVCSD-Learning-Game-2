@@ -14,6 +14,7 @@ function userLogInRequest(){
           $sql = "SELECT * FROM UserDatabase";
           $result = mysqli_query($conn, $sql)
           $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+          mysqli_free_result($result);
           return $data;
   
               
