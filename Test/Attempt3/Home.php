@@ -60,7 +60,7 @@
 
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <h1 style="text-align:center; color:white;">
+  <h1 style="text-align:left; color:white;">
     MVCSD
   </h1>
 </header>
