@@ -15,6 +15,15 @@ function userLogInRequest(){
   
 
   $conn = connect();
+  $sql = "SELECT * FROM UserDatabase";
+  if ($result = mysqli_query($conn, $sql)) {
+   
+      $row = mysqli_fetch_row($result);
+
+        
+      
+      mysqli_free_result($result);
+  }
   mysqli_close($conn);
   
 
