@@ -15,4 +15,6 @@ PutHTML:
 		cp TestingAround.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Game.js /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Game.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
+		cp notes.txt /var/www/html/class/ssd/$(USER)/LGAttempt3/
+
 
