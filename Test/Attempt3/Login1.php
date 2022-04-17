@@ -11,6 +11,10 @@ function connect() {
 
 
 
+function userLogInRequest(){
+  return 69;
+
+}
 ?>
 
 
