@@ -23,6 +23,7 @@
       font-size: 24px;
       height:100px;
       width:200px;
+      transition-duration: 0.4s;
     }
     .button1 {
       margin: 0;
