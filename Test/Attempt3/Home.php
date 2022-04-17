@@ -42,10 +42,9 @@
       transform: translate(-50%, -50%);
     }
     .button1:hover {
-      background-color: #4CAF50;
-      color: white;
+      background-color: black;
     }
-    .button1:hover {
+    .button2:hover {
       background-color: #4CAF50;
       color: white;
     }
