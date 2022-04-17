@@ -55,7 +55,7 @@
 </header>
 
 <body style="background-color:black;">
-  <div style = "position:relative; top:50px; background-color:yellow;">
+  <div style = "text-align:center; position:relative; top:50px; color:white;">
      This div has relative positioning.
   </div>
   <h2 style="text-align:center; color:white;">Press button to play </h2>
