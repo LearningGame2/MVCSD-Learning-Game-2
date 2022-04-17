@@ -25,10 +25,9 @@ function userLogInRequest(){
       mysqli_free_result($result);
   }
   mysqli_close($conn);
-  
+  return json_encode($row);
 
   $penis = "sex";
-  return $row;
 
       
 
