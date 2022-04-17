@@ -35,7 +35,10 @@
 <body>
     <h1 style="text-align:center;">Logged in!</h1>
     <h2 style="text-align:center;">Press button to play </h2>
-    <button type ="submit" onclick = "goToGame()" class="button;center">Play</button>
+
+    <div class="button">
+      <button type ="submit" onclick = "goToGame()" class="center">Play</button>
+    </div>
     <button type ="submit" onclick = "logOut()" class="button">Log out</button>
 </body>
 
