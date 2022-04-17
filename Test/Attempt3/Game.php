@@ -33,7 +33,7 @@ function promptRequest(){
       
             return json_encode($row);
             }
-    }
+}
 
 ?>
 
@@ -126,7 +126,12 @@ function promptRequest(){
 
         </div>
     </main>
-<script>
+    <script>
+
+
+
+
+
 
 function fillQuestions(){ 
     const questions = [
@@ -220,392 +225,49 @@ function fillQuestions(){
             optionD: "",
             correctOption: ""
         }
-]; 
+];   
+  for (let i = 0; i < 10; i++) {
 
- // QUESTION 0 
-
-    var phpPrompt0 = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
-    var prompt0 = JSON.parse(phpPrompt0);
-    console.log(prompt0);
-    questions[0].question = prompt0[1];
-
-    var j = Math.floor(Math.random()*4)+1;
-
-    if(j == 1){
-        questions[0].optionA = prompt0[2];
-        questions[0].optionB = prompt0[3];
-        questions[0].optionC = prompt0[4];
-        questions[0].optionD = prompt0[5];
-        questions[0].correctOption ="optionA";
-    }
-    if(j == 2){
-        questions[0].optionA = prompt0[5];
-        questions[0].optionB = prompt0[2];
-        questions[0].optionC = prompt0[3];
-        questions[0].optionD = prompt0[4];
-        questions[0].correctOption = "optionB";
-    } 
-    if(j == 3){
-        questions[0].optionA = prompt0[4];
-        questions[0].optionB = prompt0[5];
-        questions[0].optionC = prompt0[2];
-        questions[0].optionD = prompt0[3];
-        questions[0].correctOption = "optionC";
-    }
-    if(j == 4){
-        questions[0].optionA = prompt0[3];
-        questions[0].optionB = prompt0[4];
-        questions[0].optionC = prompt0[5];
-        questions[0].optionD = prompt0[2];
-        questions[0].correctOption = "optionD";
-    }
-
-   
-
-  // QUESTION 1
-
-  var phpPrompt1 = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
-    var prompt1= JSON.parse(phpPrompt1);
-    console.log(prompt1);
-    questions[1].question = prompt1[1];
+    var phpPrompt = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
+    var prompt = JSON.parse(phpPrompt);
+    console.log(prompt);
+    questions[i].question = prompt[1];
 
     var j = Math.floor(Math.random()*4)+1;
 
     if(j == 1){
-        questions[1].optionA = prompt1[2];
-        questions[1].optionB = prompt1[3];
-        questions[1].optionC = prompt1[4];
-        questions[1].optionD = prompt1[5];
-        questions[1].correctOption ="optionA";
+        questions[i].optionA = prompt[2];
+        questions[i].optionB = prompt[3];
+        questions[i].optionC = prompt[4];
+        questions[i].optionD = prompt[5];
+        questions[i].correctOption ="optionA";
     }
     if(j == 2){
-        questions[1].optionA = prompt1[5];
-        questions[1].optionB = prompt1[2];
-        questions[1].optionC = prompt1[3];
-        questions[1].optionD = prompt1[4];
-        questions[1].correctOption = "optionB";
+        questions[i].optionA = prompt[5];
+        questions[i].optionB = prompt[2];
+        questions[i].optionC = prompt[3];
+        questions[i].optionD = prompt[4];
+        questions[i].correctOption = "optionB";
     } 
     if(j == 3){
-        questions[1].optionA = prompt1[4];
-        questions[1].optionB = prompt1[5];
-        questions[1].optionC = prompt1[2];
-        questions[1].optionD = prompt1[3];
-        questions[1].correctOption = "optionC";
+        questions[i].optionA = prompt[4];
+        questions[i].optionB = prompt[5];
+        questions[i].optionC = prompt[2];
+        questions[i].optionD = prompt[3];
+        questions[i].correctOption = "optionC";
     }
     if(j == 4){
-        questions[1].optionA = prompt1[3];
-        questions[1].optionB = prompt1[4];
-        questions[1].optionC = prompt1[5];
-        questions[1].optionD = prompt1[2];
-        questions[1].correctOption = "optionD";
+        questions[i].optionA = prompt[3];
+        questions[i].optionB = prompt[4];
+        questions[i].optionC = prompt[5];
+        questions[i].optionD = prompt[2];
+        questions[i].correctOption = "optionD";
     }
-    
-// QUESTION 2
-
-  var phpPrompt2 = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
-    var prompt2= JSON.parse(phpPrompt2);
-    console.log(prompt2);
-    questions[2].question = prompt2[1];
-
-    var j = Math.floor(Math.random()*4)+1;
-
-    if(j == 1){
-        questions[2].optionA = prompt2[2];
-        questions[2].optionB = prompt2[3];
-        questions[2].optionC = prompt2[4];
-        questions[2].optionD = prompt2[5];
-        questions[2].correctOption ="optionA";
-    }
-    if(j == 2){
-        questions[2].optionA = prompt2[5];
-        questions[2].optionB = prompt2[2];
-        questions[2].optionC = prompt2[3];
-        questions[2].optionD = prompt2[4];
-        questions[2].correctOption = "optionB";
-    } 
-    if(j == 3){
-        questions[2].optionA = prompt2[4];
-        questions[2].optionB = prompt2[5];
-        questions[2].optionC = prompt2[2];
-        questions[2].optionD = prompt2[3];
-        questions[2].correctOption = optionC";
-    }
-    if(j == 4){
-        questions[2].optionA = prompt2[3];
-        questions[2].optionB = prompt2[4];
-        questions[2].optionC = prompt2[5];
-        questions[2].optionD = prompt2[2];
-        questions[2].correctOption = "optionD";
-    }
-
- // QUESTION 3
-
- var phpPrompt3 = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
-    var prompt3= JSON.parse(phpPrompt3);
-    console.log(prompt3);
-    questions[3].question = prompt3[1];
-
-    var j = Math.floor(Math.random()*4)+1;
-
-    if(j == 1){
-        questions[3].optionA = prompt3[2];
-        questions[3].optionB = prompt3[3];
-        questions[3].optionC = prompt3[4];
-        questions[3].optionD = prompt3[5];
-        questions[3].correctOption ="optionA";
-    }
-    if(j == 2){
-        questions[3].optionA = prompt3[5];
-        questions[3].optionB = prompt3[2];
-        questions[3].optionC = prompt3[3];
-        questions[3].optionD = prompt3[4];
-        questions[3].correctOption = "optionB";
-    } 
-    if(j == 3){
-        questions[3].optionA = prompt3[4];
-        questions[3].optionB = prompt3[5];
-        questions[3].optionC = prompt3[2];
-        questions[3].optionD = prompt3[3];
-        questions[3].correctOption = "optionC";
-    }
-    if(j == 4){
-        questions[3].optionA = prompt3[3];
-        questions[3].optionB = prompt3[4];
-        questions[3].optionC = prompt3[5];
-        questions[3].optionD = prompt3[2];
-        questions[3].correctOption = "optionD";
-    }
-    
- // QUESTION 4
-
- var phpPrompt4 = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
-    var prompt4= JSON.parse(phpPrompt4);
-    console.log(prompt4);
-    questions[4].question = prompt4[1];
-
-    var j = Math.floor(Math.random()*4)+1;
-
-    if(j == 1){
-        questions[4].optionA = prompt4[2];
-        questions[4].optionB = prompt4[3];
-        questions[4].optionC = prompt4[4];
-        questions[4].optionD = prompt4[5];
-        questions[4].correctOption ="optionA";
-    }
-    if(j == 2){
-        questions[4].optionA = prompt4[5];
-        questions[4].optionB = prompt4[2];
-        questions[4].optionC = prompt4[3];
-        questions[4].optionD = prompt4[4];
-        questions[4].correctOption = "optionB";
-    } 
-    if(j == 3){
-        questions[4].optionA = prompt4[4];
-        questions[4].optionB = prompt4[5];
-        questions[4].optionC = prompt4[2];
-        questions[4].optionD = prompt4[3];
-        questions[4].correctOption = "optionC";
-    }
-    if(j == 4){
-        questions[4].optionA = prompt4[3];
-        questions[4].optionB = prompt4[4];
-        questions[4].optionC = prompt4[5];
-        questions[4].optionD = prompt4[2];
-        questions[4].correctOption = "optionD";
-    }
-
-   // QUESTION 5
-
-   var phpPrompt5 = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
-    var prompt5= JSON.parse(phpPrompt5);
-    console.log(prompt5);
-    questions[5].question = prompt5[1];
-
-    var j = Math.floor(Math.random()*4)+1;
-
-    if(j == 1){
-        questions[5].optionA = prompt5[2];
-        questions[5].optionB = prompt5[3];
-        questions[5].optionC = prompt5[4];
-        questions[5].optionD = prompt5[5];
-        questions[5].correctOption ="optionA";
-    }
-    if(j == 2){
-        questions[5].optionA = prompt5[5];
-        questions[5].optionB = prompt5[2];
-        questions[5].optionC = prompt5[3];
-        questions[5].optionD = prompt5[4];
-        questions[5].correctOption = "optionB";
-    } 
-    if(j == 3){
-        questions[5].optionA = prompt5[4];
-        questions[5].optionB = prompt5[5];
-        questions[5].optionC = prompt5[2];
-        questions[5].optionD = prompt5[3];
-        questions[5].correctOption = "optionC";
-    }
-    if(j == 4){
-        questions[5].optionA = prompt5[3];
-        questions[5].optionB = prompt5[4];
-        questions[5].optionC = prompt5[5];
-        questions[5].optionD = prompt5[2];
-        questions[5].correctOption = "optionD";
-    }
- // QUESTION 6
-
- var phpPrompt6 = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
-    var prompt6= JSON.parse(phpPrompt6);
-    console.log(prompt6);
-    questions[6].question = prompt6[1];
-
-    var j = Math.floor(Math.random()*4)+1;
-
-    if(j == 1){
-        questions[6].optionA = prompt6[2];
-        questions[6].optionB = prompt6[3];
-        questions[6].optionC = prompt6[4];
-        questions[6].optionD = prompt6[5];
-        questions[6].correctOption ="optionA";
-    }
-    if(j == 2){
-        questions[6].optionA = prompt6[5];
-        questions[6].optionB = prompt6[2];
-        questions[6].optionC = prompt6[3];
-        questions[6].optionD = prompt6[4];
-        questions[6].correctOption = "optionB";
-    } 
-    if(j == 3){
-        questions[6].optionA = prompt6[4];
-        questions[6].optionB = prompt6[5];
-        questions[6].optionC = prompt6[2];
-        questions[6].optionD = prompt6[3];
-        questions[6].correctOption = "optionC";
-    }
-    if(j == 4){
-        questions[6].optionA = prompt6[3];
-        questions[6].optionB = prompt6[4];
-        questions[6].optionC = prompt6[5];
-        questions[6].optionD = prompt6[2];
-        questions[6].correctOption = "optionD";
-
-    }
-
- // QUESTION 7
-
- var phpPrompt7 = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
-    var prompt7= JSON.parse(phpPrompt7);
-    console.log(prompt7);
-    questions[7].question = prompt7[1];
-
-    var j = Math.floor(Math.random()*4)+1;
-
-    if(j == 1){
-        questions[7].optionA = prompt7[2];
-        questions[7].optionB = prompt7[3];
-        questions[7].optionC = prompt7[4];
-        questions[7].optionD = prompt7[5];
-        questions[7].correctOption ="optionA";
-    }
-    if(j == 2){
-        questions[7].optionA = prompt7[5];
-        questions[7].optionB = prompt7[2];
-        questions[7].optionC = prompt7[3];
-        questions[7].optionD = prompt7[4];
-        questions[7].correctOption = "optionB";
-    } 
-    if(j == 3){
-        questions[7].optionA = prompt7[4];
-        questions[7].optionB = prompt7[5];
-        questions[7].optionC = prompt7[2];
-        questions[7].optionD = prompt7[3];
-        questions[7].correctOption = "optionC";
-    }
-    if(j == 4){
-        questions[7].optionA = prompt7[3];
-        questions[7].optionB = prompt7[4];
-        questions[7].optionC = prompt7[5];
-        questions[7].optionD = prompt7[2];
-        questions[7].correctOption = "optionD";
-    }
-    
-     // QUESTION 8
-
-  var phpPrompt8= '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
-    var prompt8= JSON.parse(phpPrompt8);
-    console.log(prompt8);
-    questions[8].question = prompt8[1];
-
-    var j = Math.floor(Math.random()*4)+1;
-
-    if(j == 1){
-        questions[8].optionA = prompt8[2];
-        questions[8].optionB = prompt8[3];
-        questions[8].optionC = prompt8[4];
-        questions[8].optionD = prompt8[5];
-        questions[8].correctOption ="optionA";
-    }
-    if(j == 2){
-        questions[8].optionA = prompt8[5];
-        questions[8].optionB = prompt8[2];
-        questions[8].optionC = prompt8[3];
-        questions[8].optionD = prompt8[4];
-        questions[8].correctOption = "optionB";
-    } 
-    if(j == 3){
-        questions[8].optionA = prompt8[4];
-        questions[8].optionB = prompt8[5];
-        questions[8].optionC = prompt8[2];
-        questions[8].optionD = prompt8[3];
-        questions[8].correctOption = "optionC";
-    }
-    if(j == 4){
-        questions[8].optionA = prompt8[3];
-        questions[8].optionB = prompt8[4];
-        questions[8].optionC = prompt8[5];
-        questions[8].optionD = prompt8[2];
-        questions[8].correctOption = "optionD";
-    }
-    
- // QUESTION 9
-
- var phpPrompt9 = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
-    var prompt9= JSON.parse(phpPrompt9);
-    console.log(prompt9);
-    questions[9].question = prompt9[1];
-
-    var j = Math.floor(Math.random()*4)+1;
-
-    if(j == 1){
-        questions[9].optionA = prompt9[2];
-        questions[9].optionB = prompt9[3];
-        questions[9].optionC = prompt9[4];
-        questions[9].optionD = prompt9[5];
-        questions[9].correctOption ="optionA";
-    }
-    if(j == 2){
-        questions[9].optionA = prompt9[5];
-        questions[9].optionB = prompt9[2];
-        questions[9].optionC = prompt9[3];
-        questions[9].optionD = prompt9[4];
-        questions[9].correctOption = "optionB";
-    } 
-    if(j == 3){
-        questions[9].optionA = prompt9[4];
-        questions[9].optionB = prompt9[5];
-        questions[9].optionC = prompt9[2];
-        questions[9].optionD = prompt9[3];
-        questions[9].correctOption = "optionC";
-    }
-    if(j == 4){
-        questions[9].optionA = prompt9[3];
-        questions[9].optionB = prompt9[4];
-        questions[9].optionC = prompt9[5];
-        questions[9].optionD = prompt9[2];
-        questions[9].correctOption = "optionD";
-    }
+}
     return questions;
-  }
+}
 
+    
 let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
     
 function handleQuestions() {
@@ -752,7 +414,7 @@ function handleQuestions() {
     }
     
     //closes score modal, resets game and reshuffles questions
-function closeScoreModal() {
+    function closeScoreModal() {
         questionNumber = 1
         playerScore = 0
         wrongAttempt = 0
@@ -760,13 +422,13 @@ function closeScoreModal() {
         shuffledQuestions = []
         NextQuestion(indexNumber)
         document.getElementById('score-modal').style.display = "none"
-}
+    }
     
     //function to close warning modal
-function closeOptionModal() {
+    function closeOptionModal() {
         document.getElementById('option-modal').style.display = "none"
     }
     
     
-</script>
+    </script>
 </body>
