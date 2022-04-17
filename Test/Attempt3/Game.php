@@ -1,3 +1,6 @@
+<html>
+
+
 <?php
 
 print "testPrint";
@@ -67,3 +70,6 @@ function promptRequest(){
     //now put script for array of php objects...?  maybe you can echo for each thing of an object into a js object for array
 
 ?>
+
+
+</html>
