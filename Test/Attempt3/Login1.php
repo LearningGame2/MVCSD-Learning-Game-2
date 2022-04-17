@@ -13,22 +13,22 @@ function connect() {
 
 function userLogInRequest(){
   
-
+$numOfUsers = mysqli_num_rows();
   $conn = connect();
   $sql = "SELECT * FROM UserDatabase";
-  if ($result = mysqli_query($conn, $sql)) {
-   
-      $row = mysqli_fetch_row($result);
-
-        
-      
-      mysqli_free_result($result);
-  }
+  
   mysqli_close($conn);
   //return json_encode($row);
 
   $penis = array("sex", "sexagain");
-  return $penis[1];
+  $User = array();
+  for ($x = 0; $x < $numOfUsers; $x++) {
+    if ($result = mysqli_query($conn, $sql)) {
+      $User[$x] = json_encod(mysqli_fetch_row($result));
+      mysqli_free_result($result);
+  }
+  return json_encode($User);
+  }
 
       
 
