@@ -13,7 +13,7 @@ function userLogInRequest(){
           $conn = connect();
           $sql = "SELECT * FROM UserDatabase";
           $result = mysqli_query($conn, $sql)
-          $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+          $data = mysqli_fetch_all($result);
           mysqli_free_result($result);
           return $data;
   
