@@ -9,8 +9,8 @@
 </head>
 <body>
     <h1 style="text-align:center;">Logged in!</h1>
-    <h2>Press button to play </h2>
-    <button type ="submit" onclick = "goToGame()">Play</button>
+    <h2 style="text-align:center;">Press button to play </h2>
+    <button type ="submit" onclick = "goToGame()" style="background-color:blue;">Play</button>
     <button type ="submit" onclick = "logOut()">Log out</button>
 </body>
 <script>
