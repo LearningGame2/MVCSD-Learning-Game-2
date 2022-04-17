@@ -1,17 +1,6 @@
 <?php
 
-
-function connect() {
-    $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
-    
-    if (mysqli_connect_errno()) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-        exit();
-    }
-    return $conn;
-}//Connection Function   
-
-
+include("config.php"); 
 session_start();
    
 if($_SERVER["REQUEST_METHOD"] == "POST") {
