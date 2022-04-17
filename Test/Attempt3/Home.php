@@ -40,8 +40,8 @@
     header.page-header {
     display: flex;
     height: 50px;
-    min-width: 1200px;
-    align-items: center;
+    min-width: 120px;
+    align-items: right;
     color: black;
     }
   </style>
@@ -51,6 +51,8 @@
   <h1 style="text-align:center; color:white;">
     MVCSD
   </h1>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <h1>
     <span style="float:right; font-family:Copperplate">
       <a href="#">Home</a>
