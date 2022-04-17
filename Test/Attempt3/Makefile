@@ -17,6 +17,5 @@ PutHTML:
 		cp Game.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp JS2PHPtester.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 
-
 		echo "Current contents of your HTML directory: "
 		ls -l /var/www/html/class/ssd/$(USER)/LGAttempt3/
