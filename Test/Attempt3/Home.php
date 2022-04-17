@@ -20,15 +20,23 @@
           font-size: 16px;
           margin: 4px 2px;
           cursor: pointer;
-                }
+        }
+        .center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 
 <body>
     <h1 style="text-align:center;">Logged in!</h1>
     <h2 style="text-align:center;">Press button to play </h2>
-    <button type ="submit" onclick = "goToGame()" class="button" style="text-align:center;">Play</button>
-    <button type ="submit" onclick = "logOut()" class="button" style="text-align:center;">Log out</button>
+    <button type ="submit" onclick = "goToGame()" class="button.center">Play</button>
+    <button type ="submit" onclick = "logOut()" class="button">Log out</button>
 </body>
 
 <script>
