@@ -41,7 +41,6 @@
     display: flex;
     height: 50px;
     min-width: 120px;
-    align-items: center;
     color: black;
     }
   </style>
