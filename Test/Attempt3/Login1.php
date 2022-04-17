@@ -12,11 +12,18 @@ function connect() {
 function userLogInRequest(){
           $conn = connect();
           $sql = "SELECT * FROM QuestionDatabase";
-          $result = mysqli_query($conn, $sql);
-           mysqli_free_result($result);
-           mysqli_close($conn);
-      
+          if ($result = mysqli_query($conn, $sql)) {
+           
+            $row = mysqli_fetch_row($result);
+  
+              
+            
+            mysqli_free_result($result);
+         
+         mysqli_close($conn);
+    
           return json_encode($row);
+          }
 }
 
 
