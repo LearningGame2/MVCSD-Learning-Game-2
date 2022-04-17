@@ -41,7 +41,7 @@
         <button type ="submit" onclick = "goToGame()">Play</button>
       </div>
     </div>
-    <button type ="submit" onclick = "logOut()" class="button">Log out</button>
+    <button type ="submit" onclick = "logOut()" class="button center">Log out</button>
 </body>
 
 <script>
