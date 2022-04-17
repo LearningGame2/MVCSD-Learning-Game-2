@@ -37,10 +37,19 @@
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
+    header.page-header {
+    background: no-repeat left/cover url(/media/examples/puppy-header-logo.jpg);
+    display: flex;
+    height: 120px;
+    min-width: 120px;
+    align-items: center;
+    color: #fff;
+    text-shadow: #000 0 0 .2em;
+    }
   </style>
 </head>
 
-<header>
+<header class="page-header">
   <h1 style="text-align:center; color:white;">
     <span style="float:left; font-family:Copperplate">
       MVCSD
