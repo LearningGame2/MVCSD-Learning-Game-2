@@ -12,7 +12,8 @@ function connect() {
 
 
 function userLogInRequest(){
-  return 69;
+  $Penis = "sex";
+  return $Penis;
 
 }
 ?>
