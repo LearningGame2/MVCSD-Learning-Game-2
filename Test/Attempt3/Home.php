@@ -21,6 +21,8 @@
       margin: 4px 2px;
       cursor: pointer;
       font-size: 24px;
+      height:200px;
+      width:200px;
     }
     .button1 {
       margin: 0;
@@ -56,7 +58,7 @@
 </header>
 
 <body style="background-color:black;">
-  <div style = "text-align:center; position:relative; top:180px; font-size:48px; color:white;">
+  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white;">
      Press Button to Play
   </div>
 
