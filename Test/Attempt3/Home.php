@@ -26,8 +26,8 @@
 <body>
     <h1 style="text-align:center;">Logged in!</h1>
     <h2 style="text-align:center;">Press button to play </h2>
-    <button type ="submit" onclick = "goToGame()" class="button">Play</button>
-    <button type ="submit" onclick = "logOut()">Log out</button>
+    <button type ="submit" onclick = "goToGame()" class="button" style="text-align:center;">Play</button>
+    <button type ="submit" onclick = "logOut()" class="button" style="text-align:center;">Log out</button>
 </body>
 
 <script>
