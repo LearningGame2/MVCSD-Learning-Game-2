@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <link href="Home.css" rel="Home Style">
+  <link href="Home.css;" rel="stylesheet;">
   <title>
     Login Sucessful
   </title>
