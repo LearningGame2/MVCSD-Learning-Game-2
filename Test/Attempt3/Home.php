@@ -43,6 +43,18 @@
 
 <body style="background-color:black;">
   <h1 style="text-align:center; color:white;">Logged in!</h1>
+  <span style="float:right; font-family:Copperplate">
+    <a href="#">Home</a>
+    &nbsp;
+    <a href="#">Log In</a>
+    &nbsp;
+    <a href="#">About</a>
+    &nbsp;
+    <a href="#">Contact</a>
+    &nbsp;
+    <a href="#">Info</a>
+    &nbsp;
+  </span>
   <h2 style="text-align:center; color:white;">Press button to play </h2>
 
   <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
