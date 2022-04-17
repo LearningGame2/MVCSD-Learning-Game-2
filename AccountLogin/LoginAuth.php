@@ -17,10 +17,10 @@ session_start();
 if($_SERVER["REQUEST_METHOD"] == "POST") {
    // username and password sent from form 
    
-   $myusername = mysqli_real_escape_string($db,$_POST['username']);
-   $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+   $myusername = mysqli_real_escape_string($db,$_POST['Username']);
+   $mypassword = mysqli_real_escape_string($db,$_POST['Password']); 
    
-   $sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
+   $sql = "SELECT id FROM admin WHERE Username = '$myusername' and Password = '$mypassword'";
    $result = mysqli_query($db,$sql);
    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
    $active = $row['active'];
