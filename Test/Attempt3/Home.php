@@ -22,11 +22,19 @@
       margin: 4px 2px;
       cursor: pointer;
     }
-    .center {
+    .button1 {
       margin: 0;
       position: absolute;
       top: 50%;
       left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .button2 {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 30%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
