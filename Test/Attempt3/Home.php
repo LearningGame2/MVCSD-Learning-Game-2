@@ -41,6 +41,7 @@
     display: flex;
     height: 50px;
     min-width: 120px;
+    align-items: center;
     color: black;
     }
   </style>
@@ -48,9 +49,9 @@
 
 <header class="page-header">
   <h1 style="text-align:center; color:white;">
-    <span style="float:left; font-family:Copperplate">
-      MVCSD
-    </span>
+    MVCSD
+  </h1>
+  <h1>  
     <span style="float:right; font-family:Copperplate">
       <a href="#">Home</a>
       &nbsp;
