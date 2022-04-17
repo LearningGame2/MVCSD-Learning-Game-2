@@ -40,8 +40,7 @@
   </style>
 </head>
 
-<body style="background-color:black;">
-
+<header>
   <h1 style="text-align:center; color:white;">
     <span style="float:left; font-family:Copperplate">
       MVCSD
@@ -59,7 +58,10 @@
       &nbsp;
     </span>
   </h1>
-  <br>
+</header>
+
+<body style="background-color:black;">
+
   <h2 style="text-align:center; color:white;">Press button to play </h2>
 
   <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
