@@ -24,6 +24,7 @@
       height:100px;
       width:200px;
       transition-duration: 0.4s;
+      border: 2px solid white;
     }
     .button1 {
       margin: 0;
@@ -45,8 +46,7 @@
       background-color: black;
     }
     .button2:hover {
-      background-color: #4CAF50;
-      color: white;
+      background-color: black;
     }
     header.page-header {
     display: flex;
