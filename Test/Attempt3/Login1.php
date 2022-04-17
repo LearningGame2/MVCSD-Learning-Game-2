@@ -28,7 +28,7 @@ function userLogInRequest(){
   //return json_encode($row);
 
   $penis = array("sex", "sexagain");
-  return $penis;
+  return json_encode($penis);
 
       
 
