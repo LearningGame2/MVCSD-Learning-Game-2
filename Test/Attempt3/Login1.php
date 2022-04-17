@@ -11,7 +11,7 @@ function connect() {
 
 function userLogInRequest(){
           $conn = connect();
-          $sql = "SELECT * FROM QuestionDatabase";
+          $sql = "SELECT * FROM UserDatabase";
           if ($result = mysqli_query($conn, $sql)) {
            
             $row = mysqli_fetch_row($result);
