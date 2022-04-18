@@ -43,10 +43,10 @@
       transform: translate(-50%, -50%);
     }
     .button1:hover {
-      background-color: black;
+      background-color: green;
     }
     .button2:hover {
-      background-color: black;
+      background-color: green;
     }
     header.page-header {
     display: flex;
