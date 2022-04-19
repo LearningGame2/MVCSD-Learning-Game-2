@@ -12,30 +12,35 @@ function connect() {
     
     
     
-function promptRequest(){
-    
-      $rowNumber = rand(1,300);
-    
-      
+function promptRequest($numOfQuestions){
+    $questions = array();
+    for ($x = 0; $x <= $numOfQuestions; $x++) {
+        $rowNumber = rand(1,300);
         $prompt = "";
-          $conn = connect();
-          $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
-          if ($result = mysqli_query($conn, $sql)) {
-           
-              $row = mysqli_fetch_row($result);
-      
-        //      $prompt = $row[1];
-                
+        $conn = connect();
+        $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
+        if ($result = mysqli_query($conn, $sql)) {
+         
+            $row = mysqli_fetch_row($result);
+    
+      //      $prompt = $row[1];
               
-              mysqli_free_result($result);
-           
-           mysqli_close($conn);
-      
-            return json_encode($row);
-            }
+            
+            mysqli_free_result($result);
+         
+         mysqli_close($conn);
+    
+          $questions[$x] = json_encode($row);
+      }
+    }
+  return json_encode($questions);
 }
 
+
+
 ?>
+
+
 
 <head>
   <link rel="stylesheet" href="Game.css">
@@ -226,10 +231,10 @@ function fillQuestions(){
             correctOption: ""
         }
 ];   
-  for (let i = 0; i < 10; i++) {
 
-    var phpPrompt = '<?php echo promptRequest();?>'; //This is not working :(((( Big sad
-    var prompt = JSON.parse(phpPrompt);
+    var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
+  for (let i = 0; i < 10; i++) {
+    var prompt = JSON.parse(phpPrompt[i]);
     console.log(prompt);
     questions[i].question = prompt[1];
 
