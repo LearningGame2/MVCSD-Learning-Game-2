@@ -1,4 +1,4 @@
-User= Game2
+USER= Game2
 
 all: PutHTML
 
