@@ -19,13 +19,13 @@
       // If result matched $myusername and $mypassword, table row must be 1 row
 		
       if($count == 1) {
-         session_register("myusername");
-         $_SESSION['login_user'] = $myusername;
+         //session_register("myusername");
+         //$_SESSION['login_user'] = $myusername;
          $error = "Login Sucessful";
          header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Game.php");
       }else {
          $error = "Your Login Name or Password is invalid";
-         header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Game.php");
+ 
       }
    }
 ?>
