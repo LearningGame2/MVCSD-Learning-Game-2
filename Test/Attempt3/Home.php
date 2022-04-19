@@ -65,7 +65,7 @@
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
   <h1 style="text-align:left; color:white;">
-    Welcome <?php echo "$user" ?>!
+    Welcome!
   </h1>
 </header>
 

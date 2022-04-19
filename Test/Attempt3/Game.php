@@ -68,7 +68,8 @@ function promptRequest($numOfQuestions){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="closeScoreModal()">Continue</button>
+                    <button onclick="closeScoreModal()">Play Again</button>
+                    <button onclick="returnHome()">Return Home</button>
                 </div>
 
             </div>
@@ -95,7 +96,7 @@ function promptRequest($numOfQuestions){
 
                          <div class="modal-button-container">
                             <button onclick="closeOptionModal()">Continue</button>
-                        </div>
+                        </div
 
                     </div>
 
@@ -435,6 +436,8 @@ function handleQuestions() {
         document.getElementById('option-modal').style.display = "none"
     }
 
-
+    function returnHome(){
+        window.location.href = "Home.php"
+    }
     </script>
 </body>

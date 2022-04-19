@@ -24,7 +24,7 @@
          $error = "Login Sucessful";
          header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
       }else {
-         $error = "Your Login Name or Password is invalid";
+         $error = "Your login name or password is invalid.";
 
       }
    }
