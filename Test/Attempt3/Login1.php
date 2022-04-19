@@ -51,7 +51,7 @@
     <form action = "" method = "post" class="login_form" autocomplete="off" name="form">
       <label style="color:white;"> Username: </label><input type = "text" name = "username" class = "box"/><br /><br />
       <label style="color:white;"> Password: </label><input type = "password" name = "password" class = "box" /><br/><br />
-      <input type = "submit" value = " Submit "/><br />
+      <input type = "submit" value = " Submit " syle="text-align:center; color:blue;"/><br />
     </form>
 
     <div style = "font-size:11px; color:red; margin-top:10px; text-align:center; position:relative;">
