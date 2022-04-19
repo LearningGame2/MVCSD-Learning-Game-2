@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <?php
   include 'UserInfo.php';
   if(!isset($_SESSION['login'])){ //if login in session is not set
@@ -44,6 +45,8 @@ return json_encode($scores);
 
 ?>
 
+=======
+>>>>>>> 72ae58bf2eb0d28cc6ee53c811271a977ce626bb
 <!DOCTYPE html>
 <html lang="en">
 
