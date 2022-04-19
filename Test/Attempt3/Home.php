@@ -2,6 +2,7 @@
 <?php
   include 'UserInfo.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
