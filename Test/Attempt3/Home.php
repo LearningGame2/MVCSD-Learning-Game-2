@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'footer.php';?>
+<?php include 'Login1.php';?>
 
 <head>
   <meta charset="UTF-8">
