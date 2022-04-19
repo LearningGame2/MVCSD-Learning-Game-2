@@ -46,7 +46,7 @@
       background-color: green;
     }
     .button2:hover {
-      background-color: green;
+      background-color: red;
     }
     header.page-header {
     display: flex;
