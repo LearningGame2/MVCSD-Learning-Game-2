@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
 <?php
-  include 'UserInfo.php';
-  if(!isset($_SESSION['login'])){ //if login in session is not set
-    header("Location: http://www.example.com/login.php");
-}
 
 function connect() {
   $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
@@ -45,8 +40,6 @@ return json_encode($scores);
 
 ?>
 
-=======
->>>>>>> 72ae58bf2eb0d28cc6ee53c811271a977ce626bb
 <!DOCTYPE html>
 <html lang="en">
 
