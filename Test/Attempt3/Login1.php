@@ -22,7 +22,7 @@
          session_register("myusername");
          $_SESSION['login_user'] = $myusername;
          $error = "Login Sucessful";
-         header("location: https://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Game.php");
+         header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Game.php");
       }else {
          $error = "Your Login Name or Password is invalid";
       }
