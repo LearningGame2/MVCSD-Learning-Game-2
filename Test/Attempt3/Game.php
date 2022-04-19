@@ -1,19 +1,18 @@
 
-
 <?php
 function connect() {
     $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
-    
+
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
         exit();
     }
     return $conn;
-}//Connection Function   
-    
-    
-    
-    
+}//Connection Function
+
+
+
+
 function promptRequest($numOfQuestions){
     $questions = array();
     for ($x = 0; $x <= $numOfQuestions; $x++) {
@@ -22,16 +21,16 @@ function promptRequest($numOfQuestions){
         $conn = connect();
         $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
         if ($result = mysqli_query($conn, $sql)) {
-         
+
             $row = mysqli_fetch_row($result);
-    
+
       //      $prompt = $row[1];
-              
-            
+
+
             mysqli_free_result($result);
-         
+
          mysqli_close($conn);
-    
+
           $questions[$x] = $row;
       }
     }
@@ -140,7 +139,7 @@ function promptRequest($numOfQuestions){
 
 
 
-function fillQuestions(){ 
+function fillQuestions(){
     const questions = [
         //Question 1
             {
@@ -232,7 +231,7 @@ function fillQuestions(){
             optionD: "",
             correctOption: ""
         }
-];   
+];
 
     var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
   for (let i = 0; i < 10; i++) {
@@ -255,7 +254,7 @@ function fillQuestions(){
         questions[i].optionC = prompt[3];
         questions[i].optionD = prompt[4];
         questions[i].correctOption = "optionB";
-    } 
+    }
     if(j == 3){
         questions[i].optionA = prompt[4];
         questions[i].optionB = prompt[5];
@@ -274,9 +273,9 @@ function fillQuestions(){
     return questions;
 }
 
-    
+
 let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
-    
+
 function handleQuestions() {
     questions = fillQuestions();
         //function to shuffle and push 10 questions to shuffledQuestions array
@@ -288,13 +287,13 @@ function handleQuestions() {
             }
         }
 }
-    
-    
+
+
     let questionNumber = 1 //holds the current question number
     let playerScore = 0  //holds the player score
     let wrongAttempt = 0 //amount of wrong answers picked by player
     let indexNumber = 0 //will be used in displaying next question
-    
+
     // function for displaying next question in the array to dom
     //also handles displaying players and quiz information to dom
     function NextQuestion(index) {
@@ -307,28 +306,28 @@ function handleQuestions() {
         document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
         document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
         document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
-    
+
     }
-    
-    
+
+
     function checkForAnswer() {
         const currentQuestion = shuffledQuestions[indexNumber] //gets current Question
         const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
         const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
         let correctOption = null
-    
+
         options.forEach((option) => {
             if (option.value === currentQuestionAnswer) {
                 //get's correct's radio input with correct answer
                 correctOption = option.labels[0].id
             }
         })
-    
+
         //checking to make sure a radio input has been checked or an option being chosen
         if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
             document.getElementById('option-modal').style.display = "flex"
         }
-    
+
         //checking if checked radio button is same as answer
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
@@ -340,7 +339,7 @@ function handleQuestions() {
                     questionNumber++
                 }, 1000)
             }
-    
+
             else if (option.checked && option.value !== currentQuestionAnswer) {
                 const wrongLabelId = option.labels[0].id
                 document.getElementById(wrongLabelId).style.backgroundColor = "red"
@@ -354,9 +353,9 @@ function handleQuestions() {
             }
         })
     }
-    
-    
-    
+
+
+
     //called when the next button is called
     function handleNextQuestion() {
         checkForAnswer() //check if player picked right or wrong option
@@ -373,7 +372,7 @@ function handleQuestions() {
             resetOptionBackground()
         }, 1000);
     }
-    
+
     //sets options background back to null after display the right/wrong colors
     function resetOptionBackground() {
         const options = document.getElementsByName("option");
@@ -381,7 +380,7 @@ function handleQuestions() {
             document.getElementById(option.labels[0].id).style.backgroundColor = ""
         })
     }
-    
+
     // unchecking all radio buttons for next question(can be done with map or foreach loop also)
     function unCheckRadioButtons() {
         const options = document.getElementsByName("option");
@@ -389,12 +388,12 @@ function handleQuestions() {
             options[i].checked = false;
         }
     }
-    
+
     // function for when all questions being answered
     function handleEndGame() {
         let remark = null
         let remarkColor = null
-    
+
         // condition check for player remark and remark color
         if (playerScore <= 3) {
             remark = "You can do better!"
@@ -409,7 +408,7 @@ function handleQuestions() {
             remarkColor = "green"
         }
         const playerGrade = (playerScore / 10) * 100
-    
+
         //data to display to score board
         document.getElementById('remarks').innerHTML = remark
         document.getElementById('remarks').style.color = remarkColor
@@ -417,9 +416,9 @@ function handleQuestions() {
         document.getElementById('wrong-answers').innerHTML = wrongAttempt
         document.getElementById('right-answers').innerHTML = playerScore
         document.getElementById('score-modal').style.display = "flex"
-    
+
     }
-    
+
     //closes score modal, resets game and reshuffles questions
     function closeScoreModal() {
         questionNumber = 1
@@ -430,12 +429,12 @@ function handleQuestions() {
         NextQuestion(indexNumber)
         document.getElementById('score-modal').style.display = "none"
     }
-    
+
     //function to close warning modal
     function closeOptionModal() {
         document.getElementById('option-modal').style.display = "none"
     }
-    
-    
+
+
     </script>
 </body>

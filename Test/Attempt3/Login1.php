@@ -1,5 +1,6 @@
+
 <?php
-include 'UserInfo.php';
+  include 'UserInfo.php';
 ?>
 
 <!DOCTYPE html>
