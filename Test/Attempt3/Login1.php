@@ -30,6 +30,8 @@
    }
 ?>
 
+<?php include UserInfo.php?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,6 +57,7 @@
 
     <div style = "font-size:11px; color:red; margin-top:10px; text-align:center; position:relative; left:50%">
       <?php echo $error; ?>
+      <?php $user = $myusername ?>
     </div>
   </div>
 </body>
