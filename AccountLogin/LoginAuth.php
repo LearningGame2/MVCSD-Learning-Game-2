@@ -1,6 +1,6 @@
 <?php
 
-include("config.php"); 
+$conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 session_start();
    
 if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    $myusername = mysqli_real_escape_string($db,$_POST['username']);
    $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
    
-   $sql = "SELECT * FROM UserDatabase WHERE Username = '$myusername' and Password = '$mypassword'";
+   $sql = "SELECT StudentID FROM UserDatabase WHERE Username = '$myusername' and Password = '$mypassword'";
    $result = mysqli_query($db,$sql);
    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
    $active = $row['active'];
