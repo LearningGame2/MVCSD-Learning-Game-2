@@ -51,13 +51,12 @@
       To stay connected with us, please sign in.
     </h4>
     <form action = "" method = "post" class="login_form" autocomplete="off" name="form">
-                  <div class ="font" style="font-family:Fantasy; font-size:125%;">Username</div>
                   <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
                   <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
                   <input type = "submit" value = " Submit "/><br />
                </form>
 
-   <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+   <div style = "font-size:11px; color:#197DDD; margin-top:10px; text-align:center; position:relative;"><?php echo $error; ?></div>
   </div>
 </body>
 </html>
