@@ -30,7 +30,7 @@ function promptRequest($numOfQuestions){
          
          mysqli_close($conn);
     
-          $questions[$x] = json_encode($row);
+          $questions[$x] = $row;
       }
     }
   return json_encode($questions);
@@ -234,7 +234,7 @@ function fillQuestions(){
 
     var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
   for (let i = 0; i < 10; i++) {
-    var prompt = JSON.parse(phpPrompt[i]);
+    var prompt = phpPrompt[i];
     console.log(prompt);
     questions[i].question = prompt[1];
 
