@@ -31,15 +31,13 @@
 ?>
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset = "UTF-8">
-    <title> Validated Login Form</title>
-    <link rel="stylesheet" href="LoginStyle.css">
+  <meta charset = "UTF-8">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="LoginStyle.css">
 </head>
 
 <body>
@@ -51,12 +49,15 @@
       To stay connected with us, please sign in.
     </h4>
     <form action = "" method = "post" class="login_form" autocomplete="off" name="form">
-                  <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
-                  <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
-                  <input type = "submit" value = " Submit "/><br />
-               </form>
+      <label style="color:white;"> Username: </label><input type = "text" name = "username" class = "box"/><br /><br />
+      <label style="color:white;"> Password: </label><input type = "password" name = "password" class = "box" /><br/><br />
+      <input type = "submit" value = " Submit "/><br />
+    </form>
 
-   <div style = "font-size:11px; color:#197DDD; margin-top:10px; text-align:center; position:relative;"><?php echo $error; ?></div>
+    <div style = "font-size:11px; color:red; margin-top:10px; text-align:center; position:relative;">
+      <?php echo $error; ?>
+    </div>
   </div>
 </body>
+
 </html>
