@@ -234,47 +234,49 @@ function fillQuestions(){
 
     var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
   for (let i = 0; i < 10; i++) {
-    var prompt = phpPrompt[i];
-    console.log(prompt);
-    questions[i].question = prompt[1];
+        var prompt = phpPrompt[i];
+        console.log(prompt);
+        questions[i].question = prompt[1];
 
-    var j = Math.floor(Math.random()*4)+1;
+        var j = Math.floor(Math.random()*4)+1;
 
-    if(j == 1){
-        questions[i].optionA = prompt[2];
-        questions[i].optionB = prompt[3];
-        questions[i].optionC = prompt[4];
-        questions[i].optionD = prompt[5];
-        questions[i].correctOption ="optionA";
+        if(j == 1){
+            questions[i].optionA = prompt[2];
+            questions[i].optionB = prompt[3];
+            questions[i].optionC = prompt[4];
+            questions[i].optionD = prompt[5];
+            questions[i].correctOption ="optionA";
+        }
+        if(j == 2){
+            questions[i].optionA = prompt[5];
+            questions[i].optionB = prompt[2];
+            questions[i].optionC = prompt[3];
+            questions[i].optionD = prompt[4];
+            questions[i].correctOption = "optionB";
+        } 
+        if(j == 3){
+            questions[i].optionA = prompt[4];
+            questions[i].optionB = prompt[5];
+            questions[i].optionC = prompt[2];
+            questions[i].optionD = prompt[3];
+            questions[i].correctOption = "optionC";
+        }
+        if(j == 4){
+            questions[i].optionA = prompt[3];
+            questions[i].optionB = prompt[4];
+            questions[i].optionC = prompt[5];
+            questions[i].optionD = prompt[2];
+            questions[i].correctOption = "optionD";
+        }
     }
-    if(j == 2){
-        questions[i].optionA = prompt[5];
-        questions[i].optionB = prompt[2];
-        questions[i].optionC = prompt[3];
-        questions[i].optionD = prompt[4];
-        questions[i].correctOption = "optionB";
-    } 
-    if(j == 3){
-        questions[i].optionA = prompt[4];
-        questions[i].optionB = prompt[5];
-        questions[i].optionC = prompt[2];
-        questions[i].optionD = prompt[3];
-        questions[i].correctOption = "optionC";
-    }
-    if(j == 4){
-        questions[i].optionA = prompt[3];
-        questions[i].optionB = prompt[4];
-        questions[i].optionC = prompt[5];
-        questions[i].optionD = prompt[2];
-        questions[i].correctOption = "optionD";
-    }
-}
     return questions;
 }
 
     
 let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
     
+
+//this might be vestigial, only called once elsewhere — maybe we can also replace shuffledQuestions with just our questions[] array that will have 
 function handleQuestions() {
     questions = fillQuestions();
         //function to shuffle and push 10 questions to shuffledQuestions array
