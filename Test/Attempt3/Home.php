@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+<?php
+  include 'UserInfo'
+?>
 <html lang="en">
-<?php include 'Login1.php';?>
 
 <head>
   <meta charset="UTF-8">
