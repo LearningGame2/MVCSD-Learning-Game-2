@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include 'footer.php';?>
 
 <head>
   <meta charset="UTF-8">
@@ -60,7 +61,7 @@
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
   <h1 style="text-align:left; color:white;">
-    MVCSD
+    Welcome <?php echo $myusername; ?>
   </h1>
 </header>
 
