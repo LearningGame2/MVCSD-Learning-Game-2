@@ -1,6 +1,47 @@
 
 <?php
   include 'UserInfo.php';
+  if(!isset($_SESSION['login'])){ //if login in session is not set
+    header("Location: http://www.example.com/login.php");
+}
+
+function connect() {
+  $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
+
+  if (mysqli_connect_errno()) {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+      exit();
+  }
+  return $conn;
+}//Connection Function
+
+
+
+
+function highscoreRequest(){
+  $scores = array();
+  for ($x = 0; $x < 10; $x++) {
+      $conn = connect();
+      $sql = "SELECT * FROM Leaderboard";
+      if ($result = mysqli_query($conn, $sql)) {
+
+          $row = mysqli_fetch_row($result);
+
+    //      $prompt = $row[1];
+
+
+          mysqli_free_result($result);
+
+       mysqli_close($conn);
+
+        $scores[$x] = $row;
+    }
+  }
+
+return json_encode($scores);
+}
+
+
 ?>
 
 <!DOCTYPE html>
