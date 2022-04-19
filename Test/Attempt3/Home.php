@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-  include 'UserInfo'
+  include 'UserInfo.php'
 ?>
 <html lang="en">
 
