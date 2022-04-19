@@ -1,4 +1,4 @@
 <?php
     include 'Login1.php'
-    $user
+    $user = $myusername;
 ?>
