@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       session_register("myusername");
       $_SESSION['login_user'] = $myusername;
       
-      header("location: welcome.php");
+      header("location: https://cslab.kenyon.edu/class/ssd/Game2/AccountLogin/welcome.php");
    }else {
       $error = "Your username or password is not in our database.  Please make sure you entered everything correctly and are trying the correct username and password.";
    }
