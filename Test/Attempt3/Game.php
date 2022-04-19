@@ -271,8 +271,8 @@ function fillQuestions(){
         questions[i].correctOption = "optionD";
     }
 }
- 
-
+    return questions;
+}
 
     
 let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
