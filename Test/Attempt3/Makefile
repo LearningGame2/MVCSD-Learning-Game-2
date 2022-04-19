@@ -6,7 +6,6 @@ USER= Game2
 all: PutHTML
 
 PutHTML:
-		cp Connection.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Game.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Home.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Login1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
