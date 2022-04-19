@@ -50,18 +50,13 @@
     <h4 style="text-align:center; color:white; font-family:'Courier New', monospace; font-size:150%; position:relative; top:-10px;">
       To stay connected with us, please sign in.
     </h4>
-    <form class="login_form" autocomplete="off" action = "" method="post" name="form" onsubmit= "validated(); return false;">
-        <div class ="font" style="font-family:'Courier New', monospace; font-size:125%;">Username</div>
-        <input type="text" name = "email">
-        <div id = "email_error">Incorrect</div>
-        <div class ="font font2" style="font-family:'Courier New', monospace; font-size:125%;">Password</div>
-        <input type="password" name = "password">
-        <div id = "pass_error">Incorrect</div>
-        <button type = "submit" style="font-family:'Courier New', monospace;">Sign In</button>
-    </form>
+    <form action = "" method = "post" class="login_form" autocomplete="off" name="form">
+                  <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
+                  <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
+                  <input type = "submit" value = " Submit "/><br />
+               </form>
+               
+   <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
   </div>
 </body>
-
-<script src="validate.js"></script>
-
 </html>
