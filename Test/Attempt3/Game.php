@@ -95,7 +95,7 @@ function promptRequest($numOfQuestions){
 
                          <div class="modal-button-container">
                             <button onclick="closeOptionModal()">Continue</button>
-                        </div
+                        </div>
 
                     </div>
 
