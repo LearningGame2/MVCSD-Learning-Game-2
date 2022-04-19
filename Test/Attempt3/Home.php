@@ -78,7 +78,7 @@
     window.location.href = "Game.php"
   }
   function logOut(){
-    window.location.href = "Login1.html"
+    window.location.href = "Login1.php"
   }
 </script>
 
