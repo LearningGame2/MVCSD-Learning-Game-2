@@ -9,7 +9,7 @@
       $myusername = mysqli_real_escape_string($conn,$_POST['username']);
       $mypassword = mysqli_real_escape_string($conn,$_POST['password']); 
       
-      $sql = "SELECT StudentID FROM admin WHERE Username = '$myusername' and Passcode = '$mypassword'";
+      $sql = "SELECT StudentID FROM UserDatabase WHERE Username = '$myusername' and Passcode = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
