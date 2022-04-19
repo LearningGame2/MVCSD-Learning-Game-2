@@ -19,13 +19,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    // If result matched $myusername and $mypassword, table row must be 1 row
      
    if($count == 1) {
-      session_register("myusername");
-      $_SESSION['login_user'] = $myusername;
-      
-      header("location: https://cslab.kenyon.edu/class/ssd/Game2/AccountLogin/welcome.php");
-   }else {
+    //   session_register("myusername");
+    //   $_SESSION['login_user'] = $myusername;
+    $error = "Login Sucessful";
+    header("location: https://cslab.kenyon.edu/class/ssd/Game2/AccountLogin/welcome.php");
+    }
+
+    else {
       $error = "Your username or password is not in our database.  Please make sure you entered everything correctly and are trying the correct username and password.";
-   }
+    }
 }
 ?>
 
