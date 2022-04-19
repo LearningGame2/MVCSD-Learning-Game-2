@@ -13,6 +13,7 @@
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
+      $user = $myusername
 
       $count = mysqli_num_rows($result);
 
