@@ -1,3 +1,5 @@
+
+
 <?php
 function connect() {
     $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
@@ -12,30 +14,35 @@ function connect() {
     
     
     
-function promptRequest(){
-    
-      $rowNumber = rand(1,300);
-    
-      
+function promptRequest($numOfQuestions){
+    $questions = array();
+    for ($x = 0; $x <= $numOfQuestions; $x++) {
+        $rowNumber = rand(1,300);
         $prompt = "";
-          $conn = connect();
-          $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
-          if ($result = mysqli_query($conn, $sql)) {
-           
-              $row = mysqli_fetch_row($result);
-      
-        //      $prompt = $row[1];
-                
+        $conn = connect();
+        $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
+        if ($result = mysqli_query($conn, $sql)) {
+         
+            $row = mysqli_fetch_row($result);
+    
+      //      $prompt = $row[1];
               
-              mysqli_free_result($result);
-           
-           mysqli_close($conn);
-      
-            return json_encode($row);
-            }
+            
+            mysqli_free_result($result);
+         
+         mysqli_close($conn);
+    
+          $questions[$x] = $row;
+      }
     }
+  return json_encode($questions);
+}
+
+
 
 ?>
+
+
 
 <head>
   <link rel="stylesheet" href="Game.css">
@@ -129,73 +136,169 @@ function promptRequest(){
     <script>
 
 
-class Question {
-    qPrompt, qAns, qResponse1, qResponse2, qResponse3, qResponse4;
-    constructor ()
-    {
-        //how to parse JSON into these things...?  maybe call a new function for each?  (bring those back in code?)
-        var phpQuestion = '<?php echo promptRequest();?>';
-        var question = JSON.parse(phpQuestion);
-        this.qPrompt = phpQuestion[1];
-        this.qAns = phpQuestion[2];
-        this.qResponse1 = phpQuestion[2]
-        this.qResponse2 = phpQuestion[3];
-        this.qResponse3 = phpQuestion[4];
-        this.qResponse4 = phpQuestion[5];
-        console.log("${qPrompt} is qPrompt");
+
+
+
+
+function fillQuestions(){ 
+    const questions = [
+        //Question 1
+            {
+                question: "",
+                optionA: "",
+                optionB: "",
+                optionC: "",
+                optionD: "",
+                correctOption: ""
+            },
+        //Question 2
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 3
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 4
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 5
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 6
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 7
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 8
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 9
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        },
+        //Question 10
+        {
+            question: "",
+            optionA: "",
+            optionB: "",
+            optionC: "",
+            optionD: "",
+            correctOption: ""
+        }
+];   
+
+    var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
+  for (let i = 0; i < 10; i++) {
+    var prompt = phpPrompt[i];
+    console.log(prompt);
+    questions[i].question = prompt[1];
+
+    var j = Math.floor(Math.random()*4)+1;
+
+    if(j == 1){
+        questions[i].optionA = prompt[2];
+        questions[i].optionB = prompt[3];
+        questions[i].optionC = prompt[4];
+        questions[i].optionD = prompt[5];
+        questions[i].correctOption ="optionA";
+    }
+    if(j == 2){
+        questions[i].optionA = prompt[5];
+        questions[i].optionB = prompt[2];
+        questions[i].optionC = prompt[3];
+        questions[i].optionD = prompt[4];
+        questions[i].correctOption = "optionB";
+    } 
+    if(j == 3){
+        questions[i].optionA = prompt[4];
+        questions[i].optionB = prompt[5];
+        questions[i].optionC = prompt[2];
+        questions[i].optionD = prompt[3];
+        questions[i].correctOption = "optionC";
+    }
+    if(j == 4){
+        questions[i].optionA = prompt[3];
+        questions[i].optionB = prompt[4];
+        questions[i].optionC = prompt[5];
+        questions[i].optionD = prompt[2];
+        questions[i].correctOption = "optionD";
     }
 }
+ 
 
 
-//all this is not in any function:
-let questionsTestArr = [100];
-let q1 = new Question();
-console.log(q1.qPrompt+ "= q1.qPrompt");
-
-
-//class Questions {
-    //this.questions = [100];
-    function fillQuestions () {
-        for (int i = 0; i < 100; i++) /* change the end condition to i < 100 if this works, then later when restructuring game, 
-                                    set an if statement to change the array iterator to 20, 40, etc whatever level they move to * 20 */
-        {
-            
-            questionsTestArr[i] = new Question();
-
+    
+let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
+    
+function handleQuestions() {
+    questions = fillQuestions();
+        //function to shuffle and push 10 questions to shuffledQuestions array
+    //app would be dealing with 10questions per session
+        while (shuffledQuestions.length <= 9) {
+            const random = questions[Math.floor(Math.random() * questions.length)]
+            if (!shuffledQuestions.includes(random)) {
+                shuffledQuestions.push(random)
+            }
         }
-        return questionsTestArr;
-    }
-//}
-
-    
-//let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
-    
-// //all this is not used at the moment (i believe?  doesn't seem to be called anywhere?   will comment out just in case)
-// function handleQuestions() {
-//     questions = fillQuestions();
-//         //function to shuffle and push 10 questions to shuffledQuestions array
-//     //app would be dealing with 10questions per session
-//         while (shuffledQuestions.length <= 9) {
-//             const random = questions[Math.floor(Math.random() * questions.length)]
-//             if (!shuffledQuestions.includes(random)) {
-//                 shuffledQuestions.push(random)
-//             }
-//         }
-// }
+}
     
     
     let questionNumber = 1 //holds the current question number
     let playerScore = 0  //holds the player score
     let wrongAttempt = 0 //amount of wrong answers picked by player
-
-    const shuffledQuestions = fillQuestions();
     let indexNumber = 0 //will be used in displaying next question
     
     // function for displaying next question in the array to dom
     //also handles displaying players and quiz information to dom
     function NextQuestion(index) {
-        //handleQuestions()
-
+        handleQuestions()
         const currentQuestion = shuffledQuestions[index]
         document.getElementById("question-number").innerHTML = questionNumber
         document.getElementById("player-score").innerHTML = playerScore
@@ -332,6 +435,7 @@ console.log(q1.qPrompt+ "= q1.qPrompt");
     function closeOptionModal() {
         document.getElementById('option-modal').style.display = "none"
     }
+    
     
     </script>
 </body>
