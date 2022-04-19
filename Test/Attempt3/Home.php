@@ -3,34 +3,72 @@
 
 <head>
   <meta charset="UTF-8">
-  <link href="Home.css" rel="Home Style">
   <title>
     Login Sucessful
   </title>
+
+  <style>
+    .button {
+      text-align: center;
+      background-color: #197DDD;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      font-size: 24px;
+      height:100px;
+      width:200px;
+      transition-duration: 0.4s;
+      border: 2px solid white;
+    }
+    .button1 {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .button2 {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 60%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .button1:hover {
+      background-color: green;
+    }
+    .button2:hover {
+      background-color: green;
+    }
+    header.page-header {
+    display: flex;
+    height: 50px;
+    min-width: 120px;
+    align-items: center;
+    color: black;
+    }
+  </style>
 </head>
 
-<body style="background-color:black;">
-  <div>
-    <h1 style="text-align:center; color:white;">
-      <span style="float:left; font-family:Copperplate">
-        MVCSD
-      </span>
-      <span style="float:right; font-family:Copperplate">
-        <a href="#">Home</a>
-        &nbsp;
-        <a href="#">Log In</a>
-        &nbsp;
-        <a href="#">About</a>
-        &nbsp;
-        <a href="#">Contact</a>
-        &nbsp;
-        <a href="#">Info</a>
-        &nbsp;
-      </span>
-    </h1>
-  </div>
+<header class="page-header">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <h1 style="text-align:left; color:white;">
+    MVCSD
+  </h1>
+</header>
 
-  <h2 style="text-align:center; color:white;">Press button to play </h2>
+<body style="background-color:black;">
+  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white;">
+     Press Button to Play
+  </div>
 
   <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
   <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>

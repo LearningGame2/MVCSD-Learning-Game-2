@@ -54,13 +54,13 @@ body{
     outline: none;
     cursor: pointer;
     font-weight: bold;
-    background: green;
+    background: #197DDD;
     border-radius: 3px;
     border: 1px solid #3949AB;
     transition: .2s;
 }
 .login_form button:hover{
-    background: #0a0e3f;
+    background: green;
 }
 .login_form #email_error,
 .login_form #pass_error{
