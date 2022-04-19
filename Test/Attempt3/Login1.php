@@ -20,7 +20,7 @@
 
       if($count == 1) {
          //session_register("myusername");
-         //$_SESSION['login_user'] = $myusername;
+         $_SESSION['login'] = $myusername;
          $error = "Login Sucessful";
          header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
       }else {
