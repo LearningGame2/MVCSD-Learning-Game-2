@@ -1,6 +1,6 @@
-<?php
-   include('session.php');
-?>
+<!-- <?php
+//    include('session.php');
+// ?>
 <html">
    
    <head>
@@ -8,8 +8,17 @@
    </head>
    
    <body>
-      <h1>Welcome <?php echo $login_session; ?></h1> 
+     
       <h2><a href = "logout.php">Sign Out</a></h2>
    </body>
    
+</html> -->
+
+<html>
+   <head>
+   </head>
+
+   <body>
+      <p>Success!</p>
+   </body>
 </html>

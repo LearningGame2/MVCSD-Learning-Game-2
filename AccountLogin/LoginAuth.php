@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    $myusername = mysqli_real_escape_string($db,$_POST['username']);
    $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
    
-   $sql = "SELECT StudentID FROM UserDatabase WHERE Username = '$myusername' and Password = '$mypassword'";
+   $sql = "SELECT * FROM UserDatabase WHERE Username = '$myusername' and Password = '$mypassword'";
    $result = mysqli_query($db,$sql);
    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
    $active = $row['active'];
