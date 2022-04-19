@@ -69,6 +69,7 @@ function promptRequest($numOfQuestions){
 
                 <div class="modal-button-container">
                     <button onclick="closeScoreModal()">Continue</button>
+                    <button onclick="returnHome()">Home</button>
                 </div>
 
             </div>
