@@ -29,27 +29,7 @@ function leaderboardRequest(){
     $scores[$x] = mysqli_fetch_assoc($result);
   }
 
-
-  function cmp($a, $b)
-  {
-    $one = $a;
-    $two = $b;
-    if ($one== $two]) {
-        return 0;
-    }
-    if ($one> $two) {
-      return 1;
-  }
-   if ($one< $two) {
-    return -1;
-  }
-
-
-  usort($scores, "cmp");
-
   return json_encode($scores);
-
-
 }
 
 
