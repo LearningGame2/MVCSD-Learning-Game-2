@@ -31,10 +31,15 @@ function leaderboardRequest(){
 
 
 
+  $columns = array_column($scores, 1 );
+
+
+
 
 //USE usort() function to sort before sending
 
-return json_encode($scores);
+return json_encode(array_multisort($columns, SORT_ASC, $array));
+
 }
 
 
