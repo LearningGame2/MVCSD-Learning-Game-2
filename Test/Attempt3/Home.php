@@ -124,6 +124,7 @@ return json_encode($scores);
   }
   function logOut(){
     window.location.href = "Login1.php"
+    <?php session_destroy(); ?>
   }
 </script>
 
