@@ -29,12 +29,12 @@ function leaderboardRequest(){
     $scores[$x] = mysqli_fetch_assoc($result);
   }
 
-  $col = array_column( $scores, "Username" );
-  $sortedScores = array_multisort( $col, SORT_ASC, $scores);
+  usort($scores, function($a, $b) {
+    return $a['Highscore'] <=> $b['Highscore'];
+  });
 
 
-
-  return json_encode($sortedScores);
+  return json_encode($scores);
 }
 
 
