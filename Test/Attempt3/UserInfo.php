@@ -1,6 +1,4 @@
 <?php
-  include 'Login1.php'
-
   function connect() {
     $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
