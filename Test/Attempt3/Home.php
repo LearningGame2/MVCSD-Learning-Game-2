@@ -1,26 +1,127 @@
+
+<?php
+
+function connect() {
+  $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
+
+  if (mysqli_connect_errno()) {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+      exit();
+  }
+  return $conn;
+}//Connection Function
+
+
+
+
+function highscoreRequest(){
+  $scores = array();
+  for ($x = 0; $x < 10; $x++) {
+      $conn = connect();
+      $sql = "SELECT * FROM Leaderboard";
+      if ($result = mysqli_query($conn, $sql)) {
+
+          $row = mysqli_fetch_row($result);
+
+    //      $prompt = $row[1];
+
+
+          mysqli_free_result($result);
+
+       mysqli_close($conn);
+
+        $scores[$x] = $row;
+    }
+  }
+
+return json_encode($scores);
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <title>
+    Login Sucessful
+  </title>
 
-    <title>
-        Login Sucessful
-    </title>
+  <style>
+    .button {
+      text-align: center;
+      background-color: #197DDD;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      font-size: 24px;
+      height:100px;
+      width:200px;
+      transition-duration: 0.4s;
+      border: 2px solid white;
+    }
+    .button1 {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .button2 {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 60%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .button1:hover {
+      background-color: green;
+    }
+    .button2:hover {
+      background-color: red;
+    }
+    header.page-header {
+    display: flex;
+    height: 50px;
+    min-width: 120px;
+    align-items: center;
+    color: black;
+    }
+  </style>
 </head>
-<body>
-    <h1 style="text-align:center;">Logged in!</h1>
-    <h2>Press button to play </h2>
-    <button type ="submit" onclick = "goToGame()">Play</button>
-    <button type ="submit" onclick = "logOut()">Log out</button>
-</body>
-<script>
-function goToGame(){
-    window.location.href = "Game.php"
-}
-function logOut(){
-    window.location.href = "Login1.html"
-}
 
+<header class="page-header">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <h1 style="text-align:left; color:white;">
+    Welcome!
+  </h1>
+</header>
+
+<body style="background-color:black;">
+  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white;">
+     Press Button to Play
+  </div>
+
+  <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
+  <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>
+</body>
+
+<script>
+  function goToGame(){
+    window.location.href = "Game.php"
+  }
+  function logOut(){
+    window.location.href = "Login1.php"
+  }
 </script>
 
 </html>
