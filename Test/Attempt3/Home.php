@@ -1,5 +1,6 @@
 
 <?php
+include 'UserInfo.php'
 
 function connect() {
   $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
@@ -102,7 +103,7 @@ return json_encode($scores);
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
   <h1 style="text-align:left; color:white;">
-    Welcome!
+    Welcome <?php echo $user ?> !
   </h1>
 </header>
 
