@@ -25,16 +25,14 @@ function leaderboardRequest(){
   $conn = connect();
   $sql = "SELECT * FROM Leaderboard";
   $result = mysqli_query($conn,$sql);
-  while($row = mysqli_fetch_assoc($result)){
-    $scores[]=$row;
+  for ($x = 0; $x < 10; $x++) {
+    $scores[$x] = mysqli_fetch_assoc($result);
   }
-}
+
 
 
 
 //USE usort() function to sort before sending
-
-
 
 return json_encode($scores);
 }
