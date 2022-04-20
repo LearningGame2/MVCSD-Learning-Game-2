@@ -174,20 +174,7 @@ function fillQuestions()
 }
 
 
-
-let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
-
-function handleQuestions() {
-    questions = fillQuestions();
-        //function to shuffle and push 10 questions to shuffledQuestions array
-    //app would be dealing with 10questions per session
-        while (shuffledQuestions.length <= 9) {
-            const random = questions[Math.floor(Math.random() * questions.length)]
-            if (!shuffledQuestions.includes(random)) {
-                shuffledQuestions.push(random)
-            }
-        }
-}
+let questionArray = fillQuestions();
 
 
     let questionNumber = 1 //holds the current question number
@@ -199,7 +186,7 @@ function handleQuestions() {
     //also handles displaying players and quiz information to dom
     function NextQuestion(index) {
         handleQuestions()
-        const currentQuestion = shuffledQuestions[index]
+        const currentQuestion = questionArray[index]
         document.getElementById("question-number").innerHTML = questionNumber
         document.getElementById("player-score").innerHTML = playerScore
         document.getElementById("display-question").innerHTML = currentQuestion.question;
@@ -212,7 +199,7 @@ function handleQuestions() {
 
 
     function checkForAnswer() {
-        const currentQuestion = shuffledQuestions[indexNumber] //gets current Question
+        const currentQuestion = questionArray[indexNumber] //gets current Question
         const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
         const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
         let correctOption = null
@@ -326,7 +313,7 @@ function handleQuestions() {
         playerScore = 0
         wrongAttempt = 0
         indexNumber = 0
-        shuffledQuestions = []
+        questionArray = []
         NextQuestion(indexNumber)
         document.getElementById('score-modal').style.display = "none"
     }
