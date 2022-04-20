@@ -29,7 +29,12 @@ function leaderboardRequest(){
     $scores[$x] = mysqli_fetch_assoc($result);
   }
 
-  return json_encode($scores);
+  $col = array_column( $scores, "Username" );
+  $sortedScores = array_multisort( $col, SORT_ASC, $scores);
+
+
+
+  return json_encode($sortedScores);
 }
 
 
@@ -112,6 +117,9 @@ function leaderboardRequest(){
 
 <script>
   var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
+  // for(let i = 0; i < 10; i++){
+  //   testScores
+  // }
   console.log(testScores);
   function goToGame(){
     window.location.href = "Game.php"
@@ -120,6 +128,7 @@ function leaderboardRequest(){
     window.location.href = "Login1.php"
     <?php session_destroy(); ?>
   }
+
 </script>
 
 </html>
