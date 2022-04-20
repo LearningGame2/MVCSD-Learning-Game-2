@@ -98,12 +98,8 @@ function leaderboardRequest(){
 
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <h1 style="text-align:left; color:white;">
-<<<<<<< HEAD
+  <h1 style="text-align:center; color:white;">
     Welcome <?php echo $_SESSION['login']?>!
-=======
-    Welcome <?php echo $user ?> !
->>>>>>> 88c46b682d70492bb8d1b57dddf6144bdf11d26e
   </h1>
 </header>
 
