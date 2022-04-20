@@ -164,7 +164,7 @@ function leaderboardRequest(){
   var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
 
   console.log(testScores);
-  console.log(testScores[3][1]);
+  console.log(testScores[3].Username);
   function goToGame(){
     window.location.href = "Game.php"
   }
