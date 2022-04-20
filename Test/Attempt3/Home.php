@@ -2,6 +2,9 @@
 <?php
 
 session_start();
+if(!isset($_SESSION['login'])){
+  header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
+}
 
 
 function connect() {
@@ -25,15 +28,9 @@ function leaderboardRequest(){
       if ($result = mysqli_query($conn, $sql)) {
 
           $row = mysqli_fetch_row($result);
-
-    //      $prompt = $row[1];
-
-
           mysqli_free_result($result);
-
-       mysqli_close($conn);
-
-        $scores[$x] = $row;
+          mysqli_close($conn);
+          $scores[$x] = $row;
     }
   }
 
