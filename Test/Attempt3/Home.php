@@ -28,12 +28,9 @@ function leaderboardRequest(){
   for ($x = 0; $x < 10; $x++) {
     $scores[$x] = mysqli_fetch_assoc($result);
   }
-
   usort($scores, function($a, $b) {
     return $a['Highscore'] <=> $b['Highscore'];
   });
-
-
   return json_encode($scores);
 }
 
@@ -113,14 +110,61 @@ function leaderboardRequest(){
 
   <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
   <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>
+  <div>
+  <table>
+  <tr>
+    <th>Player</th>
+    <th>Score</th>
+  </tr>
+  <tr>
+    <td><span id="player1"></span></td>
+    <td><span id="score1"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player2"></span></td>
+    <td><span id="score2"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player3"></span></td>
+    <td><span id="score3"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player4"></span></td>
+    <td><span id="score4"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player5"></span></td>
+    <td><span id="score5"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player6"></span></td>
+    <td><span id="score6"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player7"></span></td>
+    <td><span id="score7"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player8"></span></td>
+    <td><span id="score8"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player9"></span></td>
+    <td><span id="score9"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player10"></span></td>
+    <td><span id="score10"></span></td>
+  </tr>
+</table>
+</div>
 </body>
 
 <script>
   var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
-  // for(let i = 0; i < 10; i++){
-  //   testScores
-  // }
+
   console.log(testScores);
+  console.log(testScores[3][1]);
   function goToGame(){
     window.location.href = "Game.php"
   }
