@@ -33,7 +33,7 @@ function highscoreRequest(){
         $scores[$x] = $row;
     }
   }
-
+//USE usort() function to sort before sending
 return json_encode($scores);
 }
 
@@ -102,7 +102,7 @@ return json_encode($scores);
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
   <h1 style="text-align:left; color:white;">
-    Welcome!
+    Welcome <?php echo $_SESSION['login']?>!
   </h1>
 </header>
 
