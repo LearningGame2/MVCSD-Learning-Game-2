@@ -30,20 +30,22 @@ function leaderboardRequest(){
   }
 
 
-  // function cmp($a, $b)
-  // {
-  //   if ($a[1] == $b[1]) {
-  //       return 0;
-  //   }
-  //   if ($a[1] > $b[1]) {
-  //     return 1;
-  // }
-  //  if ($a[1] < $b[1]) {
-  //   return -1;
-  // }
+  function cmp($a, $b)
+  {
+    $one = $a[1];
+    $two = $b[1];
+    if ($one== $two]) {
+        return 0;
+    }
+    if ($one> $two) {
+      return 1;
+  }
+   if ($one< $two) {
+    return -1;
+  }
 
 
-  // usort($scores, "cmp");
+  usort($scores, "cmp");
 
   return json_encode($scores);
 
