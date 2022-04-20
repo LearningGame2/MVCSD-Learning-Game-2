@@ -111,7 +111,7 @@ function leaderboardRequest(){
   <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
   <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>
   <div>
-  <table>
+  <table style = "color:white;">
   <tr>
     <th>Player</th>
     <th>Score</th>
@@ -163,8 +163,37 @@ function leaderboardRequest(){
 <script>
   var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
 
+  document.getElementById("player1").innerHTML = testScores[9].Username;
+  document.getElementById("score1").innerHTML = testScores[9].Highscore;
+
+  document.getElementById("player2").innerHTML = testScores[8].Username;
+  document.getElementById("score2").innerHTML = testScores[8].Highscore;
+
+  document.getElementById("player3").innerHTML = testScores[7].Username;
+  document.getElementById("score3").innerHTML = testScores[7].Highscore;
+
+  document.getElementById("player4").innerHTML = testScores[6].Username;
+  document.getElementById("score4").innerHTML = testScores[6].Highscore;
+
+  document.getElementById("player5").innerHTML = testScores[5].Username;
+  document.getElementById("score5").innerHTML = testScores[5].Highscore;
+
+  document.getElementById("player6").innerHTML = testScores[4].Username;
+  document.getElementById("score6").innerHTML = testScores[4].Highscore;
+
+  document.getElementById("player7").innerHTML = testScores[3].Username;
+  document.getElementById("score7").innerHTML = testScores[3].Highscore;
+
+  document.getElementById("player8").innerHTML = testScores[2].Username;
+  document.getElementById("score8").innerHTML = testScores[2].Highscore;
+
+  document.getElementById("player9").innerHTML = testScores[1].Username;
+  document.getElementById("score9").innerHTML = testScores[1].Highscore;
+  
+  document.getElementById("player10").innerHTML = testScores[0].Username;
+  document.getElementById("score10").innerHTML = testScores[0].Highscore;
+
   console.log(testScores);
-  console.log(testScores[3].Username);
   function goToGame(){
     window.location.href = "Game.php"
   }
