@@ -1,6 +1,12 @@
 
 <?php
 
+session_start();
+if(!isset($_SESSION['login'])){
+  header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
+} //Comment out to make less annoying
+
+
 function connect() {
   $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
@@ -13,28 +19,19 @@ function connect() {
 
 
 
-
-function highscoreRequest(){
+function leaderboardRequest(){
   $scores = array();
+  
+  $conn = connect();
+  $sql = "SELECT * FROM Leaderboard";
+  $result = mysqli_query($conn,$sql);
   for ($x = 0; $x < 10; $x++) {
-      $conn = connect();
-      $sql = "SELECT * FROM Leaderboard";
-      if ($result = mysqli_query($conn, $sql)) {
-
-          $row = mysqli_fetch_row($result);
-
-    //      $prompt = $row[1];
-
-
-          mysqli_free_result($result);
-
-       mysqli_close($conn);
-
-        $scores[$x] = $row;
-    }
+    $scores[$x] = mysqli_fetch_assoc($result);
   }
-
-return json_encode($scores);
+  usort($scores, function($a, $b) {
+    return $a['Highscore'] <=> $b['Highscore'];
+  });
+  return json_encode($scores);
 }
 
 
@@ -102,7 +99,7 @@ return json_encode($scores);
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
   <h1 style="text-align:left; color:white;">
-    Welcome!
+    Welcome <?php echo $_SESSION['login']?>!
   </h1>
 </header>
 
@@ -113,15 +110,99 @@ return json_encode($scores);
 
   <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
   <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>
+  <div>
+  <table style = "color:white;">
+  <tr>
+    <th>Player</th>
+    <th>Score</th>
+  </tr>
+  <tr>
+    <td><span id="player1"></span></td>
+    <td><span id="score1"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player2"></span></td>
+    <td><span id="score2"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player3"></span></td>
+    <td><span id="score3"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player4"></span></td>
+    <td><span id="score4"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player5"></span></td>
+    <td><span id="score5"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player6"></span></td>
+    <td><span id="score6"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player7"></span></td>
+    <td><span id="score7"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player8"></span></td>
+    <td><span id="score8"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player9"></span></td>
+    <td><span id="score9"></span></td>
+  </tr>
+  <tr>
+    <td><span id="player10"></span></td>
+    <td><span id="score10"></span></td>
+  </tr>
+</table>
+</div>
 </body>
 
 <script>
+  var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
+
+  document.getElementById("player1").innerHTML = testScores[9].Username;
+  document.getElementById("score1").innerHTML = testScores[9].Highscore;
+
+  document.getElementById("player2").innerHTML = testScores[8].Username;
+  document.getElementById("score2").innerHTML = testScores[8].Highscore;
+
+  document.getElementById("player3").innerHTML = testScores[7].Username;
+  document.getElementById("score3").innerHTML = testScores[7].Highscore;
+
+  document.getElementById("player4").innerHTML = testScores[6].Username;
+  document.getElementById("score4").innerHTML = testScores[6].Highscore;
+
+  document.getElementById("player5").innerHTML = testScores[5].Username;
+  document.getElementById("score5").innerHTML = testScores[5].Highscore;
+
+  document.getElementById("player6").innerHTML = testScores[4].Username;
+  document.getElementById("score6").innerHTML = testScores[4].Highscore;
+
+  document.getElementById("player7").innerHTML = testScores[3].Username;
+  document.getElementById("score7").innerHTML = testScores[3].Highscore;
+
+  document.getElementById("player8").innerHTML = testScores[2].Username;
+  document.getElementById("score8").innerHTML = testScores[2].Highscore;
+
+  document.getElementById("player9").innerHTML = testScores[1].Username;
+  document.getElementById("score9").innerHTML = testScores[1].Highscore;
+  
+  document.getElementById("player10").innerHTML = testScores[0].Username;
+  document.getElementById("score10").innerHTML = testScores[0].Highscore;
+
+  console.log(testScores);
   function goToGame(){
     window.location.href = "Game.php"
   }
   function logOut(){
     window.location.href = "Login1.php"
+    <?php session_destroy(); ?>
   }
+
 </script>
 
 </html>
+
