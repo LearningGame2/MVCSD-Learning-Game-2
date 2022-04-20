@@ -22,17 +22,13 @@ function connect() {
 
 function leaderboardRequest(){
   $scores = array();
-  for ($x = 0; $x < 10; $x++) {
-      $conn = connect();
-      $sql = "SELECT * FROM Leaderboard";
-      if ($result = mysqli_query($conn, $sql)) {
-
-          $row = mysqli_fetch_row($result);
-          mysqli_free_result($result);
-          mysqli_close($conn);
-          $scores[$x] = $row;
-    }
+  $conn = connect();
+  $sql = "SELECT * FROM Leaderboard";
+  $result = mysqli_query($conn,$sql);
+  while($row = mysqli_fetch_assoc($result)){
+    $scores[]=$row;
   }
+}
 
 
 
