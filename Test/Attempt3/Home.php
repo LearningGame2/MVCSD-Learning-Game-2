@@ -17,17 +17,7 @@ function connect() {
   return $conn;
 }//Connection Function
 
-function cmp($a, $b)
-{
-    if ($a[1] == $b[1]) {
-        return 0;
-    }
-    if ($a[1] > $b[1]) {
-      return 1;
-  }
-   if ($a[1] < $b[1]) {
-    return -1;
-}
+
 }
 
 
@@ -42,9 +32,24 @@ function leaderboardRequest(){
     $scores[$x] = mysqli_fetch_assoc($result);
   }
 
-  $sortedScores = usort($a, "cmp");
+
+  function cmp($a, $b)
+  {
+    if ($a[1] == $b[1]) {
+        return 0;
+    }
+    if ($a[1] > $b[1]) {
+      return 1;
+  }
+   if ($a[1] < $b[1]) {
+    return -1;
+  }
+
+
+  $sortedScores = usort($scores, "cmp");
 
   return json_encode($sortedScores);
+
 
 }
 
