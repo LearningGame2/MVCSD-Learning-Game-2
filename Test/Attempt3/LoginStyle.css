@@ -54,7 +54,7 @@ body{
     outline: none;
     cursor: pointer;
     font-weight: bold;
-    background: #197DDD;
+    background: blue;
     border-radius: 3px;
     border: 1px solid #3949AB;
     transition: .2s;

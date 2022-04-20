@@ -99,7 +99,11 @@ function leaderboardRequest(){
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
   <h1 style="text-align:left; color:white;">
+<<<<<<< HEAD
     Welcome <?php echo $_SESSION['login']?>!
+=======
+    Welcome <?php echo $user ?> !
+>>>>>>> main
   </h1>
 </header>
 
