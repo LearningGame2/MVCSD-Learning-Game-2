@@ -2,9 +2,9 @@
 <?php
 
 session_start();
-if(!isset($_SESSION['login'])){
-  header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
-}
+// if(!isset($_SESSION['login'])){
+//   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
+// } //Comment out to make less annoying
 
 
 function connect() {
@@ -32,11 +32,7 @@ function leaderboardRequest(){
 
 
 
-  $sortedScores = usort($scores, function($x, $y) {
-    return $x[1] <=> $y[1]; });
-
-
-//USE usort() function to sort before sending
+  $sortedScores = asort($scores);
 
 return json_encode($sortedScores);
 
