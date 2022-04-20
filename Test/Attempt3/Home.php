@@ -43,7 +43,7 @@ function leaderboardRequest(){
   }
 
 
-  usort($scores, "cmp");
+  // usort($scores, "cmp");
 
   return json_encode($scores);
 
