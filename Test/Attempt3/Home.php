@@ -32,9 +32,8 @@ function leaderboardRequest(){
 
 
 
-  $columns = array_column($scores, 1 );
-  $sortedScores = array_multisort($columns, SORT_ASC, $scores);
-
+  $sortedScores = usort($scores, function($x, $y) {
+    return $x[1] <=> $y[1]; });
 
 
 //USE usort() function to sort before sending
