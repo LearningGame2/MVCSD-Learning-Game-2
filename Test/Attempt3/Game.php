@@ -132,146 +132,47 @@ function promptRequest($numOfQuestions){
 
         </div>
     </main>
-    <script>
 
 
+<script>
 
-
-
-
-function fillQuestions(){
-    const questions = [
-        //Question 1
-            {
-                question: "",
-                optionA: "",
-                optionB: "",
-                optionC: "",
-                optionD: "",
-                correctOption: ""
-            },
-        //Question 2
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 3
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 4
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 5
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 6
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 7
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 8
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 9
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 10
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        }
-];
-
-    var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
-  for (let i = 0; i < 10; i++) {
-    var prompt = phpPrompt[i];
-    console.log(prompt);
-    questions[i].question = prompt[1];
-
-    var j = Math.floor(Math.random()*4)+1;
-
-    if(j == 1){
-        questions[i].optionA = prompt[2];
-        questions[i].optionB = prompt[3];
-        questions[i].optionC = prompt[4];
-        questions[i].optionD = prompt[5];
-        questions[i].correctOption ="optionA";
-    }
-    if(j == 2){
-        questions[i].optionA = prompt[5];
-        questions[i].optionB = prompt[2];
-        questions[i].optionC = prompt[3];
-        questions[i].optionD = prompt[4];
-        questions[i].correctOption = "optionB";
-    }
-    if(j == 3){
-        questions[i].optionA = prompt[4];
-        questions[i].optionB = prompt[5];
-        questions[i].optionC = prompt[2];
-        questions[i].optionD = prompt[3];
-        questions[i].correctOption = "optionC";
-    }
-    if(j == 4){
-        questions[i].optionA = prompt[3];
-        questions[i].optionB = prompt[4];
-        questions[i].optionC = prompt[5];
-        questions[i].optionD = prompt[2];
-        questions[i].correctOption = "optionD";
+//making a class of question object to fill questions array
+class Question {
+    constructor (question, optionA, optionB, optionC, optionD, correctOption) {
+        this.question = question;
+        this.optionA = optionA;
+        this.optionB = optionB;
+        this.optionC = optC;
+        this.optionD = optionD;
+        this.correctOption = correctOption;
     }
 }
+
+/*fills questions array after parsing the decoded json that php returned, setting them in a random order and then creating a
+  question object with the results from the parse*/
+//post: returns questions array
+function fillQuestions()
+{
+    const questions = [10];
+    var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
+    
+    for (let i = 0; i < 10; i++) {
+        var prompt = phpPrompt[i];
+        console.log(prompt);
+        qPrompt = prompt[1];
+        var j = Math.floor(Math.random()*4)+1;
+        var ansA = prompt[j%4+1];
+        var ansB = prompt[(j+1)%4+1];
+        var ansC = prompt[(j+2)%4+1];
+        var ansD = prompt[(j+3)%4+1];
+        var rightResponse = "ans"+String.fromCharCode(64+j); //maybe can't combine char & string?  JS is dynamic tho...
+        var currentQuestion = new Question(qPrompt,ansA,ansB,ansC,ansD,rightResponse);
+        questions[i] = currentQuestion;
+    }
+
     return questions;
 }
+
 
 
 let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
