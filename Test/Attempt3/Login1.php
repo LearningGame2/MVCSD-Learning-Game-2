@@ -54,7 +54,7 @@
     </form>
 
     <div style = "font-size:40px; color:blue; margin-top:10px; text-align:center; position:relative; left:10%">
-      <?php echo $error; ?>
+      <?php echo “<font size=“18” face=‘Arial’>” $error; ?>
     </div>
   </div>
 </body>
