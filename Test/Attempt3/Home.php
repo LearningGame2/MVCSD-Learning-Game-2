@@ -32,8 +32,8 @@ function leaderboardRequest(){
 
   function cmp($a, $b)
   {
-    $one = $a[1];
-    $two = $b[1];
+    $one = $a;
+    $two = $b;
     if ($one== $two]) {
         return 0;
     }
