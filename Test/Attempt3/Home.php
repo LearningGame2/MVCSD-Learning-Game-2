@@ -18,9 +18,6 @@ function connect() {
 }//Connection Function
 
 
-}
-
-
 
 function leaderboardRequest(){
   $scores = array();
