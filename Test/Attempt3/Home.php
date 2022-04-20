@@ -22,6 +22,7 @@ function connect() {
 
 function leaderboardRequest(){
   $scores = array();
+  
   $conn = connect();
   $sql = "SELECT * FROM Leaderboard";
   $result = mysqli_query($conn,$sql);
@@ -32,13 +33,13 @@ function leaderboardRequest(){
 
 
   $columns = array_column($scores, 1 );
-
+  $sortedScores = array_multisort($columns, SORT_ASC, $scores);
 
 
 
 //USE usort() function to sort before sending
 
-return json_encode(array_multisort($columns, SORT_ASC, $array));
+return json_encode($sortedScores);
 
 }
 
