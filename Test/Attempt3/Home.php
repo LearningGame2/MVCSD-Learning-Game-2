@@ -46,9 +46,9 @@ function leaderboardRequest(){
   }
 
 
-  $sortedScores = usort($scores, "cmp");
+  usort($scores, "cmp");
 
-  return json_encode($sortedScores);
+  return json_encode($scores);
 
 
 }
