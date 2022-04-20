@@ -17,7 +17,7 @@ function connect() {
 
 
 
-function highscoreRequest(){
+function leaderboardRequest(){
   $scores = array();
   for ($x = 0; $x < 10; $x++) {
       $conn = connect();
@@ -36,7 +36,13 @@ function highscoreRequest(){
         $scores[$x] = $row;
     }
   }
+
+
+
 //USE usort() function to sort before sending
+
+
+
 return json_encode($scores);
 }
 
@@ -119,6 +125,8 @@ return json_encode($scores);
 </body>
 
 <script>
+  var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
+  console.log(testScores);
   function goToGame(){
     window.location.href = "Game.php"
   }
@@ -129,3 +137,4 @@ return json_encode($scores);
 </script>
 
 </html>
+
