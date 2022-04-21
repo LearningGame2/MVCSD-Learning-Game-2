@@ -101,7 +101,7 @@ function leaderboardRequest(){
       margin-left:auto;
       width:40%;
       text-align:center;
-      font-size:20px;
+      font-size:25px;
       font-family: "Lucida Console", "Courier New", monospace;
     }
     .center {
