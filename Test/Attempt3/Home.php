@@ -101,8 +101,7 @@ function leaderboardRequest(){
       margin-left:auto;
       width:40%;
       text-align:center;
-      font-size:20;
-      font-family: "Times New Roman", Times, serif;
+      font-size:20px;
     }
     .center {
       margin-left: auto;
