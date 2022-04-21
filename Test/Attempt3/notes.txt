@@ -1669,6 +1669,3 @@ function addScore($s){
 
 
 
-
-
-
