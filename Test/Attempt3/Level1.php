@@ -18,11 +18,10 @@ function connect() {
 }//Connection Function
 
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Score sent
-   $levelScore = $_POST['player-score'];
+function nextLevel(){
+   $levelScore = $_GET['player-score'];
    $_SESSION['score'] = $Session['score']+intval($levelScore);
-   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php")
+   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php");
  }
 
 
@@ -78,7 +77,7 @@ function addToScore($s){
                 </div>
 
                 <div class="modal-button-container">
-                    <button method = "post">LEVEL 2</button>
+                    <button onclick = "<?php echo nextLevel();?>">LEVEL 2</button>
                 </div>
 
             </div>
