@@ -200,7 +200,7 @@ function fillQuestions()
 
 let questionArray = fillQuestions();
     setCookie(score, 0); //sets score as 0
-    setCookie(streak,0);
+    //setCookie(streak, 0);
     console.log("My score =" + getCookie(score));
     
     let questionNumber = 1 //holds the current question number
