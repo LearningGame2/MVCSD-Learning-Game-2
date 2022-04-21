@@ -1665,6 +1665,3 @@ console.log(q1.qPrompt+ "= q1.qPrompt");
 
 
 
-
-
-
