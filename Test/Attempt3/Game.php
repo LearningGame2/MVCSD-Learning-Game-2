@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+// if(!isset($_SESSION['login'])){
+//   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
+// } //Comment out to make less annoying
+
 function connect() {
     $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
@@ -161,25 +167,39 @@ function fillQuestions()
         console.log(prompt);
         qPrompt = prompt[1];
         var j = Math.floor(Math.random()*4)+1;
-        var ansA = prompt[j%6+1];
-        var ansB = prompt[(j+1)%6+1];
-        var ansC = prompt[(j+2)%6+1];
-        var ansD = prompt[(j+3)%6+1];
-        //MAKE IF STATEMENTS
-        var rightResponse;
-        if (j==1) {
 
-        } else if (j==2) {
-
-        } else if (j==3) {
-
-        } else if (j==4) {
-
-        } else {
-            rightResponse = "Something in our code went wrong but we'll give it to you — is the right answer!";
+        //this way is so clunky but i couldn't get my fancy way to work :(
+        let optionA, optionB, optionC, optionD, correctOption;
+        if(j == 1){
+            optionA = prompt[2];
+            optionB = prompt[3];
+            optionC = prompt[4];
+            optionD = prompt[5];
+            correctOption ="optionA";
         }
-        var rightResponse = "ans"+String.fromCharCode(64+j); //maybe can't combine char & string?  JS is dynamic tho...
-        var currentQuestion = new Question(qPrompt,ansA,ansB,ansC,ansD,rightResponse);
+        if(j == 2){
+            optionA = prompt[5];
+            optionB = prompt[2];
+            optionC = prompt[3];
+            optionD = prompt[4];
+            correctOption = "optionB";
+        }
+        if(j == 3){
+            optionA = prompt[4];
+            optionB = prompt[5];
+            optionC = prompt[2];
+            optionD = prompt[3];
+            correctOption = "optionC";
+        }
+        if(j == 4){
+            optionA = prompt[3];
+            optionB = prompt[4];
+            optionC = prompt[5];
+            optionD = prompt[2];
+            correctOption = "optionD";
+        }
+
+        var currentQuestion = new Question(qPrompt,optionA,optionB,optionC,optionD,correctOption);
         questions[i] = currentQuestion;
     }
 
@@ -198,7 +218,6 @@ let questionArray = fillQuestions();
     // function for displaying next question in the array to dom
     //also handles displaying players and quiz information to dom
     function NextQuestion(index) {
-        //handleQuestions() — this is also vestigial
         const currentQuestion = questionArray[index]
         document.getElementById("question-number").innerHTML = questionNumber
         document.getElementById("player-score").innerHTML = playerScore
@@ -320,7 +339,7 @@ let questionArray = fillQuestions();
 
     }
 
-    //closes score modal, resets game and reshuffles questions
+    //closes score modal and resets game
     function closeScoreModal() {
         questionNumber = 1
         playerScore = 0
