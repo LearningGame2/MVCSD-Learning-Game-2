@@ -53,7 +53,7 @@
       <button type = "submit" value = " Submit ">Submit</button>
     </form>
 
-    <div style = "font-size:30px; color:red; margin-top:10px; text-align:center; position:relative; left:-50%">
+    <div style = "font-size:30px; color:red; margin-top:10px; text-align:center; position:relative; left:0%">
       <?php echo $error; ?>
     </div>
   </div>
