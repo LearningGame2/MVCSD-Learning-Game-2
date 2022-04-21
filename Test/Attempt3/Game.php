@@ -253,8 +253,8 @@ let questionArray = fillQuestions();
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
-                streak++
                 playerScore = playerScore + 1 + streak //adding to player's score
+                streak++
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
                 //set to delay question number till when next question loads
