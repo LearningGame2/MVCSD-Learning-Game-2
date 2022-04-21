@@ -78,8 +78,7 @@ function promptRequest($numOfQuestions){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="closeScoreModal()">Play Again</button>
-                    <button onclick="returnHome()">Exit Game</button>
+                    <button onclick="returnHome()">Ok</button>
                 </div>
 
             </div>
@@ -334,18 +333,6 @@ let questionArray = fillQuestions();
         document.getElementById('wrong-answers').innerHTML = wrongAttempt
         document.getElementById('right-answers').innerHTML = playerScore
         document.getElementById('score-modal').style.display = "flex"
-
-    }
-
-    //closes score modal, resets game and reshuffles questions
-    function closeScoreModal() {
-        questionNumber = 1
-        playerScore = 0
-        wrongAttempt = 0
-        indexNumber = 0
-        questionArray = []
-        NextQuestion(indexNumber)
-        document.getElementById('score-modal').style.display = "none"
     }
 
     //function to close warning modal
