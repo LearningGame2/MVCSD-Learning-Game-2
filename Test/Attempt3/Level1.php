@@ -50,7 +50,7 @@ function addToScore($s){
 
 <body onload="NextQuestion(0)">
   <h1 style="background-color:black; color:white; text-align:center; font-family:courier new; font-size:300%; line-height: 100px">
-    Level 2
+    Level 1
   </h1>
     <main>
         <!-- creating a modal for when quiz ends -->
@@ -58,7 +58,7 @@ function addToScore($s){
 
             <div class="modal-content-container">
 
-                <h1>Level 2 COMPLETED</h1>
+                <h1>Level 1 COMPLETED</h1>
 
                 <div class="grade-details">
                     <p>Wrong Answers : <span id="wrong-answers"></span></p>
@@ -69,7 +69,7 @@ function addToScore($s){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="nextlevel()">GO</button>
+                    <button onclick="nextlevel()">LEVEL 2</button>
                 </div>
 
             </div>
