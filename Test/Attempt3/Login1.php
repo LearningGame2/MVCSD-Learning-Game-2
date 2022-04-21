@@ -40,7 +40,8 @@
 </head>
 
 <body>
-  <div class ="container" style = "position:relative;top:-10px;">
+  <button type ="submit" onclick = "logOut()" class="button button2">Log Out</button>
+  <div class ="container" style = "position:relative; top:-10px;">
     <h1 style="text-align:center; color:white; font-family:Garamond; font-size:350%; position:relative; top:-10px;">
       Welcome Back!
     </h1>
@@ -53,7 +54,7 @@
       <button type = "submit" value = " Submit ">Submit</button>
     </form>
 
-    <div style = "font-size:11px; color:blue; margin-top:10px; text-align:center; position:relative; left:10%">
+    <div style = "font-size:30px; color:red; margin-top:10px; text-align:center; position:relative; left:0%">
       <?php echo $error; ?>
     </div>
   </div>
