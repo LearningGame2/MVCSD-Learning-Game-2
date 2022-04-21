@@ -1662,6 +1662,10 @@ console.log(q1.qPrompt+ "= q1.qPrompt");
 
 
 
+function addScore($s){
+    $_SESSION['score'] = $_SESSION['score'] + $s;
+}
+
 
 
 
