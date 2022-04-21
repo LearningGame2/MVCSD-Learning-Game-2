@@ -18,7 +18,13 @@ function connect() {
 }//Connection Function
 
 
-$_SESSION['score'] = $Session['score']+intval($_POST['GoTo']);
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    // username and password sent from form
+
+    $_SESSION['score'] = intval($Session['score'])+intval($_POST['GoTo']);
+    header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php");
+}
 
 
 
@@ -76,8 +82,8 @@ function addToScore($s){
 
                 <div class="modal-button-container">
                     <form method = "post">
-                    <input type = "hidden" name = "GoTo" value = "score">
-                    <button type = "submit" onclick = "nextLevel()">LEVEL 2</button>
+                    <input type = "hidden" name = "GoTo" value = "player-score">
+                    <button type = "submit">LEVEL 2</button>
                     </form>
                 </div>
 
