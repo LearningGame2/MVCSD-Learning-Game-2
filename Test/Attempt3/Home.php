@@ -3,9 +3,9 @@
 
 session_start();
 
-if(!isset($_SESSION['login'])){
-  header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
-} //Comment out to make less annoying
+// if(!isset($_SESSION['login'])){
+//   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
+// } //Comment out to make less annoying
 
 
 function connect() {
