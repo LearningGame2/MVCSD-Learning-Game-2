@@ -200,7 +200,7 @@ function fillQuestions()
 
 let questionArray = fillQuestions();
 
-
+    document.cookie = 0
     let questionNumber = 1 //holds the current question number
     let playerScore = 0  //holds the player score
     let amountCorrect = 0 //different from score, does not include streaks
@@ -340,6 +340,7 @@ let questionArray = fillQuestions();
         document.getElementById("player-score").innerHTML = playerScore;
         document.getElementById("player-streak").innerHTML = streak;
 
+        document.cookie = playerScore
 
     }
   
