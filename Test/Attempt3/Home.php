@@ -102,7 +102,7 @@ function leaderboardRequest(){
       width:40%
     }
     .center {
-      margin-left: auto;
+      margin-left: 250px;
       margin-right: auto;
     }
   </style>
