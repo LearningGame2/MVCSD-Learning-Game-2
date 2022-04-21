@@ -50,6 +50,33 @@ function promptRequest($numOfQuestions){
 
 <head>
   <link rel="stylesheet" href="Game.css"> <!--CHANGE THIS IF YOU CHANGE FOR EACH LEVEL-->
+  <style>
+    .button {
+      text-align: center;
+      background-color: #197DDD;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      font-size: 24px;
+      height:100px;
+      width:200px;
+      transition-duration: 0.4s;
+      border: 2px solid white;
+    }
+    .button1 {
+      margin: 0;
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  </style>
 </head>
 
 <body onload="NextQuestion(0)">
@@ -161,7 +188,7 @@ function fillQuestions()
 {
     const questions = [10];
     var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
-    
+
     for (let i = 0; i < 10; i++) {
         var prompt = phpPrompt[i];
         console.log(prompt);
