@@ -68,7 +68,7 @@ function leaderboardRequest(){
     .button1 {
       margin: 0;
       position: absolute;
-      top: 35%;
+      top: 40px;
       left: 40%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
@@ -76,7 +76,7 @@ function leaderboardRequest(){
     .button2 {
       margin: 0;
       position: absolute;
-      top: 35%;
+      top: 40px;
       left: 60%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
@@ -120,7 +120,7 @@ function leaderboardRequest(){
 </header>
 
 <body style="background-color:black;">
-  <div style = "text-align:center; position:relative; top:50px; font-size:48px; color:white;">
+  <div style = "text-align:center; position:relative; top:35px; font-size:48px; color:white;">
      Press Button to Play
   </div>
 
