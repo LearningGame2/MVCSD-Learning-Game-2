@@ -64,7 +64,7 @@ function addToScore($s){
                     <p>Wrong Answers : <span id="wrong-answers"></span></p>
                     <p>Right Answers : <span id="right-answers"></span></p>
                     <p>Grade : <span id="grade-percentage"></span>%</p>
-                    <p>Score : <span id="score"></span>%</p>
+                    <p>Score : <span id="score"></span></p>
                     <p ><span id="remarks"></span></p>
                 </div>
 
@@ -208,7 +208,7 @@ let questionArray = fillQuestions();
 
 
     let questionNumber = 1 //holds the current question number
-    let playerScore = 0  //holds the player score
+    let playerScore = Integer.parseInt('<?php echo $_SESSION['score'];?>')  //holds the player score
     let amountCorrect = 0 //different from score, does not include streaks
     let wrongAttempt = 0 //amount of wrong answers picked by player
     let indexNumber = 0 //will be used in displaying next question

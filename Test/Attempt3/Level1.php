@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$_SESSION['score'] = 0;
+
 // if(!isset($_SESSION['login'])){
 //   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
 // } //Comment out to make less annoying
@@ -14,6 +16,14 @@ function connect() {
     }
     return $conn;
 }//Connection Function
+
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Score sent
+   $levelScore = $_POST['player-score'];
+   $_SESSION['score'] = $Session['score']+intval($levelScore);
+   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php")
+ }
 
 
 
@@ -37,7 +47,6 @@ function promptRequest($numOfQuestions){
 
 function addToScore($s){
     $_SESSION['score'] = $_SESSION['score'] + $s;
-
 }
 
 ?>
@@ -69,7 +78,7 @@ function addToScore($s){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="nextLevel()">LEVEL 2</button>
+                    <button method = "post">LEVEL 2</button>
                 </div>
 
             </div>
