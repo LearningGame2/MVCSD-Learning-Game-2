@@ -99,7 +99,8 @@ function leaderboardRequest(){
       border-collapse: collapse;
       margin-top:auto;
       margin-left:auto;
-      width:40%
+      width:40%;
+      text-align:center;
     }
     .center {
       margin-left: auto;
