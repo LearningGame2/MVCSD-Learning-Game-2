@@ -120,7 +120,7 @@ function leaderboardRequest(){
 </header>
 
 <body style="background-color:black;">
-  <div style = "text-align:center; position:relative; top:30px; font-size:48px; color:white;">
+  <div style = "text-align:left; position:relative; top:30px; font-size:48px; color:white;">
      Press Button to Play
   </div>
 
