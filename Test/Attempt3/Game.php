@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if(!isset($_SESSION['login'])){
+  header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
+} //Comment out to make less annoying
+
 function connect() {
     $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
@@ -132,161 +138,62 @@ function promptRequest($numOfQuestions){
 
         </div>
     </main>
-    <script>
 
 
+<script>
 
-
-
-
-function fillQuestions(){
-    const questions = [
-        //Question 1
-            {
-                question: "",
-                optionA: "",
-                optionB: "",
-                optionC: "",
-                optionD: "",
-                correctOption: ""
-            },
-        //Question 2
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 3
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 4
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 5
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 6
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 7
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 8
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 9
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        },
-        //Question 10
-        {
-            question: "",
-            optionA: "",
-            optionB: "",
-            optionC: "",
-            optionD: "",
-            correctOption: ""
-        }
-];
-
-    var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
-  for (let i = 0; i < 10; i++) {
-    var prompt = phpPrompt[i];
-    console.log(prompt);
-    questions[i].question = prompt[1];
-
-    var j = Math.floor(Math.random()*4)+1;
-
-    if(j == 1){
-        questions[i].optionA = prompt[2];
-        questions[i].optionB = prompt[3];
-        questions[i].optionC = prompt[4];
-        questions[i].optionD = prompt[5];
-        questions[i].correctOption ="optionA";
-    }
-    if(j == 2){
-        questions[i].optionA = prompt[5];
-        questions[i].optionB = prompt[2];
-        questions[i].optionC = prompt[3];
-        questions[i].optionD = prompt[4];
-        questions[i].correctOption = "optionB";
-    }
-    if(j == 3){
-        questions[i].optionA = prompt[4];
-        questions[i].optionB = prompt[5];
-        questions[i].optionC = prompt[2];
-        questions[i].optionD = prompt[3];
-        questions[i].correctOption = "optionC";
-    }
-    if(j == 4){
-        questions[i].optionA = prompt[3];
-        questions[i].optionB = prompt[4];
-        questions[i].optionC = prompt[5];
-        questions[i].optionD = prompt[2];
-        questions[i].correctOption = "optionD";
+//making a class of question object to fill questions array
+class Question {
+    constructor (question, optionA, optionB, optionC, optionD, correctOption) {
+        this.question = question;
+        this.optionA = optionA;
+        this.optionB = optionB;
+        this.optionC = optionC;
+        this.optionD = optionD;
+        this.correctOption = correctOption;
     }
 }
+
+/*fills questions array after parsing the decoded json that php returned, setting them in a random order and then creating a
+  question object with the results from the parse*/
+//post: returns questions array
+function fillQuestions()
+{
+    const questions = [10];
+    var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
+    
+    for (let i = 0; i < 10; i++) {
+        var prompt = phpPrompt[i];
+        console.log(prompt);
+        qPrompt = prompt[1];
+        var j = Math.floor(Math.random()*4)+1;
+        var ansA = prompt[j%6+1];
+        var ansB = prompt[(j+1)%6+1];
+        var ansC = prompt[(j+2)%6+1];
+        var ansD = prompt[(j+3)%6+1];
+        //MAKE IF STATEMENTS
+        var rightResponse;
+        if (j==1) {
+
+        } else if (j==2) {
+
+        } else if (j==3) {
+
+        } else if (j==4) {
+
+        } else {
+            rightResponse = "Something in our code went wrong but we'll give it to you — is the right answer!";
+        }
+        var rightResponse = "ans"+String.fromCharCode(64+j); //maybe can't combine char & string?  JS is dynamic tho...
+        var currentQuestion = new Question(qPrompt,ansA,ansB,ansC,ansD,rightResponse);
+        questions[i] = currentQuestion;
+    }
+
     return questions;
 }
 
 
-let shuffledQuestions = []; //empty array to hold shuffled selected questions out of all available questions
-
-function handleQuestions() {
-    questions = fillQuestions();
-        //function to shuffle and push 10 questions to shuffledQuestions array
-    //app would be dealing with 10questions per session
-        while (shuffledQuestions.length <= 9) {
-            const random = questions[Math.floor(Math.random() * questions.length)]
-            if (!shuffledQuestions.includes(random)) {
-                shuffledQuestions.push(random)
-            }
-        }
-}
+let questionArray = fillQuestions();
 
 
     let questionNumber = 1 //holds the current question number
@@ -297,8 +204,8 @@ function handleQuestions() {
     // function for displaying next question in the array to dom
     //also handles displaying players and quiz information to dom
     function NextQuestion(index) {
-        handleQuestions()
-        const currentQuestion = shuffledQuestions[index]
+        //handleQuestions() — this is also vestigial
+        const currentQuestion = questionArray[index]
         document.getElementById("question-number").innerHTML = questionNumber
         document.getElementById("player-score").innerHTML = playerScore
         document.getElementById("display-question").innerHTML = currentQuestion.question;
@@ -311,7 +218,7 @@ function handleQuestions() {
 
 
     function checkForAnswer() {
-        const currentQuestion = shuffledQuestions[indexNumber] //gets current Question
+        const currentQuestion = questionArray[indexNumber] //gets current Question
         const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
         const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
         let correctOption = null
@@ -425,7 +332,7 @@ function handleQuestions() {
         playerScore = 0
         wrongAttempt = 0
         indexNumber = 0
-        shuffledQuestions = []
+        questionArray = []
         NextQuestion(indexNumber)
         document.getElementById('score-modal').style.display = "none"
     }
