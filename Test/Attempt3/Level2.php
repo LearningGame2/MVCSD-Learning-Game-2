@@ -209,19 +209,19 @@ function fillQuestions()
     //retreiving the first variable, streak or score
     var nameValueArray = cookieArray[0].split("=")
     if(nameValueArray[0] == "score"){
-        playerScore = parseInt(nameValueArray[1])
+        let playerScore = parseInt(nameValueArray[1])
     }
     else if(nameValueArray[0] == "streak"){
-        streak = parseInt(nameValueArray[1])
+        let streak = parseInt(nameValueArray[1])
     }
 
     //retreiving the first variable, streak or score
     var nameValueArray = cookieArray[1].split("=")
     if(nameValueArray[0] == "score"){
-        playerScore = parseInt(nameValueArray[1])
+        let playerScore = parseInt(nameValueArray[1])
     }
     else if(nameValueArray[0] == "streak"){
-        streak = parseInt(nameValueArray[1])
+        let streak = parseInt(nameValueArray[1])
     }
 
 
