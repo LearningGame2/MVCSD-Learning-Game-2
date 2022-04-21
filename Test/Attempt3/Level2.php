@@ -21,7 +21,7 @@ function connect() {
 function promptRequest($numOfQuestions){
     $questions = array();
     for ($x = 0; $x <= $numOfQuestions; $x++) {
-        $rowNumber = rand(400,500);
+        $rowNumber = rand(400,410);
         $prompt = "";
         $conn = connect();
         $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
@@ -41,7 +41,7 @@ function promptRequest($numOfQuestions){
 
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
   <link rel="stylesheet" href="Game.css">
 </head>
