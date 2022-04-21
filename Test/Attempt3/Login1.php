@@ -19,9 +19,7 @@
       // If result matched $myusername and $mypassword, table row must be 1 row
 
       if($count == 1) {
-         //session_register("myusername");
          $_SESSION['login'] = $myusername;
-         $error = "Login Sucessful";
          header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
       }else {
          $error = "Your login name or password is invalid.";
@@ -40,7 +38,7 @@
 </head>
 
 <body>
-  <div class ="container" style = "position:relative; top:-10px;">
+  <div class ="container" style = "position:relative;top:-10px;">
     <h1 style="text-align:center; color:white; font-family:Garamond; font-size:350%; position:relative; top:-10px;">
       Welcome Back!
     </h1>
@@ -53,7 +51,7 @@
       <button type = "submit" value = " Submit ">Submit</button>
     </form>
 
-    <div style = "font-size:30px; color:red; margin-top:10px; text-align:center; position:relative; left:0%">
+    <div style = "font-size:11px; color:red; margin-top:10px; text-align:center; position:relative; left:70%">
       <?php echo $error; ?>
     </div>
   </div>
