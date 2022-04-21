@@ -80,6 +80,7 @@ function promptRequest($numOfQuestions){
 </head>
 
 <body onload="NextQuestion(0)">
+  <button type ="submit" onclick = "returnHome()" class="button button1">Exit</button>
   <h1 style="background-color:black; color:white; text-align:center; font-family:courier new; font-size:300%; line-height: 100px">
     Learning Game 2
   </h1>
@@ -179,6 +180,10 @@ class Question {
         this.optionD = optionD;
         this.correctOption = correctOption;
     }
+}
+
+function returnHome(){
+  window.location.href = "Home.php"
 }
 
 /*fills questions array after parsing the decoded json that php returned, setting them in a random order and then creating a
