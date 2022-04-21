@@ -79,8 +79,10 @@ function addToScore($s){
         <div class="game-quiz-container" style = "position:relative; top:-75px">
 
             <div class="game-details-container">
-                <h1>Score : <span id="player-score"></span> / 10</h1>
-                <h1> Question : <span id="question-number"></span> / 10</h1>
+                <h1>Score : <span id="player-score"></span></h1>
+                <h1>Current Streak : <span id = "player-streak"></span></h1>
+                <h1>Question : <span id="question-number"></span> / 10</h1>
+
             </div>
 
             <div class="game-question-container">
@@ -207,16 +209,19 @@ let questionArray = fillQuestions();
 
     let questionNumber = 1 //holds the current question number
     let playerScore = 0  //holds the player score
+    let amountCorrect = 0 //different from score, does not include streaks
     let wrongAttempt = 0 //amount of wrong answers picked by player
     let indexNumber = 0 //will be used in displaying next question
+    let streak = 0 //Keeps track of player streak
 
     // function for displaying next question in the array to dom
     //also handles displaying players and quiz information to dom
     function NextQuestion(index) {
         //handleQuestions() — this is also vestigial
-        const currentQuestion = questionArray[index]
-        document.getElementById("question-number").innerHTML = questionNumber
-        document.getElementById("player-score").innerHTML = playerScore
+        const currentQuestion = questionArray[index];
+        document.getElementById("question-number").innerHTML = questionNumber;
+        document.getElementById("player-score").innerHTML = playerScore;
+        document.getElementById("player-streak").innerHTML = streak;
         document.getElementById("display-question").innerHTML = currentQuestion.question;
         document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
         document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
@@ -248,7 +253,9 @@ let questionArray = fillQuestions();
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
-                playerScore++ //adding to player's score
+                streak++
+                playerScore = playerScore + 1 + streak //adding to player's score
+                amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
                 //set to delay question number till when next question loads
                 setTimeout(() => {
@@ -262,6 +269,7 @@ let questionArray = fillQuestions();
                 document.getElementById(correctOption).style.backgroundColor = "green"
                 wrongAttempt++ //adds 1 to wrong attempts
                 indexNumber++
+                streak = 0
                 //set to delay question number till when next question loads
                 setTimeout(() => {
                     questionNumber++
@@ -315,15 +323,15 @@ let questionArray = fillQuestions();
             remark = "You can do better!"
             remarkColor = "red"
         }
-        else if (playerScore >= 4 && playerScore < 7) {
+        else if (playerScore >= 4 && playerScore < 9) {
             remark = "Keep practicing!"
             remarkColor = "orange"
         }
-        else if (playerScore >= 7) {
+        else if (playerScore >= 10) {
             remark = "Excellent! Keep up the good work."
             remarkColor = "green"
         }
-        const playerGrade = (playerScore / 10) * 100
+        const playerGrade = (amountCorrect / 10) * 100
 
         //data to display to score board
         document.getElementById('remarks').innerHTML = remark
