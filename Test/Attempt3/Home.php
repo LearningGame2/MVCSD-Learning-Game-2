@@ -216,7 +216,7 @@ function leaderboardRequest(){
 
   console.log(testScores);
   function goToGame(){
-    window.location.href = "Game.php" //CHANGE THIS IF CHANGE FOR EACH LEVEL
+    window.location.href = "LevelOne.php"
   }
   function logOut(){
     window.location.href = "Login1.php"
