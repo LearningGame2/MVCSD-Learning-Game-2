@@ -6,6 +6,7 @@
 
 html, body{
     height: 100%;
+    background-image: url("different-types-of-dogs.jpg");
 }
 
 
@@ -21,7 +22,6 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("different-types-of-dogs.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
