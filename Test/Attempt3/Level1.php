@@ -204,8 +204,6 @@ let questionArray = fillQuestions();
     document.cookie = "score = 0;"
     document.cookie = "streak = 0;"
 
-
-    console.log("My score =" + getCookie(score));
     
     let questionNumber = 1 //holds the current question number
     let playerScore = 0  //holds the player score
