@@ -205,7 +205,7 @@ let questionArray = fillQuestions();
     console.log('<?php echo $_SESSION['score'];?>')
 
     let questionNumber = 1 //holds the current question number
-    let playerScore = parseInt('<?php echo $_SESSION['score'];?>')  //holds the player score
+    let playerScore = 0//holds the player score
     let amountCorrect = 0 //different from score, does not include streaks
     let wrongAttempt = 0 //amount of wrong answers picked by player
     let indexNumber = 0 //will be used in displaying next question
