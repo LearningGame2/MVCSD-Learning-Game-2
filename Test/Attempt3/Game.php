@@ -61,10 +61,10 @@ function addToScore($s){
                 <h1>Congratulations, Quiz Completed.</h1>
 
                 <div class="grade-details">
-                    <p>Attempts : 10</p>
                     <p>Wrong Answers : <span id="wrong-answers"></span></p>
                     <p>Right Answers : <span id="right-answers"></span></p>
                     <p>Grade : <span id="grade-percentage"></span>%</p>
+                    <p>Score : <span id="score"></span>%</p>
                     <p ><span id="remarks"></span></p>
                 </div>
 
@@ -339,7 +339,12 @@ let questionArray = fillQuestions();
         document.getElementById('grade-percentage').innerHTML = playerGrade
         document.getElementById('wrong-answers').innerHTML = wrongAttempt
         document.getElementById('right-answers').innerHTML = amountCorrect
+        document.getElementById('score').innerHTML = playerScore
         document.getElementById('score-modal').style.display = "flex"
+
+        document.getElementById("question-number").innerHTML = questionNumber;
+        document.getElementById("player-score").innerHTML = playerScore;
+        document.getElementById("player-streak").innerHTML = streak;
 
     }
   
