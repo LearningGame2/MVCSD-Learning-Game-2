@@ -10,7 +10,5 @@ PutHTML:
 		cp Home.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Login1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp LoginStyle.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
-		cp validate.js /var/www/html/class/ssd/$(USER)/LGAttempt3/
-		cp TestingAround.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Game.js /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Game.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
