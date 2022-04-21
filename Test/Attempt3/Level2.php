@@ -207,11 +207,11 @@ let questionArray = fillQuestions();
     console.log('<?php echo $_SESSION['score'];?>')
 
     let questionNumber = 1 //holds the current question number
-    let playerScore = parseInt(document.cookie) //holds the player score
+    let playerScore = getCookie(score)//holds the player score
     let amountCorrect = 0 //different from score, does not include streaks
     let wrongAttempt = 0 //amount of wrong answers picked by player
     let indexNumber = 0 //will be used in displaying next question
-    let streak = 0 //Keeps track of player streak
+    let streak = getCookie(streak) //Keeps track of player streak
 
     // function for displaying next question in the array to dom
     //also handles displaying players and quiz information to dom
@@ -355,5 +355,35 @@ let questionArray = fillQuestions();
     function returnHome(){
         window.location.href = "Home.php"
     }
+
+
+
+    /*COOOOOOOOOOOOOOOOOOOOOKIES*/
+
+
+    function setCookie(cname, cvalue) {
+    document.cookie = cname + "=" + cvalue + ";"
+    }
+
+    function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+    }
+
+
+
+
+
     </script>
 </body>
