@@ -206,6 +206,7 @@ function fillQuestions()
 
 let questionArray = fillQuestions();
 
+    console.log('<?php echo $_SESSION['score'];?>')
 
     let questionNumber = 1 //holds the current question number
     let playerScore = Integer.parseInt('<?php echo $_SESSION['score'];?>')  //holds the player score
