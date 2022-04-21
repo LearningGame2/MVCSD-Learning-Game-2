@@ -48,10 +48,6 @@ function promptRequest($numOfQuestions){
   return json_encode($questions);
 }
 
-function addToScore($s){
-    $_SESSION['score'] = $_SESSION['score'] + $s;
-}
-
 ?>
 
 
@@ -81,8 +77,8 @@ function addToScore($s){
                 </div>
 
                 <div class="modal-button-container">
-                    <form method = "post">
-                    <input type = "hidden" name = "GoTo" value = "player-score">
+                    <form method = "post" id = "myform">
+                    <input type = "hidden" name = "GoTo" value = "0">
                     <button type = "submit">LEVEL 2</button>
                     </form>
                 </div>
@@ -360,6 +356,8 @@ let questionArray = fillQuestions();
         document.getElementById("question-number").innerHTML = questionNumber;
         document.getElementById("player-score").innerHTML = playerScore;
         document.getElementById("player-streak").innerHTML = streak;
+
+        document.myform.GoTo.value = playerScore;
 
     }
   
