@@ -46,8 +46,8 @@
       To stay connected with us, please sign in.
     </h4>
     <form action = "" method = "post" class="login_form" autocomplete="off" name="form">
-      <label style="color:white; font-family:Garamond"> Username: </label><input type = "text" name = "username" class = "box"/><br /><br />
-      <label style="color:white; font-family:Garamond"> Password: </label><input type = "password" name = "password" class = "box" /><br/><br />
+      <label style="color:white; font-family:Garamond"> Username: </label><input type = "text" placeholder="username" name = "username" class = "box"/><br /><br />
+      <label style="color:white; font-family:Garamond"> Password: </label><input type = "password" placeholder="password" name = "password" class = "box" /><br/><br />
       <button type = "submit" value = " Submit ">Submit</button>
     </form>
 
