@@ -21,7 +21,6 @@ function connect() {
 function nextLevel(){
    $levelScore = $_GET['player-score'];
    $_SESSION['score'] = $Session['score']+intval($levelScore);
-   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php");
  }
 
 
