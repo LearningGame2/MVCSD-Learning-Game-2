@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$_SESSION['score'] = 0;
+$_SESSION['score'] = $_POST['score'];
 
 // if(!isset($_SESSION['login'])){
 //   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
@@ -369,5 +369,23 @@ let questionArray = fillQuestions();
     function nextLevel(){
         window.location.href = "Level2.php"
     }
-    </script>
+
+
+
+
+function setSession(){
+   var fullname = $('#score').val();
+   var dataString = playerScore;
+
+   $.ajax({
+        type: "POST",
+        url: "Level1.php",
+        data: dataString,
+        cache: false,
+        });
+
+}
+
+
+</script>
 </body>
