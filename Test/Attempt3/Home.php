@@ -97,6 +97,18 @@ return json_encode($scores);
     align-items: center;
     color: black;
     }
+<<<<<<< Updated upstream
+=======
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      width:100%;
+      bordercolor:red;
+    }
+    th, td {
+      padding: 15px;
+    }
+>>>>>>> Stashed changes
   </style>
 </head>
 
