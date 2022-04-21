@@ -19,18 +19,6 @@ function connect() {
 
 
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    // username and password sent from form
-
-    $_SESSION['score'] = intval($Session['score'])+intval($_POST['GoTo']);
-    header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php");
-}
-
-
-
-
-
-
 function promptRequest($numOfQuestions){
     $questions = array();
     for ($x = 0; $x <= $numOfQuestions; $x++) {
@@ -77,10 +65,7 @@ function promptRequest($numOfQuestions){
                 </div>
 
                 <div class="modal-button-container">
-                    <form method = "post" id = "myform">
-                    <input type = "hidden" name = "GoTo" value = "0">
-                    <button type = "submit">LEVEL 2</button>
-                    </form>
+                    <button type = "submit" onclick = "nextLevel()">LEVEL 2</button>
                 </div>
 
             </div>
@@ -357,7 +342,7 @@ let questionArray = fillQuestions();
         document.getElementById("player-score").innerHTML = playerScore;
         document.getElementById("player-streak").innerHTML = streak;
 
-        document.myform.GoTo.value = playerScore;
+        setSession();
 
     }
   
