@@ -99,7 +99,7 @@ function leaderboardRequest(){
       border-collapse: collapse;
       margin-top:10px;
       margin-left:10px;
-      width:100%
+      width:40%
     }
   </style>
 </head>
