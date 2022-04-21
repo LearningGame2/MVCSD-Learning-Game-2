@@ -15,11 +15,6 @@ function connect() {
     return $conn;
 }//Connection Function
 
-function addScore($s){
-    $_SESSION['score'] = $_SESSION['score'] + $s;
-}
-
-
 
 
 
@@ -78,7 +73,8 @@ function promptRequest($numOfQuestions){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="returnHome()">Ok</button>
+                    <button onclick="closeScoreModal()">Play Again</button>
+                    <button onclick="returnHome()">Exit Game</button>
                 </div>
 
             </div>
@@ -145,12 +141,6 @@ function promptRequest($numOfQuestions){
 
 
 <script>
-function goHome(){
-
-
-
-}
-
 
 //making a class of question object to fill questions array
 class Question {
@@ -177,25 +167,39 @@ function fillQuestions()
         console.log(prompt);
         qPrompt = prompt[1];
         var j = Math.floor(Math.random()*4)+1;
-        var ansA = prompt[j%6+1];
-        var ansB = prompt[(j+1)%6+1];
-        var ansC = prompt[(j+2)%6+1];
-        var ansD = prompt[(j+3)%6+1];
-        //MAKE IF STATEMENTS
-        var rightResponse;
-        if (j==1) {
 
-        } else if (j==2) {
-
-        } else if (j==3) {
-
-        } else if (j==4) {
-
-        } else {
-            rightResponse = "Something in our code went wrong but we'll give it to you — is the right answer!";
+        //this way is so clunky but i couldn't get my fancy way to work :(
+        let optionA, optionB, optionC, optionD, correctOption;
+        if(j == 1){
+            optionA = prompt[2];
+            optionB = prompt[3];
+            optionC = prompt[4];
+            optionD = prompt[5];
+            correctOption ="optionA";
         }
-        var rightResponse = "ans"+String.fromCharCode(64+j); //maybe can't combine char & string?  JS is dynamic tho...
-        var currentQuestion = new Question(qPrompt,ansA,ansB,ansC,ansD,rightResponse);
+        if(j == 2){
+            optionA = prompt[5];
+            optionB = prompt[2];
+            optionC = prompt[3];
+            optionD = prompt[4];
+            correctOption = "optionB";
+        }
+        if(j == 3){
+            optionA = prompt[4];
+            optionB = prompt[5];
+            optionC = prompt[2];
+            optionD = prompt[3];
+            correctOption = "optionC";
+        }
+        if(j == 4){
+            optionA = prompt[3];
+            optionB = prompt[4];
+            optionC = prompt[5];
+            optionD = prompt[2];
+            correctOption = "optionD";
+        }
+
+        var currentQuestion = new Question(qPrompt,optionA,optionB,optionC,optionD,correctOption);
         questions[i] = currentQuestion;
     }
 
@@ -333,6 +337,18 @@ let questionArray = fillQuestions();
         document.getElementById('wrong-answers').innerHTML = wrongAttempt
         document.getElementById('right-answers').innerHTML = playerScore
         document.getElementById('score-modal').style.display = "flex"
+
+    }
+
+    //closes score modal, resets game and reshuffles questions
+    function closeScoreModal() {
+        questionNumber = 1
+        playerScore = 0
+        wrongAttempt = 0
+        indexNumber = 0
+        questionArray = []
+        NextQuestion(indexNumber)
+        document.getElementById('score-modal').style.display = "none"
     }
 
     //function to close warning modal
