@@ -97,9 +97,13 @@ function leaderboardRequest(){
     table, th, td {
       border: 1px solid white;
       border-collapse: collapse;
-      margin-top:250px;
-      margin-left:400px;
+      margin-top:auto;
+      margin-left:auto;
       width:40%
+    }
+    .center {
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
@@ -119,7 +123,7 @@ function leaderboardRequest(){
   <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
   <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>
   <div>
-  <table style = "color:white;">
+  <table style = "color:white;" class="center">
   <tr>
     <th>Player</th>
     <th>Score</th>
