@@ -68,7 +68,7 @@ function leaderboardRequest(){
     .button1 {
       margin: 0;
       position: absolute;
-      top: 30%;
+      top: 35%;
       left: 40%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
@@ -76,7 +76,7 @@ function leaderboardRequest(){
     .button2 {
       margin: 0;
       position: absolute;
-      top: 30%;
+      top: 35%;
       left: 60%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
@@ -95,19 +95,19 @@ function leaderboardRequest(){
     color: black;
     }
     table, th, td {
-      border: 1px solid white;
+      border: 2px solid white;
       border-collapse: collapse;
       margin-top:auto;
       margin-left:auto;
       width:40%;
       text-align:center;
-      font-size:22px;
+      font-size:23px;
       font-family: "Lucida Console", "Courier New", monospace;
     }
     .center {
       margin-left: auto;
       margin-right: auto;
-      margin-top:200px
+      margin-top:225px
     }
   </style>
 </head>
@@ -120,7 +120,7 @@ function leaderboardRequest(){
 </header>
 
 <body style="background-color:black;">
-  <div style = "text-align:center; position:relative; top:25px; font-size:48px; color:white;">
+  <div style = "text-align:center; position:relative; top:30px; font-size:48px; color:white;">
      Press Button to Play
   </div>
 
