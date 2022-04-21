@@ -42,8 +42,6 @@ function promptRequest($numOfQuestions){
   return json_encode($questions);
 }
 
-
-
 ?>
 
 
