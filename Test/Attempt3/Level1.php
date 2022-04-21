@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-$_SESSION['score'] = $_POST['score'];
-
 // if(!isset($_SESSION['login'])){
 //   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
 // } //Comment out to make less annoying
@@ -38,8 +36,8 @@ function promptRequest($numOfQuestions){
 
 ?>
 
-
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <link rel="stylesheet" href="Game.css">
 </head>
@@ -342,7 +340,6 @@ let questionArray = fillQuestions();
         document.getElementById("player-score").innerHTML = playerScore;
         document.getElementById("player-streak").innerHTML = streak;
 
-        setSession();
 
     }
   
@@ -358,19 +355,9 @@ let questionArray = fillQuestions();
 
 
 
-function setSession(){
-   var fullname = $('#score').val();
-   var dataString = playerScore;
 
-   $.ajax({
-        type: "POST",
-        url: "Level1.php",
-        data: dataString,
-        cache: false,
-        });
-
-}
 
 
 </script>
 </body>
+</html>
