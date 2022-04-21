@@ -18,10 +18,9 @@ function connect() {
 }//Connection Function
 
 
-function nextLevel(){
-   $levelScore = $_GET['player-score'];
-   $_SESSION['score'] = $Session['score']+intval($levelScore);
- }
+$_SESSION['score'] = $Session['score']+intval($_POST['GoTo']);
+
+
 
 
 
@@ -76,7 +75,10 @@ function addToScore($s){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick = "<?php echo nextLevel();?>">LEVEL 2</button>
+                    <form method = "post">
+                    <input type = "hidden" name = "GoTo" value = "score">
+                    <button type = "submit" onclick = "nextLevel()">LEVEL 2</button>
+                    </form>
                 </div>
 
             </div>
