@@ -125,9 +125,10 @@ function leaderboardRequest(){
   <div style = "text-align:center; position:relative; top:30px; font-size:48px; color:white;">
      Press Button to Play
   </div>
-
+  <div>
   <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
   <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>
+  </div>
   <div style = "text-align:center; position:relative; top:30px; font-size:48px; color:white;">
      Leaderboard
   </div>
