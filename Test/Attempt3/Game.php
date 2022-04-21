@@ -161,10 +161,10 @@ function fillQuestions()
         console.log(prompt);
         qPrompt = prompt[1];
         var j = Math.floor(Math.random()*4)+1;
-        var ansA = prompt[j%4+1];
-        var ansB = prompt[(j+1)%4+1];
-        var ansC = prompt[(j+2)%4+1];
-        var ansD = prompt[(j+3)%4+1];
+        var ansA = prompt[j%5+1];
+        var ansB = prompt[(j+1)%5+1];
+        var ansC = prompt[(j+2)%5+1];
+        var ansD = prompt[(j+3)%5+1];
         var rightResponse = "ans"+String.fromCharCode(64+j); //maybe can't combine char & string?  JS is dynamic tho...
         var currentQuestion = new Question(qPrompt,ansA,ansB,ansC,ansD,rightResponse);
         questions[i] = currentQuestion;
