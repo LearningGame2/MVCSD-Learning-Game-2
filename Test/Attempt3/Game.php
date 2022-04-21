@@ -26,23 +26,19 @@ function promptRequest($numOfQuestions){
         $conn = connect();
         $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
         if ($result = mysqli_query($conn, $sql)) {
-
-            $row = mysqli_fetch_row($result);
-
-      //      $prompt = $row[1];
-
-
-            mysqli_free_result($result);
-
-         mysqli_close($conn);
-
+          $row = mysqli_fetch_row($result);
+          mysqli_free_result($result);
+          mysqli_close($conn);
           $questions[$x] = $row;
       }
     }
   return json_encode($questions);
 }
 
+function addToScore($s){
+    $_SESSION['score'] = $_SESSION['score'] + $s;
 
+}
 
 ?>
 
@@ -73,8 +69,7 @@ function promptRequest($numOfQuestions){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="closeScoreModal()">Play Again</button>
-                    <button onclick="returnHome()">Exit Game</button>
+                    <button onclick="returnHome()">Ok</button>
                 </div>
 
             </div>
@@ -258,7 +253,7 @@ let questionArray = fillQuestions();
                 //set to delay question number till when next question loads
                 setTimeout(() => {
                     questionNumber++
-                }, 1000)
+                }, 500)
             }
 
             else if (option.checked && option.value !== currentQuestionAnswer) {
@@ -270,7 +265,7 @@ let questionArray = fillQuestions();
                 //set to delay question number till when next question loads
                 setTimeout(() => {
                     questionNumber++
-                }, 1000)
+                }, 500)
             }
         })
     }
@@ -339,18 +334,7 @@ let questionArray = fillQuestions();
         document.getElementById('score-modal').style.display = "flex"
 
     }
-
-    //closes score modal, resets game and reshuffles questions
-    function closeScoreModal() {
-        questionNumber = 1
-        playerScore = 0
-        wrongAttempt = 0
-        indexNumber = 0
-        questionArray = []
-        NextQuestion(indexNumber)
-        document.getElementById('score-modal').style.display = "none"
-    }
-
+  
     //function to close warning modal
     function closeOptionModal() {
         document.getElementById('option-modal').style.display = "none"
