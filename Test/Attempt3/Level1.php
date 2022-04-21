@@ -199,8 +199,12 @@ function fillQuestions()
 
 
 let questionArray = fillQuestions();
-    setCookie(score, 0); //sets score as 0
+    // setCookie(score, 0); //sets score as 0
     //setCookie(streak, 0);
+    document.cookie = "score = 0;"
+    document.cookie = "streak = 0;"
+
+
     console.log("My score =" + getCookie(score));
     
     let questionNumber = 1 //holds the current question number
@@ -342,7 +346,8 @@ let questionArray = fillQuestions();
         document.getElementById("player-score").innerHTML = playerScore;
         document.getElementById("player-streak").innerHTML = streak;
 
-        document.cookie = playerScore
+        document.cookie = "score = " + playerScore + ";"  
+        document.cookie = "streak = " + streak + ";"
 
     }
   
@@ -355,25 +360,25 @@ let questionArray = fillQuestions();
         window.location.href = "Level2.php"
     }
 
-    function setCookie(cname, cvalue) {
-    document.cookie = cname + "=" + cvalue + ";"
-    }
+//     function setCookie(cname, cvalue) {
+//     document.cookie = cname + "=" + cvalue + ";"
+//     }
 
-    function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-        let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-    }
+//     function getCookie(cname) {
+//     let name = cname + "=";
+//     let decodedCookie = decodeURIComponent(document.cookie);
+//     let ca = decodedCookie.split(';');
+//     for(let i = 0; i <ca.length; i++) {
+//         let c = ca[i];
+//     while (c.charAt(0) == ' ') {
+//       c = c.substring(1);
+//     }
+//     if (c.indexOf(name) == 0) {
+//       return c.substring(name.length, c.length);
+//     }
+//   }
+//   return "";
+//     }
 
 
 

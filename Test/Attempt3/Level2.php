@@ -202,16 +202,35 @@ function fillQuestions()
 }
 
 
-let questionArray = fillQuestions();
+    let questionArray = fillQuestions();
 
-    console.log('<?php echo $_SESSION['score'];?>')
+    var cookieArray = document.cookie.split("; ")
+
+    //retreiving the first variable, streak or score
+    var nameValueArray = cookieArray[0].split("=")
+    if(nameValueArray[0] == "score"){
+        playerScore = parseInt(nameValueArray[1])
+    }
+    else if(nameValueArray[0] == "streak"){
+        streak = parseInt(nameValueArray[1])
+    }
+
+    //retreiving the first variable, streak or score
+    var nameValueArray = cookieArray[1].split("=")
+    if(nameValueArray[0] == "score"){
+        playerScore = parseInt(nameValueArray[1])
+    }
+    else if(nameValueArray[0] == "streak"){
+        streak = parseInt(nameValueArray[1])
+    }
+
+
+
 
     let questionNumber = 1 //holds the current question number
-    let playerScore = getCookie(score)//holds the player score
     let amountCorrect = 0 //different from score, does not include streaks
     let wrongAttempt = 0 //amount of wrong answers picked by player
     let indexNumber = 0 //will be used in displaying next question
-    let streak = getCookie(streak) //Keeps track of player streak
 
     // function for displaying next question in the array to dom
     //also handles displaying players and quiz information to dom
