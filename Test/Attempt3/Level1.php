@@ -199,8 +199,9 @@ function fillQuestions()
 
 
 let questionArray = fillQuestions();
-
-    document.cookie = 0
+    setCookie(score, 10);
+    console.log(getCookie(score));
+    
     let questionNumber = 1 //holds the current question number
     let playerScore = 0  //holds the player score
     let amountCorrect = 0 //different from score, does not include streaks
@@ -353,6 +354,25 @@ let questionArray = fillQuestions();
         window.location.href = "Level2.php"
     }
 
+    function setCookie(cname, cvalue) {
+    document.cookie = cname + "=" + cvalue + ";"
+    }
+
+    function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+    }
 
 
 
