@@ -218,7 +218,6 @@ let questionArray = fillQuestions();
     // function for displaying next question in the array to dom
     //also handles displaying players and quiz information to dom
     function NextQuestion(index) {
-        //handleQuestions() — this is also vestigial
         const currentQuestion = questionArray[index]
         document.getElementById("question-number").innerHTML = questionNumber
         document.getElementById("player-score").innerHTML = playerScore
@@ -340,7 +339,7 @@ let questionArray = fillQuestions();
 
     }
 
-    //closes score modal, resets game and reshuffles questions
+    //closes score modal and resets game
     function closeScoreModal() {
         questionNumber = 1
         playerScore = 0
