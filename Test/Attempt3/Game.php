@@ -142,7 +142,7 @@ class Question {
         this.question = question;
         this.optionA = optionA;
         this.optionB = optionB;
-        this.optionC = optC;
+        this.optionC = optionC;
         this.optionD = optionD;
         this.correctOption = correctOption;
     }
@@ -185,7 +185,7 @@ let questionArray = fillQuestions();
     // function for displaying next question in the array to dom
     //also handles displaying players and quiz information to dom
     function NextQuestion(index) {
-        handleQuestions()
+        //handleQuestions() — this is also vestigial
         const currentQuestion = questionArray[index]
         document.getElementById("question-number").innerHTML = questionNumber
         document.getElementById("player-score").innerHTML = playerScore
