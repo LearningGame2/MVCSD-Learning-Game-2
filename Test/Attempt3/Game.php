@@ -260,7 +260,7 @@ let questionArray = fillQuestions();
                 //set to delay question number till when next question loads
                 setTimeout(() => {
                     questionNumber++
-                }, 500)
+                }, 10)
             }
 
             else if (option.checked && option.value !== currentQuestionAnswer) {
@@ -273,7 +273,7 @@ let questionArray = fillQuestions();
                 //set to delay question number till when next question loads
                 setTimeout(() => {
                     questionNumber++
-                }, 500)
+                }, 10)
             }
         })
     }
@@ -338,7 +338,7 @@ let questionArray = fillQuestions();
         document.getElementById('remarks').style.color = remarkColor
         document.getElementById('grade-percentage').innerHTML = playerGrade
         document.getElementById('wrong-answers').innerHTML = wrongAttempt
-        document.getElementById('right-answers').innerHTML = playerScore
+        document.getElementById('right-answers').innerHTML = amountCorrect
         document.getElementById('score-modal').style.display = "flex"
 
     }
