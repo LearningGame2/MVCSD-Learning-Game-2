@@ -64,12 +64,12 @@ function addToScore($s){
                     <p>Wrong Answers : <span id="wrong-answers"></span></p>
                     <p>Right Answers : <span id="right-answers"></span></p>
                     <p>Grade : <span id="grade-percentage"></span>%</p>
-                    <p>Score : <span id="score"></span>%</p>
+                    <p>Score : <span id="score"></span></p>
                     <p ><span id="remarks"></span></p>
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="nextlevel()">LEVEL 2</button>
+                    <button onclick="nextLevel()">LEVEL 2</button>
                 </div>
 
             </div>
