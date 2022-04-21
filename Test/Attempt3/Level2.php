@@ -206,22 +206,25 @@ function fillQuestions()
 
     var cookieArray = document.cookie.split("; ")
 
+    let playerScore
+    let streak 
+
     //retreiving the first variable, streak or score
     var nameValueArray = cookieArray[0].split("=")
     if(nameValueArray[0] == "score"){
-        let playerScore = parseInt(nameValueArray[1])
+        playerScore = parseInt(nameValueArray[1])
     }
     else if(nameValueArray[0] == "streak"){
-        let streak = parseInt(nameValueArray[1])
+        streak = parseInt(nameValueArray[1])
     }
 
     //retreiving the first variable, streak or score
     var nameValueArray = cookieArray[1].split("=")
     if(nameValueArray[0] == "score"){
-        let playerScore = parseInt(nameValueArray[1])
+        playerScore = parseInt(nameValueArray[1])
     }
     else if(nameValueArray[0] == "streak"){
-        let streak = parseInt(nameValueArray[1])
+        streak = parseInt(nameValueArray[1])
     }
 
 
