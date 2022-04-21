@@ -22,7 +22,7 @@ function connect() {
 
 function leaderboardRequest(){
   $scores = array();
-  
+
   $conn = connect();
   $sql = "SELECT * FROM Leaderboard";
   $result = mysqli_query($conn,$sql);
@@ -105,7 +105,7 @@ function leaderboardRequest(){
 </header>
 
 <body style="background-color:black;">
-  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white;">
+  <div style = "text-align:center; position:relative; top:50px; font-size:48px; color:white;">
      Press Button to Play
   </div>
 
@@ -190,7 +190,7 @@ function leaderboardRequest(){
 
   document.getElementById("player9").innerHTML = testScores[1].Username;
   document.getElementById("score9").innerHTML = testScores[1].Highscore;
-  
+
   document.getElementById("player10").innerHTML = testScores[0].Username;
   document.getElementById("score10").innerHTML = testScores[0].Highscore;
 
@@ -206,4 +206,3 @@ function leaderboardRequest(){
 </script>
 
 </html>
-
