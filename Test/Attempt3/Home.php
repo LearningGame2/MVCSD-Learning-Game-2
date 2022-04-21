@@ -97,8 +97,8 @@ function leaderboardRequest(){
     table, th, td {
       border: 1px solid white;
       border-collapse: collapse;
-      margin-top:10px;
-      margin-left:10px;
+      margin-top:100px;
+      margin-left:100px;
       width:40%
     }
   </style>
