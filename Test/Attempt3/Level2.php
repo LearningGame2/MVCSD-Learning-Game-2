@@ -69,7 +69,7 @@ function addToScore($s){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="nextlevel()">GO</button>
+                    <button onclick="returnHome()">Ok</button>
                 </div>
 
             </div>
@@ -353,8 +353,8 @@ let questionArray = fillQuestions();
         document.getElementById('option-modal').style.display = "none"
     }
 
-    function nextLevel(){
-        window.location.href = "Level2.php"
+    function returnHome(){
+        window.location.href = "Home.php"
     }
     </script>
 </body>
