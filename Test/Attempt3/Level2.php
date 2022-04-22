@@ -209,7 +209,7 @@ function fillQuestions()
     console.log("Cookie is " + document.cookie);
     let playerScore
     let streak 
-    for(var i = 0; i<= cookieArray.length; i++){
+    for(var i = 1; i<= cookieArray.length; i++){
 
         var nameValueArray = cookieArray[i].split("=")
 
