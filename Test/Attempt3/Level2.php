@@ -214,34 +214,68 @@ function fillQuestions()
     console.log(cookieArray[2]);
     console.log(cookieArray[3]);
 
+    
 
+    let checkScoreStreak = 0;
     let cook = cookieArray[2];
     while (cook.charAt(0)!= '='){
         cook = cook.substring(1);
+        if(cook.charAt(0) == 's' || cook.charAt(0) == 't'){
+            checkScoreStreak++;
+        }
     }
-
-    let ifDumbCookie = cookieArray[2].split('=');
-    if(ifDumbCookie[0] == "streak"){
+    if (checkScoreStreak == 2){
         streak = parseInt(cook.substring(1));
     }
-    else if(ifDumbCookie[0] == "score"){
-        streak = parseInt(cook.substring(1));
+    else if (checkScoreStreak == 1){
+        playerScore = parseInt(cook.substring(1));
     }
-    
+    else{console.log(ERROR)}
 
 
+    checkScoreStreak = 0;
     cook = cookieArray[3];
     while (cook.charAt(0)!= '='){
         cook = cook.substring(1);
+        if(cook.charAt(0) == 's' || cook.charAt(0) == 't'){
+            checkScoreStreak++;
+        }
     }
+    if (checkScoreStreak == 2){
+        streak = parseInt(cook.substring(1));
+    }
+    else if (checkScoreStreak == 1){
+        playerScore = parseInt(cook.substring(1));
+    }
+    else{console.log(ERROR)}
 
-    ifDumbCookie = cookieArray[3].split('=');
-    if(ifDumbCookie[0] == "streak"){
-        streak = parseInt(cook.substring(1));
-    }
-    else if(ifDumbCookie[0] == "score"){
-        streak = parseInt(cook.substring(1));
-    }
+    // let cook = cookieArray[2];
+    // while (cook.charAt(0)!= '='){
+    //     cook = cook.substring(1);
+    // }
+
+    // let ifDumbCookie = cookieArray[2].split('=');
+    // if(ifDumbCookie[0] == "streak"){
+    //     streak = parseInt(cook.substring(1));
+    // }
+    // else if(ifDumbCookie[0] == "score"){
+    //     score = parseInt(cook.substring(1));
+    // }
+    
+
+
+    // cook = cookieArray[3];
+    // while (cook.charAt(0)!= '='){
+    //     cook = cook.substring(1);
+    // }
+
+    // ifDumbCookie = cookieArray[3].split('=');
+    // if(ifDumbCookie[0] == "streak"){
+    //     streak = parseInt(cook.substring(1));
+    // }
+    // else if(ifDumbCookie[0] == "score"){
+    //     score = parseInt(cook.substring(1));
+    // }
 
 
     let questionNumber = 1 //holds the current question number
