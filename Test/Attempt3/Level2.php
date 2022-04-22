@@ -213,7 +213,7 @@ function fillQuestions()
     console.log(cookieArray[2]);
     console.log(cookieArray[3]);
 
-]   let cook = cookieArray[2];
+   let cook = cookieArray[2];
     while (cook.charAt(0)!= '='){
         cook = cook.substring(1);
     }
