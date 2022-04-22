@@ -206,6 +206,7 @@ function fillQuestions()
 
     var cookieArray = document.cookie.split("; ")
 
+    console.log(document.cookie);
     let playerScore
     let streak 
 
