@@ -209,19 +209,44 @@ function fillQuestions()
     console.log("Cookie is !!!! " + document.cookie);
     let playerScore
     let streak 
-   
-    for(var i = 2; i<= cookieArray.length; i++){
 
-        //var nameValueArray = cookieArray[i].split("=")
-        console.log(cookieArray[i]);
+    console.log(cookieArray[2]);
+    console.log(cookieArray[3]);
 
-        // if(nameValueArray[0] == "score"){
-        //     playerScore = parseInt(nameValueArray[1])
-        // }
-        // else if(nameValueArray[0] == "streak"){
-        //     streak = parseInt(nameValueArray[1])
-        // }
+]   let cook = cookieArray[2];
+    while (cook.charAt(0)!= '='){
+        cook = cook.substring(1);
     }
+
+    playerScore = parseInt(cook.substring(2));
+
+   
+    cook = cookieArray[3];
+    while (cook.charAt(0)!= '='){
+        cook = cook.substring(1);
+    }
+
+    streak = parseInt(cook.substring(2));
+    // for(var i = 2; i<= cookieArray.length; i++){
+    //     console.log(cookieArray[i]);
+    //     let cook = cookieArray[i];
+    //     while (cook.charAt(0)!= '='){
+    //         cook = cook.substring(1)
+    //     }
+
+
+
+
+    //     //var nameValueArray = cookieArray[i].split("=")
+       
+
+    //     // if(nameValueArray[0] == "score"){
+    //     //     playerScore = parseInt(nameValueArray[1])
+    //     // }
+    //     // else if(nameValueArray[0] == "streak"){
+    //     //     streak = parseInt(nameValueArray[1])
+    //     // }
+    // }
 
 
 
