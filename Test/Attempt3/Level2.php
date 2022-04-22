@@ -139,19 +139,6 @@ function promptRequest($numOfQuestions){
 
 <script>
 
-
-let cookieScore = "cookieScore"
-let cookieStreak = "cookieStreak"
-
-let playerScore = getCookie(cookieScore)
-let playerStreak = getCookie(cookieStreak)
-
-let levelMultiplier = 1
-let questionNumber = 1 //holds the current question number
-let amountCorrect = 0 //different from score, does not include streaks
-let wrongAttempt = 0 //amount of wrong answers picked by player
-let indexNumber = 0 //will be used in displaying next question
-
 //making a class of question object to fill questions array
 class Question {
     constructor (question, optionA, optionB, optionC, optionD, correctOption) {
@@ -165,6 +152,18 @@ class Question {
 }
 
 let questionArray = fillQuestions();
+
+let cookieScore = "cookieScore"
+let cookieStreak = "cookieStreak"
+
+let playerScore = getCookie(cookieScore)
+let playerStreak = getCookie(cookieStreak)
+
+let levelMultiplier = 1
+let questionNumber = 1 //holds the current question number
+let amountCorrect = 0 //different from score, does not include streaks
+let wrongAttempt = 0 //amount of wrong answers picked by player
+let indexNumber = 0 //will be used in displaying next question
 
 /*fills questions array after parsing the decoded json that php returned, setting them in a random order and then creating a
 question object with the results from the parse*/
