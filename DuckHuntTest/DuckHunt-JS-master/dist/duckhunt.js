@@ -37536,7 +37536,6 @@ var Game = function () {
     value: function win() {
       _Sound2.default.play('champ');
       this.gameStatus = 'You Win!';
-      this.showReplay(this.getScoreMessage());
       setTimeout(() => {
         window.location.href = "../../../LGAttempt3/Level2.php"
       }, "3000")
@@ -37547,7 +37546,6 @@ var Game = function () {
     value: function loss() {
       _Sound2.default.play('loserSound');
       this.gameStatus = 'You Lose!';
-      this.showReplay(this.getScoreMessage());
       setTimeout(() => {
         window.location.href = "../../../LGAttempt3/Level2.php"
       }, "3000")
