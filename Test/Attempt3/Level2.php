@@ -230,7 +230,7 @@ function fillQuestions()
     else if (checkScoreStreak == 1){
         playerScore = parseInt(cook.substring(1));
     }
-    else{console.log(ERROR)}
+    else{console.log("ERROR")}
 
 
     checkScoreStreak = 0;
