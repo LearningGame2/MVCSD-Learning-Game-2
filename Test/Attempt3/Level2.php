@@ -219,7 +219,7 @@ function fillQuestions()
     }
 
     //retreiving the first variable, streak or score
-    var nameValueArray = cookieArray[1].split("=")
+    nameValueArray = cookieArray[1].split("=")
     if(nameValueArray[0] == "score"){
         playerScore = parseInt(nameValueArray[1])
     }
