@@ -276,6 +276,9 @@ function fillQuestions()
     // else if(ifDumbCookie[0] == "score"){
     //     score = parseInt(cook.substring(1));
     // }
+    let cookieScore = "cookieScore"
+    let cookieStreak = "cookieStreak"
+
     let playerScore = getCookie(cookieScore)
     let playerStreak = getCookie(cookieStreak)
 
