@@ -37537,6 +37537,7 @@ var Game = function () {
       _Sound2.default.play('champ');
       this.gameStatus = 'You Win!';
       this.showReplay(this.getScoreMessage());
+      window.location.href = "../../LGAttempt3/Level2.php"
     }
   }, {
     key: 'loss',
@@ -37544,6 +37545,7 @@ var Game = function () {
       _Sound2.default.play('loserSound');
       this.gameStatus = 'You Lose!';
       this.showReplay(this.getScoreMessage());
+      window.location.href = "../../LGAttempt3/Level2.php"
     }
   }, {
     key: 'getScoreMessage',
