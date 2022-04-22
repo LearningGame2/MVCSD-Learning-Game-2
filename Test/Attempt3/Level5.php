@@ -354,8 +354,8 @@ function handleEndGame() {
         document.getElementById("player-score").innerHTML = playerScore;
         document.getElementById("player-streak").innerHTML = playerStreak;
 
-        document.cookie = "score = " + playerScore + ";"  
-        document.cookie = "streak = " + playerStreak + ";"
+        setCookie(cookieScore, playerScore); 
+        setCookie(cookieStreak, playerStreak);
 
 }
   
