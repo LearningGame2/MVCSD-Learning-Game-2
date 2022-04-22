@@ -67,7 +67,7 @@ function promptRequest($numOfQuestions){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="goHome()">Ok</button>
+                    <button onclick="goEndGame()">Ok</button>
                 </div>
 
             </div>
@@ -391,8 +391,8 @@ function fillQuestions()
         document.getElementById('option-modal').style.display = "none"
     }
 
-    function goHome(){
-        window.location.href = "Home.php"
+    function goEndGame(){
+        window.location.href = "EndGame.php"
     }
     </script>
 </body>
