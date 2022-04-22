@@ -220,7 +220,7 @@ function fillQuestions()
         cook = cook.substring(1);
     }
 
-    ifDumbCookie = cookieArray[2].split('=');
+    let ifDumbCookie = cookieArray[2].split('=');
     if(ifDumbCookie[0] == "streak"){
         streak = parseInt(cook.substring(1));
     }
@@ -235,7 +235,7 @@ function fillQuestions()
         cook = cook.substring(1);
     }
 
-    let ifDumbCookie = cookieArray[3].split('=');
+    ifDumbCookie = cookieArray[3].split('=');
     if(ifDumbCookie[0] == "streak"){
         streak = parseInt(cook.substring(1));
     }
