@@ -258,7 +258,7 @@ function checkForAnswer() {
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
-                pplayerScore = playerScore + ((1 + playerStreak) * levelMultiplier) 
+                playerScore = playerScore + ((1 + playerStreak) * levelMultiplier) 
                 playerStreak++
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
