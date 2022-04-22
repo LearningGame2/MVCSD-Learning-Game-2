@@ -220,7 +220,7 @@ function fillQuestions()
             streak = parseInt(nameValueArray[1])
         }
         else{
-            console.log(COOKIE ERROR YUM YUM)
+            console.log("COOKIE ERROR YUM YUM")
         }
 
     }
