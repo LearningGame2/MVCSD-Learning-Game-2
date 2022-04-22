@@ -205,49 +205,49 @@ function fillQuestions()
 
     let questionArray = fillQuestions();
 
-    var cookieArray = document.cookie.split("; ")
+    // var cookieArray = document.cookie.split("; ")
 
-    console.log("Cookie is !!!! " + document.cookie);
-    let playerScore
-    let streak 
+    // console.log("Cookie is !!!! " + document.cookie);
+    // let playerScore
+    // let streak 
 
-    console.log(cookieArray[2]);
-    console.log(cookieArray[3]);
+    // console.log(cookieArray[2]);
+    // console.log(cookieArray[3]);
 
     
 
-    let checkScoreStreak = 0;
-    let cook = cookieArray[2];
-    while (cook.charAt(0)!= '='){
-        cook = cook.substring(1);
-        if(cook.charAt(0) == 's' || cook.charAt(0) == 't'){
-            checkScoreStreak++;
-        }
-    }
-    if (checkScoreStreak == 2){
-        streak = parseInt(cook.substring(1));
-    }
-    else if (checkScoreStreak == 1){
-        playerScore = parseInt(cook.substring(1));
-    }
-    else{console.log("ERROR")}
+    // let checkScoreStreak = 0;
+    // let cook = cookieArray[2];
+    // while (cook.charAt(0)!= '='){
+    //     cook = cook.substring(1);
+    //     if(cook.charAt(0) == 's' || cook.charAt(0) == 't'){
+    //         checkScoreStreak++;
+    //     }
+    // }
+    // if (checkScoreStreak == 2){
+    //     streak = parseInt(cook.substring(1));
+    // }
+    // else if (checkScoreStreak == 1){
+    //     playerScore = parseInt(cook.substring(1));
+    // }
+    // else{console.log("ERROR")}
 
 
-    checkScoreStreak = 0;
-    cook = cookieArray[3];
-    while (cook.charAt(0)!= '='){
-        cook = cook.substring(1);
-        if(cook.charAt(0) == 's' || cook.charAt(0) == 't'){
-            checkScoreStreak++;
-        }
-    }
-    if (checkScoreStreak == 2){
-        streak = parseInt(cook.substring(1));
-    }
-    else if (checkScoreStreak == 1){
-        playerScore = parseInt(cook.substring(1));
-    }
-    else{console.log(ERROR)}
+    // checkScoreStreak = 0;
+    // cook = cookieArray[3];
+    // while (cook.charAt(0)!= '='){
+    //     cook = cook.substring(1);
+    //     if(cook.charAt(0) == 's' || cook.charAt(0) == 't'){
+    //         checkScoreStreak++;
+    //     }
+    // }
+    // if (checkScoreStreak == 2){
+    //     streak = parseInt(cook.substring(1));
+    // }
+    // else if (checkScoreStreak == 1){
+    //     playerScore = parseInt(cook.substring(1));
+    // }
+    // else{console.log("ERROR")}
 
     // let cook = cookieArray[2];
     // while (cook.charAt(0)!= '='){
@@ -276,7 +276,8 @@ function fillQuestions()
     // else if(ifDumbCookie[0] == "score"){
     //     score = parseInt(cook.substring(1));
     // }
-
+    let playerScore = getCookie(cookieScore)
+    let playerStreak = getCookie(cookieStreak)
 
     let questionNumber = 1 //holds the current question number
     let amountCorrect = 0 //different from score, does not include streaks
@@ -290,7 +291,7 @@ function fillQuestions()
         const currentQuestion = questionArray[index];
         document.getElementById("question-number").innerHTML = questionNumber;
         document.getElementById("player-score").innerHTML = playerScore;
-        document.getElementById("player-streak").innerHTML = streak;
+        document.getElementById("player-streak").innerHTML = playerStreak;
         document.getElementById("display-question").innerHTML = currentQuestion.question;
         document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
         document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
@@ -322,8 +323,8 @@ function fillQuestions()
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
-                playerScore = playerScore + 1 + streak //adding to player's score
-                streak++
+                playerScore = playerScore + 1 + playerStreak //adding to player's score
+                playerStreak++
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
                 //set to delay question number till when next question loads
@@ -338,7 +339,7 @@ function fillQuestions()
                 document.getElementById(correctOption).style.backgroundColor = "green"
                 wrongAttempt++ //adds 1 to wrong attempts
                 indexNumber++
-                streak = 0
+                playerStreak = 0
                 //set to delay question number till when next question loads
                 setTimeout(() => {
                     questionNumber++
@@ -413,10 +414,10 @@ function fillQuestions()
 
         document.getElementById("question-number").innerHTML = questionNumber;
         document.getElementById("player-score").innerHTML = playerScore;
-        document.getElementById("player-streak").innerHTML = streak;
+        document.getElementById("player-streak").innerHTML = playerStreak;
 
         document.cookie = "score = " + playerScore + ";"  
-        document.cookie = "streak = " + streak + ";"
+        document.cookie = "streak = " + playerStreak + ";"
 
     }
   
@@ -428,5 +429,27 @@ function fillQuestions()
     function nextLevel(){
         window.location.href = "Level3.php"
     }
-    </script>
+
+
+function setCookie(cname, cvalue) { 
+        document.cookie = cname + "=" + cvalue + ";"
+}
+
+function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+         return "";
+}
+
+</script>
 </body>

@@ -37548,9 +37548,9 @@ var Game = function () {
       _Sound2.default.play('loserSound');
       console.log("Score " + this.score);
       this.gameStatus = 'You Lose!';
-      // setTimeout(() => {
-      //   window.location.href = "../../../LGAttempt3/Level2.php"
-      // }, "3000")
+      setTimeout(() => {
+        window.location.href = "../../../LGAttempt3/Level2.php"
+      }, "3000")
       
     }
   }, {

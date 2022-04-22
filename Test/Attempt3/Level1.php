@@ -68,7 +68,7 @@ function promptRequest($numOfQuestions){
 
             </div>
         </div>
-<!-- end of modal of quiz details-->
+    <!-- end of modal of quiz details-->
 
         <div class="game-quiz-container" style = "position:relative; top:-75px">
 
@@ -133,6 +133,10 @@ function promptRequest($numOfQuestions){
 
 <script>
 
+
+
+
+
 //making a class of question object to fill questions array
 class Question {
     constructor (question, optionA, optionB, optionC, optionD, correctOption) {
@@ -146,7 +150,7 @@ class Question {
 }
 
 /*fills questions array after parsing the decoded json that php returned, setting them in a random order and then creating a
-  question object with the results from the parse*/
+question object with the results from the parse*/
 //post: returns questions array
 function fillQuestions()
 {
@@ -199,37 +203,35 @@ function fillQuestions()
 
 
 let questionArray = fillQuestions();
-    // setCookie(score, 0); //sets score as 0
-    //setCookie(streak, 0);
-    document.cookie = "score = 0";
-    document.cookie = "streak = 0";
+setCookie(cookieScore, 0); 
+setCookie(cookieStreak, 0);//sets score as 0 in cookies, I think this is redundant
 
+console.log(document.cookie); //cookie checker
     
-    let questionNumber = 1 //holds the current question number
-    let playerScore = 0  //holds the player score
-    let amountCorrect = 0 //different from score, does not include streaks
-    let wrongAttempt = 0 //amount of wrong answers picked by player
-    let indexNumber = 0 //will be used in displaying next question
-    let streak = 0 //Keeps track of player streak
+let questionNumber = 1 //holds the current question number
+let playerScore = 0  //holds the player score
+let amountCorrect = 0 //different from score, does not include streaks
+let wrongAttempt = 0 //amount of wrong answers picked by player
+let indexNumber = 0 //will be used in displaying next question
+let playerStreak = 0 //Keeps track of player streak
 
-    // function for displaying next question in the array to dom
-    //also handles displaying players and quiz information to dom
-    function NextQuestion(index) {
+// function for displaying next question in the array to dom
+//also handles displaying players and quiz information to dom
+function NextQuestion(index) {
         //handleQuestions() — this is also vestigial
         const currentQuestion = questionArray[index];
         document.getElementById("question-number").innerHTML = questionNumber;
         document.getElementById("player-score").innerHTML = playerScore;
-        document.getElementById("player-streak").innerHTML = streak;
+        document.getElementById("player-streak").innerHTML = playerStreak;
         document.getElementById("display-question").innerHTML = currentQuestion.question;
         document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
         document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
         document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
         document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
+}
 
-    }
 
-
-    function checkForAnswer() {
+function checkForAnswer() {
         const currentQuestion = questionArray[indexNumber] //gets current Question
         const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
         const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
@@ -251,8 +253,8 @@ let questionArray = fillQuestions();
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
-                playerScore = playerScore + 1 + streak //adding to player's score
-                streak++
+                playerScore = playerScore + 1 + playerStreak //adding to player's score
+                playerStreak++
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
                 //set to delay question number till when next question loads
@@ -267,19 +269,19 @@ let questionArray = fillQuestions();
                 document.getElementById(correctOption).style.backgroundColor = "green"
                 wrongAttempt++ //adds 1 to wrong attempts
                 indexNumber++
-                streak = 0
+                playerStreak = 0
                 //set to delay question number till when next question loads
                 setTimeout(() => {
                     questionNumber++
                 }, 10)//used to be 1000
             }
         })
-    }
+}
 
 
 
-    //called when the next button is called
-    function handleNextQuestion() {
+//called when the next button is called
+function handleNextQuestion() {
         checkForAnswer() //check if player picked right or wrong option
         unCheckRadioButtons()
         //delays next question displaying for a second just for some effects so questions don't rush in on player
@@ -293,26 +295,26 @@ let questionArray = fillQuestions();
             }
             resetOptionBackground()
         }, 1000);
-    }
+}
 
-    //sets options background back to null after display the right/wrong colors
-    function resetOptionBackground() {
+//sets options background back to null after display the right/wrong colors
+function resetOptionBackground() {
         const options = document.getElementsByName("option");
         options.forEach((option) => {
             document.getElementById(option.labels[0].id).style.backgroundColor = ""
         })
-    }
+}
 
-    // unchecking all radio buttons for next question(can be done with map or foreach loop also)
-    function unCheckRadioButtons() {
+// unchecking all radio buttons for next question(can be done with map or foreach loop also)
+function unCheckRadioButtons() {
         const options = document.getElementsByName("option");
         for (let i = 0; i < options.length; i++) {
             options[i].checked = false;
         }
-    }
+}
 
-    // function for when all questions being answered
-    function handleEndGame() {
+// function for when all questions being answered
+function handleEndGame() {
         let remark = null
         let remarkColor = null
 
@@ -342,21 +344,41 @@ let questionArray = fillQuestions();
 
         document.getElementById("question-number").innerHTML = questionNumber;
         document.getElementById("player-score").innerHTML = playerScore;
-        document.getElementById("player-streak").innerHTML = streak;
+        document.getElementById("player-streak").innerHTML = playerStreak;
 
-        document.cookie = "score = " + playerScore + ";"  
-        document.cookie = "streak = " + streak + ";"
+        setCookie(cookieScore, playerScore); 
+        setCookie(cookieStreak, playerStreak);
 
-    }
+}
   
-    //function to close warning modal
-    function closeOptionModal() {
+//function to close warning modal
+function closeOptionModal() {
         document.getElementById('option-modal').style.display = "none"
-    }
+}
 
-    function nextLevel(){
+function nextLevel(){
         window.location.href = "Level2.php"
-    }
+}
+
+function setCookie(cname, cvalue) { 
+        document.cookie = cname + "=" + cvalue + ";"
+}
+
+function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+         return "";
+}
 
 </script>
 </body>
