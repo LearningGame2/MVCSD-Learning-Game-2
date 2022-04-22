@@ -37339,21 +37339,21 @@ var Game = function () {
       document.addEventListener('keypress', function (event) {
         event.stopImmediatePropagation();
 
-        if (event.key === 'p') {
-          _this.pause();
-        }
+        // if (event.key === 'p') {
+        //   _this.pause();
+        // }
 
         if (event.key === 'm') {
           _this.mute();
         }
 
-        if (event.key === 'c') {
-          _this.openLevelCreator();
-        }
+        // if (event.key === 'c') {
+        //   _this.openLevelCreator();
+        // }
 
-        if (event.key === 'f') {
-          _this.fullscreen();
-        }
+        // if (event.key === 'f') {
+        //   _this.fullscreen();
+        // }
       });
 
       document.addEventListener('fullscreenchange', function () {
@@ -37621,10 +37621,10 @@ var Game = function () {
         return;
       }
 
-      if (this.stage.clickedFullscreenLink(clickPoint)) {
-        this.fullscreen();
-        return;
-      }
+      // if (this.stage.clickedFullscreenLink(clickPoint)) {
+      //   this.fullscreen();
+      //   return;
+      // }
 
       // if (this.stage.clickedLevelCreatorLink(clickPoint)) {
       //   this.openLevelCreator();
