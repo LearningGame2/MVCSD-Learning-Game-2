@@ -139,7 +139,6 @@ function promptRequest($numOfQuestions){
 
 <script>
 
-let questionArray = fillQuestions();
 
 let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
@@ -164,6 +163,8 @@ class Question {
         this.correctOption = correctOption;
     }
 }
+
+let questionArray = fillQuestions();
 
 /*fills questions array after parsing the decoded json that php returned, setting them in a random order and then creating a
 question object with the results from the parse*/
