@@ -209,23 +209,20 @@ function fillQuestions()
     console.log("Cookie is " + document.cookie);
     let playerScore
     let streak 
+    for(var i = 0; i<= cookieArray.length; i++){
 
-    //retreiving the first variable, streak or score
-    var nameValueArray = cookieArray[0].split("=")
-    if(nameValueArray[0] == "score"){
-        playerScore = parseInt(nameValueArray[1])
-    }
-    else if(nameValueArray[0] == "streak"){
-        streak = parseInt(nameValueArray[1])
-    }
+        var nameValueArray = cookieArray[i].split("=")
 
-    //retreiving the first variable, streak or score
-    nameValueArray = cookieArray[1].split("=")
-    if(nameValueArray[0] == "score"){
-        playerScore = parseInt(nameValueArray[1])
-    }
-    else if(nameValueArray[0] == "streak"){
-        streak = parseInt(nameValueArray[1])
+        if(nameValueArray[0] == "score"){
+            playerScore = parseInt(nameValueArray[1])
+        }
+        else if(nameValueArray[0] == "streak"){
+            streak = parseInt(nameValueArray[1])
+        }
+        else{
+            console.log(COOKIE ERROR YUM YUM)
+        }
+
     }
 
 
