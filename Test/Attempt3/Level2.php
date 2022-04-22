@@ -211,7 +211,8 @@ function fillQuestions()
     let streak 
     for(var i = 2; i<= cookieArray.length; i++){
 
-        var nameValueArray = cookieArray[i].split("=")
+        //var nameValueArray = cookieArray[i].split("=")
+        console.log("Cookie is " + cookieArray);
 
         if(nameValueArray[0] == "score"){
             playerScore = parseInt(nameValueArray[1])
