@@ -157,8 +157,8 @@ let questionArray = fillQuestions();
 let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
 
-let playerScore = getCookie(cookieScore)
-let playerStreak = getCookie(cookieStreak)
+let playerScore = parseInt(getCookie(cookieScore))
+let playerStreak = parseInt(getCookie(cookieStreak))
 
 let levelMultiplier = 5
 let questionNumber = 1 //holds the current question number
