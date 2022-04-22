@@ -20,7 +20,7 @@ function connect() {
 function promptRequest($numOfQuestions){
     $questions = array();
     for ($x = 0; $x <= $numOfQuestions; $x++) {
-        $rowNumber = rand(1,300);
+        $rowNumber = rand(1,399);
         $prompt = "";
         $conn = connect();
         $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
@@ -211,7 +211,8 @@ setCookie(cookieScore, 0);
 setCookie(cookieStreak, 0);//sets score as 0 in cookies, I think this is redundant
 
 console.log(document.cookie); //cookie checker
-    
+ 
+let levelMultiplier = 1
 let questionNumber = 1 //holds the current question number
 let playerScore = 0  //holds the player score
 let amountCorrect = 0 //different from score, does not include streaks
@@ -257,7 +258,7 @@ function checkForAnswer() {
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
-                playerScore = playerScore + 1 + playerStreak //adding to player's score
+                pplayerScore = playerScore + ((1 + playerStreak) * levelMultiplier) 
                 playerStreak++
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..

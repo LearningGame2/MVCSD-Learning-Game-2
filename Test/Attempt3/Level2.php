@@ -16,8 +16,6 @@ function connect() {
 }//Connection Function
 
 
-
-
 function promptRequest($numOfQuestions){
     $questions = array();
     for ($x = 0; $x <= $numOfQuestions; $x++) {
@@ -37,6 +35,10 @@ function promptRequest($numOfQuestions){
 
 
 ?>
+
+
+
+
 
 
 <!DOCTYPE html>
@@ -72,7 +74,7 @@ function promptRequest($numOfQuestions){
 
             </div>
         </div>
-<!-- end of modal of quiz details-->
+    <!-- end of modal of quiz details-->
 
         <div class="game-quiz-container" style = "position:relative; top:-75px">
 
@@ -137,6 +139,20 @@ function promptRequest($numOfQuestions){
 
 <script>
 
+let questionArray = fillQuestions();
+
+let cookieScore = "cookieScore"
+let cookieStreak = "cookieStreak"
+
+let playerScore = getCookie(cookieScore)
+let playerStreak = getCookie(cookieStreak)
+
+let levelMultiplier = 1
+let questionNumber = 1 //holds the current question number
+let amountCorrect = 0 //different from score, does not include streaks
+let wrongAttempt = 0 //amount of wrong answers picked by player
+let indexNumber = 0 //will be used in displaying next question
+
 //making a class of question object to fill questions array
 class Question {
     constructor (question, optionA, optionB, optionC, optionD, correctOption) {
@@ -150,7 +166,7 @@ class Question {
 }
 
 /*fills questions array after parsing the decoded json that php returned, setting them in a random order and then creating a
-  question object with the results from the parse*/
+question object with the results from the parse*/
 //post: returns questions array
 function fillQuestions()
 {
@@ -203,93 +219,10 @@ function fillQuestions()
 
 
 
-    let questionArray = fillQuestions();
-
-    // var cookieArray = document.cookie.split("; ")
-
-    // console.log("Cookie is !!!! " + document.cookie);
-    // let playerScore
-    // let streak 
-
-    // console.log(cookieArray[2]);
-    // console.log(cookieArray[3]);
-
-    
-
-    // let checkScoreStreak = 0;
-    // let cook = cookieArray[2];
-    // while (cook.charAt(0)!= '='){
-    //     cook = cook.substring(1);
-    //     if(cook.charAt(0) == 's' || cook.charAt(0) == 't'){
-    //         checkScoreStreak++;
-    //     }
-    // }
-    // if (checkScoreStreak == 2){
-    //     streak = parseInt(cook.substring(1));
-    // }
-    // else if (checkScoreStreak == 1){
-    //     playerScore = parseInt(cook.substring(1));
-    // }
-    // else{console.log("ERROR")}
-
-
-    // checkScoreStreak = 0;
-    // cook = cookieArray[3];
-    // while (cook.charAt(0)!= '='){
-    //     cook = cook.substring(1);
-    //     if(cook.charAt(0) == 's' || cook.charAt(0) == 't'){
-    //         checkScoreStreak++;
-    //     }
-    // }
-    // if (checkScoreStreak == 2){
-    //     streak = parseInt(cook.substring(1));
-    // }
-    // else if (checkScoreStreak == 1){
-    //     playerScore = parseInt(cook.substring(1));
-    // }
-    // else{console.log("ERROR")}
-
-    // let cook = cookieArray[2];
-    // while (cook.charAt(0)!= '='){
-    //     cook = cook.substring(1);
-    // }
-
-    // let ifDumbCookie = cookieArray[2].split('=');
-    // if(ifDumbCookie[0] == "streak"){
-    //     streak = parseInt(cook.substring(1));
-    // }
-    // else if(ifDumbCookie[0] == "score"){
-    //     score = parseInt(cook.substring(1));
-    // }
-    
-
-
-    // cook = cookieArray[3];
-    // while (cook.charAt(0)!= '='){
-    //     cook = cook.substring(1);
-    // }
-
-    // ifDumbCookie = cookieArray[3].split('=');
-    // if(ifDumbCookie[0] == "streak"){
-    //     streak = parseInt(cook.substring(1));
-    // }
-    // else if(ifDumbCookie[0] == "score"){
-    //     score = parseInt(cook.substring(1));
-    // }
-    let cookieScore = "cookieScore"
-    let cookieStreak = "cookieStreak"
-
-    let playerScore = getCookie(cookieScore)
-    let playerStreak = getCookie(cookieStreak)
-
-    let questionNumber = 1 //holds the current question number
-    let amountCorrect = 0 //different from score, does not include streaks
-    let wrongAttempt = 0 //amount of wrong answers picked by player
-    let indexNumber = 0 //will be used in displaying next question
-
-    // function for displaying next question in the array to dom
-    //also handles displaying players and quiz information to dom
-    function NextQuestion(index) {
+   
+// function for displaying next question in the array to dom
+//also handles displaying players and quiz information to dom
+function NextQuestion(index) {
         //handleQuestions() — this is also vestigial
         const currentQuestion = questionArray[index];
         document.getElementById("question-number").innerHTML = questionNumber;
@@ -301,10 +234,10 @@ function fillQuestions()
         document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
         document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
 
-    }
+}
 
 
-    function checkForAnswer() {
+function checkForAnswer() {
         const currentQuestion = questionArray[indexNumber] //gets current Question
         const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
         const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
@@ -326,7 +259,7 @@ function fillQuestions()
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
-                playerScore = playerScore + 1 + playerStreak //adding to player's score
+                playerScore = playerScore + ((1 + playerStreak) * levelMultiplier) //adding to player's score
                 playerStreak++
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
@@ -349,18 +282,18 @@ function fillQuestions()
                 }, 10)
             }
         })
-    }
+}
 
 
 
-    //called when the next button is called
-    function handleNextQuestion() {
+//called when the next button is called
+function handleNextQuestion() {
         checkForAnswer() //check if player picked right or wrong option
         unCheckRadioButtons()
         //delays next question displaying for a second just for some effects so questions don't rush in on player
         setTimeout(() => {
             if (indexNumber <= 9) {
-    //displays next question as long as index number isn't greater than 9, remember index number starts from 0, so index 9 is question 10
+            //displays next question as long as index number isn't greater than 9, remember index number starts from 0, so index 9 is question 10
                 NextQuestion(indexNumber)
             }
             else {
@@ -368,26 +301,26 @@ function fillQuestions()
             }
             resetOptionBackground()
         }, 1000);
-    }
+}
 
-    //sets options background back to null after display the right/wrong colors
-    function resetOptionBackground() {
+//sets options background back to null after display the right/wrong colors
+function resetOptionBackground() {
         const options = document.getElementsByName("option");
         options.forEach((option) => {
             document.getElementById(option.labels[0].id).style.backgroundColor = ""
         })
-    }
+}
 
-    // unchecking all radio buttons for next question(can be done with map or foreach loop also)
-    function unCheckRadioButtons() {
+// unchecking all radio buttons for next question(can be done with map or foreach loop also)
+function unCheckRadioButtons() {
         const options = document.getElementsByName("option");
         for (let i = 0; i < options.length; i++) {
             options[i].checked = false;
         }
-    }
+}
 
-    // function for when all questions being answered
-    function handleEndGame() {
+// function for when all questions being answered
+function handleEndGame() {
         let remark = null
         let remarkColor = null
 
@@ -422,17 +355,16 @@ function fillQuestions()
         document.cookie = "score = " + playerScore + ";"  
         document.cookie = "streak = " + playerStreak + ";"
 
-    }
+}
   
-    //function to close warning modal
-    function closeOptionModal() {
+//function to close warning modal
+function closeOptionModal() {
         document.getElementById('option-modal').style.display = "none"
-    }
+}
 
-    function nextLevel(){
+function nextLevel(){
         window.location.href = "Level3.php"
-    }
-
+}
 
 function setCookie(cname, cvalue) { 
         document.cookie = cname + "=" + cvalue + ";"
