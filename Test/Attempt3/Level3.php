@@ -365,7 +365,7 @@ function closeOptionModal() {
 }
 
 function nextLevel(){
-        window.location.href = "Level3.php"
+        window.location.href = "Level4.php"
 }
 
 function setCookie(cname, cvalue) { 
