@@ -8,6 +8,8 @@ session_start();
 // } //Comment out to make less annoying
 
 
+
+
 function connect() {
   $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
@@ -107,7 +109,7 @@ function leaderboardRequest(){
     .center {
       margin-left: auto;
       margin-right: auto;
-      margin-top:200px
+      margin-top:225px
     }
   </style>
 </head>
@@ -123,14 +125,13 @@ function leaderboardRequest(){
   <div style = "text-align:center; position:relative; top:30px; font-size:48px; color:white;">
      Press Button to Play
   </div>
-
+  <div>
   <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
   <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>
-
-  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
-      Leaderboard
   </div>
-
+  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
+     Leaderboard
+  </div>
   <div>
   <table style = "color:white;" class="center">
   <tr>
@@ -216,7 +217,7 @@ function leaderboardRequest(){
 
   console.log(testScores);
   function goToGame(){
-    window.location.href = "Game.php"
+    window.location.href = "Level1.php"
   }
   function logOut(){
     window.location.href = "Login1.php"
