@@ -213,21 +213,36 @@ function fillQuestions()
 
     console.log(cookieArray[2]);
     console.log(cookieArray[3]);
+    
 
-   let cook = cookieArray[2];
+    let cook = cookieArray[2];
     while (cook.charAt(0)!= '='){
         cook = cook.substring(1);
     }
 
-    streak = parseInt(cook.substring(1));
+    let ifDumbCookie = cookieArray[2].split('=');
+    if(ifDumbCookie[0] == "streak"){
+        streak = parseInt(cook.substring(1));
+    }
+    else if(ifDumbCookie[0] == "score"){
+        streak = parseInt(cook.substring(1));
+    }
+    
 
-   
+
     cook = cookieArray[3];
     while (cook.charAt(0)!= '='){
         cook = cook.substring(1);
     }
 
-    playerScore = parseInt(cook.substring(1));
+    let ifDumbCookie = cookieArray[3].split('=');
+    if(ifDumbCookie[0] == "streak"){
+        streak = parseInt(cook.substring(1));
+    }
+    else if(ifDumbCookie[0] == "score"){
+        streak = parseInt(cook.substring(1));
+    }
+
 
     let questionNumber = 1 //holds the current question number
     let amountCorrect = 0 //different from score, does not include streaks
