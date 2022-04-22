@@ -40,7 +40,6 @@
 </head>
 
 <body>
-  <button type ="submit" onclick = "logOut()" class="button button2">Log Out</button>
   <div class ="container" style = "position:relative; top:-10px;">
     <h1 style="text-align:center; color:white; font-family:Garamond; font-size:350%; position:relative; top:-10px;">
       Welcome Back!
