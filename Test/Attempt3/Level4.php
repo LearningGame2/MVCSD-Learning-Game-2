@@ -48,7 +48,7 @@ function promptRequest($numOfQuestions){
 
 <body onload="NextQuestion(0)">
   <h1 style="background-color:black; color:white; text-align:center; font-family:courier new; font-size:300%; line-height: 100px">
-    Level 2
+    Level 4
   </h1>
     <main>
         <!-- creating a modal for when quiz ends -->
@@ -56,7 +56,7 @@ function promptRequest($numOfQuestions){
 
             <div class="modal-content-container">
 
-                <h1>Level 2 COMPLETED</h1>
+                <h1>Level 4 COMPLETED</h1>
 
                 <div class="grade-details">
                     <p>Wrong Answers : <span id="wrong-answers"></span></p>
@@ -392,7 +392,7 @@ function fillQuestions()
     }
 
     function nextLevel(){
-        window.location.href = "Level3.php"
+        window.location.href = "Level5.php"
     }
     </script>
 </body>

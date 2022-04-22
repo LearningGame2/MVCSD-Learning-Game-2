@@ -8,6 +8,9 @@ all: PutHTML
 PutHTML:
 		cp Level1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level2.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
+		cp Level3.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
+		cp Level4.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
+		cp Level5.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Home.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Login1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp LoginStyle.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
