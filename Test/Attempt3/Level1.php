@@ -203,6 +203,10 @@ function fillQuestions()
 
 
 let questionArray = fillQuestions();
+
+let cookieScore = "cookieScore"
+let cookieStreak = "cookieStreak"
+
 setCookie(cookieScore, 0); 
 setCookie(cookieStreak, 0);//sets score as 0 in cookies, I think this is redundant
 
