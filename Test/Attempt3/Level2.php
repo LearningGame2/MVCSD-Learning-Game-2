@@ -218,7 +218,7 @@ function fillQuestions()
         cook = cook.substring(1);
     }
 
-    playerScore = parseInt(cook.substring(2));
+    playerScore = parseInt(cook.substring(1));
 
    
     cook = cookieArray[3];
@@ -226,7 +226,7 @@ function fillQuestions()
         cook = cook.substring(1);
     }
 
-    streak = parseInt(cook.substring(2));
+    streak = parseInt(cook.substring(1));
     // for(var i = 2; i<= cookieArray.length; i++){
     //     console.log(cookieArray[i]);
     //     let cook = cookieArray[i];
