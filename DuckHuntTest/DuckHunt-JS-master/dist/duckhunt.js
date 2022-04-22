@@ -37536,6 +37536,7 @@ var Game = function () {
     value: function win() {
       _Sound2.default.play('champ');
       this.gameStatus = 'You Win!';
+      console.log("Score " + this.score);
       setTimeout(() => {
         window.location.href = "../../../LGAttempt3/Level2.php"
       }, "3000")
@@ -37545,6 +37546,7 @@ var Game = function () {
     key: 'loss',
     value: function loss() {
       _Sound2.default.play('loserSound');
+      console.log("Score " + this.score);
       this.gameStatus = 'You Lose!';
       setTimeout(() => {
         window.location.href = "../../../LGAttempt3/Level2.php"
@@ -37596,10 +37598,10 @@ var Game = function () {
     key: 'openLevelCreator',
     value: function openLevelCreator() {
       // If they didn't pause the game, pause it for them
-      if (!this.paused) {
-        this.pause();
-      }
-      window.open('/creator.html', '_blank');
+      // if (!this.paused) {
+      //   this.pause();
+      // }
+      // window.open('/creator.html', '_blank');
     }
   }, {
     key: 'handleClick',
@@ -37609,10 +37611,10 @@ var Game = function () {
         y: event.data.global.y
       };
 
-      if (this.stage.clickedPauseLink(clickPoint)) {
-        this.pause();
-        return;
-      }
+      // if (this.stage.clickedPauseLink(clickPoint)) {
+      //   this.pause();
+      //   return;
+      // }
 
       if (this.stage.clickedMuteLink(clickPoint)) {
         this.mute();
@@ -37624,10 +37626,10 @@ var Game = function () {
         return;
       }
 
-      if (this.stage.clickedLevelCreatorLink(clickPoint)) {
-        this.openLevelCreator();
-        return;
-      }
+      // if (this.stage.clickedLevelCreatorLink(clickPoint)) {
+      //   this.openLevelCreator();
+      //   return;
+      // }
 
       if (!this.stage.hud.replayButton && !this.outOfAmmo() && !this.shouldWaveEnd() && !this.paused) {
         _Sound2.default.play('gunSound');
