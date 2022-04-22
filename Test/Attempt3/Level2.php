@@ -159,7 +159,7 @@ let cookieStreak = "cookieStreak"
 let playerScore = parseInt(getCookie(cookieScore))
 let playerStreak = parseInt(getCookie(cookieStreak))
 
-let levelMultiplier = 1
+let levelMultiplier = 2
 let questionNumber = 1 //holds the current question number
 let amountCorrect = 0 //different from score, does not include streaks
 let wrongAttempt = 0 //amount of wrong answers picked by player
