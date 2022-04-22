@@ -6,6 +6,8 @@ Table of Contents:
 - Line 291: Skon's JSON Code from Office Hours 4/14
 - Line 486: Connor's Quiz Questions
 - Line 600: fillQuestions() from Game.php
+...other things...
+- Line 1699: sam's version of promptRequest to prevent accidental duplicate questions in questionArray returned by php
 
 
 
@@ -1689,3 +1691,52 @@ function addScore($s){
 
 
 
+
+
+
+
+
+my version of questionArray to prevent question duplication with random numbers:
+function promptRequest($numOfQuestions){
+    $randomNum = array();
+    $questions = array();
+
+    for ($x = 0; x<= $numOfQuestions; $x++{ //can't it just be $x < $numOfQuestions?
+        $randGen = rand(1,300);
+        $workingRand = true;
+        for ($i = 0; $i < $x; $i++) {
+            if ($randGen==$randomNum[$i])
+            {
+                $i==$x;
+                $workingRand = false;
+            }
+
+        }
+        if ($workingRand==true) {
+            $randomNum[$x] = $randGen;
+        }
+
+    }
+
+    for ($x = 0; $x <= $numOfQuestions; $x++) {  //can't it just be $x < $numOfQuestions?
+        //$rowNumber = rand(1,300);
+        $prompt = "";
+        $conn = connect();
+        $currentRowNum = $randomNum[$x];
+        $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$randomNum[$x]'"; //if this doesn't work, change to $currentRowNum
+        if ($result = mysqli_query($conn, $sql)) {
+
+            $row = mysqli_fetch_row($result);
+
+      //      $prompt = $row[1];
+
+
+            mysqli_free_result($result);
+
+            mysqli_close($conn);
+
+            $questions[$x] = $row;
+      }
+    }
+  return json_encode($questions);
+}
