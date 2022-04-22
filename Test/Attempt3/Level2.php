@@ -213,14 +213,14 @@ function fillQuestions()
 
     console.log(cookieArray[2]);
     console.log(cookieArray[3]);
-    
+
 
     let cook = cookieArray[2];
     while (cook.charAt(0)!= '='){
         cook = cook.substring(1);
     }
 
-    let ifDumbCookie = cookieArray[2].split('=');
+    ifDumbCookie = cookieArray[2].split('=');
     if(ifDumbCookie[0] == "streak"){
         streak = parseInt(cook.substring(1));
     }
