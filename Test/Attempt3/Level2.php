@@ -219,7 +219,7 @@ function fillQuestions()
         cook = cook.substring(1);
     }
 
-    playerScore = parseInt(cook.substring(1));
+    streak = parseInt(cook.substring(1));
 
    
     cook = cookieArray[3];
@@ -227,7 +227,7 @@ function fillQuestions()
         cook = cook.substring(1);
     }
 
-    streak = parseInt(cook.substring(1));
+    playerScore = parseInt(cook.substring(1));
 
     let questionNumber = 1 //holds the current question number
     let amountCorrect = 0 //different from score, does not include streaks
