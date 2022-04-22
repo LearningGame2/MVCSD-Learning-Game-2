@@ -212,14 +212,14 @@ function fillQuestions()
     for(var i = 2; i<= cookieArray.length; i++){
 
         //var nameValueArray = cookieArray[i].split("=")
-        console.log("Cookie is " + cookieArray);
+        console.log("Cookie is " + cookieArray[i]);
 
-        if(nameValueArray[0] == "score"){
-            playerScore = parseInt(nameValueArray[1])
-        }
-        else if(nameValueArray[0] == "streak"){
-            streak = parseInt(nameValueArray[1])
-        }
+        // if(nameValueArray[0] == "score"){
+        //     playerScore = parseInt(nameValueArray[1])
+        // }
+        // else if(nameValueArray[0] == "streak"){
+        //     streak = parseInt(nameValueArray[1])
+        // }
     }
 
 
