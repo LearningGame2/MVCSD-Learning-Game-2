@@ -37550,7 +37550,7 @@ _createClass(Game, [{
     //document.cookie = "cookieMiniGameMulti = " + LG2multiplier + ";"+ "path=../../../LGAttempt3/Level5.php";
     setTimeout(() => {
       window.location.href = "../../../LGAttempt3/Level5.php"
-    }, "10000")
+    }, "3000")
     
   }
 }, {
@@ -37564,7 +37564,7 @@ _createClass(Game, [{
     //document.cookie = "cookieMiniGameMulti = " + LG2multiplier + ";"+ "path=../../../LGAttempt3/Level5.php";
     setTimeout(() => {
       window.location.href = "../../../LGAttempt3/Level5.php"
-    }, "10000")
+    }, "3000")
     
   }
 }, {
