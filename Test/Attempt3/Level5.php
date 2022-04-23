@@ -167,6 +167,7 @@ let playerStreak = parseInt(getCookie(cookieStreak))
 document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
 console.log(getCookie(cookieMiniGameMulti))
 console.log(playerMiniGameMulti)
+console.log(document.cookie)
 
 let levelMultiplier = 5
 let questionNumber = 1 //holds the current question number
