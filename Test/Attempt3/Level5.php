@@ -161,7 +161,6 @@ let cookieStreak = "cookieStreak"
 let cookieMiniGameMulti = "cookieMiniGameMulti"
 
 let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
-// let playerMiniGameMulti = parseInt(getCookie(cookieMiniGameMulti))
 let playerScore = parseInt(getCookie(cookieScore))
 let playerStreak = parseInt(getCookie(cookieStreak))
 
