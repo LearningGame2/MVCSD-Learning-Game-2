@@ -37550,6 +37550,7 @@ _createClass(Game, [{
     console.log("Score " + this.score);
     this.gameStatus = 'You Lose!';
     setCookie("cookieMiniGameMulti",Math.round(this.score/100));
+    console.log(Math.round(this.score/100))
     setTimeout(() => {
       window.location.href = "../../../LGAttempt3/Level5.php"
     }, "3000")
