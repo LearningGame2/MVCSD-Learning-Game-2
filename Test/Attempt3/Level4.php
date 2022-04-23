@@ -346,10 +346,11 @@ function handleEndGame() {
 
 
         if (amountCorrect>8){
-            document.getElementById("option-four-label").innerHTML = "Go Duck Hunting";
+            document.getElementById("minigame-check").innerHTML = "Go Duck Hunting";
+            document.getElementById("minigame-check").style.color = "white";
         }
         else{
-            document.getElementById("option-four-label").innerHTML = "Next Level";
+            document.getElementById("minigame-check").innerHTML = "Next Level";
         }
 
         const playerGrade = (amountCorrect / 10) * 100
