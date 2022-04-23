@@ -69,7 +69,7 @@ function promptRequest($numOfQuestions){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="nextLevel()">Next Level</button>
+                    <button onclick="nextLevel()"><span id="minigame-check"></span></button>
                 </div>
 
             </div>
@@ -155,6 +155,10 @@ let questionArray = fillQuestions();
 
 let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
+let cookieMiniGameMulti = "cookieMiniGameMulti"
+
+setCookie(cookieMiniGameMulti, 1)
+
 
 let playerScore = parseInt(getCookie(cookieScore))
 let playerStreak = parseInt(getCookie(cookieStreak))
@@ -339,6 +343,15 @@ function handleEndGame() {
             remark = "Excellent! Keep up the good work."
             remarkColor = "green"
         }
+
+
+        if (amountCorrect>8){
+            document.getElementById("option-four-label").innerHTML = "Go Duck Hunting";
+        }
+        else{
+            document.getElementById("option-four-label").innerHTML = "Next Level";
+        }
+
         const playerGrade = (amountCorrect / 10) * 100
 
         //data to display to score board
@@ -365,7 +378,14 @@ function closeOptionModal() {
 }
 
 function nextLevel(){
-        window.location.href = "Level5.php"
+       
+
+        if (amountCorrect>8){
+            window.location.href = "../DuckHuntTest/DuckHunt-JS-master/dist/"
+        }
+        else{
+            window.location.href = "Level5.php"
+        }
 }
 
 function setCookie(cname, cvalue) { 
