@@ -37545,7 +37545,7 @@ _createClass(Game, [{
     _Sound2.default.play('champ');
     this.gameStatus = 'You Win!';
     console.log("Score " + this.score);
-    LG2multiplier = (Math.round(this.score/500)+1)
+    var LG2multiplier = (Math.round(this.score/500)+1)
     document.cookie = "cookieMiniGameMulti = " + LG2multiplier + ";"+ "path=../../../";
     setTimeout(() => {
       window.location.href = "../../../LGAttempt3/Level5.php"
@@ -37558,7 +37558,7 @@ _createClass(Game, [{
     _Sound2.default.play('loserSound');
     console.log("Score " + this.score);
     this.gameStatus = 'You Lose!';
-    LG2multiplier = (Math.round(this.score/500)+1)
+    var LG2multiplier = (Math.round(this.score/500)+1)
     document.cookie = "cookieMiniGameMulti = " + LG2multiplier + ";"+ "path=../../../";
     setTimeout(() => {
       window.location.href = "../../../LGAttempt3/Level5.php"
