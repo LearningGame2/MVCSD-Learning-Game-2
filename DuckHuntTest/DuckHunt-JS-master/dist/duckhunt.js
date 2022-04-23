@@ -37553,7 +37553,7 @@ _createClass(Game, [{
     console.log(Math.round(this.score/100))
     setTimeout(() => {
       window.location.href = "../../../LGAttempt3/Level5.php"
-    }, "10000")
+    }, "5000")
     
   }
 }, {
