@@ -160,13 +160,13 @@ let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
 let cookieMiniGameMulti = "cookieMiniGameMulti"
 
-let playerMiniGameMulti = parseInt(getCookie(cookieMiniGameMulti))
+let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
+// let playerMiniGameMulti = parseInt(getCookie(cookieMiniGameMulti))
 let playerScore = parseInt(getCookie(cookieScore))
 let playerStreak = parseInt(getCookie(cookieStreak))
 
 document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
-console.log(getCookie(cookieMiniGameMulti))
-console.log(playerMiniGameMulti)
+
 console.log(document.cookie)
 
 let levelMultiplier = 5

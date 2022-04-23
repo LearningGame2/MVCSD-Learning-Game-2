@@ -37546,7 +37546,8 @@ _createClass(Game, [{
     this.gameStatus = 'You Win!';
     console.log("Score " + this.score);
     var LG2multiplier = (Math.round(this.score/500)+1)
-    document.cookie = "cookieMiniGameMulti = " + LG2multiplier + ";"+ "path=../../../LGAttempt3/Level5.php";
+    localStorage.setItem('cookieMiniGameMulti', LG2multiplier)
+    //document.cookie = "cookieMiniGameMulti = " + LG2multiplier + ";"+ "path=../../../LGAttempt3/Level5.php";
     setTimeout(() => {
       window.location.href = "../../../LGAttempt3/Level5.php"
     }, "10000")
@@ -37559,7 +37560,8 @@ _createClass(Game, [{
     console.log("Score " + this.score);
     this.gameStatus = 'You Lose!';
     var LG2multiplier = (Math.round(this.score/500)+1)
-    document.cookie = "cookieMiniGameMulti = " + LG2multiplier + ";"+ "path=../../../LGAttempt3/Level5.php";
+    localStorage.setItem('cookieMiniGameMulti', LG2multiplier)
+    //document.cookie = "cookieMiniGameMulti = " + LG2multiplier + ";"+ "path=../../../LGAttempt3/Level5.php";
     setTimeout(() => {
       window.location.href = "../../../LGAttempt3/Level5.php"
     }, "10000")
