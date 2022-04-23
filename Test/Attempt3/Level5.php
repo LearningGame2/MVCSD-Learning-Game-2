@@ -81,7 +81,9 @@ function promptRequest($numOfQuestions){
             <div class="game-details-container">
                 <h1>Score : <span id="player-score"></span></h1>
                 <h1>Current Streak : <span id = "player-streak"></span></h1>
+                <h1>Duck Hunter Multiplier: <span id = "player-minigamemulti"></span></h1>
                 <h1>Question : <span id="question-number"></span> / 10</h1>
+
 
             </div>
 
@@ -156,9 +158,13 @@ let questionArray = fillQuestions();
 
 let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
+let cookieMiniGameMulti = "cookieMiniGameMulti"
 
+let playerMiniGameMulti = parseInt(getCookie(cookieMiniGameMulti))
 let playerScore = parseInt(getCookie(cookieScore))
 let playerStreak = parseInt(getCookie(cookieStreak))
+
+document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
 
 let levelMultiplier = 5
 let questionNumber = 1 //holds the current question number
@@ -261,7 +267,7 @@ function checkForAnswer() {
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
-                playerScore = playerScore + ((1 + playerStreak) * levelMultiplier) //adding to player's score
+                playerScore = playerScore + ((1 + playerStreak) * levelMultiplier * playerMiniGameMulti) //adding to player's score
                 playerStreak++
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
