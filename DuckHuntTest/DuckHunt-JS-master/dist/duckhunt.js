@@ -37545,6 +37545,7 @@ _createClass(Game, [{
     _Sound2.default.play('champ');
     this.gameStatus = 'You Win!';
     console.log("Score " + this.score);
+    console.log(document.cookie)
     setCookie("cookieMiniGameMulti",Math.round(this.score/100));
     setTimeout(() => {
       window.location.href = "../../../LGAttempt3/Level5.php"
@@ -37558,6 +37559,7 @@ _createClass(Game, [{
     console.log("Score " + this.score);
     this.gameStatus = 'You Lose!';
     setCookie("cookieMiniGameMulti",Math.round(this.score/100));
+    console.log(document.cookie)
     console.log(Math.round(this.score/100))
     setTimeout(() => {
       window.location.href = "../../../LGAttempt3/Level5.php"
