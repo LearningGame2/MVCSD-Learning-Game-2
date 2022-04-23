@@ -37252,6 +37252,14 @@ function Game(opts) {
   return this;
 }
 
+/*LearningGame2 Added Functionality*/
+
+function setCookie(LG2name, LG2value) { 
+  document.cookie = LG2name + "=" + LG2value + ";"
+  }
+  
+  /*LearningGame2 Added Functionality*/
+
 _createClass(Game, [{
   key: 'load',
   value: function load() {
@@ -81447,27 +81455,6 @@ return module;
 
 
 
-/*LearningGame2 Added Functionality*/
-
-function setCookie(cccccname, cccccvalue) { 
-document.cookie = cccccname + "=" + cccccvalue + ";"
-}
-
-function getCookie(cccccname) {
-let nnnnname = cccccname + "=";
-let dddddecodedCookie = decodeURIComponent(document.cookie);
-let ccccca = dddddecodedCookie.split(';');
-for(let i = 0; i <ccccca.length; i++) {
-    let ccccc = ccccca[i];
-    while (ccccc.charAt(0) == ' ') {
-        ccccc = ccccc.substring(1);
-    }
-    if (ccccc.indexOf(nnnnname) == 0) {
-        return ccccc.substring(nnnnname.length, ccccc.length);
-    }
-}
- return "";
-}
 
 
 
