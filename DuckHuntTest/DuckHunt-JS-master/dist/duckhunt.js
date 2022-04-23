@@ -37545,11 +37545,11 @@ _createClass(Game, [{
     _Sound2.default.play('champ');
     this.gameStatus = 'You Win!';
     console.log("Score " + this.score);
-    console.log(document.cookie)
-    setCookie("cookieMiniGameMulti",Math.round(this.score/100));
+    LG2multiplier = (Math.round(this.score/500)+1)
+    document.cookie = "cookieMiniGameMulti = " + LG2multiplier + ";"+ "path=../../../";
     setTimeout(() => {
       window.location.href = "../../../LGAttempt3/Level5.php"
-    }, "3000")
+    }, "10000")
     
   }
 }, {
@@ -37558,12 +37558,11 @@ _createClass(Game, [{
     _Sound2.default.play('loserSound');
     console.log("Score " + this.score);
     this.gameStatus = 'You Lose!';
-    setCookie("cookieMiniGameMulti",Math.round(this.score/100));
-    console.log(document.cookie)
-    console.log(Math.round(this.score/100))
+    LG2multiplier = (Math.round(this.score/500)+1)
+    document.cookie = "cookieMiniGameMulti = " + LG2multiplier + ";"+ "path=../../../";
     setTimeout(() => {
       window.location.href = "../../../LGAttempt3/Level5.php"
-    }, "5000")
+    }, "10000")
     
   }
 }, {
