@@ -43,7 +43,7 @@ function checkUpdateLeaderboard(){
     $deleteScore = $scores[0]['Highscore']
     $deleteName = $scores[0]['Username']
     for($x = 9; $x >=0; $x--){
-        if($playerScore > $scores[$x]['highscore']){
+        if($playerScore > $scores[$x]['Highscore']){
             $checkLeaderboardScore = $x;
             break;
         }
