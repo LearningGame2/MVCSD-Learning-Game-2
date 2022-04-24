@@ -40,22 +40,10 @@ function promptRequest($numOfQuestions){
 <html lang="en">
 <head>
   <link rel="stylesheet" href="Game.css">
-  <style>
-    body {
-        background-color: #269;
-        background-image:
-        linear-gradient(rgba(255,255,255,.5) 2px, transparent 2px),
-        linear-gradient(90deg, rgba(255,255,255,.5) 2px, transparent 2px),
-        linear-gradient(rgba(255,255,255,.28) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.28) 1px, transparent 1px);
-        background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-        background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-        }
-  </style>
 </head>
 
 <body onload="NextQuestion(0)">
-  <h1 style="background-color:black; color:white; text-align:center; font-family: "Lucida Console", "Courier New", monospace; font-size:300%; line-height: 100px">
+  <h1 style="background-color:black; color:white; text-align:center; font-family: Lucida Console; font-size:300%; line-height: 100px">
     Level 1
   </h1>
     <main>
