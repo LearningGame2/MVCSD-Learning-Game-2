@@ -9,7 +9,7 @@ html, body{
 }
 
 body{
-    font-family: 'Montserrat', serif;
+    font-family: "Lucida Console", "Courier New", monospace;
     background-color: #269;
     background-image:
     linear-gradient(rgba(255,255,255,.5) 2px, transparent 2px),
