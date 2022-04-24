@@ -6,6 +6,7 @@ USER= Game2
 all: PutHTML
 
 PutHTML:
+		chmod 777 Level1.php Level2.php Level3.php Level4.php Level5.php EndGame.php Home.php Login1.php
 		cp Level1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level2.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level3.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
