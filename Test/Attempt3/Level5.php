@@ -52,7 +52,7 @@ function promptRequest($numOfQuestions){
 
 <body onload="NextQuestion(0)">
   <h1 style="background-color:black; color:white; text-align:center; font-family:courier new; font-size:300%; line-height: 100px">
-    Level 5
+    Lvl 5
   </h1>
     <main>
         <!-- creating a modal for when quiz ends -->
