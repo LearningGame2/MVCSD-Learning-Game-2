@@ -49,18 +49,6 @@ function checkUpdateLeaderboard(){
         }
     }
 
-    // if($checkLeaderboardScore == 9){         //this function seemed unnecessary given that we have checkLeaderboardScore <= 9 in the function below already
-    //     $conn = connect();
-    //     $sql = "DELETE FROM Leaderboard WHERE Username = '$deleteName' and Highscore = '$deleteScore";
-    //     if (mysqli_query($conn, $sql)) {
-    //         echo "Record deleted successfully";
-    //     } 
-    //     else {
-    //         echo "Error deleting record: " . mysqli_error($conn);  
-    //     }
-
-    //     //shouldn't there be something here?
-    // }
     if($checkLeaderboardScore >= 0 && $checkLeaderboardScore<= 9){ //Leaderboard      also changed this from else if to if
         $conn = connect();
         $sql = "DELETE FROM Leaderboard WHERE Username = '$deleteName' and Highscore = '$deleteScore'"; //changed Highscore from Passcode (vestigial from copied code?)
