@@ -40,6 +40,18 @@ function promptRequest($numOfQuestions){
 <html lang="en">
 <head>
   <link rel="stylesheet" href="Game.css">
+  <style>
+    body {
+        background-color: #269;
+        background-image:
+        linear-gradient(rgba(255,255,255,.5) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255,255,255,.5) 2px, transparent 2px),
+        linear-gradient(rgba(255,255,255,.28) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.28) 1px, transparent 1px);
+        background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+        background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+        }
+  </style>
 </head>
 
 <body onload="NextQuestion(0)">
@@ -156,7 +168,7 @@ function fillQuestions()
 {
     const questions = [10];
     var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
-    
+
     for (let i = 0; i < 10; i++) {
         var prompt = phpPrompt[i];
         console.log(prompt);
@@ -207,11 +219,11 @@ let questionArray = fillQuestions();
 let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
 
-setCookie(cookieScore, 0); 
+setCookie(cookieScore, 0);
 setCookie(cookieStreak, 0);//sets score as 0 in cookies, I think this is redundant
 
 console.log(document.cookie); //cookie checker
- 
+
 let levelMultiplier = 1
 let questionNumber = 1 //holds the current question number
 let playerScore = 0  //holds the player score
@@ -258,7 +270,7 @@ function checkForAnswer() {
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
-                playerScore = playerScore + ((1 + playerStreak) * levelMultiplier) 
+                playerScore = playerScore + ((1 + playerStreak) * levelMultiplier)
                 playerStreak++
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
@@ -351,11 +363,11 @@ function handleEndGame() {
         document.getElementById("player-score").innerHTML = playerScore;
         document.getElementById("player-streak").innerHTML = playerStreak;
 
-        setCookie(cookieScore, playerScore); 
+        setCookie(cookieScore, playerScore);
         setCookie(cookieStreak, playerStreak);
 
 }
-  
+
 //function to close warning modal
 function closeOptionModal() {
         document.getElementById('option-modal').style.display = "none"
@@ -365,7 +377,7 @@ function nextLevel(){
         window.location.href = "Level2.php"
 }
 
-function setCookie(cname, cvalue) { 
+function setCookie(cname, cvalue) {
         document.cookie = cname + "=" + cvalue + ";"
 }
 
