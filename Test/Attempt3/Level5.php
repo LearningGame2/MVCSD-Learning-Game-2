@@ -5,6 +5,8 @@ session_start();
 //   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
 // } //Comment out to make less annoying
 
+$x = $_SESSION['login']
+
 function connect() {
     $conn = mysqli_connect("localhost","fishell1","S219352","Game2");
 
