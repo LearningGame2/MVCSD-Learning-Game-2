@@ -7,7 +7,7 @@ all: PutHTML
 
 PutHTML:
 		cp Level1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
-		chmod 777 Level1.php
+		chmod Level1.php - rwx rwx rwx
 		cp Level2.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level3.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level4.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
