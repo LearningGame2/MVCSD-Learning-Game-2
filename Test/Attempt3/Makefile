@@ -24,7 +24,6 @@ PutHTML:
 		cp Login1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		chmod 777 LoginStyle.css
 		cp LoginStyle.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
-		chmod 777 Game.css
 		cp Game.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
 
 
