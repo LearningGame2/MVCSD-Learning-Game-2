@@ -20,7 +20,7 @@ function connect() {
 
 
 
-function leaderboardRequest(){
+function leaderboardRequest(){ //called by checkUpdateLeaderboard below
   $scores = array();
 
   $conn = connect();
@@ -37,9 +37,9 @@ function leaderboardRequest(){
 
 
 function checkUpdateLeaderboard(){
-    $scores = leaderboardRequest();
-    $playerScore = intval( $_COOKIE['cookieScore']);
-    $checkLeaderboardScore = -1; //keep track of what position to insert as
+    $scores = leaderboardRequest(); //calls leaderboardRequest above
+    $playerScore = intval($_COOKIE["cookieScore"]); //changed from intval( $_COOKIE["cookieScore"])
+    $checkLeaderboardScore = -1; //keep track of whether to add to Leaderboard
     $deleteScore = $scores[0]['Highscore']
     $deleteName = $scores[0]['Username']
     for($x = 9; $x >=0; $x--){
@@ -49,11 +49,21 @@ function checkUpdateLeaderboard(){
         }
     }
 
-    if($checkLeaderboardScore = 9){ 
-    }
-    else if($checkLeaderboardScore >= 0 && $checkLeaderboardScore<= 9){ //Leaderboard
+    // if($checkLeaderboardScore == 9){         //this function seemed unnecessary given that we have checkLeaderboardScore <= 9 in the function below already
+    //     $conn = connect();
+    //     $sql = "DELETE FROM Leaderboard WHERE Username = '$deleteName' and Highscore = '$deleteScore";
+    //     if (mysqli_query($conn, $sql)) {
+    //         echo "Record deleted successfully";
+    //     } 
+    //     else {
+    //         echo "Error deleting record: " . mysqli_error($conn);  
+    //     }
+
+    //     //shouldn't there be something here?
+    // }
+    if($checkLeaderboardScore >= 0 && $checkLeaderboardScore<= 9){ //Leaderboard      also changed this from else if to if
         $conn = connect();
-        $sql = "DELETE FROM Leaderboard WHERE Username = '$deleteName' and Passcode = '$deleteScore'";
+        $sql = "DELETE FROM Leaderboard WHERE Username = '$deleteName' and Highscore = '$deleteScore'"; //changed Highscore from Passcode (vestigial from copied code?)
         if (mysqli_query($conn, $sql)) {
             echo "Record deleted successfully";
         } 
@@ -64,22 +74,23 @@ function checkUpdateLeaderboard(){
 
         $sql = "INSERT INTO Leaderboard (Username, Highscore) VALUES ('$_SESSION['login']', '$playerScore')";
         if (mysqli_query($conn, $sql)) {
-            echo "Record insert successfully";
+            echo "Record inserted successfully";
         } 
         else {
-            echo "Error insert record: " . mysqli_error($conn);  
+            echo "Error inserting record: " . mysqli_error($conn);  
         }
         mysqli_close($conn);
 
 
         //Return conditionals
-        if($checkLeaderboardScore=9){//All time new highscore
+        if($checkLeaderboardScore==9){//All time new highscore!!!!11!!1!!!
             return 2;
         }
         else{return 1;}//On leaderboard, respectable dude
         
     }
-    else if($checkLeaderboardScore < 0){ // Did not make leaderboard, rip loser
+
+    else if($checkLeaderboardScore < 0){ // Did not make leaderboard, rip bozo
         return 0;
     }
 }
@@ -92,7 +103,7 @@ function checkUpdateLeaderboard(){
 <<!DOCTYPE html>
 <html lang="en">
     <h1>END SCREEN </h1>
-    <button onclick = "goHome()">Go Home Loser</button>
+    <button onclick = "goHome()">Go Home Loser</button> <!--change before tuesday pres...maybe?-->
     <h1> FINAL SCORE: <span id = "final-score"></span></h1>
     <div>
         <h1><span id = "update-leaderboard-message"></span></h1>
@@ -103,14 +114,14 @@ function checkUpdateLeaderboard(){
 
 let cookieScore = "cookieScore"    
 let playerScore = parseInt(getCookie(cookieScore))
-document.getElementById("player-streak").innerHTML = playerScore
+document.getElementById("final-score").innerHTML = playerScore //changed this from gEBID("player-streak")
 
 let UpdateLeaderboard = parseInt('<?php checkUpdateLeaderboard() ?>')
 if(UpdateLeaderboard == 0){
     document.getElementById("update-leaderboard-message").innerHTML = "Awesome Job!"
 }
 else if(UpdateLeaderboard == 1){
-    document.getElementById("update-leaderboard-message").innerHTML = "You made it onto the leaderboard!! Fantastic!!!"
+    document.getElementById("update-leaderboard-message").innerHTML = "You made it onto the leaderboard!! Fantastic run!!!"
 }
 else if(UpdateLeaderboard == 2){
     document.getElementById("update-leaderboard-message").innerHTML = "NEW ALL TIME HIGH SCORE!!!!"
