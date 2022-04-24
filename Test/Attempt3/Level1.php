@@ -55,7 +55,7 @@ function promptRequest($numOfQuestions){
 </head>
 
 <body onload="NextQuestion(0)">
-  <h1 style="background-color:black; color:white; text-align:center; font-family:courier new; font-size:300%; line-height: 100px">
+  <h1 style="background-color:black; color:white; text-align:center; font-family: "Lucida Console", "Courier New", monospace; font-size:300%; line-height: 100px">
     Level 1
   </h1>
     <main>
