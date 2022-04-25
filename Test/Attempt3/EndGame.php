@@ -40,8 +40,8 @@ function checkUpdateLeaderboard(){
     $scores = leaderboardRequest(); //calls leaderboardRequest above
     $playerScore = intval($_COOKIE["cookieScore"]); //changed from intval( $_COOKIE["cookieScore"])
     $checkLeaderboardScore = -1; //keep track of whether to add to Leaderboard
-    $deleteScore = $scores[0]['Highscore']
-    $deleteName = $scores[0]['Username']
+    $deleteScore = $scores[0]['Highscore'];
+    $deleteName = $scores[0]['Username'];
     for($x = 9; $x >=0; $x--){
         if($playerScore > $scores[$x]['Highscore']){
             $checkLeaderboardScore = $x;
