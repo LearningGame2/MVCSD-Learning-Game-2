@@ -40,8 +40,8 @@ function checkUpdateLeaderboard(){
     $scores = leaderboardRequest(); //calls leaderboardRequest above
     $playerScore = intval($_COOKIE["cookieScore"]); //changed from intval( $_COOKIE["cookieScore"])
     $checkLeaderboardScore = -1; //keep track of whether to add to Leaderboard
-    $deleteScore = $scores[0]['Highscore']
-    $deleteName = $scores[0]['Username']
+    $deleteScore = $scores[0]['Highscore'];
+    $deleteName = $scores[0]['Username'];
     for($x = 9; $x >=0; $x--){
         if($playerScore > $scores[$x]['Highscore']){
             $checkLeaderboardScore = $x;
@@ -61,7 +61,8 @@ function checkUpdateLeaderboard(){
 
         //changed login to be in double quotes...maybe chaining ' ' and " " is the problem?  idk this code feels like it should work
         //i know SESSION login already wasn't working but login was blue and not orange when we had ' ' whereas it was orange in Home.php
-        $sql = "INSERT INTO Leaderboard (Username, Highscore) VALUES ('$_SESSION["login"]', '$playerScore')";
+        $seshLogin = $_SESSION['login'];
+        $sql = "INSERT INTO Leaderboard (Username, Highscore) VALUES ('$seshLogin', '$playerScore')";
         if (mysqli_query($conn, $sql)) {
             echo "Record inserted successfully";
         } 
