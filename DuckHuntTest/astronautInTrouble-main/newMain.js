@@ -405,6 +405,10 @@ function createGame([spritePlayer, spriteR, fullIcon, spriteBg]){
     function playGameOver() {
         STATE.currentScreen = 'GameOver';
 
+        localStorage.setItem('cookieMiniGameMulti', ${CURR_SCORE});
+
+        window.location.href = "../../../LGAttempt3/Level5.php"
+
         const CURR_SCORE = SCORE.point;
         let MAX_SCORE = getCookie('MAX_SCORE');
         if(MAX_SCORE == null) MAX_SCORE = 0;
@@ -439,8 +443,9 @@ function createGame([spritePlayer, spriteR, fullIcon, spriteBg]){
                 'green');
         }
 
+
         writeOnScreen(
-            'Press ENTER or TOUCH THE SCREEN to play again',
+            'Returning to LearningGame2 shortly',
             F_M,
             {x: C.canvas.width/2, y: C.canvas.height/2+20},
             'center');
