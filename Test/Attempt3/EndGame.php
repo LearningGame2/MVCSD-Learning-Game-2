@@ -119,15 +119,15 @@ function checkUpdateLeaderboard(){
 </head>
 
 <body style="background-color:black">
-    <h1 sytle="text-align:center;"> GAME OVER! </h1>
-    <h1 sytle="text-align:center;"> FINAL SCORE: <span id = "final-score"></span></h1>
+    <h1 sytle="text-align:center; color:white;"> GAME OVER! </h1>
+    <h1 sytle="text-align:center; color:white;"> FINAL SCORE: <span id = "final-score"></span></h1>
     <div>
         <h1><span id = "update-leaderboard-message"></span></h1>
     </div>
     <div>
         Good Try <?php echo $_SESSION['login'] ?>
     </div>
-    <button onclick = "goHome()">Return Home</button> <!--change before tuesday pres...maybe?-->
+    <button onclick = "goHome()" class="button">Return Home</button> <!--change before tuesday pres...maybe?-->
 </body>
 
 <script>
