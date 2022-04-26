@@ -407,61 +407,61 @@ function createGame([spritePlayer, spriteR, fullIcon, spriteBg]){
 
         localStorage.setItem('cookieMiniGameMulti', SCORE.point);
 
-        window.location.href = "../../../LGAttempt3/Level5.php"
+        window.location.href = "../../LGAttempt3/Level4.php"
 
-        const CURR_SCORE = SCORE.point;
-        let MAX_SCORE = getCookie('MAX_SCORE');
-        if(MAX_SCORE == null) MAX_SCORE = 0;
+        // const CURR_SCORE = SCORE.point;
+        // let MAX_SCORE = getCookie('MAX_SCORE');
+        // if(MAX_SCORE == null) MAX_SCORE = 0;
 
-        if(CURR_SCORE > MAX_SCORE){
-            writeOnScreen(
-                'Congratulation!',
-                F_B,
-                {x: C_W/2, y: C.canvas.height/2-30},
-                'center',
-                'green');
-            writeOnScreen(
-                `You beat the previous High Score: ${MAX_SCORE}`,
-                F_M,
-                {x: C.canvas.width/2, y: C.canvas.height/2+42},
-                'center');
+        // if(CURR_SCORE > MAX_SCORE){
+        //     writeOnScreen(
+        //         'Congratulation!',
+        //         F_B,
+        //         {x: C_W/2, y: C.canvas.height/2-30},
+        //         'center',
+        //         'green');
+        //     writeOnScreen(
+        //         `You beat the previous High Score: ${MAX_SCORE}`,
+        //         F_M,
+        //         {x: C.canvas.width/2, y: C.canvas.height/2+42},
+        //         'center');
 
-            document.cookie = `MAX_SCORE=${CURR_SCORE}; Secure`;
-        }else{
-            writeOnScreen(
-                'Game Over',
-                F_B,
-                {x: C.canvas.width/2, y: C.canvas.height/2-30},
-                'center',
-                'red');
+        //     document.cookie = `MAX_SCORE=${CURR_SCORE}; Secure`;
+        // }else{
+        //     writeOnScreen(
+        //         'Game Over',
+        //         F_B,
+        //         {x: C.canvas.width/2, y: C.canvas.height/2-30},
+        //         'center',
+        //         'red');
 
-            writeOnScreen(
-                `Higher Score: ${MAX_SCORE}`,
-                F_M,
-                {x: C.canvas.width/2, y: C.canvas.height/2+42},
-                'center',
-                'green');
-        }
+        //     writeOnScreen(
+        //         `Higher Score: ${MAX_SCORE}`,
+        //         F_M,
+        //         {x: C.canvas.width/2, y: C.canvas.height/2+42},
+        //         'center',
+        //         'green');
+        // }
 
 
-        writeOnScreen(
-            'Returning to LearningGame2 shortly',
-            F_M,
-            {x: C.canvas.width/2, y: C.canvas.height/2+20},
-            'center');
+        // writeOnScreen(
+        //     'Returning to LearningGame2 shortly',
+        //     F_M,
+        //     {x: C.canvas.width/2, y: C.canvas.height/2+20},
+        //     'center');
 
-        with (new AudioContext)
-        with (GA = createGain())
-        for (i in D = [19, 21, 24])
-            with (createOscillator())
-            if (D[i])
-                connect(GA),
-                    GA.connect(destination),
-                    start(i * .1),
-                    frequency.setValueAtTime(440 * 1.06 ** (13 - D[i]), i * .1), type = 'triangle',
-                    gain.setValueAtTime(1, i * .1),
-                    gain.setTargetAtTime(.0001, i * .1 + .08, .005),
-                    stop(i * .1 + .09)
+        // with (new AudioContext)
+        // with (GA = createGain())
+        // for (i in D = [19, 21, 24])
+        //     with (createOscillator())
+        //     if (D[i])
+        //         connect(GA),
+        //             GA.connect(destination),
+        //             start(i * .1),
+        //             frequency.setValueAtTime(440 * 1.06 ** (13 - D[i]), i * .1), type = 'triangle',
+        //             gain.setValueAtTime(1, i * .1),
+        //             gain.setTargetAtTime(.0001, i * .1 + .08, .005),
+        //             stop(i * .1 + .09)
     }
     
     function playBgm() {
