@@ -114,8 +114,7 @@ function checkUpdateLeaderboard(){
       width:200px;
       transition-duration: 0.4s;
       border: 2px solid white;
-    }
-    .button1 {
+
       margin: 0;
       position: absolute;
       top: 30%;
@@ -123,7 +122,7 @@ function checkUpdateLeaderboard(){
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
-    .button1:hover {
+    .button:hover {
       background-color: green;
     }
   </style>
