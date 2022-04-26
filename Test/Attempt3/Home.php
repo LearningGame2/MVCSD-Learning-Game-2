@@ -37,6 +37,14 @@ function leaderboardRequest(){
   return json_encode($scores);
 }
 
+// function getName() {
+//   $conn = connect();
+//   $currentUser = $_SESSION['login'];
+//   $sql = "SELECT DISTINCT GovernmentName FROM UserDatabase WHERE Username = '$currentUser'";
+//   $result = mysqli_query($conn,$sql);
+//   return $result;
+// }
+
 
 ?>
 
@@ -117,7 +125,7 @@ function leaderboardRequest(){
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
   <h1 style="text-align:center; color:white;">
-    Welcome <?php echo $_SESSION['login']?>!
+    Welcome,  <?php echo $_SESSION['login']?>!
   </h1>
 </header>
 

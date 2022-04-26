@@ -45,14 +45,16 @@ function promptRequest($numOfQuestions){
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <link rel="stylesheet" href="Game.css">
+  <title>
+    Level 5
+  </title>
 </head>
 
 <body onload="NextQuestion(0)">
-  <h1 style="background-color:black; color:white; text-align:center; font-family:courier new; font-size:300%; line-height: 100px">
-    Lvl 5
+  <h1 style="background-color:black; color:white; text-align:center; font-family:Garamond; font-size:300%; line-height: 100px">
+    Level 5
   </h1>
     <main>
         <!-- creating a modal for when quiz ends -->
@@ -84,7 +86,7 @@ function promptRequest($numOfQuestions){
                 <h1>Score : <span id="player-score"></span></h1>
                 <h1>Current Streak : <span id = "player-streak"></span></h1>
                 <h1>Duck Hunter Multiplier: <span id = "player-minigamemulti"></span></h1>
-                <h1>Question : <span id="question-number"></span> / 10</h1>
+                <h1>Question : <span id="question-number"></span> / 5</h1> <!--for 5 questions: changed from / 10 -->
 
 
             </div>
@@ -182,10 +184,13 @@ question object with the results from the parse*/
 //post: returns questions array
 function fillQuestions()
 {
-    const questions = [10];
-    var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
-    
-    for (let i = 0; i < 10; i++) {
+    //for 5 questions: added to implement changes easier
+    let numQuestions = 5;
+
+    const questions = [numQuestions];
+    var phpPrompt = JSON.parse('<?php echo promptRequest(5);?>'); //for 5 questions: changed from 10
+
+    for (let i = 0; i < numQuestions; i++) {
         var prompt = phpPrompt[i];
         console.log(prompt);
         qPrompt = prompt[1];
@@ -231,7 +236,7 @@ function fillQuestions()
 
 
 
-   
+
 // function for displaying next question in the array to dom
 //also handles displaying players and quiz information to dom
 function NextQuestion(index) {
@@ -304,12 +309,12 @@ function handleNextQuestion() {
         unCheckRadioButtons()
         //delays next question displaying for a second just for some effects so questions don't rush in on player
         setTimeout(() => {
-            if (indexNumber <= 9) {
-            //displays next question as long as index number isn't greater than 9, remember index number starts from 0, so index 9 is question 10
+            if (indexNumber <= 4) { //for 5 questions: changed from 9
+            //displays next question as long as index number isn't greater than 4, remember index number starts from 0, so index 4 is question 5
                 NextQuestion(indexNumber)
             }
             else {
-                handleEndGame()//ends game if index number greater than 9 meaning we're already at the 10th question
+                handleEndGame()//ends game if index number greater than 4 meaning we're already at the 5 question
             }
             resetOptionBackground()
         }, 1000);
@@ -336,16 +341,17 @@ function handleEndGame() {
         let remark = null
         let remarkColor = null
 
+        //for 5 questions: next 15 lines edited
         // condition check for player remark and remark color
-        if (playerScore <= 3) {
+        if (playerScore <= 2) {
             remark = "You can do better!"
             remarkColor = "red"
         }
-        else if (playerScore >= 4 && playerScore < 9) {
+        else if (playerScore >= 3 && playerScore < 5) {
             remark = "Keep practicing!"
             remarkColor = "orange"
         }
-        else if (playerScore >= 10) {
+        else if (playerScore >= 5) {
             remark = "Excellent! Keep up the good work."
             remarkColor = "green"
         }
@@ -364,11 +370,11 @@ function handleEndGame() {
         document.getElementById("player-score").innerHTML = playerScore;
         document.getElementById("player-streak").innerHTML = playerStreak;
 
-        setCookie(cookieScore, playerScore); 
+        setCookie(cookieScore, playerScore);
         setCookie(cookieStreak, playerStreak);
 
 }
-  
+
 //function to close warning modal
 function closeOptionModal() {
         document.getElementById('option-modal').style.display = "none"
@@ -378,7 +384,7 @@ function goEndGame(){
         window.location.href = "EndGame.php"
 }
 
-function setCookie(cname, cvalue) { 
+function setCookie(cname, cvalue) {
         document.cookie = cname + "=" + cvalue + ";"
 }
 

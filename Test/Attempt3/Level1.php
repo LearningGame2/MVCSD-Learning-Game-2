@@ -18,48 +18,66 @@ function connect() {
 
 
 function promptRequest($numOfQuestions){
-    $randomNum = array();
     $questions = array();
-
-    for ($x = 0; x<= $numOfQuestions; $x++{ //can't it just be $x < $numOfQuestions?
-        $randGen = rand(1,300);
-        $workingRand = true;
-        for ($i = 0; $i < $x; $i++) {
-            if ($randGen==$randomNum[$i])
-            {
-                $i==$x;
-                $workingRand = false;
-            }
-
-        }
-        if ($workingRand==true) {
-            $randomNum[$x] = $randGen;
-        }
-
-    }
-
-    for ($x = 0; $x <= $numOfQuestions; $x++) {  //can't it just be $x < $numOfQuestions?
-        //$rowNumber = rand(1,300);
+    for ($x = 0; $x <= $numOfQuestions; $x++) {
+        $rowNumber = rand(1,399);
         $prompt = "";
         $conn = connect();
-        $currentRowNum = $randomNum[$x];
-        $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$randomNum[$x]'"; //if this doesn't work, change to $currentRowNum
+        $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
         if ($result = mysqli_query($conn, $sql)) {
-
-            $row = mysqli_fetch_row($result);
-
-      //      $prompt = $row[1];
-
-
-            mysqli_free_result($result);
-
-            mysqli_close($conn);
-
-            $questions[$x] = $row;
+          $row = mysqli_fetch_row($result);
+          mysqli_free_result($result);
+          mysqli_close($conn);
+          $questions[$x] = $row;
       }
     }
   return json_encode($questions);
 }
+
+//version to prevent duplicate questions being pulled that doesn't work (yet)
+// function promptRequest($numOfQuestions){
+//     $randomNum = array();
+//     $questions = array();
+
+//     for ($x = 0; x<= $numOfQuestions; $x++{ //can't it just be $x < $numOfQuestions?
+//         $randGen = rand(1,300);
+//         $workingRand = true;
+//         for ($i = 0; $i < $x; $i++) {
+//             if ($randGen==$randomNum[$i])
+//             {
+//                 $i==$x;
+//                 $workingRand = false;
+//             }
+
+//         }
+//         if ($workingRand==true) {
+//             $randomNum[$x] = $randGen;
+//         }
+
+//     }
+
+//     for ($x = 0; $x <= $numOfQuestions; $x++) {  //can't it just be $x < $numOfQuestions?
+//         //$rowNumber = rand(1,300);
+//         $prompt = "";
+//         $conn = connect();
+//         $currentRowNum = $randomNum[$x];
+//         $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$randomNum[$x]'"; //if this doesn't work, change to $currentRowNum
+//         if ($result = mysqli_query($conn, $sql)) {
+
+//             $row = mysqli_fetch_row($result);
+
+//       //      $prompt = $row[1];
+
+
+//             mysqli_free_result($result);
+
+//             mysqli_close($conn);
+
+//             $questions[$x] = $row;
+//       }
+//     }
+//   return json_encode($questions);
+// }
 
 ?>
 
@@ -67,6 +85,9 @@ function promptRequest($numOfQuestions){
 <html lang="en">
 <head>
   <link rel="stylesheet" href="Game.css">
+  <title>
+    Level 1
+  </title>
 </head>
 
 <body onload="NextQuestion(0)">
