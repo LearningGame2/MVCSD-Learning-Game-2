@@ -111,7 +111,7 @@ function checkUpdateLeaderboard(){
       cursor: pointer;
       font-size: 24px;
       height:100px;
-      width:200px;
+      width: 400px;
       transition-duration: 0.4s;
       border: 2px solid white;
     }
@@ -127,7 +127,7 @@ function checkUpdateLeaderboard(){
     <div>
         <h1><span id = "update-leaderboard-message"></span></h1>
     </div>
-    <div>
+    <div style="text-align:center;">
         <h1 style="color:white;"> Good Try <?php echo $_SESSION['login'] ?> </h1>
     </div>
     <div style="text-align:center;">
