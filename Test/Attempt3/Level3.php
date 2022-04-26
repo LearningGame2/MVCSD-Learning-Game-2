@@ -348,6 +348,14 @@ function handleEndGame() {
         }
         const playerGrade = (amountCorrect / 7) * 100
 
+        if (amountCorrect>5){ 
+            document.getElementById("minigame-check").innerHTML = "Astronaut in Trouble!!";
+            document.getElementById("minigame-check").style.color = "white";
+        }
+        else{
+            document.getElementById("minigame-check").innerHTML = "Next Level";
+        }
+
         //data to display to score board
         document.getElementById('remarks').innerHTML = remark
         document.getElementById('remarks').style.color = remarkColor
@@ -372,7 +380,15 @@ function closeOptionModal() {
 }
 
 function nextLevel(){
-        window.location.href = "Level4.php"
+
+
+    
+    if (amountCorrect>5){ //for 5 questions: changed from 8
+            window.location.href = "../DuckHuntTest/astronautInTrouble-main/"
+        }
+        else{
+            window.location.href = "Level4.php"
+        }
 }
 
 function setCookie(cname, cvalue) {

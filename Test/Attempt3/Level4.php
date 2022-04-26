@@ -357,7 +357,7 @@ function handleEndGame() {
         }
 
 
-        if (amountCorrect>4){ //for 5 questions: changed from 8
+        if (amountCorrect>4){ 
             document.getElementById("minigame-check").innerHTML = "Go Duck Hunting";
             document.getElementById("minigame-check").style.color = "white";
         }
