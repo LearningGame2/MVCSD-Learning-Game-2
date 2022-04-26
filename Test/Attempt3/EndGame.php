@@ -118,6 +118,7 @@ function checkUpdateLeaderboard(){
   </style>
 </head>
 
+<body style="background-color:black">
     <h1 sytle="text-align:center;"> GAME OVER! </h1>
     <h1 sytle="text-align:center;"> FINAL SCORE: <span id = "final-score"></span></h1>
     <div>
@@ -127,6 +128,8 @@ function checkUpdateLeaderboard(){
         Good Try <?php echo $_SESSION['login'] ?>
     </div>
     <button onclick = "goHome()">Return Home</button> <!--change before tuesday pres...maybe?-->
+</body>
+
 <script>
 
 let cookieScore = "cookieScore"
