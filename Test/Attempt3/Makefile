@@ -7,8 +7,6 @@ all: PutHTML
 
 PutHTML:
 		cp Level1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
-		cp Level2.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
-		cp Level5.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp EndGame.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 
 		cp Home.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
