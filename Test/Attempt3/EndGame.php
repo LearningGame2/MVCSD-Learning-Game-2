@@ -119,8 +119,8 @@ function checkUpdateLeaderboard(){
 </head>
 
 <body style="background-color:black">
-    <h1 sytle="text-align:center; color:white;"> GAME OVER! </h1>
-    <h1 sytle="text-align:center; color:white;"> FINAL SCORE: <span id = "final-score"></span></h1>
+    <h1 style="text-align:center; color:white; font-family:Garamond; font-size:350%;"> GAME OVER! </h1>
+    <h1 style="text-align:center; color:white; font-family:Garamond; font-size:350%;"> FINAL SCORE: <span id = "final-score"></span> </h1>
     <div>
         <h1><span id = "update-leaderboard-message"></span></h1>
     </div>
