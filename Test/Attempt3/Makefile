@@ -13,7 +13,7 @@ PutHTML:
 		cp Game.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
 
 		cp buttonPractice.html /var/www/html/class/ssd/$(USER)/UniQuReq/
-		cp butonAnim.css /var/www/html/class/ssd/$(USER)/UniQuReq/
+		cp buttonAnim.css /var/www/html/class/ssd/$(USER)/UniQuReq/
 
 
 		echo "Current contents of your HTML directory: "
