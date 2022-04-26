@@ -1,3 +1,21 @@
+ul.starbursts {
+	list-style:none;
+	margin:20px 0;
+	padding:0;
+	overflow:hidden;
+}
+ul.starbursts li {
+	float:left;
+	width:10em;
+	height:10em;
+	position:relative;
+}
+ul.starbursts * {
+	margin:0;
+	padding:0;
+	line-height:1.2em;
+}
+
 /* Starburst 5 */
 .starburst5 {
 	display:block;
