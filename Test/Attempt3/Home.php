@@ -125,7 +125,7 @@ function leaderboardRequest(){
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
   <h1 style="text-align:center; color:white;">
-    Welcome,  <?php echo $S_SESSION['login']?>!
+    Welcome,  <?php echo $_SESSION['login']?>!
   </h1>
 </header>
 
