@@ -405,7 +405,7 @@ function createGame([spritePlayer, spriteR, fullIcon, spriteBg]){
     function playGameOver() {
         STATE.currentScreen = 'GameOver';
 
-        localStorage.setItem('cookieMiniGameMulti', ${CURR_SCORE});
+        localStorage.setItem('cookieMiniGameMulti', SCORE.point);
 
         window.location.href = "../../../LGAttempt3/Level5.php"
 
