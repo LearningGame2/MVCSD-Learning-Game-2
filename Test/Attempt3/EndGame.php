@@ -114,13 +114,6 @@ function checkUpdateLeaderboard(){
       width:200px;
       transition-duration: 0.4s;
       border: 2px solid white;
-
-      margin: 0;
-      position: absolute;
-      top: 30%;
-      left: 40%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
     }
     .button:hover {
       background-color: green;
@@ -137,7 +130,9 @@ function checkUpdateLeaderboard(){
     <div>
         Good Try <?php echo $_SESSION['login'] ?>
     </div>
-    <button onclick = "goHome()" class="button">Return Home</button> <!--change before tuesday pres...maybe?-->
+    <div style="text-align:center;">
+      <button onclick = "goHome()" class="button">Return Home</button> <!--change before tuesday pres...maybe?-->
+    </div>
 </body>
 
 <script>
