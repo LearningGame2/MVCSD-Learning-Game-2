@@ -98,7 +98,9 @@ function checkUpdateLeaderboard(){
     <div>
         <h1><span id = "update-leaderboard-message"></span></h1>
     </div>
-
+    <div>
+        Good Try <?php echo $_SESSION['login'] ?>
+    </div>
 
 <script>
 
