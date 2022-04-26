@@ -41,7 +41,7 @@
 
 <body>
   <div class ="container" style = "position:relative; top:-10px;">
-    <h1 style="text-align:center; color:white; font-family:Garamond; font-size:350%; position:relative; top:-10px;">
+    <h1 style="text-align:center; color:blue; font-family:Garamond; font-size:350%; position:relative; top:-10px;">
       Welcome Back!
     </h1>
     <h4 style="text-align:center; color:white; font-family:Garamond; font-size:150%; position:relative; top:-10px;">
