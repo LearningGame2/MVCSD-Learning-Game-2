@@ -51,8 +51,8 @@ function promptRequest($numOfQuestions){
 </head>
 
 <body onload="NextQuestion(0)">
-  <h1 style="background-color:black; color:white; text-align:center; font-family:courier new; font-size:300%; line-height: 100px">
-    Lvl 5
+  <h1 style="background-color:black; color:white; text-align:center; font-family:Garamond; font-size:300%; line-height: 100px">
+    Level 5
   </h1>
     <main>
         <!-- creating a modal for when quiz ends -->
@@ -187,7 +187,7 @@ function fillQuestions()
 
     const questions = [numQuestions];
     var phpPrompt = JSON.parse('<?php echo promptRequest(5);?>'); //for 5 questions: changed from 10
-    
+
     for (let i = 0; i < numQuestions; i++) {
         var prompt = phpPrompt[i];
         console.log(prompt);
@@ -234,7 +234,7 @@ function fillQuestions()
 
 
 
-   
+
 // function for displaying next question in the array to dom
 //also handles displaying players and quiz information to dom
 function NextQuestion(index) {
@@ -368,11 +368,11 @@ function handleEndGame() {
         document.getElementById("player-score").innerHTML = playerScore;
         document.getElementById("player-streak").innerHTML = playerStreak;
 
-        setCookie(cookieScore, playerScore); 
+        setCookie(cookieScore, playerScore);
         setCookie(cookieStreak, playerStreak);
 
 }
-  
+
 //function to close warning modal
 function closeOptionModal() {
         document.getElementById('option-modal').style.display = "none"
@@ -382,7 +382,7 @@ function goEndGame(){
         window.location.href = "EndGame.php"
 }
 
-function setCookie(cname, cvalue) { 
+function setCookie(cname, cvalue) {
         document.cookie = cname + "=" + cvalue + ";"
 }
 
