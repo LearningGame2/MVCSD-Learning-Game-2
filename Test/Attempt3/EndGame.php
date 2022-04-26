@@ -93,7 +93,7 @@ function checkUpdateLeaderboard(){
 <<!DOCTYPE html>
 <html lang="en">
     <h1>END SCREEN </h1>
-    <button onclick = "goHome()">Go Home Loser</button> <!--change before tuesday pres...maybe?-->
+    <button onclick = "goHome()">Go Home</button> <!--change before tuesday pres...maybe?-->
     <h1> FINAL SCORE: <span id = "final-score"></span></h1>
     <div>
         <h1><span id = "update-leaderboard-message"></span></h1>
