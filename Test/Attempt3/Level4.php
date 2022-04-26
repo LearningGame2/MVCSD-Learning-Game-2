@@ -84,6 +84,7 @@ function promptRequest($numOfQuestions){
             <div class="game-details-container">
                 <h1>Score : <span id="player-score"></span></h1>
                 <h1>Current Streak : <span id = "player-streak"></span></h1>
+                <h1>Astronaut In Trouble Multiplier: <span id = "player-minigamemulti"></span></h1>
                 <h1>Question : <span id="question-number"></span> / 5</h1> <!--for 5 questions: changed from / 10 -->
 
             </div>
@@ -160,7 +161,11 @@ let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
 let cookieMiniGameMulti = "cookieMiniGameMulti"
 
+let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
+document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
+
 localStorage.setItem('cookieMiniGameMulti', 1)
+
 
 
 let playerScore = parseInt(getCookie(cookieScore))
@@ -271,7 +276,7 @@ function checkForAnswer() {
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
-                playerScore = playerScore + ((1 + playerStreak) * levelMultiplier) //adding to player's score
+                playerScore = playerScore + ((1 + playerStreak) * levelMultiplier*playerMiniGameMulti) //adding to player's score
                 playerStreak++
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
