@@ -39,7 +39,8 @@ function leaderboardRequest(){
 
 function getName() {
   $conn = connect();
-  $sql = "SELECT Name FROM UserDatabase WHERE Username = $_SESSION['$login']";
+  $currentUser = $_SESSION['login'];
+  $sql = "SELECT DISTINCT GovernmentName FROM UserDatabase WHERE Username = '$currentUser'";
   $result = mysqli_query($conn,$sql);
   return $result;
 }
