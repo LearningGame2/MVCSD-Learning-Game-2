@@ -54,9 +54,9 @@ function checkUpdateLeaderboard(){
         $sql = "DELETE FROM Leaderboard WHERE Username = '$deleteName' and Highscore = '$deleteScore'"; //changed Highscore from Passcode (vestigial from copied code?)
         if (mysqli_query($conn, $sql)) {
             echo "Record deleted successfully";
-        } 
+        }
         else {
-            echo "Error deleting record: " . mysqli_error($conn);  
+            echo "Error deleting record: " . mysqli_error($conn);
         }
 
         //changed login to be in double quotes...maybe chaining ' ' and " " is the problem?  idk this code feels like it should work
@@ -65,9 +65,9 @@ function checkUpdateLeaderboard(){
         $sql = "INSERT INTO Leaderboard (Username, Highscore) VALUES ('$seshLogin', '$playerScore')";
         if (mysqli_query($conn, $sql)) {
             echo "Record inserted successfully";
-        } 
+        }
         else {
-            echo "Error inserting record: " . mysqli_error($conn);  
+            echo "Error inserting record: " . mysqli_error($conn);
         }
         mysqli_close($conn);
 
@@ -77,7 +77,7 @@ function checkUpdateLeaderboard(){
             return 2;
         }
         else{return 1;}//On leaderboard, respectable dude
-        
+
     }
 
     else if($checkLeaderboardScore < 0){ // Did not make leaderboard, rip bozo
@@ -92,19 +92,44 @@ function checkUpdateLeaderboard(){
 
 <<!DOCTYPE html>
 <html lang="en">
-    <h1>END SCREEN </h1>
-    <button onclick = "goHome()">Go Home</button> <!--change before tuesday pres...maybe?-->
-    <h1> FINAL SCORE: <span id = "final-score"></span></h1>
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Game Over
+  </title>
+  <style>
+    .button {
+      text-align: center;
+      background-color: #197DDD;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      font-size: 24px;
+      height:100px;
+      width:200px;
+      transition-duration: 0.4s;
+      border: 2px solid white;
+    }
+  </style>
+</head>
+
+    <h1 sytle="text-align:center;"> GAME OVER! </h1>
+    <h1 sytle="text-align:center;"> FINAL SCORE: <span id = "final-score"></span></h1>
     <div>
         <h1><span id = "update-leaderboard-message"></span></h1>
     </div>
     <div>
         Good Try <?php echo $_SESSION['login'] ?>
     </div>
-
+    <button onclick = "goHome()">Return Home</button> <!--change before tuesday pres...maybe?-->
 <script>
 
-let cookieScore = "cookieScore"    
+let cookieScore = "cookieScore"
 let playerScore = parseInt(getCookie(cookieScore))
 document.getElementById("final-score").innerHTML = playerScore //changed this from gEBID("player-streak")
 
@@ -120,9 +145,7 @@ else if(UpdateLeaderboard == 2){
 }
 
 
-
-
-function setCookie(cname, cvalue) { 
+function setCookie(cname, cvalue) {
         document.cookie = cname + "=" + cvalue + ";"
 }
 
@@ -146,6 +169,6 @@ function goHome(){
     window.location.href = "Home.php"
 }
 
-
 </script>
+
 </html>
