@@ -72,7 +72,7 @@ function promptRequest($numOfQuestions){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="nextLevel()">Next Level</button>
+                    <button onclick="nextLevel()"><span id="minigame-check"></span></button>
                 </div>
 
             </div>
