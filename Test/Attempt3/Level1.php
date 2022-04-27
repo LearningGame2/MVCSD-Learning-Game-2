@@ -326,9 +326,12 @@ function checkForAnswer() {
                 indexNumber++
                 playerStreak = 0
                 //set to delay question number till when next question loads
-                setTimeout(() => {
-                    questionNumber++
-                }, 8)//used to be 1000
+
+                if (questionNumber < 8){
+                  setTimeout(() => {
+                      questionNumber++
+                  }, 10)//used to be 1000
+                }
             }
         })
 }
