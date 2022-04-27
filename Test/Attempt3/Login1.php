@@ -9,7 +9,7 @@
       $myusername = mysqli_real_escape_string($conn,$_POST['username']);
       $mypassword = mysqli_real_escape_string($conn,$_POST['password']);
 
-      $sql = "SELECT GovernmentName AND Username FROM UserDatabase WHERE Username = '$myusername' and Passcode = '$mypassword'";
+      $sql = "SELECT * FROM UserDatabase WHERE Username = '$myusername' and Passcode = '$mypassword'";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       
