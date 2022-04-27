@@ -114,8 +114,8 @@ function leaderboardRequest(){
       text-align:center;
       font-size:23px;
       font-family: "Lucida Console", "Courier New", monospace;
-      height:100px;
-      width:100px
+      height:50;
+      width:auto;
     }
     .center {
       margin-left: auto;
