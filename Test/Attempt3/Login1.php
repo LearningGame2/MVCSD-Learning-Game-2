@@ -12,7 +12,7 @@
       $sql = "SELECT GovernmentName FROM UserDatabase WHERE Username = '$myusername' and Passcode = '$mypassword'";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
+      $active = $row['GovernmentName'];
 
       $count = mysqli_num_rows($result);
 
@@ -20,7 +20,7 @@
 
       if($count == 1) {
          //session_register("myusername");
-         $_SESSION['login'] = $result;
+         $_SESSION['login'] = $active;
          $error = "Login Sucessful";
          header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
       }else {
