@@ -328,7 +328,7 @@ function checkForAnswer() {
                 //set to delay question number till when next question loads
                 setTimeout(() => {
                     questionNumber++
-                }, 10)//used to be 1000
+                }, 8)//used to be 1000
             }
         })
 }
