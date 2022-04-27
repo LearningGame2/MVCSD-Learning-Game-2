@@ -63,7 +63,7 @@ main{
 .game-question-container h1{
     font-size: 1.1rem;
     text-align: center;
-    padding: 3px;
+    padding: 5px; /*could be useful, changed from 3px*/
 }
 
 .game-options-container{
@@ -205,7 +205,7 @@ input[type=radio]:checked ~ .option {
     background-color: rgb(83, 82, 82);
 }
 
-@media(min-width : 300px) and (max-width : 375px){ /* changed from 350px max*/
+@media(min-width : 300px) and (max-width : 350px){
     .game-quiz-container{
         width: 90%;
         height: 80vh;
@@ -238,7 +238,7 @@ input[type=radio]:checked ~ .option {
     }
 }
 
-@media(min-width : 350px) and (max-width : 750px){
+@media(min-width : 350px) and (max-width : 700px){
    .game-quiz-container{
        width: 90%;
        height: 80vh;
