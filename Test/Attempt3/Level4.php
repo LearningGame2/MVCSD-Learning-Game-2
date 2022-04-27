@@ -46,10 +46,13 @@ function promptRequest($numOfQuestions){
 
 <head>
   <link rel="stylesheet" href="Game.css">
+  <title>
+    Level 4
+  </title>
 </head>
 
 <body onload="NextQuestion(0)">
-  <h1 style="background-color:black; color:white; text-align:center; font-family:courier new; font-size:300%; line-height: 100px">
+  <h1 style="background-color:black; color:white; text-align:center; font-family:Garamond; font-size:300%; line-height: 100px">
     Level 4
   </h1>
     <main>
@@ -81,6 +84,7 @@ function promptRequest($numOfQuestions){
             <div class="game-details-container">
                 <h1>Score : <span id="player-score"></span></h1>
                 <h1>Current Streak : <span id = "player-streak"></span></h1>
+                <h1>Astronaut In Trouble Multiplier: <span id = "player-minigamemulti"></span></h1>
                 <h1>Question : <span id="question-number"></span> / 5</h1> <!--for 5 questions: changed from / 10 -->
 
             </div>
@@ -157,7 +161,11 @@ let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
 let cookieMiniGameMulti = "cookieMiniGameMulti"
 
+let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
+document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
+
 localStorage.setItem('cookieMiniGameMulti', 1)
+
 
 
 let playerScore = parseInt(getCookie(cookieScore))
@@ -181,7 +189,7 @@ function fillQuestions()
 
     const questions = [numQuestions];
     var phpPrompt = JSON.parse('<?php echo promptRequest(5);?>'); //for 5 questions: changed from 10
-    
+
     for (let i = 0; i < numQuestions; i++) {
         var prompt = phpPrompt[i];
         console.log(prompt);
@@ -228,7 +236,7 @@ function fillQuestions()
 
 
 
-   
+
 // function for displaying next question in the array to dom
 //also handles displaying players and quiz information to dom
 function NextQuestion(index) {
@@ -268,7 +276,7 @@ function checkForAnswer() {
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
-                playerScore = playerScore + ((1 + playerStreak) * levelMultiplier) //adding to player's score
+                playerScore = playerScore + ((1 + playerStreak) * levelMultiplier*playerMiniGameMulti) //adding to player's score
                 playerStreak++
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
@@ -349,7 +357,7 @@ function handleEndGame() {
         }
 
 
-        if (amountCorrect>4){ //for 5 questions: changed from 8
+        if (amountCorrect>4){ 
             document.getElementById("minigame-check").innerHTML = "Go Duck Hunting";
             document.getElementById("minigame-check").style.color = "white";
         }
@@ -372,18 +380,18 @@ function handleEndGame() {
         document.getElementById("player-score").innerHTML = playerScore;
         document.getElementById("player-streak").innerHTML = playerStreak;
 
-        setCookie(cookieScore, playerScore); 
+        setCookie(cookieScore, playerScore);
         setCookie(cookieStreak, playerStreak);
 
 }
-  
+
 //function to close warning modal
 function closeOptionModal() {
         document.getElementById('option-modal').style.display = "none"
 }
 
 function nextLevel(){
-       
+
 
         if (amountCorrect>4){ //for 5 questions: changed from 8
             window.location.href = "../DuckHuntTest/DuckHunt-JS-master/dist/"
@@ -393,7 +401,7 @@ function nextLevel(){
         }
 }
 
-function setCookie(cname, cvalue) { 
+function setCookie(cname, cvalue) {
         document.cookie = cname + "=" + cvalue + ";"
 }
 

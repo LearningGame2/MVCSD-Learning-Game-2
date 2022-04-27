@@ -46,10 +46,13 @@ function promptRequest($numOfQuestions){
 
 <head>
   <link rel="stylesheet" href="Game.css">
+  <title>
+    Level 3
+  </title>
 </head>
 
 <body onload="NextQuestion(0)">
-  <h1 style="background-color:black; color:white; text-align:center; font-family:courier new; font-size:300%; line-height: 100px">
+  <h1 style="background-color:black; color:white; text-align:center; font-family:Garamond; font-size:300%; line-height: 100px">
     Level 3
   </h1>
     <main>
@@ -69,7 +72,7 @@ function promptRequest($numOfQuestions){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="nextLevel()">Next Level</button>
+                    <button onclick="nextLevel()"><span id="minigame-check"></span></button>
                 </div>
 
             </div>
@@ -177,7 +180,7 @@ function fillQuestions()
 
     const questions = [numQuestions];
     var phpPrompt = JSON.parse('<?php echo promptRequest(7);?>'); //for 7 questions: changed from 10
-    
+
     for (let i = 0; i < numQuestions; i++) {
         var prompt = phpPrompt[i];
         console.log(prompt);
@@ -224,7 +227,7 @@ function fillQuestions()
 
 
 
-   
+
 // function for displaying next question in the array to dom
 //also handles displaying players and quiz information to dom
 function NextQuestion(index) {
@@ -345,6 +348,14 @@ function handleEndGame() {
         }
         const playerGrade = (amountCorrect / 7) * 100
 
+        if (amountCorrect>5){ 
+            document.getElementById("minigame-check").innerHTML = "Astronaut in Trouble!!";
+            document.getElementById("minigame-check").style.color = "white";
+        }
+        else{
+            document.getElementById("minigame-check").innerHTML = "Next Level";
+        }
+
         //data to display to score board
         document.getElementById('remarks').innerHTML = remark
         document.getElementById('remarks').style.color = remarkColor
@@ -358,21 +369,29 @@ function handleEndGame() {
         document.getElementById("player-score").innerHTML = playerScore;
         document.getElementById("player-streak").innerHTML = playerStreak;
 
-        setCookie(cookieScore, playerScore); 
+        setCookie(cookieScore, playerScore);
         setCookie(cookieStreak, playerStreak);
 
 }
-  
+
 //function to close warning modal
 function closeOptionModal() {
         document.getElementById('option-modal').style.display = "none"
 }
 
 function nextLevel(){
-        window.location.href = "Level4.php"
+
+
+    
+    if (amountCorrect>5){ //for 5 questions: changed from 8
+            window.location.href = "../DuckHuntTest/astronautInTrouble-main/"
+        }
+        else{
+            window.location.href = "Level4.php"
+        }
 }
 
-function setCookie(cname, cvalue) { 
+function setCookie(cname, cvalue) {
         document.cookie = cname + "=" + cvalue + ";"
 }
 

@@ -45,9 +45,11 @@ function promptRequest($numOfQuestions){
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <link rel="stylesheet" href="Game.css">
+  <title>
+    Level 5
+  </title>
 </head>
 
 <body onload="NextQuestion(0)">
@@ -187,7 +189,7 @@ function fillQuestions()
 
     const questions = [numQuestions];
     var phpPrompt = JSON.parse('<?php echo promptRequest(5);?>'); //for 5 questions: changed from 10
-    
+
     for (let i = 0; i < numQuestions; i++) {
         var prompt = phpPrompt[i];
         console.log(prompt);
@@ -234,7 +236,7 @@ function fillQuestions()
 
 
 
-   
+
 // function for displaying next question in the array to dom
 //also handles displaying players and quiz information to dom
 function NextQuestion(index) {
@@ -368,11 +370,11 @@ function handleEndGame() {
         document.getElementById("player-score").innerHTML = playerScore;
         document.getElementById("player-streak").innerHTML = playerStreak;
 
-        setCookie(cookieScore, playerScore); 
+        setCookie(cookieScore, playerScore);
         setCookie(cookieStreak, playerStreak);
 
 }
-  
+
 //function to close warning modal
 function closeOptionModal() {
         document.getElementById('option-modal').style.display = "none"
@@ -382,7 +384,7 @@ function goEndGame(){
         window.location.href = "EndGame.php"
 }
 
-function setCookie(cname, cvalue) { 
+function setCookie(cname, cvalue) {
         document.cookie = cname + "=" + cvalue + ";"
 }
 

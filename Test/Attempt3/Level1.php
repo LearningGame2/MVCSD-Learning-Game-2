@@ -85,6 +85,9 @@ function promptRequest($numOfQuestions){
 <html lang="en">
 <head>
   <link rel="stylesheet" href="Game.css">
+  <title>
+    Level 1
+  </title>
 </head>
 
 <body onload="NextQuestion(0)">
