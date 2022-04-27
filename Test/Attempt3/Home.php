@@ -34,6 +34,7 @@ function leaderboardRequest(){
   usort($scores, function($a, $b) {
     return $a['Highscore'] <=> $b['Highscore'];
   });
+  mysqli_close($conn);
   return json_encode($scores);
 }
 
