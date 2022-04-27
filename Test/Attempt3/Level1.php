@@ -435,4 +435,12 @@ function getCookie(cname) {
 
 </script>
 </body>
+<img src=LG2Images/TallFlame.png   id='i1' 
+  style="position:absolute; left: 500; top: 100;">
+
+<img src=LG2Images/TallFlame.png  id='i1' 
+  style="position:absolute; left: 500; top: 100;">
+
+<img src=LG2Images/WideFlame.png  id='i1' 
+  style="position:absolute; left: 500; top: 100; display: none">
 </html>
