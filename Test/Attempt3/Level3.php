@@ -272,9 +272,11 @@ function checkForAnswer() {
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
                 //set to delay question number till when next question loads
-                setTimeout(() => {
-                    questionNumber++
-                }, 10)
+                if (questionNumber < 7){
+                  setTimeout(() => {
+                      questionNumber++
+                  }, 10)//used to be 1000
+                }
             }
 
             else if (option.checked && option.value !== currentQuestionAnswer) {
@@ -285,9 +287,11 @@ function checkForAnswer() {
                 indexNumber++
                 playerStreak = 0
                 //set to delay question number till when next question loads
-                setTimeout(() => {
-                    questionNumber++
-                }, 10)
+                if (questionNumber < 7){
+                  setTimeout(() => {
+                      questionNumber++
+                  }, 10)//used to be 1000
+                }
             }
         })
 }
