@@ -34,7 +34,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     border-radius: 30px;
 }
 
@@ -63,7 +63,7 @@ main{
 .game-question-container h1{
     font-size: 1.1rem;
     text-align: center;
-    padding: 1px; /*could be useful, changed from 3px*/
+    padding: 3px;
 }
 
 .game-options-container{
