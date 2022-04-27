@@ -12,8 +12,7 @@
       $sql = "SELECT GovernmentName AND Username FROM UserDatabase WHERE Username = '$myusername' and Passcode = '$mypassword'";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $GovernmentName = $row['GovernmentName'];
-      $DatabaseUsername =$row['Username'];
+      
 
       $count = mysqli_num_rows($result);
 
@@ -21,8 +20,10 @@
 
       if($count == 1) {
          //session_register("myusername");
-         setcookie("GovernmentName", $GovernmentName, time() + (3600), "/"); 
-         setcookie("Username", $DatabaseUsername, time() + (3600), "/"); 
+        $GovernmentName = $row['GovernmentName'];
+        $DatabaseUsername =$row['Username'];
+         setcookie("GovernmentName", $GovernmentName, time() + (3600)); 
+         setcookie("Username", $DatabaseUsername, time() + (3600)); 
         
          $error = "Login Sucessful";
          header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
