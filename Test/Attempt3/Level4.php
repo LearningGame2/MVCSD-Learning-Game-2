@@ -82,9 +82,9 @@ function promptRequest($numOfQuestions){
         <div class="game-quiz-container" style = "position:relative; top:-75px">
 
             <div class="game-details-container">
-                <h1>Score : <span id="player-score"></span></h1>
-                <h1>Current Streak : <span id = "player-streak"></span></h1>
-                <h1>Astronaut In Trouble Multiplier: <span id = "player-minigamemulti"></span></h1>
+                <h1>Score : <span id="player-score"></span>  </h1>
+                <h1>Current Streak : <span id = "player-streak"></span>  </h1>
+                <h1>Astronaut In Trouble Multiplier: <span id = "player-minigamemulti"></span>  </h1>
                 <h1>Question : <span id="question-number"></span> / 5</h1> <!--for 5 questions: changed from / 10 -->
 
             </div>
