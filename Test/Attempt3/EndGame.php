@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['login'])){
+if(!isset($_COOKIE['Username'])){
   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
 } //Comment out to make less annoying
 
@@ -61,7 +61,7 @@ function checkUpdateLeaderboard(){
 
         //changed login to be in double quotes...maybe chaining ' ' and " " is the problem?  idk this code feels like it should work
         //i know SESSION login already wasn't working but login was blue and not orange when we had ' ' whereas it was orange in Home.php
-        $seshLogin = $_SESSION['login'];
+        $seshLogin = $_COOKIE['Username'];
         $sql = "INSERT INTO Leaderboard (Username, Highscore) VALUES ('$seshLogin', '$playerScore')";
         if (mysqli_query($conn, $sql)) {
             echo "Record inserted successfully";
