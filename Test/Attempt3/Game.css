@@ -63,7 +63,7 @@ main{
 .game-question-container h1{
     font-size: 1.1rem;
     text-align: center;
-    padding: 5px; /*could be useful, changed from 3px*/
+    padding: 1px; /*could be useful, changed from 3px*/
 }
 
 .game-options-container{
