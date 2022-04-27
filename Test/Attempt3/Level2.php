@@ -329,15 +329,15 @@ function handleEndGame() {
         let remarkColor = null
 
         // condition check for player remark and remark color
-        if (playerScore <= 3) {
+        if (amountCorrect <= 3) {
             remark = "You can do better!"
             remarkColor = "red"
         }
-        else if (playerScore >= 4 && playerScore < 9) {
+        else if (amountCorrect >= 4 && amountCorrect < 9) {
             remark = "Keep practicing!"
             remarkColor = "orange"
         }
-        else if (playerScore >= 10) {
+        else if (amountCorrect >= 10) {
             remark = "Excellent! Keep up the good work."
             remarkColor = "green"
         }
