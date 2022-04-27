@@ -123,7 +123,7 @@ function promptRequest($numOfQuestions){
             <div class="game-details-container">
                 <h1>Score : <span id="player-score"></span></h1>
                 <h1>Current Streak : <span id = "player-streak"></span></h1>
-                <h1>Question : <span id="question-number"></span> / 10</h1>
+                <h1>Question : <span id="question-number"></span> / 8</h1>
 
             </div>
 
@@ -183,8 +183,6 @@ function promptRequest($numOfQuestions){
 
 
 
-console.log(<?php echo $_SESSION['login']?>);
-
 
 //making a class of question object to fill questions array
 class Question {
@@ -203,10 +201,10 @@ question object with the results from the parse*/
 //post: returns questions array
 function fillQuestions()
 {
-    const questions = [10];
-    var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
+    const questions = [8];
+    var phpPrompt = JSON.parse('<?php echo promptRequest(8);?>');
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 8; i++) {
         var prompt = phpPrompt[i];
         console.log(prompt);
         qPrompt = prompt[1];
@@ -340,12 +338,12 @@ function handleNextQuestion() {
         unCheckRadioButtons()
         //delays next question displaying for a second just for some effects so questions don't rush in on player
         setTimeout(() => {
-            if (indexNumber <= 9) {
-    //displays next question as long as index number isn't greater than 9, remember index number starts from 0, so index 9 is question 10
+            if (indexNumber <= 7) {
+    //displays next question as long as index number isn't greater than 7, remember index number starts from 0, so index 7 is question 8
                 NextQuestion(indexNumber)
             }
             else {
-                handleEndGame()//ends game if index number greater than 9 meaning we're already at the 10th question
+                handleEndGame()//ends game if index number greater than 9 meaning we're already at the 8 question
             }
             resetOptionBackground()
         }, 1000);
@@ -377,15 +375,15 @@ function handleEndGame() {
             remark = "You can do better!"
             remarkColor = "red"
         }
-        else if (playerScore >= 4 && playerScore < 9) {
+        else if (playerScore >= 4 && playerScore < 7) {
             remark = "Keep practicing!"
             remarkColor = "orange"
         }
-        else if (playerScore >= 10) {
+        else if (playerScore >= 8) {
             remark = "Excellent! Keep up the good work."
             remarkColor = "green"
         }
-        const playerGrade = (amountCorrect / 10) * 100
+        const playerGrade = (amountCorrect / 8) * 100
 
         //data to display to score board
         document.getElementById('remarks').innerHTML = remark
