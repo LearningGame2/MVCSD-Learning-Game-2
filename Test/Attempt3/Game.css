@@ -28,7 +28,7 @@ main{
 }
 
 .game-quiz-container{
-    width: 40rem;
+    width: 50rem;
     height: 30rem;
     background-color: lightgray;
     display: flex;
