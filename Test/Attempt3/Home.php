@@ -72,7 +72,7 @@ function leaderboardRequest(){
       cursor: pointer;
       font-size: 24px;
       height:100px;
-      width:200px;
+      width:250px;
       transition-duration: 0.4s;
       border: 2px solid white;
     }
