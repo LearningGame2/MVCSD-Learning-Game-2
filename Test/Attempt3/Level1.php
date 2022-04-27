@@ -183,6 +183,7 @@ function promptRequest($numOfQuestions){
 
 
 
+<console.log(<?php echo $_SESSION['login']?>);
 
 
 //making a class of question object to fill questions array
