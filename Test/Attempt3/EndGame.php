@@ -128,7 +128,7 @@ function checkUpdateLeaderboard(){
         <h1><span id = "update-leaderboard-message"></span></h1>
     </div>
     <div style="text-align:center;">
-        <h1 style="color:white;"> Good Try <?php echo $_SESSION['login'] ?> </h1>
+        <h1 style="color:white;"> Good Try <?php echo $_COOKIE['Username'] ?> </h1>
     </div>
     <div style="text-align:center;">
       <button onclick = "goHome()" class="button">Return Home</button> <!--change before tuesday pres...maybe?-->
