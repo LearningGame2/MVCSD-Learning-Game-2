@@ -19,7 +19,7 @@ function connect() {
 function promptRequest($numOfQuestions){
     $questions = array();
     for ($x = 0; $x <= $numOfQuestions; $x++) {
-        $rowNumber = rand(1,399);
+        $rowNumber = rand(1000,1399);
         $prompt = "";
         $conn = connect();
         $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
@@ -83,9 +83,9 @@ function promptRequest($numOfQuestions){
 
             <div class="game-details-container">
                 <h1>Score : <span id="player-score"></span></h1>
-                <h1>  Current Streak : <span id = "player-streak"></span></h1>
-                <h1>  Astronaut In Trouble Multiplier: <span id = "player-minigamemulti"></span></h1>
-                <h1>  Question : <span id="question-number"></span> / 5</h1> <!--for 5 questions: changed from / 10 -->
+                <h1>Current Streak : <span id = "player-streak"></span></h1>
+                <h1>Astronaut In Trouble Multiplier: <span id = "player-minigamemulti"></span></h1>
+                <h1>Question : <span id="question-number"></span> / 5</h1> <!--for 5 questions: changed from / 10 -->
 
             </div>
 
