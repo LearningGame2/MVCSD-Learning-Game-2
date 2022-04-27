@@ -343,21 +343,21 @@ function handleEndGame() {
 
         //for 5 questions: next 15 lines edited
         // condition check for player remark and remark color
-        if (playerScore <= 2) {
+        if (amountCorrect <= 2) {
             remark = "You can do better!"
             remarkColor = "red"
         }
-        else if (playerScore >= 3 && playerScore < 5) {
+        else if (amountCorrect >= 3 && amountCorrect < 5) {
             remark = "Keep practicing!"
             remarkColor = "orange"
         }
-        else if (playerScore >= 5) {
+        else if (amountCorrect >= 5) {
             remark = "Excellent! Keep up the good work."
             remarkColor = "green"
         }
 
 
-        if (amountCorrect>4){ 
+        if (amountCorrect>4){
             document.getElementById("minigame-check").innerHTML = "Go Duck Hunting";
             document.getElementById("minigame-check").style.color = "white";
         }

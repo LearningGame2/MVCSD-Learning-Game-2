@@ -371,15 +371,15 @@ function handleEndGame() {
         let remarkColor = null
 
         // condition check for player remark and remark color
-        if (playerScore <= 3) {
+        if (amountCorrect <= 3) {
             remark = "You can do better!"
             remarkColor = "red"
         }
-        else if (playerScore >= 4 && playerScore < 7) {
+        else if (amountCorrect >= 4 && amountCorrect < 7) {
             remark = "Keep practicing!"
             remarkColor = "orange"
         }
-        else if (playerScore >= 8) {
+        else if (amountCorrect >= 8) {
             remark = "Excellent! Keep up the good work."
             remarkColor = "green"
         }
@@ -433,13 +433,13 @@ function getCookie(cname) {
 }
 
 </script>
-<img src=LG2Images/TallFlame.png   id='leftFire' 
+<img src=LG2Images/TallFlame.png   id='leftFire'
   style="position:relative; left: 500; top: 100;">
 
-<img src=LG2Images/TallFlame.png  id='rightFire' 
+<img src=LG2Images/TallFlame.png  id='rightFire'
   style="position:absolute; left: 500; top: 100;">
 
-<img src=LG2Images/WideFlame.png  id='bottomFire' 
+<img src=LG2Images/WideFlame.png  id='bottomFire'
   style="position:absolute; left: 500; top: 100; display: none">
 </body>
 
