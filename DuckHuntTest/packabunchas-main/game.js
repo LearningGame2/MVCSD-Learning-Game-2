@@ -1822,12 +1822,13 @@ function story22() {
 }
 
 function story32() {
+	console.log("entering story 32")
+	firstTime = false;
 	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "We hope you enjoyed our learning game", " ", " ", " ", "      - click to see your total score! - "
 	])
 
 	//setMessage(["Click to continue"], true)
 	//
-	firstTime = false;
 	skipState = 2
 	animateMouth = true
 	storyTimeOut = setTimeout(function() {
