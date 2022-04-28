@@ -3147,37 +3147,43 @@ function mouseUp(e) {
 					showLoading = false
 					backButton.originalx = -500
 
+					if (storyState == 1)
+					{
+						storyState+=2;
+					}
+
 					//
-					if (storyState == 1) {
+					// if (storyState == 1) {
 
 
-						//instantly set polyleft to 13k!
-						//so if the player reloads the game during story-middle, they are not 0
-						//if the player reloads during ship transition, they stay as they were before
-						//btw there is a problem if the player reloads between the two saveData
-						//in that case polyleft would be 0
-						polyLeft = 10
-						currentPolyTextToShow = 10
-						saveData("polyLeft", polyLeft.toString())
+					// 	//instantly set polyleft to 13k!
+					// 	//so if the player reloads the game during story-middle, they are not 0
+					// 	//if the player reloads during ship transition, they stay as they were before
+					// 	//btw there is a problem if the player reloads between the two saveData
+					// 	//in that case polyleft would be 0
+					// 	polyLeft = 10
+					// 	currentPolyTextToShow = 10
+					// 	saveData("polyLeft", polyLeft.toString())
 
-						storyState = 2
-						saveData("storyState", storyState.toString())
-						state = "story-middle"
-						animateMouth = true
-						canSkip = true
-						setStoryMessage(["Look, ehm ...", "I don't know how to", "tell you this ...", " ", "Remember when I said", "there were '13 Blockychums'", "to be rescued?", "My ... bad, they are actually", "13 ... THOUSAND."])
+					// 	storyState = 2
+					// 	saveData("storyState", storyState.toString())
+					// 	state = "story-middle"
+					// 	animateMouth = true
+					// 	canSkip = true
+					// 	setStoryMessage(["Look, ehm ...", "I don't know how to", "tell you this ...", " ", "Remember when I said", "there were '13 Blockychums'", "to be rescued?", "My ... bad, they are actually", "13 ... THOUSAND."])
 
 
 
-						//setMessage(["Click to continue"], true)
-						skipState = 0
-						animateMouth = true
-						storyTimeOut = setTimeout(function() {
-							skipState = 1
-							animateMouth = false
-						}, 9000)
+					// 	//setMessage(["Click to continue"], true)
+					// 	skipState = 0
+					// 	animateMouth = true
+					// 	storyTimeOut = setTimeout(function() {
+					// 		skipState = 1
+					// 		animateMouth = false
+					// 	}, 9000)
 
-					} else if (storyState == 3) {
+					// } else //sam edit
+							if (storyState == 3) {
 						storyState = 4
 						saveData("storyState", storyState.toString())
 						state = "story-ending"
