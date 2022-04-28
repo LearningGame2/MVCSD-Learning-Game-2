@@ -78,7 +78,7 @@ mixed = false
 //starting additional area spaces
 margin = 0
 
-gameModes = ["PENTA"]
+gameModes = ["CLASSIC"]
 currentGameMode = parseInt(loadData("currentGameMode", "0"))
 
 
