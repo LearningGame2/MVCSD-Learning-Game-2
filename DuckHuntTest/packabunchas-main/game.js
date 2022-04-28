@@ -1540,7 +1540,7 @@ function drawBackGround() {
 
 		ctx.save()
 		ctx.clip()
-		ctx.globalAlpha = 0.4 //sam edit: from 0.03
+		ctx.globalAlpha = 2 //sam edit: from 0.03
 		ctx.fillStyle = "#000"
 		ctx.beginPath();
 		ctx.ellipse(150, 800, 400, 400, 0, 0, 2 * Math.PI);
@@ -1649,7 +1649,7 @@ function drawBackGround() {
 		//
 	} else {
 		ctx.strokeStyle = "#000"
-		ctx.globalAlpha = 0.4 //sam edit: from 0.03
+		ctx.globalAlpha = 2 //sam edit: from 0.03
 		ctx.beginPath();
 		ctx.arc(300 + xxx, 500 + yyy, 100, 0, 2 * Math.PI);
 		ctx.stroke();
@@ -2537,12 +2537,13 @@ function createLevel() {
 		}, 500)
 
 
-		// if (gameModes[currentGameMode] == "CLASSIC") {
-		// 	numberOfPolyominos = 4
-		// 	sizeOfPolyominos = 4
-		// 	mixed = false
-		// 	margin = 2
-		// } else if (gameModes[currentGameMode] == "MIX") {
+		if (gameModes[currentGameMode] == "CLASSIC") {
+			numberOfPolyominos = 4
+			sizeOfPolyominos = 4
+			mixed = false
+			margin = 2
+		} 
+		// else if (gameModes[currentGameMode] == "MIX") {
 		// 	numberOfPolyominos = 8
 		// 	sizeOfPolyominos = 5
 		// 	mixed = true
@@ -2552,13 +2553,12 @@ function createLevel() {
 		// 	sizeOfPolyominos = 4
 		// 	mixed = false
 		// 	margin = 0
-		// } else 
-				if (gameModes[currentGameMode] == "PENTA") {
-			numberOfPolyominos = 5
-			sizeOfPolyominos = 5
-			mixed = false
-			margin = 10
-		} 
+		// } else if (gameModes[currentGameMode] == "PENTA") {
+		// 	numberOfPolyominos = 5
+		// 	sizeOfPolyominos = 5
+		// 	mixed = false
+		// 	margin = 10
+		// } 
 		// else if (gameModes[currentGameMode] == "KIDS") {
 		// 	numberOfPolyominos = 2
 		// 	sizeOfPolyominos = 7
@@ -3065,6 +3065,7 @@ function mouseUp(e) {
 			animateMouth = false
 		} else if (skipState == 1) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
+			skipState = 2; //sam edit ... is this right?
 			//story22()
 		} else if (skipState == 2) {
 			if (storyTimeOut != null) clearTimeout(storyTimeOut)
