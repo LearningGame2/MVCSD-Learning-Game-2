@@ -56,7 +56,7 @@ function leaderboardRequest(){
 <head>
   <meta charset="UTF-8">
   <title>
-    Login Sucessful
+    Learning Game 2
   </title>
 
   <style>
