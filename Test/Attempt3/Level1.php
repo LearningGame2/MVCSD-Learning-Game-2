@@ -1,6 +1,5 @@
 <?php
 session_start();
-//$checkpoint = intval($_COOKIE['Checkpoint']);
 
 if(intval($_COOKIE['Checkpoint'])!=0){
     header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
