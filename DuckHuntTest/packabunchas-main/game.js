@@ -78,7 +78,7 @@ mixed = false
 //starting additional area spaces
 margin = 0
 
-gameModes = ["CLASSIC"]
+gameModes = ["Run it!"]
 currentGameMode = parseInt(loadData("currentGameMode", "0"))
 
 
@@ -92,7 +92,7 @@ lerpSpeed = 0.1
 mylatesttap = 0
 bottomTextText = ""
 
-polyLeft = parseInt(loadData("polyLeft", "10"))
+polyLeft = parseInt(loadData("polyLeft", "3")) //sam edit: this might mess everything up
 currentPolyTextToShow = polyLeft
 
 
@@ -2536,7 +2536,7 @@ function createLevel() {
 		}, 500)
 
 
-		if (gameModes[currentGameMode] == "CLASSIC") {
+		if (gameModes[currentGameMode] == "Run it!") {
 			numberOfPolyominos = 4
 			sizeOfPolyominos = 4
 			mixed = false
@@ -3029,7 +3029,8 @@ function mouseUp(e) {
 			animateMouth = false
 		} else if (skipState == 3) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
-			story13()
+			window.location.href = "EndGame.php" //sam edit
+			//story13()
 			skipState = 4
 		} else if (skipState == 4) {
 			if (storyTimeOut != null) clearTimeout(storyTimeOut)
@@ -3046,7 +3047,7 @@ function mouseUp(e) {
 			storyState = 1
 			saveData("storyState", storyState.toString())
 			polyLeft = 10
-			currentPolyTextToShow = 10
+			currentPolyTextToShow = 3
 			saveData("polyLeft", polyLeft.toString())
 			gotoMenu()
 			skipState = 6
