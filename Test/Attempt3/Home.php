@@ -231,10 +231,10 @@ function leaderboardRequest(){
   document.getElementById("score10").innerHTML = testScores[0].Highscore;
 
   if(getCookie("cookieScore")!= null){
-    document.getElementById("IfPreviousScore").innerHTML = "Your Last Score: " + getCookie("cookieScore");
+    document.getElementById("IfPreviousScore").innerHTML = "Your Last Score: " + parseInt(getCookie("cookieScore"));
   }
-  if(getCookie("cookieStreak")!= null){
-    document.getElementById("IfPreviousScore").innerHTML = "Your Last Streak: " + getCookie("cookieStreak");
+  if(getCookie("cookieHighStreak")!= null){
+    document.getElementById("IfPreviousScore").innerHTML = "Your Last Highest Streak: " + getCookie("cookieHighStreak");
   }
 
 

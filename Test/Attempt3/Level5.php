@@ -162,10 +162,12 @@ let questionArray = fillQuestions();
 let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
 let cookieMiniGameMulti = "cookieMiniGameMulti"
+let cookieHighStreak = "cookieHighStreak"
 
 let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
 let playerScore = parseInt(getCookie(cookieScore))
 let playerStreak = parseInt(getCookie(cookieStreak))
+let playerHighStreak = parseInt(getCookie(cookieHighStreak))
 
 document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
 
@@ -277,6 +279,9 @@ function checkForAnswer() {
                 document.getElementById(correctOption).style.backgroundColor = "green"
                 playerScore = playerScore + ((1 + playerStreak) * levelMultiplier * playerMiniGameMulti) //adding to player's score
                 playerStreak++
+                if(playerStreak>playerHighStreak){
+                    playerHighStreak = playerStreak
+                }
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
                 //set to delay question number till when next question loads
@@ -375,6 +380,7 @@ function handleEndGame() {
 
         setCookie(cookieScore, playerScore);
         setCookie(cookieStreak, playerStreak);
+        setCookie(cookieHighStreak,playerHighStreak);
 
 }
 

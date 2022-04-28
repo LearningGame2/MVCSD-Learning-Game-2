@@ -158,9 +158,11 @@ let questionArray = fillQuestions();
 
 let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
+let cookieHighStreak = "cookieHighStreak"
 
 let playerScore = parseInt(getCookie(cookieScore))
 let playerStreak = parseInt(getCookie(cookieStreak))
+let playerHighStreak = parseInt(getCookie(cookieHighStreak))
 
 let levelMultiplier = 3
 let questionNumber = 1 //holds the current question number
@@ -269,6 +271,9 @@ function checkForAnswer() {
                 document.getElementById(correctOption).style.backgroundColor = "green"
                 playerScore = playerScore + ((1 + playerStreak) * levelMultiplier) //adding to player's score
                 playerStreak++
+                if(playerStreak>playerHighStreak){
+                    playerHighStreak = playerStreak
+                }
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
                 //set to delay question number till when next question loads
@@ -375,6 +380,7 @@ function handleEndGame() {
 
         setCookie(cookieScore, playerScore);
         setCookie(cookieStreak, playerStreak);
+        setCookie(cookieHighStreak,playerHighStreak);
 
 }
 
