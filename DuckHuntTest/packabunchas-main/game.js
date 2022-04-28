@@ -1822,7 +1822,7 @@ function story22() {
 
 function story32() {
 	setStoryMessage(["Oh, the dev left a note, too:", " ", "Did you really finish", "PACKABUNCHAS?", " ",
-		"CONGRATULATIONS!", " ", "and many", "THANKS FOR PLAYING!!!", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "      - click to reset the game! - "
+		"CONGRATULATIONS!", " ", "and many", "THANKS FOR PLAYING!!!", " ", " ", " ", " ", " ", "We hope you enjoyed our learning game", " ", " ", " ", " ", " ", " ", "      - click to see your total score! - "
 	])
 
 	//setMessage(["Click to continue"], true)
