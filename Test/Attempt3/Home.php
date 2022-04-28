@@ -2,10 +2,11 @@
 <?php
 
 session_start();
+setcookie("Checkpoint", 0);
 
-// if(!isset($_COOKIE['Username'])){
-//   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
-// } //Comment out to make less annoying
+if(!isset($_COOKIE['Username'])){
+  header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
+} //Comment out to make less annoying
 
 
 
@@ -55,7 +56,7 @@ function leaderboardRequest(){
 <head>
   <meta charset="UTF-8">
   <title>
-    Login Sucessful
+    Learning Game 2
   </title>
 
   <style>
@@ -72,7 +73,7 @@ function leaderboardRequest(){
       cursor: pointer;
       font-size: 24px;
       height:100px;
-      width:200px;
+      width:250px;
       transition-duration: 0.4s;
       border: 2px solid white;
     }
@@ -188,10 +189,17 @@ function leaderboardRequest(){
     <td><span id="score10"></span></td>
   </tr>
 </table>
+  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
+     <span id = "IfPreviousScore"> </span>
+  </div>
+  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
+     <span id = "IfPreviousStreak"> </span>
+  </div>
 </div>
 </body>
 
 <script>
+  console.log(document.cookie)
   var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
 
   document.getElementById("player1").innerHTML = testScores[9].Username;
@@ -223,6 +231,30 @@ function leaderboardRequest(){
 
   document.getElementById("player10").innerHTML = testScores[0].Username;
   document.getElementById("score10").innerHTML = testScores[0].Highscore;
+
+  if(getCookie("cookieScore")!= null){
+    document.getElementById("IfPreviousScore").innerHTML = "Your Last Score: " + parseInt(getCookie("cookieScore"));
+  }
+  if(getCookie("cookieHighStreak")!= null){
+    document.getElementById("IfPreviousScore").innerHTML = "Your Last Highest Streak: " + getCookie("cookieHighStreak");
+  }
+
+
+  function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+         return "";
+  }
 
   console.log(testScores);
   function goToGame(){

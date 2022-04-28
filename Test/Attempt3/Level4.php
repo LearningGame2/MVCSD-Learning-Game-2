@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if(intval($_COOKIE['Checkpoint'])!=3){
+    header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
+}
+setcookie("Checkpoint", 4);
+
 if(!isset($_COOKIE['Username'])){
   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
 } //Comment out to make less annoying
@@ -160,6 +165,7 @@ let questionArray = fillQuestions();
 let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
 let cookieMiniGameMulti = "cookieMiniGameMulti"
+let cookieHighStreak = "cookieHighStreak"
 
 let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
 document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
@@ -170,6 +176,7 @@ localStorage.setItem('cookieMiniGameMulti', 1)
 
 let playerScore = parseInt(getCookie(cookieScore))
 let playerStreak = parseInt(getCookie(cookieStreak))
+let playerHighStreak = parseInt(getCookie(cookieHighStreak))
 
 let levelMultiplier = 4
 let questionNumber = 1 //holds the current question number
@@ -278,12 +285,17 @@ function checkForAnswer() {
                 document.getElementById(correctOption).style.backgroundColor = "green"
                 playerScore = playerScore + ((1 + playerStreak) * levelMultiplier*playerMiniGameMulti) //adding to player's score
                 playerStreak++
+                if(playerStreak>playerHighStreak){
+                    playerHighStreak = playerStreak
+                }
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
                 //set to delay question number till when next question loads
-                setTimeout(() => {
-                    questionNumber++
-                }, 10)
+                if (questionNumber < 5){
+                  setTimeout(() => {
+                      questionNumber++
+                  }, 10)//used to be 1000
+                }
             }
 
             else if (option.checked && option.value !== currentQuestionAnswer) {
@@ -294,9 +306,11 @@ function checkForAnswer() {
                 indexNumber++
                 playerStreak = 0
                 //set to delay question number till when next question loads
-                setTimeout(() => {
-                    questionNumber++
-                }, 10)
+                if (questionNumber < 5){
+                  setTimeout(() => {
+                      questionNumber++
+                  }, 10)//used to be 1000
+                }
             }
         })
 }
@@ -343,21 +357,21 @@ function handleEndGame() {
 
         //for 5 questions: next 15 lines edited
         // condition check for player remark and remark color
-        if (playerScore <= 2) {
+        if (amountCorrect <= 2) {
             remark = "You can do better!"
             remarkColor = "red"
         }
-        else if (playerScore >= 3 && playerScore < 5) {
+        else if (amountCorrect >= 3 && amountCorrect < 5) {
             remark = "Keep practicing!"
             remarkColor = "orange"
         }
-        else if (playerScore >= 5) {
+        else if (amountCorrect >= 5) {
             remark = "Excellent! Keep up the good work."
             remarkColor = "green"
         }
 
 
-        if (amountCorrect>4){ 
+        if (amountCorrect>4){
             document.getElementById("minigame-check").innerHTML = "Go Duck Hunting";
             document.getElementById("minigame-check").style.color = "white";
         }
@@ -382,6 +396,7 @@ function handleEndGame() {
 
         setCookie(cookieScore, playerScore);
         setCookie(cookieStreak, playerStreak);
+        setCookie(cookieHighStreak, playerHighStreak);
 
 }
 

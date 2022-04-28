@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if(intval($_COOKIE['Checkpoint'])!=0){
+    header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
+}
+setcookie("Checkpoint", 1);
+
 if(!isset($_COOKIE['Username'])){
   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
 } //Comment out to make less annoying
@@ -253,19 +258,22 @@ let questionArray = fillQuestions();
 
 let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
+let cookieHighStreak = "cookieHighStreak"
 
 setCookie(cookieScore, 0);
-setCookie(cookieStreak, 0);//sets score as 0 in cookies, I think this is redundant
+setCookie(cookieStreak, 0);
+setCookie(cookieHighStreak,0); 
 
 console.log(document.cookie); //cookie checker
 
 let levelMultiplier = 1
-let questionNumber = 1 //holds the current question number
-let playerScore = 0  //holds the player score
+let questionNumber = 1 //holds the current question number 
 let amountCorrect = 0 //different from score, does not include streaks
 let wrongAttempt = 0 //amount of wrong answers picked by player
 let indexNumber = 0 //will be used in displaying next question
-let playerStreak = 0 //Keeps track of player streak
+let playerScore = 0 //holds the player score
+let playerStreak = 0 //Keeps track of player current streak
+let playerHighStreak = 0 //Keeps track of player highest streak
 
 // function for displaying next question in the array to dom
 //also handles displaying players and quiz information to dom
@@ -308,11 +316,17 @@ function checkForAnswer() {
                 playerScore = playerScore + ((1 + playerStreak) * levelMultiplier)
                 playerStreak++
                 amountCorrect++
+                if(playerStreak > playerHighStreak){
+                    playerHighStreak = playerStreak
+                }
                 indexNumber++ //adding 1 to index so has to display next question..
                 //set to delay question number till when next question loads
-                setTimeout(() => {
-                    questionNumber++
-                }, 10)//used to be 1000
+                if (questionNumber < 8){
+                  setTimeout(() => {
+                      questionNumber++
+                  }, 10)//used to be 1000
+                }
+
             }
 
             else if (option.checked && option.value !== currentQuestionAnswer) {
@@ -323,9 +337,12 @@ function checkForAnswer() {
                 indexNumber++
                 playerStreak = 0
                 //set to delay question number till when next question loads
-                setTimeout(() => {
-                    questionNumber++
-                }, 10)//used to be 1000
+
+                if (questionNumber < 8){
+                  setTimeout(() => {
+                      questionNumber++
+                  }, 10)//used to be 1000
+                }
             }
         })
 }
@@ -371,15 +388,15 @@ function handleEndGame() {
         let remarkColor = null
 
         // condition check for player remark and remark color
-        if (playerScore <= 3) {
+        if (amountCorrect <= 3) {
             remark = "You can do better!"
             remarkColor = "red"
         }
-        else if (playerScore >= 4 && playerScore < 7) {
+        else if (amountCorrect >= 4 && amountCorrect < 7) {
             remark = "Keep practicing!"
             remarkColor = "orange"
         }
-        else if (playerScore >= 8) {
+        else if (amountCorrect >= 8) {
             remark = "Excellent! Keep up the good work."
             remarkColor = "green"
         }
@@ -400,6 +417,7 @@ function handleEndGame() {
 
         setCookie(cookieScore, playerScore);
         setCookie(cookieStreak, playerStreak);
+        setCookie(cookieHighStreak,playerHighStreak);
 
 }
 
@@ -433,13 +451,13 @@ function getCookie(cname) {
 }
 
 </script>
-<img src=LG2Images/TallFlame.png   id='leftFire' 
+<img src=LG2Images/TallFlame.png   id='leftFire'
   style="position:relative; left: 500; top: 100;">
 
-<img src=LG2Images/TallFlame.png  id='rightFire' 
+<img src=LG2Images/TallFlame.png  id='rightFire'
   style="position:absolute; left: 500; top: 100;">
 
-<img src=LG2Images/WideFlame.png  id='bottomFire' 
+<img src=LG2Images/WideFlame.png  id='bottomFire'
   style="position:absolute; left: 500; top: 100; display: none">
 </body>
 

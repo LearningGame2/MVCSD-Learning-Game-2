@@ -9,7 +9,7 @@
       $myusername = mysqli_real_escape_string($conn,$_POST['username']);
       $mypassword = mysqli_real_escape_string($conn,$_POST['password']);
 
-      $sql = "SELECT GovernmentName AND Username FROM UserDatabase WHERE Username = '$myusername' and Passcode = '$mypassword'";
+      $sql = "SELECT * FROM UserDatabase WHERE Username = '$myusername' and Passcode = '$mypassword'";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       
@@ -56,11 +56,53 @@
       <label style="color:white; font-family:Garamond"> Password: </label><input type = "password" name = "password" class = "box" /><br/><br />
       <button type = "submit" value = " Submit ">Submit</button>
     </form>
-
+    <div>
+      <button type = "submit" id = "welcome-back-button" onclick = "login()">Log in as <span id = "welcome-back-text"></span></button>
+    </div>
     <div style = "font-size:30px; color:red; margin-top:10px; text-align:center; position:relative; left:0%">
       <?php echo $error; ?>
     </div>
   </div>
 </body>
+<script>
+  let GovernmentName = getCookie("GovernmentName");
+  let Username = getCookie("Username");
+  if(GovernmentName !=NULL && Username != NULL){
+   document.getElementById("welcome-back-text").innerHTML = GovernmentName;
+   document.getElementById("test").hidden=false;
+  }
+  else{
+    document.getElementById("test").hidden=true;
+  }
 
+  function login(){
+    setCookie("GovernmentName",GovernmentName, 1);
+    setCookie("Username",Username, 1);
+    window.location.href = "Home.php"
+  }
+   
+
+  function setCookie(cname, cvalue, exhours) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+         return "";
+  }
+</script>
 </html>
