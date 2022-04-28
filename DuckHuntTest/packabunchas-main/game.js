@@ -1822,10 +1822,12 @@ function story22() {
 }
 
 function story32() {
-	console.log("entering story 32")
-	firstTime = false;
 	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "We hope you enjoyed our learning game", " ", " ", " ", "      - click to see your total score! - "
 	])
+
+	console.log("entering story 32")
+	firstTime = false;
+
 
 	//setMessage(["Click to continue"], true)
 	//
