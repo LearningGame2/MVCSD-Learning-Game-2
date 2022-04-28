@@ -199,6 +199,7 @@ function leaderboardRequest(){
 </body>
 
 <script>
+  console.log(document.cookie)
   var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
 
   document.getElementById("player1").innerHTML = testScores[9].Username;
