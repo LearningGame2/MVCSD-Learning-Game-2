@@ -124,9 +124,9 @@ function checkUpdateLeaderboard(){
 <body style="background-color:black">
     <h1 style="text-align:center; color:white; font-family:Garamond; font-size:350%;"> GAME OVER! </h1>
     <h1 style="text-align:center; color:white; font-family:Garamond; font-size:350%;"> FINAL SCORE: <span id = "final-score"></span> </h1>
-    <h1 style="text-align:center; color:white; font-family:Garamond; font-size:350%;"> HIGHEST STREAK <span id = "high-streak"></span> </h1>
+    <h1 style="text-align:center; color:white; font-family:Garamond; font-size:350%;"> HIGHEST STREAK: <span id = "high-streak"></span> </h1>
     <div style="text-align:center;">
-        <h1 style="color:white;"> Good Try, <?php echo $_COOKIE['Username'] ?> !</h1>
+        <h1 style="color:white;"> Good Try, <?php echo $_COOKIE['Username'] ?>!</h1>
     </div>
     <div>
         <h1><span id = "update-leaderboard-message"></span></h1>

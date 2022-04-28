@@ -171,6 +171,8 @@ let amountCorrect = 0 //different from score, does not include streaks
 let wrongAttempt = 0 //amount of wrong answers picked by player
 let indexNumber = 0 //will be used in displaying next question
 
+console.log(document.cookie);
+
 /*fills questions array after parsing the decoded json that php returned, setting them in a random order and then creating a
 question object with the results from the parse*/
 //post: returns questions array
