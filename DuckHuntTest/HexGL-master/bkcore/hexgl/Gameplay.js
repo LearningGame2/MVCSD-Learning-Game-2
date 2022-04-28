@@ -166,15 +166,16 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 
 	if(result == this.results.FINISH)
 	{
-		if(this.hud != null) this.hud.display("Finish");
-		window.location.href = "../../../LGAttempt3/Level5.php"
+		if(this.hud != null) {this.hud.display("Finish");
+		window.location.href = "../../../LGAttempt3/Level5.php"}
 		this.step = 100;
 		
 	}
 	else if(result == this.results.DESTROYED)
 	{
-		if(this.hud != null) this.hud.display("Destroyed");
-		window.location.href = "../../../LGAttempt3/Level5.php"
+		if(this.hud != null) 
+		{this.hud.display("Destroyed");
+		window.location.href = "../../../LGAttempt3/Level5.php"}
 		this.step = 100;
 
 	}
