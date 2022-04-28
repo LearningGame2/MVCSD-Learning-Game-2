@@ -78,7 +78,7 @@ mixed = false
 //starting additional area spaces
 margin = 0
 
-gameModes = ["CLASSIC", "PENTA", "MIX", "KIDS", "EZPZ", ]
+gameModes = ["PENTA"]
 currentGameMode = parseInt(loadData("currentGameMode", "0"))
 
 
@@ -1540,7 +1540,7 @@ function drawBackGround() {
 
 		ctx.save()
 		ctx.clip()
-		ctx.globalAlpha = 1
+		ctx.globalAlpha = 0.4 //sam edit: from 0.03
 		ctx.fillStyle = "#000"
 		ctx.beginPath();
 		ctx.ellipse(150, 800, 400, 400, 0, 0, 2 * Math.PI);
@@ -1649,7 +1649,7 @@ function drawBackGround() {
 		//
 	} else {
 		ctx.strokeStyle = "#000"
-		ctx.globalAlpha = 0.03
+		ctx.globalAlpha = 0.4 //sam edit: from 0.03
 		ctx.beginPath();
 		ctx.arc(300 + xxx, 500 + yyy, 100, 0, 2 * Math.PI);
 		ctx.stroke();
@@ -1857,7 +1857,7 @@ function story12() {
 }
 
 function story13() {
-	setStoryMessage(["OKAY, let's roll up", "our sleeves and get", "those Blockychums back!", " ", "Remember:", "any game mode is fine,", "as long as you feel comfortable.", " ", "PACKABUNCHAS!"])
+	setStoryMessage(["OKAY, let's roll up", "our sleeves and get", "those Blockychums back!", " ", "PACKABUNCHAS!"])
 
 
 
@@ -2537,32 +2537,34 @@ function createLevel() {
 		}, 500)
 
 
-		if (gameModes[currentGameMode] == "CLASSIC") {
-			numberOfPolyominos = 4
-			sizeOfPolyominos = 4
-			mixed = false
-			margin = 2
-		} else if (gameModes[currentGameMode] == "MIX") {
-			numberOfPolyominos = 8
-			sizeOfPolyominos = 5
-			mixed = true
-			margin = 5
-		} else if (gameModes[currentGameMode] == "EZPZ") {
-			numberOfPolyominos = 3
-			sizeOfPolyominos = 4
-			mixed = false
-			margin = 0
-		} else if (gameModes[currentGameMode] == "PENTA") {
+		// if (gameModes[currentGameMode] == "CLASSIC") {
+		// 	numberOfPolyominos = 4
+		// 	sizeOfPolyominos = 4
+		// 	mixed = false
+		// 	margin = 2
+		// } else if (gameModes[currentGameMode] == "MIX") {
+		// 	numberOfPolyominos = 8
+		// 	sizeOfPolyominos = 5
+		// 	mixed = true
+		// 	margin = 5
+		// } else if (gameModes[currentGameMode] == "EZPZ") {
+		// 	numberOfPolyominos = 3
+		// 	sizeOfPolyominos = 4
+		// 	mixed = false
+		// 	margin = 0
+		// } else 
+				if (gameModes[currentGameMode] == "PENTA") {
 			numberOfPolyominos = 5
 			sizeOfPolyominos = 5
 			mixed = false
 			margin = 10
-		} else if (gameModes[currentGameMode] == "KIDS") {
-			numberOfPolyominos = 2
-			sizeOfPolyominos = 7
-			mixed = true
-			margin = 0
-		}
+		} 
+		// else if (gameModes[currentGameMode] == "KIDS") {
+		// 	numberOfPolyominos = 2
+		// 	sizeOfPolyominos = 7
+		// 	mixed = true
+		// 	margin = 0
+		// }
 
 		if (polyLeft < numberOfPolyominos) {
 			numberOfPolyominos = polyLeft
@@ -3357,7 +3359,7 @@ function mouseUp(e) {
 					animateMouth = true
 
 
-					setStoryMessage(["Hey Spacey, wake up!", "Guess what happened today.", "Yeah.", "Those 13 Blockychums", "got lost in the galaxy", " ", "AGAIN!"])
+					setStoryMessage(["Hey Spacey, wake up!", "Guess what happened today.", "Yeah.", "Those 5 Blockychums", "got lost in the galaxy", " ", "AGAIN!"])
 					//setMessage(["Click to continue"], true)
 
 
