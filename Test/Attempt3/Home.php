@@ -2,6 +2,7 @@
 <?php
 
 session_start();
+setcookie("Checkpoint", 0);
 
 if(!isset($_COOKIE['Username'])){
   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
