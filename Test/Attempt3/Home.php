@@ -188,6 +188,12 @@ function leaderboardRequest(){
     <td><span id="score10"></span></td>
   </tr>
 </table>
+  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
+     <span id = "IfPreviousScore"> </span>
+  </div>
+  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
+     <span id = "IfPreviousStreak"> </span>
+  </div>
 </div>
 </body>
 
@@ -223,6 +229,30 @@ function leaderboardRequest(){
 
   document.getElementById("player10").innerHTML = testScores[0].Username;
   document.getElementById("score10").innerHTML = testScores[0].Highscore;
+
+  if(getCookie("cookieScore")!= null){
+    document.getElementById("IfPreviousScore").innerHTML = "Your Last Score: " + getCookie("cookieScore");
+  }
+  if(getCookie("cookieStreak")!= null){
+    document.getElementById("IfPreviousScore").innerHTML = "Your Last Streak: " + getCookie("cookieStreak");
+  }
+
+
+  function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+         return "";
+  }
 
   console.log(testScores);
   function goToGame(){
