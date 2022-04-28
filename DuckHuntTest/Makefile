@@ -9,5 +9,5 @@ PutHTML:
 		cp -r  DuckHunt-JS-master /var/www/html/class/ssd/$(USER)/DuckHuntTest
 #		cp -r  space-jump-master /var/www/html/class/ssd/$(USER)/DuckHuntTest
 #		cp -r  astronautInTrouble-main /var/www/html/class/ssd/$(USER)/DuckHuntTest
-		cp -r packabunchas-main /var/www/html/class/ssd/$(USER)/DuckHuntTest
+#		cp -r packabunchas-main /var/www/html/class/ssd/$(USER)/DuckHuntTest
 		cp -r  HexGL-master /var/www/html/class/ssd/$(USER)/DuckHuntTest
