@@ -22,6 +22,7 @@ So, if you want to check it for any reason, do it at your own risk :D
 
 //versionN = 0.3
 
+firstTime = true; //sam edit — when to proceed to EndGame.php
 c = document.getElementById("v");
 ctx = c.getContext("2d");
 w = v.width
@@ -1826,6 +1827,7 @@ function story32() {
 
 	//setMessage(["Click to continue"], true)
 	//
+	firstTime = false;
 	skipState = 2
 	animateMouth = true
 	storyTimeOut = setTimeout(function() {
@@ -1873,9 +1875,10 @@ function story13() {
 function goToGame() {
 	if (state == "menu") {
 
-		leftButton.originalx = -500
-		//leftButton.x = -500
-		rightButton.originalx = w + 500
+		//sam edit: only one game mode so no need for arrows
+		// leftButton.originalx = -500
+		// //leftButton.x = -500
+		// rightButton.originalx = w + 500
 		//rightButton.x = w + 500
 		startButton.originaly = 10000
 		//startButton.y = h + 500
@@ -3029,8 +3032,11 @@ function mouseUp(e) {
 			animateMouth = false
 		} else if (skipState == 3) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
-			window.location.href = "EndGame.php" //sam edit
-			//story13()
+			if (!firstTime)
+			{
+				window.location.href = "../LGAttempt3/EndGame.php" //sam edit
+			}
+			story13()
 			skipState = 4
 		} else if (skipState == 4) {
 			if (storyTimeOut != null) clearTimeout(storyTimeOut)
