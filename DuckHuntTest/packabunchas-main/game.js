@@ -1827,7 +1827,7 @@ function story32() {
 
 	console.log("entering story 32")
 	firstTime = false;
-
+	console.log(window.firstTime);
 
 	//setMessage(["Click to continue"], true)
 	//
@@ -3051,7 +3051,7 @@ function mouseUp(e) {
 			setStoryMessage([""])
 			storyState = 1
 			saveData("storyState", storyState.toString())
-			polyLeft = 10
+			polyLeft = 3
 			currentPolyTextToShow = 3
 			saveData("polyLeft", polyLeft.toString())
 			gotoMenu()
@@ -3101,6 +3101,7 @@ function mouseUp(e) {
 		} else if (skipState == 1) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
 			story32()
+			// firstTime=false; //uncomment this if commit 690 doesn't work
 			if (!firstTime) //sam edit
 			{
 				window.location.href = "../LGAttempt3/EndGame.php" //sam edit
@@ -3200,7 +3201,7 @@ function mouseUp(e) {
 						//setMessage(["Click to continue"], true)
 						canSkip = true
 						animateMouth = true
-						setStoryMessage(["PACKABUNCHAS!!!", "We did it, Spacey!!!", " ", "WE ACTUALLY RESCUED ALL", "10  Blockychums!", " ",
+						setStoryMessage(["PACKABUNCHAS!!!", "We did it, Spacey!!!", " ", "WE ACTUALLY RESCUED ALL", " THOSE BLOCKYCHUMS!", " ",
 							"Let's celebrate!", " ", "(ﾉ^ヮ^)ﾉ*:・ﾟ✧"
 						])
 
@@ -3260,6 +3261,7 @@ function mouseUp(e) {
 			storyState = 3
 			saveData("storyState", storyState.toString())
 			currentPolyTextToShow = 1
+
 			saveData("polyLeft", polyLeft.toString())
 		}
 
