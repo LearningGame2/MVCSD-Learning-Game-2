@@ -1495,7 +1495,8 @@ function drawTexts() {
 
 
 	ctx.textAlign = "center";
-	ctx.fillText(dText + currFormat("3"), pTextPos.x, pTextPos.y); //sam edit: took out currentPolyTextToShow, replaced w/ 3
+	let numPuzzles = 3;
+	ctx.fillText(dText + currFormat(numPuzzles), pTextPos.x, pTextPos.y); //sam edit: took out currentPolyTextToShow, replaced w/ 3
 	ctx.globalAlpha = 1
 
 
@@ -3101,7 +3102,7 @@ function mouseUp(e) {
 		} else if (skipState == 1) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
 			story32()
-			// firstTime=false; //uncomment this if commit 690 doesn't work
+			firstTime=true; //uncomment this if commit 690 doesn't work
 			if (firstTime == false) //sam edit
 			{
 				window.location.href = "../LGAttempt3/EndGame.php" //sam edit
