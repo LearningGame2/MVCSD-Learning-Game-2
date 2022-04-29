@@ -22,7 +22,7 @@ So, if you want to check it for any reason, do it at your own risk :D
 
 //versionN = 0.3
 
-firstTime = true; //sam edit — when to proceed to EndGame.php
+let firstTime = true; //sam edit — when to proceed to EndGame.php
 c = document.getElementById("v");
 ctx = c.getContext("2d");
 w = v.width
@@ -3102,7 +3102,7 @@ function mouseUp(e) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
 			story32()
 			// firstTime=false; //uncomment this if commit 690 doesn't work
-			if (!firstTime) //sam edit
+			if (firstTime == false) //sam edit
 			{
 				window.location.href = "../LGAttempt3/EndGame.php" //sam edit
 			}
