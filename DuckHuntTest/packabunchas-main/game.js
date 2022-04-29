@@ -1495,7 +1495,7 @@ function drawTexts() {
 
 
 	ctx.textAlign = "center";
-	ctx.fillText(dText + currFormat(currentPolyTextToShow), pTextPos.x, pTextPos.y);
+	ctx.fillText(dText + currFormat("3"), pTextPos.x, pTextPos.y); //sam edit: took out currentPolyTextToShow, replaced w/ 3
 	ctx.globalAlpha = 1
 
 
@@ -1822,7 +1822,7 @@ function story22() {
 }
 
 function story32() {
-	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "We hope you enjoyed our" , " ", "learning game!", " ", " ", "      - click to see your total score! - "
+	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "We hope you enjoyed our" , "learning game!", " ", " ", "    - click to see your total score! - "
 	])
 
 	console.log("entering story 32")
@@ -3035,10 +3035,6 @@ function mouseUp(e) {
 			animateMouth = false
 		} else if (skipState == 3) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
-			if (!firstTime)
-			{
-				window.location.href = "../LGAttempt3/EndGame.php" //sam edit
-			}
 			story13()
 			skipState = 4
 		} else if (skipState == 4) {
@@ -3105,6 +3101,10 @@ function mouseUp(e) {
 		} else if (skipState == 1) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
 			story32()
+			if (!firstTime) //sam edit
+			{
+				window.location.href = "../LGAttempt3/EndGame.php" //sam edit
+			}
 		} else if (skipState == 2) {
 			if (storyTimeOut != null) clearTimeout(storyTimeOut)
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
@@ -3224,14 +3224,15 @@ function mouseUp(e) {
 		}, 500)
 	}
 
-	for (let i = 0; i < buttons.length; i++) {
-		var button = buttons[i]
-		if (button.contains(mouseX, mouseY)) {
-			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click			
-			button.onClick()
-		}
-		button.isPressed = false
-	}
+	//sam edit: tryna get buttons to go away while playing game
+	// for (let i = 0; i < buttons.length; i++) {
+	// 	var button = buttons[i]
+	// 	if (button.contains(mouseX, mouseY)) {
+	// 		zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click			
+	// 		button.onClick()
+	// 	}
+	// 	button.isPressed = false
+	// }
 
 
 
