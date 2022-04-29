@@ -3226,15 +3226,14 @@ function mouseUp(e) {
 		}, 500)
 	}
 
-	//sam edit: tryna get buttons to go away while playing game
-	// for (let i = 0; i < buttons.length; i++) {
-	// 	var button = buttons[i]
-	// 	if (button.contains(mouseX, mouseY)) {
-	// 		zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click			
-	// 		button.onClick()
-	// 	}
-	// 	button.isPressed = false
-	// }
+	for (let i = 0; i < buttons.length; i++) {
+		var button = buttons[i]
+		if (button.contains(mouseX, mouseY)) {
+			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click			
+			button.onClick()
+		}
+		button.isPressed = false
+	}
 
 
 
