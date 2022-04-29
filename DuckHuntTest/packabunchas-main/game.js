@@ -3108,7 +3108,7 @@ function mouseUp(e) {
 			//firstTime=false; //uncomment this if commit 690 doesn't work
 			if (firstTime == false) //sam edit
 			{
-				window.location.href = "../Game2/LGAttempt3/EndGame.php" //sam edit
+				window.location.href = "../ssd/Game2/LGAttempt3/EndGame.php" //sam edit
 			}
 		} else if (skipState == 2) {
 			if (storyTimeOut != null) clearTimeout(storyTimeOut)
