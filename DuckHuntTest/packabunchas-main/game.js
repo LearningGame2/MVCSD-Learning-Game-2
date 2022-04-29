@@ -154,15 +154,17 @@ effectVolume = 1
 muted = loadData("muted", "false") == "true"
 
 
-leftButton = createButton(w * 0.2, h * 0.55, 100, 100, "<", 70, -5, 22, function() {
-	changeMode(-1)
-})
-buttons.push(leftButton)
+//sam edit: no buttons needed b/c just one gamemode
+// leftButton = createButton(w * 0.2, h * 0.55, 100, 100, "<", 70, -5, 22, function() {
+// 	changeMode(-1)
+// })
+// buttons.push(leftButton)
 
-rightButton = createButton(w * 0.8, h * 0.55, 100, 100, ">", 70, 5, 22, function() {
-	changeMode(1)
-})
-buttons.push(rightButton)
+// rightButton = createButton(w * 0.8, h * 0.55, 100, 100, ">", 70, 5, 22, function() {
+// 	changeMode(1)
+// })
+// buttons.push(rightButton)
+
 
 startButton = createButton(w * 0.5, h * 0.6, 140, 350, "START", 70, 0, 25, goToGame)
 buttons.push(startButton)
@@ -176,11 +178,11 @@ buttons.push(muteButton)
 fullScreenButton = createButton(-1500, h * 0.06, 120, 120, "", 70, 0, 0, toggleFullscreen)
 buttons.push(fullScreenButton)
 
-
-leftButton.originalx = -10000
-leftButton.x = -10000
-rightButton.originalx = 10000
-rightButton.x = 10000
+//sam edit: no buttons needed
+// leftButton.originalx = -10000
+// leftButton.x = -10000
+// rightButton.originalx = 10000
+// rightButton.x = 10000
 startButton.originaly = 10000
 startButton.y = 10000
 backButton.originalx = -1000
@@ -1933,9 +1935,10 @@ function backToMenu() {
 		setTimeout(function() {
 			showLoading = false
 			state = "menu"
-			leftButton.originalx = w * 0.15
-			//leftButton.x = -500
-			rightButton.originalx = w * 0.85
+			//sam edit: no btns needed
+			// leftButton.originalx = w * 0.15
+			// //leftButton.x = -500
+			// rightButton.originalx = w * 0.85
 			//rightButton.x = w + 500
 			startButton.originaly = h * 0.75
 			//startButton.y = h + 500
@@ -3102,7 +3105,7 @@ function mouseUp(e) {
 		} else if (skipState == 1) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
 			story32()
-			firstTime=true; //uncomment this if commit 690 doesn't work
+			//firstTime=false; //uncomment this if commit 690 doesn't work
 			if (firstTime == false) //sam edit
 			{
 				window.location.href = "../LGAttempt3/EndGame.php" //sam edit
@@ -3410,9 +3413,10 @@ function mouseUp(e) {
 
 function gotoMenu() {
 	state = "menu"
-	leftButton.originalx = w * 0.15
-	//leftButton.x = -500
-	rightButton.originalx = w * 0.85
+	//sam edit: no bts needed
+	// leftButton.originalx = w * 0.15
+	// //leftButton.x = -500
+	// rightButton.originalx = w * 0.85
 	//rightButton.x = w + 500
 	startButton.originaly = h * 0.75
 	//startButton.y = h + 500
