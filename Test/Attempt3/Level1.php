@@ -97,11 +97,11 @@ function promptRequest($numOfQuestions){
 </head>
 
 <body onload="NextQuestion(0)">
+  <div style="background-image: url('/LG2Images/duck-meet-g84831808a_1920.jpg');">
   <h1 style="color:white; text-align:center; font-family:Garamond; font-size:300%; line-height: 100px">
     Level 1
   </h1>
     <main>
-      <div class="bg">
         <!-- creating a modal for when quiz ends -->
         <div class="modal-container" id="score-modal">
 
