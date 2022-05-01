@@ -3,6 +3,8 @@ session_start();
 // if(intval($_COOKIE['Checkpoint'])!=5){
 //     header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
 // }
+// setcookie("Checkpoint",6);
+//
 
 
 if(!isset($_COOKIE['Username'])){
@@ -46,6 +48,7 @@ function checkUpdateLeaderboard(){
     $checkLeaderboardScore = -1; //keep track of whether to add to Leaderboard
     $deleteScore = $scores[0]['Highscore'];
     $deleteName = $scores[0]['Username'];
+    $deleteID = $scores[0]['GameID'];
     for($x = 9; $x >=0; $x--){
         if($playerScore > $scores[$x]['Highscore']){
             $checkLeaderboardScore = $x;
@@ -55,7 +58,7 @@ function checkUpdateLeaderboard(){
 
     if($checkLeaderboardScore >= 0 && $checkLeaderboardScore<= 9){ //Leaderboard      also changed this from else if to if
         $conn = connect();
-        $sql = "DELETE FROM Leaderboard WHERE Username = '$deleteName' and Highscore = '$deleteScore'"; //changed Highscore from Passcode (vestigial from copied code?)
+        $sql = "DELETE FROM Leaderboard WHERE Username = '$deleteName' and Highscore = '$deleteScore' and GameID = '$deleteID'"; //changed Highscore from Passcode (vestigial from copied code?)
         if (mysqli_query($conn, $sql)) {
             echo "Record deleted successfully";
         }
@@ -136,7 +139,7 @@ function checkUpdateLeaderboard(){
         <h1><span id = "update-leaderboard-message"></span></h1>
     </div>
     <div style="text-align:center;">
-      <button onclick = "goHome()" class="button">Return Home</button> <!--change before tuesday pres...maybe?-->
+      <button onclick = "goHome()" class="button">Return Home</button> 
     </div>
 
 </body>

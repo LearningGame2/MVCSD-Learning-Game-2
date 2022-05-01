@@ -395,7 +395,7 @@ function closeOptionModal() {
 }
 
 function goFinalGame(){
-        window.location.href = "../Game2/DuckHuntTest/packabunchas-main/"
+        window.location.href = "../DuckHuntTest/packabunchas-main/"
 }
 
 function setCookie(cname, cvalue) {
