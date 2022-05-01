@@ -93,9 +93,30 @@ function promptRequest($numOfQuestions){
   <title>
     Level 1
   </title>
+
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .bg {
+      /* The image used */
+      background-image: url("duck-meet-g84831808a_1920.jpg");
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
 </head>
 
 <body onload="NextQuestion(0)">
+<div class="bg">
   <h1 style="background-color:black; color:white; text-align:center; font-family:Garamond; font-size:300%; line-height: 100px">
     Level 1
   </h1>
@@ -182,7 +203,7 @@ function promptRequest($numOfQuestions){
 
         </div>
     </main>
-
+</div>
 
 <script>
 
@@ -262,12 +283,12 @@ let cookieHighStreak = "cookieHighStreak"
 
 setCookie(cookieScore, 0);
 setCookie(cookieStreak, 0);
-setCookie(cookieHighStreak,0); 
+setCookie(cookieHighStreak,0);
 
 console.log(document.cookie); //cookie checker
 
 let levelMultiplier = 1
-let questionNumber = 1 //holds the current question number 
+let questionNumber = 1 //holds the current question number
 let amountCorrect = 0 //different from score, does not include streaks
 let wrongAttempt = 0 //amount of wrong answers picked by player
 let indexNumber = 0 //will be used in displaying next question
