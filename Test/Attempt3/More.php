@@ -7,14 +7,25 @@
         </title>
     </head>
 
-    <h1>
+    <h1 class="header">
         Some background info on this project: <br><br>
     </h1>
 
     <style>
+        .header{
+            margin-right: 20px;
+            margin-left: 20px;
+
+        }
         .infoP{
             margin-right: 100px;
             margin-left: 100px;
+        }
+        .creds{
+            margin-right:
+        }
+        .li{
+            color: rgb(91, 75, 105);
         }
     </style>
 
@@ -37,7 +48,7 @@
         between the levels of the quiz, and we think we succeeded.  Enjoy!<br><br><br>
     </body>
 
-    <body id="creds">
+    <body class="creds">
         Credits:
         <ul>
             <li>Packabunchas, a colorful puzzle game by Mattia Fortunati
