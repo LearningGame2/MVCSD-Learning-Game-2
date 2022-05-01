@@ -129,9 +129,9 @@ function leaderboardRequest(){
   <h1 style="text-align:center; color:white;">
     Welcome,  <?php echo $_COOKIE['Username']?>!
     <span style="float:right">
-      <a href="More.php"><div class="button button1">
+      <a href="More.php">
         Learn More About Us
-      </div></a>
+      </a>
     </span>
   </h1>
 </header>
