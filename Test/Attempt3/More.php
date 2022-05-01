@@ -7,14 +7,10 @@
         </title>
     </head>
 
-    <h1 class="header">
-        Some background info on this project: <br><br>
-    </h1>
-
     <style>
         .header{
-            margin-right: 20px;
-            margin-left: 20px;
+            margin-right: -80px;
+            margin-left: -80px;
 
         }
         .infoP{
@@ -24,10 +20,14 @@
         .creds{
             margin-right:
         }
-        .li{
+        .games{
             color: rgb(91, 75, 105);
         }
     </style>
+
+    <h1 class="header">
+        Some background info on this project: <br><br>
+    </h1>
 
     <body id="b1" class="infoP">
         This website was produced by 3 students of Kenyon College: Connor Dailey, Mason Fishell, and Sam Rabieh, for the class Software 
@@ -50,7 +50,7 @@
 
     <body class="creds">
         Credits:
-        <ul>
+        <ul class="games">
             <li>Packabunchas, a colorful puzzle game by Mattia Fortunati
             <li>Astronaut in Trouble, a simple pixel side-scroller by Douglas Lopes
             <li>HexGL, a futuristic HTML5 racing game by BKCore / Thibault Despoulain
