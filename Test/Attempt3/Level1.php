@@ -97,6 +97,7 @@ function promptRequest($numOfQuestions){
 </head>
 
 <body onload="NextQuestion(0)">
+<div class="bg">
   <h1 style="color:white; text-align:center; font-family:Garamond; font-size:300%; line-height: 100px">
     Level 1
   </h1>
@@ -183,6 +184,7 @@ function promptRequest($numOfQuestions){
 
         </div>
     </main>
+</div>
 
 <script>
 
@@ -451,14 +453,7 @@ function getCookie(cname) {
 }
 
 </script>
-<img src=LG2Images/TallFlame.png   id='leftFire'
-  style="position:relative; left: 500; top: 100;">
 
-<img src=LG2Images/TallFlame.png  id='rightFire'
-  style="position:absolute; left: 500; top: 100;">
-
-<img src=LG2Images/WideFlame.png  id='bottomFire'
-  style="position:absolute; left: 500; top: 100; display: none">
 </body>
 
 </html>
