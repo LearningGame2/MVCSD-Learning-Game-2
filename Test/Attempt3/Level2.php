@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-if(intval($_COOKIE['Checkpoint'])!=1){
-    header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
-}
-setcookie("Checkpoint", 2);
+// if(intval($_COOKIE['Checkpoint'])!=1){
+//     header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
+// }
+// setcookie("Checkpoint", 2);
 
 if(!isset($_COOKIE['Username'])){
   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
@@ -384,7 +384,12 @@ function closeOptionModal() {
 }
 
 function nextLevel(){
-        window.location.href = "Level3.php"
+if (amountCorrect>5){ //for 5 questions: changed from 8
+        window.location.href = "../DuckHuntTest/astronautInTrouble-main/"
+    }
+    else{
+        window.location.href = "Level4.php"
+    }
 }
 
 function setCookie(cname, cvalue) {
