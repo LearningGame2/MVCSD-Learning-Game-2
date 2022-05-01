@@ -22,6 +22,7 @@ So, if you want to check it for any reason, do it at your own risk :D
 
 //versionN = 0.3
 
+let firstTime = true; //sam edit — when to proceed to EndGame.php
 c = document.getElementById("v");
 ctx = c.getContext("2d");
 w = v.width
@@ -78,7 +79,7 @@ mixed = false
 //starting additional area spaces
 margin = 0
 
-gameModes = ["PENTA"]
+gameModes = ["Run it!"]
 currentGameMode = parseInt(loadData("currentGameMode", "0"))
 
 
@@ -92,7 +93,7 @@ lerpSpeed = 0.1
 mylatesttap = 0
 bottomTextText = ""
 
-polyLeft = parseInt(loadData("polyLeft", "10"))
+polyLeft = parseInt(loadData("polyLeft", "3")) //sam edit: this might mess everything up, maybe why only 1 level in commit 694
 currentPolyTextToShow = polyLeft
 
 
@@ -153,15 +154,17 @@ effectVolume = 1
 muted = loadData("muted", "false") == "true"
 
 
-leftButton = createButton(w * 0.2, h * 0.55, 100, 100, "<", 70, -5, 22, function() {
-	changeMode(-1)
-})
-buttons.push(leftButton)
+//sam edit: no buttons needed b/c just one gamemode
+// leftButton = createButton(w * 0.2, h * 0.55, 100, 100, "<", 70, -5, 22, function() {
+// 	changeMode(-1)
+// })
+// buttons.push(leftButton)
 
-rightButton = createButton(w * 0.8, h * 0.55, 100, 100, ">", 70, 5, 22, function() {
-	changeMode(1)
-})
-buttons.push(rightButton)
+// rightButton = createButton(w * 0.8, h * 0.55, 100, 100, ">", 70, 5, 22, function() {
+// 	changeMode(1)
+// })
+// buttons.push(rightButton)
+
 
 startButton = createButton(w * 0.5, h * 0.6, 140, 350, "START", 70, 0, 25, goToGame)
 buttons.push(startButton)
@@ -175,11 +178,11 @@ buttons.push(muteButton)
 fullScreenButton = createButton(-1500, h * 0.06, 120, 120, "", 70, 0, 0, toggleFullscreen)
 buttons.push(fullScreenButton)
 
-
-leftButton.originalx = -10000
-leftButton.x = -10000
-rightButton.originalx = 10000
-rightButton.x = 10000
+//sam edit: no buttons needed
+// leftButton.originalx = -10000
+// leftButton.x = -10000
+// rightButton.originalx = 10000
+// rightButton.x = 10000
 startButton.originaly = 10000
 startButton.y = 10000
 backButton.originalx = -1000
@@ -1494,7 +1497,8 @@ function drawTexts() {
 
 
 	ctx.textAlign = "center";
-	ctx.fillText(dText + currFormat(currentPolyTextToShow), pTextPos.x, pTextPos.y);
+	let numPuzzles = 1; //sam edit: commit 694 i was only getting one level with 3, can i get 2 levels now?
+	ctx.fillText(dText + currFormat(numPuzzles), pTextPos.x, pTextPos.y); //sam edit: took out currentPolyTextToShow, replaced w/ 3
 	ctx.globalAlpha = 1
 
 
@@ -1540,7 +1544,7 @@ function drawBackGround() {
 
 		ctx.save()
 		ctx.clip()
-		ctx.globalAlpha = 0.4 //sam edit: from 0.03
+		ctx.globalAlpha = 2 //sam edit: from 0.03
 		ctx.fillStyle = "#000"
 		ctx.beginPath();
 		ctx.ellipse(150, 800, 400, 400, 0, 0, 2 * Math.PI);
@@ -1649,7 +1653,7 @@ function drawBackGround() {
 		//
 	} else {
 		ctx.strokeStyle = "#000"
-		ctx.globalAlpha = 0.4 //sam edit: from 0.03
+		ctx.globalAlpha = 2 //sam edit: from 0.03
 		ctx.beginPath();
 		ctx.arc(300 + xxx, 500 + yyy, 100, 0, 2 * Math.PI);
 		ctx.stroke();
@@ -1821,9 +1825,12 @@ function story22() {
 }
 
 function story32() {
-	setStoryMessage(["Oh, the dev left a note, too:", " ", "Did you really finish", "PACKABUNCHAS?", " ",
-		"CONGRATULATIONS!", " ", "and many", "THANKS FOR PLAYING!!!", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "      - click to reset the game! - "
+	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "We hope you enjoyed our" , "learning game!", " ", " ", "    - click to see your total score! - "
 	])
+
+	console.log("entering story 32")
+	firstTime = false;
+	console.log(window.firstTime);
 
 	//setMessage(["Click to continue"], true)
 	//
@@ -1874,9 +1881,10 @@ function story13() {
 function goToGame() {
 	if (state == "menu") {
 
-		leftButton.originalx = -500
-		//leftButton.x = -500
-		rightButton.originalx = w + 500
+		//sam edit: only one game mode so no need for arrows
+		// leftButton.originalx = -500
+		// //leftButton.x = -500
+		// rightButton.originalx = w + 500
 		//rightButton.x = w + 500
 		startButton.originaly = 10000
 		//startButton.y = h + 500
@@ -1927,9 +1935,10 @@ function backToMenu() {
 		setTimeout(function() {
 			showLoading = false
 			state = "menu"
-			leftButton.originalx = w * 0.15
-			//leftButton.x = -500
-			rightButton.originalx = w * 0.85
+			//sam edit: no btns needed
+			// leftButton.originalx = w * 0.15
+			// //leftButton.x = -500
+			// rightButton.originalx = w * 0.85
 			//rightButton.x = w + 500
 			startButton.originaly = h * 0.75
 			//startButton.y = h + 500
@@ -2537,12 +2546,13 @@ function createLevel() {
 		}, 500)
 
 
-		// if (gameModes[currentGameMode] == "CLASSIC") {
-		// 	numberOfPolyominos = 4
-		// 	sizeOfPolyominos = 4
-		// 	mixed = false
-		// 	margin = 2
-		// } else if (gameModes[currentGameMode] == "MIX") {
+		if (gameModes[currentGameMode] == "Run it!") {
+			numberOfPolyominos = 4
+			sizeOfPolyominos = 4
+			mixed = false
+			margin = 2
+		} 
+		// else if (gameModes[currentGameMode] == "MIX") {
 		// 	numberOfPolyominos = 8
 		// 	sizeOfPolyominos = 5
 		// 	mixed = true
@@ -2552,13 +2562,12 @@ function createLevel() {
 		// 	sizeOfPolyominos = 4
 		// 	mixed = false
 		// 	margin = 0
-		// } else 
-				if (gameModes[currentGameMode] == "PENTA") {
-			numberOfPolyominos = 5
-			sizeOfPolyominos = 5
-			mixed = false
-			margin = 10
-		} 
+		// } else if (gameModes[currentGameMode] == "PENTA") {
+		// 	numberOfPolyominos = 5
+		// 	sizeOfPolyominos = 5
+		// 	mixed = false
+		// 	margin = 10
+		// } 
 		// else if (gameModes[currentGameMode] == "KIDS") {
 		// 	numberOfPolyominos = 2
 		// 	sizeOfPolyominos = 7
@@ -3046,8 +3055,8 @@ function mouseUp(e) {
 			setStoryMessage([""])
 			storyState = 1
 			saveData("storyState", storyState.toString())
-			polyLeft = 10
-			currentPolyTextToShow = 10
+			polyLeft = 3
+			currentPolyTextToShow = 3 //sam edit: is this also causing it to be only one level in cmt 694?
 			saveData("polyLeft", polyLeft.toString())
 			gotoMenu()
 			skipState = 6
@@ -3065,6 +3074,7 @@ function mouseUp(e) {
 			animateMouth = false
 		} else if (skipState == 1) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
+			skipState = 2; //sam edit ... is this right?
 			//story22()
 		} else if (skipState == 2) {
 			if (storyTimeOut != null) clearTimeout(storyTimeOut)
@@ -3095,6 +3105,11 @@ function mouseUp(e) {
 		} else if (skipState == 1) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
 			story32()
+			//firstTime=false; //uncomment this if commit 690 doesn't work
+			if (firstTime == false) //sam edit
+			{
+				window.location.href = "cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/EndGame.php" //sam edit
+			}
 		} else if (skipState == 2) {
 			if (storyTimeOut != null) clearTimeout(storyTimeOut)
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
@@ -3190,7 +3205,7 @@ function mouseUp(e) {
 						//setMessage(["Click to continue"], true)
 						canSkip = true
 						animateMouth = true
-						setStoryMessage(["PACKABUNCHAS!!!", "We did it, Spacey!!!", " ", "WE ACTUALLY RESCUED ALL", "10  Blockychums!", " ",
+						setStoryMessage(["PACKABUNCHAS!!!", "We did it, Spacey!!!", " ", "WE ACTUALLY RESCUED ALL", " THOSE BLOCKYCHUMS!", " ",
 							"Let's celebrate!", " ", "(ﾉ^ヮ^)ﾉ*:・ﾟ✧"
 						])
 
@@ -3248,7 +3263,8 @@ function mouseUp(e) {
 			polyLeft = 1
 			storyState = 3
 			saveData("storyState", storyState.toString())
-			currentPolyTextToShow = 1
+			currentPolyTextToShow = 1 //sam edit: last possibility for why only 1 level in cmt 694
+
 			saveData("polyLeft", polyLeft.toString())
 		}
 
@@ -3397,9 +3413,10 @@ function mouseUp(e) {
 
 function gotoMenu() {
 	state = "menu"
-	leftButton.originalx = w * 0.15
-	//leftButton.x = -500
-	rightButton.originalx = w * 0.85
+	//sam edit: no bts needed
+	// leftButton.originalx = w * 0.15
+	// //leftButton.x = -500
+	// rightButton.originalx = w * 0.85
 	//rightButton.x = w + 500
 	startButton.originaly = h * 0.75
 	//startButton.y = h + 500
