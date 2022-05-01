@@ -128,6 +128,11 @@ function leaderboardRequest(){
   &nbsp;&nbsp;&nbsp;&nbsp;
   <h1 style="text-align:center; color:white;">
     Welcome,  <?php echo $_COOKIE['Username']?>!
+    <span style="float:right">
+      <a href="More.php"><div class="button button1">
+        Learn More About Us
+      </div></a>
+    </span>
   </h1>
 </header>
 
@@ -266,7 +271,5 @@ function leaderboardRequest(){
   }
 
 </script>
-
-<a href = "More.php"><div class = "button button1">Learn More About Us</div></a>
 
 </html>
