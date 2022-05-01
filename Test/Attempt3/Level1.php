@@ -96,12 +96,12 @@ function promptRequest($numOfQuestions){
 
 </head>
 
-<body onload="NextQuestion(0)">
+<body onload="NextQuestion(0)" background="edureka.png">
+<div class="bg">
   <h1 style="color:white; text-align:center; font-family:Garamond; font-size:300%; line-height: 100px">
     Level 1
   </h1>
     <main>
-      <div class="bg">
         <!-- creating a modal for when quiz ends -->
         <div class="modal-container" id="score-modal">
 
@@ -183,8 +183,8 @@ function promptRequest($numOfQuestions){
             </div>
 
         </div>
-      </div>
     </main>
+</div>
 
 <script>
 
