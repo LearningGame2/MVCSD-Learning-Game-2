@@ -399,7 +399,7 @@ function nextLevel(){
 
 
     if (amountCorrect>5){ //for 5 questions: changed from 8
-            window.location.href = "../DuckHuntTest/astronautInTrouble-main/"
+            window.location.href = "../DuckHuntTest/HexGL-master/"
         }
         else{
             window.location.href = "Level4.php"
