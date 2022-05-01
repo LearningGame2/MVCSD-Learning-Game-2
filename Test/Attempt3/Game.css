@@ -21,14 +21,11 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.background {
-  background-image: url("duck-meet-g84831808a_1920.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: url("duck-meet-g84831808a_1920.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .game-quiz-container{
