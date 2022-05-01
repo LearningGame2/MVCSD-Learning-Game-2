@@ -20,7 +20,6 @@
             margin-left: -35px;
         }
         .games{
-            margin-left: 35px;
             color: rgb(91, 75, 105);
         }
     </style>
