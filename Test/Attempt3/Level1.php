@@ -101,6 +101,7 @@ function promptRequest($numOfQuestions){
     Level 1
   </h1>
     <main>
+      <div class="bg">
         <!-- creating a modal for when quiz ends -->
         <div class="modal-container" id="score-modal">
 
@@ -182,6 +183,7 @@ function promptRequest($numOfQuestions){
             </div>
 
         </div>
+      </div>
     </main>
 
 <script>
