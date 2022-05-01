@@ -94,29 +94,9 @@ function promptRequest($numOfQuestions){
     Level 1
   </title>
 
-  <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-    }
-
-    .bg {
-      /* The image used */
-      background-image: url("duck-meet-g84831808a_1920.jpg");
-
-      /* Full height */
-      height: 100%;
-
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  </style>
 </head>
 
 <body onload="NextQuestion(0)">
-<div class="bg">
   <h1 style="color:white; text-align:center; font-family:Garamond; font-size:300%; line-height: 100px">
     Level 1
   </h1>
@@ -203,7 +183,6 @@ function promptRequest($numOfQuestions){
 
         </div>
     </main>
-</div>
 
 <script>
 
