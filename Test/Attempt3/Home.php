@@ -126,7 +126,7 @@ function leaderboardRequest(){
 
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <h1 style="text-align:center; color:white;">
+  <h1 style="text-align:left; color:white;">
     Welcome,  <?php echo $_COOKIE['Username']?>!
     <span style="float:right">
       <a href="More.php">
