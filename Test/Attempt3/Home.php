@@ -267,6 +267,6 @@ function leaderboardRequest(){
 
 </script>
 
-<a href = "More.php"><div>Learn More About Us</div></a>
+<a href = "More.php"><div class = "button button1">Learn More About Us</div></a>
 
 </html>
