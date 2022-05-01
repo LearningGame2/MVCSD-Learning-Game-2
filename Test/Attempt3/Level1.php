@@ -97,6 +97,7 @@ function promptRequest($numOfQuestions){
 </head>
 
 <body onload="NextQuestion(0)">
+<div class="bg">
   <h1 style="color:white; text-align:center; font-family:Garamond; font-size:300%; line-height: 100px">
     Level 1
   </h1>
@@ -183,6 +184,7 @@ function promptRequest($numOfQuestions){
 
         </div>
     </main>
+</div>
 
 <script>
 
