@@ -245,10 +245,10 @@ function leaderboardRequest(){
   <span>
 
   <span style="float:right">
-    <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+    <div style = "text-align:center; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
        <span id = "IfPreviousScore"> </span>
     </div>
-    <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+    <div style = "text-align:center; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
        <span id = "IfPreviousStreak"> </span>
     </div>
   </span>
