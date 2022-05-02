@@ -5,7 +5,7 @@
         <title>
             About us!
         </title>
-        <link rel="icon" type="image/x-icon" href="/LG2Images/KenyonLogo.svp.png">
+        <link rel="icon" type="image/x-icon" href="../LG2Images/KenyonLogo.svp.png">
     </head>
 
     <style>
