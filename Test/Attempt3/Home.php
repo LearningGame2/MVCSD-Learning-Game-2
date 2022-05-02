@@ -170,6 +170,14 @@ function leaderboardRequest(){
     .inLine{
       display:inline-block;
     }
+    .textLeft{
+      position:absolute;
+      text-align:left;
+    }
+    .textRight{
+      position:absolute;
+      text-align:right;
+    }
   </style>
 </head>
 
@@ -190,10 +198,9 @@ function leaderboardRequest(){
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
-  <div class="inLine" style = "text-align:center; position:absolute; top:300px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
-     <span> Leaderboard </span>
-     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-     <span> Your Stats </span>
+  <div class="inLine" style = "top:300px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+     <span class="textLeft"> Leaderboard </span>
+     <span class="textRight"> Your Stats </span>
   </div>
 
   <table class="alignLeft inLine">
