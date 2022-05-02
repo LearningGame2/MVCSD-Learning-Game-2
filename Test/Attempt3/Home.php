@@ -151,7 +151,7 @@ function leaderboardRequest(){
       border-collapse: collapse;
       margin-top:auto;
       margin-left:auto;
-      width:400px;
+      width:500px;
       text-align:center;
       font-size:23px;
       color:white;
@@ -192,7 +192,7 @@ function leaderboardRequest(){
 
   <div class="inLine" style = "text-align:center; position:absolute; top:300px; left:230px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      <span> Leaderboard </span>
-     &nbsp&nbsp&nbsp&nbsp&nbsp
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
      <span> Your Stats </span>
   </div>
 
