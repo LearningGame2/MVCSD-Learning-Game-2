@@ -139,7 +139,7 @@ function leaderboardRequest(){
   &nbsp;&nbsp;&nbsp;&nbsp;
   <div class="container">
     <span> Welcome,  <?php echo $_COOKIE['Username']?>! </span>
-    <span style="float:right; display:inline-block;">
+    <span style="float:right">
       <a href="More.php">
         Learn More About Us
       </a>
