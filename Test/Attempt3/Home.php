@@ -181,7 +181,7 @@ function leaderboardRequest(){
 
 <body style="background-color:black;">
 
-  <div style = "text-align:center; position:relative; top:25px; font-size:48px; color:white;">
+  <div style = "text-align:center; position:relative; top:15px; font-size:48px; color:white;">
      Press Button to Play
   </div>
   <div>
