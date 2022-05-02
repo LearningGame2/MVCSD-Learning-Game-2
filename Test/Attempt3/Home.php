@@ -120,6 +120,28 @@ function leaderboardRequest(){
 	     display:inline-block;
 	     *float:left;
 	  }
+    .slide-right {
+      width: 100%;
+      overflow: hidden;
+      margin-left: 400px;
+      max-width: 500px
+
+    }
+
+    .slide-right h1 {
+      animation: 2s slide-right;
+      animation-delay: 2s;
+    }
+
+    @keyframes slide-right {
+      from {
+        margin-left: -500px;
+      }
+
+      to {
+        margin-left: 0%;
+      }
+    }
     table, th, td {
       border: 2px solid white;
       border-collapse: collapse;
@@ -139,7 +161,7 @@ function leaderboardRequest(){
 </head>
 
 <div class="header">
-  <span> Welcome,  <?php echo $_COOKIE['Username']?>! </span>
+  <span> <h1> Welcome,  <?php echo $_COOKIE['Username']?>! <h1> </span>
   <span style="float:right;">
     <a href="More.php">
       Learn More About Us
