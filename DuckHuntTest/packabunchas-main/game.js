@@ -3532,10 +3532,9 @@ function touchmove(e) {
 //prefix to be sure and stay safe no other games use the same item name
 
 
-//sam edit: i really hope no other games duplicate this because if this fixes the error on different browsers...it's not coming back
-// function saveData(item, data) {
-// 	localStorage.setItem("packabunchas_" + item, data)
-// }
+function saveData(item, data) {
+	localStorage.setItem("packabunchas_" + item, data)
+}
 
 function loadData(item, _default) {
 	return localStorage.getItem("packabunchas_" + item) || _default
