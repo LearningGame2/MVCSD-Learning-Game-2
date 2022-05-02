@@ -72,7 +72,7 @@ pTextPos = {
 }
 
 
-
+//sam edit: useful
 numberOfPolyominos = 4
 sizeOfPolyominos = 4
 mixed = false
@@ -93,7 +93,8 @@ lerpSpeed = 0.1
 mylatesttap = 0
 bottomTextText = ""
 
-polyLeft = parseInt(loadData("polyLeft", "3")) //sam edit: this might mess everything up, maybe why only 1 level in commit 694
+polyLeft = parseInt(loadData("polyLeft", "5")) //sam edit: this might mess everything up, maybe why only 1 level in commit 694
+//recently changed 3-->5
 currentPolyTextToShow = polyLeft
 
 
@@ -1397,7 +1398,7 @@ function drawTexts() {
 
 
 	if (state == "story-intro" || state == "story-middle" || state == "story-ending") {
-		ctx.globalAlpha = 0.5
+		ctx.globalAlpha = 0.5 //sam edit: more of a question, WHAT IS THIS ONE
 		ctx.fillStyle = "#fff"
 		ctx.roundRect(storyTextPos.x - 40, storyTextPos.y - 80, 900, 700, 45)
 		ctx.fill()
@@ -1497,8 +1498,9 @@ function drawTexts() {
 
 
 	ctx.textAlign = "center";
-	let numPuzzles = 1; //sam edit: commit 694 i was only getting one level with 3, can i get 2 levels now?
-	ctx.fillText(dText + currFormat(numPuzzles), pTextPos.x, pTextPos.y); //sam edit: took out currentPolyTextToShow, replaced w/ 3
+	let numPuzzles = 5; //sam edit: commit 694 i was only getting one level with 3, can i get 2 levels now?
+	//recently 1-->5
+	ctx.fillText(dText + currFormat(numPuzzles), pTextPos.x, pTextPos.y); //sam edit: took out currentPolyTextToShow, replaced w/ numPuzzles
 	ctx.globalAlpha = 1
 
 
@@ -1544,7 +1546,8 @@ function drawBackGround() {
 
 		ctx.save()
 		ctx.clip()
-		ctx.globalAlpha = 2 //sam edit: from 0.03
+		ctx.globalAlpha = 1 //sam edit: from 0.03
+		//recently: 2-->1
 		ctx.fillStyle = "#000"
 		ctx.beginPath();
 		ctx.ellipse(150, 800, 400, 400, 0, 0, 2 * Math.PI);
@@ -1653,7 +1656,8 @@ function drawBackGround() {
 		//
 	} else {
 		ctx.strokeStyle = "#000"
-		ctx.globalAlpha = 2 //sam edit: from 0.03
+		ctx.globalAlpha = 1 //sam edit: from 0.03
+		//recently 2-->1
 		ctx.beginPath();
 		ctx.arc(300 + xxx, 500 + yyy, 100, 0, 2 * Math.PI);
 		ctx.stroke();
@@ -1825,7 +1829,7 @@ function story22() {
 }
 
 function story32() {
-	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "We hope you enjoyed our" , "learning game!", " ", " ", "    - click to see your total score! - "
+	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "We hope you enjoyed our" , "learning game!", " ", " ", "    - click to go to Level 2! - "
 	])
 
 	console.log("entering story 32")
@@ -1949,7 +1953,7 @@ function backToMenu() {
 
 			pTextPos.y = 3000 //to avoid cross positioning
 
-			setMessage(["Pick a game mode!"], true)
+			//setMessage(["Pick a game mode!"], true)
 		}, 500)
 
 
@@ -2443,20 +2447,24 @@ function generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin, _
 
 
 		var MSECONDS_TO_ADD_MARGIN = 100
-		if (seconds2 < MSECONDS_TO_ADD_MARGIN) {
-			generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin)
-		} else {
-			//if too much time is passed
-			//add an additional block to bag, to simplify solution
-			//add margin
-			//console.log(seconds2 + " added margin to " + _margin);
-			generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin + 1)
 
-			//or just quit?
-			//console.log(seconds2 + " too much time. END.");
-			//gameStarted = true
-			//GENERATING = false
-		}
+		generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin)
+
+		//sam edit: moved generateLevel up to maybe make less confusing, commented out these statements
+		// if (seconds2 < MSECONDS_TO_ADD_MARGIN) {
+		// 	generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin)
+		// } else {
+		// 	//if too much time is passed
+		// 	//add an additional block to bag, to simplify solution
+		// 	//add margin
+		// 	//console.log(seconds2 + " added margin to " + _margin);
+		// 	generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin + 1)
+
+		// 	//or just quit?
+		// 	//console.log(seconds2 + " too much time. END.");
+		// 	//gameStarted = true
+		// 	//GENERATING = false
+		// }
 	}
 	else {
 
@@ -3055,8 +3063,9 @@ function mouseUp(e) {
 			setStoryMessage([""])
 			storyState = 1
 			saveData("storyState", storyState.toString())
-			polyLeft = 3
-			currentPolyTextToShow = 3 //sam edit: is this also causing it to be only one level in cmt 694?
+			polyLeft = 5
+			currentPolyTextToShow = 5 //sam edit: is this also causing it to be only one level in cmt 694?
+			//recently: changed both above lines 3-->5
 			saveData("polyLeft", polyLeft.toString())
 			gotoMenu()
 			skipState = 6
@@ -3108,7 +3117,7 @@ function mouseUp(e) {
 			//firstTime=false; //uncomment this if commit 690 doesn't work
 			if (firstTime == false) //sam edit
 			{
-				window.location.href = "../../LGAttempt3/EndGame.php" //sam edit
+				window.location.href = "https://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/EndGame.php" //sam edit
 			}
 		} else if (skipState == 2) {
 			if (storyTimeOut != null) clearTimeout(storyTimeOut)
@@ -3136,8 +3145,8 @@ function mouseUp(e) {
 		showTutorial = false
 		saveData("showTutorial", "false")
 
-		//createLevel()
-		//gameStarted = false
+		//createLevel() //sam edit: should i add this back?
+		//gameStarted = false //what did this do?
 		isCinematic = true
 		endCinematicState = 0
 		setMessage([""])
@@ -3150,7 +3159,7 @@ function mouseUp(e) {
 			endCinematicState = 1
 			setTimeout(function() {
 				//
-				polyLeft -= numberOfPolyominos
+				polyLeft -= 1 //sam edit: changed numberOfPolyominos (noP?) --> 1
 				saveData("polyLeft", polyLeft.toString())
 				if (polyLeft > 0) {
 					createLevel()
@@ -3263,7 +3272,8 @@ function mouseUp(e) {
 			polyLeft = 1
 			storyState = 3
 			saveData("storyState", storyState.toString())
-			currentPolyTextToShow = 1 //sam edit: last possibility for why only 1 level in cmt 694
+			currentPolyTextToShow = 5 //sam edit: last possibility for why only 1 level in cmt 694
+			//recently: 1-->5
 
 			saveData("polyLeft", polyLeft.toString())
 		}
@@ -3413,7 +3423,7 @@ function mouseUp(e) {
 
 function gotoMenu() {
 	state = "menu"
-	//sam edit: no bts needed
+	//sam edit: no btns needed
 	// leftButton.originalx = w * 0.15
 	// //leftButton.x = -500
 	// rightButton.originalx = w * 0.85
@@ -3430,7 +3440,7 @@ function gotoMenu() {
 
 	pTextPos.y = 3000 //to avoid cross positioning
 
-	setMessage(["Pick a game mode!"], true)
+	//setMessage(["Pick a game mode!"], true)
 }
 
 function mouseMove(e) {
@@ -3529,6 +3539,7 @@ function saveData(item, data) {
 function loadData(item, _default) {
 	return localStorage.getItem("packabunchas_" + item) || _default
 }
+
 
 /*
 ===============================================   MUTE TOGGLE   ===============================================

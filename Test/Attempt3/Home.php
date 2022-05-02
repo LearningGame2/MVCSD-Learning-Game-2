@@ -81,7 +81,7 @@ function leaderboardRequest(){
       margin: 0;
       position: absolute;
       top: 30%;
-      left: 40%;
+      left: 30%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
@@ -89,7 +89,15 @@ function leaderboardRequest(){
       margin: 0;
       position: absolute;
       top: 30%;
-      left: 60%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .button3 {
+      margin: 0;
+      position: absolute;
+      top: 30%;
+      left: 70%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
@@ -97,14 +105,45 @@ function leaderboardRequest(){
       background-color: green;
     }
     .button2:hover {
+      background-color: green;
+    }
+    .button3:hover {
       background-color: red;
     }
+    /*
     header.page-header {
     display: flex;
     height: 50px;
     min-width: 120px;
     align-items: center;
     color: black;
+    }
+    */
+    .header {
+	     padding:10px;
+	     overflow:hidden;
+	     height:100%;
+       color:white;
+       font-family: "Lucida Console", "Courier New", monospace;
+	  }
+    .slide-right {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slide-right h1 {
+      animation: 2s slide-right;
+      animation-delay: 0s;
+    }
+
+    @keyframes slide-right {
+      from {
+        margin-left: -500px;
+      }
+
+      to {
+        margin-left: 0%;
+      }
     }
     table, th, td {
       border: 2px solid white;
@@ -124,26 +163,29 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<header class="page-header">
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <h1 style="text-align:center; color:white;">
-    Welcome,  <?php echo $_COOKIE['Username']?>!
-  </h1>
-    <span style="float:right">
-      <a href="More.php">
-        Learn More About Us
-      </a>
-    </span>
-</header>
+<div class="header slide-right">
+  <h1> Welcome,  <?php echo $_COOKIE['Username']?>! </h1>
+</div>
 
 <body style="background-color:black;">
+
+  <div id="info1">
+    Explain the levels & games here
+  </div>
+
   <div style = "text-align:center; position:relative; top:30px; font-size:48px; color:white;">
      Press Button to Play
   </div>
   <div>
-  <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
-  <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>
+    <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
+    <button type ="submit" onclick = "aboutUs()" class="button button2">About Us</button>
+    <button type ="submit" onclick = "logOut()" class="button button3">Log out</button>
   </div>
+
+  <div id="info2">
+    Explain the scoring here and requirements to get to a game between levels
+  </div>
+
   <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
      Leaderboard
   </div>
@@ -268,6 +310,9 @@ function leaderboardRequest(){
   function logOut(){
     window.location.href = "Login1.php"
     <?php session_destroy(); ?>
+  }
+  function aboutUs(){
+    window.location.href = "More.php"
   }
 
 </script>

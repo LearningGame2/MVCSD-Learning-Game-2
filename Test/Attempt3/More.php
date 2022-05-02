@@ -5,11 +5,11 @@
         <title>
             About us!
         </title>
+        <link rel="icon" type="image/x-icon" href="../LG2Images/KenyonLogo.svp.png">
     </head>
 
     <style>
         .header{
-            margin-right: -80px;
             margin-left: -80px;
 
         }
@@ -18,9 +18,10 @@
             margin-left: 100px;
         }
         .creds{
-            margin-right:
+            margin-left: -35px;
         }
         .games{
+            margin-left: -35px;
             color: rgb(91, 75, 105);
         }
     </style>
@@ -48,8 +49,8 @@
         between the levels of the quiz, and we think we succeeded.  Enjoy!<br><br><br>
     </body>
 
-    <body class="creds">
-        Credits:
+    <body>
+        <div class="creds">Credits:</div>
         <ul class="games">
             <li>Packabunchas, a colorful puzzle game by Mattia Fortunati
             <li>Astronaut in Trouble, a simple pixel side-scroller by Douglas Lopes

@@ -149,6 +149,7 @@ function checkUpdateLeaderboard(){
 let cookieScore = "cookieScore"
 let playerScore = parseInt(getCookie(cookieScore))
 document.getElementById("final-score").innerHTML = playerScore //changed this from gEBID("player-streak")
+//sam error noticed: console.log says this is not a function ^^
 
 let cookieHighStreak = "cookieHighStreak"
 let playerHighStreak = parseInt(getCookie(cookieHighStreak))
