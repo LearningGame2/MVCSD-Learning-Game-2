@@ -153,7 +153,8 @@ document.getElementById("final-score").innerHTML = playerScore //changed this fr
 
 let cookieHighStreak = "cookieHighStreak"
 let playerHighStreak = parseInt(getCookie(cookieHighStreak))
-document.getElementByID("high-streak").innerHTML = playerHighStreak
+document.getElementById("high-streak").innerHTML = playerHighStreak
+//changed from ID to Id
 
 let UpdateLeaderboard = parseInt('<?php checkUpdateLeaderboard() ?>')
 if(UpdateLeaderboard == 0){

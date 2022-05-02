@@ -1829,7 +1829,7 @@ function story22() {
 }
 
 function story32() {
-	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "We hope you enjoyed our" , "learning game!", " ", " ", "    - click to go to Level 2! - "
+	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "Well done, " , "learning game!", " ", " ", "    - click to go to Level 2! - "
 	])
 
 	console.log("entering story 32")
