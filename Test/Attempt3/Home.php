@@ -131,11 +131,11 @@ function leaderboardRequest(){
     }
     */
     .header {
-	     padding:10px;
+	     padding-left:20px;
+       padding-top:0px;
 	     overflow:hidden;
 	     height:100%;
        color:white;
-       top:-10px;
        width: 100%;
        font-family: "Lucida Console", "Courier New", monospace;
 	  }
