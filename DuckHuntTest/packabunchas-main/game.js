@@ -3118,7 +3118,7 @@ function mouseUp(e) {
 			animateMouth = false
 		} else if (skipState == 1) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
-			//story32()
+			story32()
 			//firstTime=false; //uncomment this if commit 690 doesn't work
 			if (firstTime == false) //sam edit
 			{
