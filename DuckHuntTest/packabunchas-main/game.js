@@ -80,7 +80,8 @@ mixed = false
 margin = 0
 
 gameModes = ["Run it!"]
-currentGameMode = parseInt(loadData("currentGameMode", "0"))
+//currentGameMode = parseInt(loadData("currentGameMode", "0"))
+//sam edit: today
 
 
 gridOffsetX = 0
@@ -93,7 +94,7 @@ lerpSpeed = 0.1
 mylatesttap = 0
 bottomTextText = ""
 
-polyLeft = parseInt(loadData("polyLeft", "5")) //sam edit: this might mess everything up, maybe why only 1 level in commit 694
+//polyLeft = parseInt(loadData("polyLeft", "5")) //sam edit: this might mess everything up, maybe why only 1 level in commit 694
 //recently changed 3-->5
 currentPolyTextToShow = polyLeft
 
@@ -121,7 +122,7 @@ fireAddendum = 5
 showFire = false
 showLoading = false
 //saveData("storyState", "0")
-storyState = parseInt(loadData("storyState", "0"))
+//storyState = parseInt(loadData("storyState", "0"))
 /*
 story states 
 0 = has to show intro
