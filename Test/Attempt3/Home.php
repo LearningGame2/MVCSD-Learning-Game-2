@@ -105,10 +105,10 @@ function leaderboardRequest(){
       background-color: green;
     }
     .button2:hover {
-      background-color: red;
+      background-color: green;
     }
     .button3:hover {
-      background-color: green;
+      background-color: red;
     }
     /*
     header.page-header {
@@ -167,7 +167,7 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<div class="slide right">
+<div class="header slide right">
   <h1> Welcome,  <?php echo $_COOKIE['Username']?>! </h1>
 </div>
 
@@ -181,9 +181,9 @@ function leaderboardRequest(){
      Press Button to Play
   </div>
   <div>
-  <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
-  <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>
-  <button type ="submit" onclick = "aboutUs()" class="button button3">Log out</button>
+    <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
+    <button type ="submit" onclick = "aboutUs()" class="button button2">About Us</button>
+    <button type ="submit" onclick = "logOut()" class="button button3">Log out</button>
   </div>
 
   <div id="info2">
