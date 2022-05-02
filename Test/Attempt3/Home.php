@@ -151,7 +151,7 @@ function leaderboardRequest(){
       border-collapse: collapse;
       margin-top:auto;
       margin-left:auto;
-      width:100%;
+      width:300px;
       text-align:center;
       font-size:23px;
       color:white;
@@ -200,15 +200,15 @@ function leaderboardRequest(){
       <th>Score</th>
     </tr>
     <tr>
-      <td style="width:100px"><span id="player1"></span></td>
+      <td><span id="player1"></span></td>
       <td><span id="score1"></span></td>
     </tr>
     <tr>
-      <td style="width:100px"><span id="player2"></span></td>
+      <td><span id="player2"></span></td>
       <td><span id="score2"></span></td>
     </tr>
     <tr>
-      <td style="width:100px"><span id="player3"></span></td>
+      <td><span id="player3"></span></td>
       <td><span id="score3"></span></td>
     </tr>
     <tr>
