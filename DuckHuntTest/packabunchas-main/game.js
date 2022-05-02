@@ -86,7 +86,8 @@ gameModes = ["Run it!"]
 
 gridOffsetX = 0
 
-menuText = gameModes[currentGameMode]
+menuText = gameModes[0];
+//sam edit: today
 
 
 lerpSpeed = 0.1
@@ -94,6 +95,7 @@ lerpSpeed = 0.1
 mylatesttap = 0
 bottomTextText = ""
 
+polyLeft = 5;
 //polyLeft = parseInt(loadData("polyLeft", "5")) //sam edit: this might mess everything up, maybe why only 1 level in commit 694
 //recently changed 3-->5
 currentPolyTextToShow = polyLeft
@@ -122,6 +124,7 @@ fireAddendum = 5
 showFire = false
 showLoading = false
 //saveData("storyState", "0")
+storyState = 0; //sam edit: today
 //storyState = parseInt(loadData("storyState", "0"))
 /*
 story states 
