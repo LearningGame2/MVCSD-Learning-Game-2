@@ -161,7 +161,7 @@ function leaderboardRequest(){
     .center {
       margin-left: auto;
       margin-right: auto;
-      margin-top:200px
+      margin-top:170px
     }
   </style>
 </head>
@@ -182,7 +182,7 @@ function leaderboardRequest(){
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
-  <div style = "text-align:center; position:relative; top:120px; font-size:48px; color:white;">
+  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white;">
      Leaderboard
   </div>
   <div>
