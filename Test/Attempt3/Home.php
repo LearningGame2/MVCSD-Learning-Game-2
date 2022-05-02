@@ -160,12 +160,12 @@ function leaderboardRequest(){
     .alignRight{
       position: absolute;
       top:375px;
-      right:15%;
+      right:5%;
     }
     .alignLeft{
       position: absolute;
       top:375px;
-      left:15%;
+      left:5%;
     }
     .inLine{
       display:inline-block;
