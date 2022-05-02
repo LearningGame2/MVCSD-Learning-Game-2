@@ -158,13 +158,13 @@ function leaderboardRequest(){
       font-family: "Lucida Console", "Courier New", monospace;
     }
     .alignRight{
-      margin-left:20px;
+      margin-left:100px;
       margin-right: auto;
       margin-top:170px
     }
     .alignLeft{
       margin-left:auto;
-      margin-right: 20px;
+      margin-right: 100px;
       margin-top:170px
     }
     .inLine{
