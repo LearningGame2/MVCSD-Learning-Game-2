@@ -124,8 +124,7 @@ function leaderboardRequest(){
       background-color: red;
     }
     .header {
-	     padding-left:25px;
-       padding-top:0px;
+	     padding:25px;
 	     overflow:hidden;
 	     height:100%;
        color:white;
