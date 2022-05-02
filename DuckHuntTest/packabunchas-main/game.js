@@ -1970,11 +1970,11 @@ function backToMenu() {
 
 function changeMode(_val) {
 	if (state == "menu") {
-		currentGameMode += _val
+		currentGameMode = 0
 		if (currentGameMode < 0) currentGameMode = gameModes.length - 1
 		if (currentGameMode > gameModes.length - 1) currentGameMode = 0
 		menuText = gameModes[currentGameMode]
-		saveData("currentGameMode", currentGameMode.toString())
+		//saveData("currentGameMode", currentGameMode.toString())
 	}
 }
 
