@@ -1546,7 +1546,8 @@ function drawBackGround() {
 
 		ctx.save()
 		ctx.clip()
-		ctx.globalAlpha = 2 //sam edit: from 0.03
+		ctx.globalAlpha = 1 //sam edit: from 0.03
+		//recently: 2-->1
 		ctx.fillStyle = "#000"
 		ctx.beginPath();
 		ctx.ellipse(150, 800, 400, 400, 0, 0, 2 * Math.PI);
@@ -1655,7 +1656,8 @@ function drawBackGround() {
 		//
 	} else {
 		ctx.strokeStyle = "#000"
-		ctx.globalAlpha = 2 //sam edit: from 0.03
+		ctx.globalAlpha = 1 //sam edit: from 0.03
+		//recently 2-->1
 		ctx.beginPath();
 		ctx.arc(300 + xxx, 500 + yyy, 100, 0, 2 * Math.PI);
 		ctx.stroke();
@@ -1951,7 +1953,7 @@ function backToMenu() {
 
 			pTextPos.y = 3000 //to avoid cross positioning
 
-			setMessage(["Pick a game mode!"], true)
+			//setMessage(["Pick a game mode!"], true)
 		}, 500)
 
 
@@ -3108,10 +3110,10 @@ function mouseUp(e) {
 		} else if (skipState == 1) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
 			story32()
-			//firstTime=false; //uncomment this if commit 690 doesn't work
+			firstTime=false; //uncomment this if commit 690 doesn't work
 			if (firstTime == false) //sam edit
 			{
-				window.location.href = "../../LGAttempt3/EndGame.php" //sam edit
+				window.location.href = "https://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/EndGame.php" //sam edit
 			}
 		} else if (skipState == 2) {
 			if (storyTimeOut != null) clearTimeout(storyTimeOut)
@@ -3417,7 +3419,7 @@ function mouseUp(e) {
 
 function gotoMenu() {
 	state = "menu"
-	//sam edit: no bts needed
+	//sam edit: no btns needed
 	// leftButton.originalx = w * 0.15
 	// //leftButton.x = -500
 	// rightButton.originalx = w * 0.85
@@ -3434,7 +3436,7 @@ function gotoMenu() {
 
 	pTextPos.y = 3000 //to avoid cross positioning
 
-	setMessage(["Pick a game mode!"], true)
+	//setMessage(["Pick a game mode!"], true)
 }
 
 function mouseMove(e) {
