@@ -128,12 +128,12 @@ function leaderboardRequest(){
   &nbsp;&nbsp;&nbsp;&nbsp;
   <h1 style="text-align:left; color:white;"> <!--used to be text-align:center b4 i commented out the center in .page-header-->
     Welcome,  <?php echo $_COOKIE['Username']?>!
-  </h1>
     <span style="float:right">
       <a href="More.php">
         Learn More About Us
       </a>
     </span>
+  </h1>
 </header>
 
 <body style="background-color:black;">
