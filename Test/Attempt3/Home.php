@@ -135,13 +135,9 @@ function leaderboardRequest(){
 	  }
     .slide-right {
       overflow: hidden;
-    }
-
-    .slide-right h2 {
       animation: 2s slide-right;
       animation-delay: 0s;
     }
-
     @keyframes slide-right {
       from {
         margin-left: -500px;
@@ -170,7 +166,7 @@ function leaderboardRequest(){
 </head>
 
 <div class="header slide-right">
-  <h2> Welcome,  <?php echo $_COOKIE['Username']?>! </h2>
+  Welcome,  <?php echo $_COOKIE['Username']?>!
 </div>
 
 <body style="background-color:black;">
