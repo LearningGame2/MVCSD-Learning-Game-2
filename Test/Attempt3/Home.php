@@ -191,8 +191,8 @@ function leaderboardRequest(){
   </div>
 
   <div class="inLine" style = "text-align:center; position:absolute; top:300px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
-     <span> Leaderboard </span>
-     <span> Your Stats </span>
+     <span style="left:15%"> Leaderboard </span>
+     <span style="left:15%"> Your Stats </span>
   </div>
 
   <table class="alignLeft inLine">
