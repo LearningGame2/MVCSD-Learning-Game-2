@@ -72,7 +72,7 @@ pTextPos = {
 }
 
 
-
+//sam edit: useful
 numberOfPolyominos = 4
 sizeOfPolyominos = 4
 mixed = false
@@ -1398,7 +1398,7 @@ function drawTexts() {
 
 
 	if (state == "story-intro" || state == "story-middle" || state == "story-ending") {
-		ctx.globalAlpha = 0.5
+		ctx.globalAlpha = 0.5 //sam edit: more of a question, WHAT IS THIS ONE
 		ctx.fillStyle = "#fff"
 		ctx.roundRect(storyTextPos.x - 40, storyTextPos.y - 80, 900, 700, 45)
 		ctx.fill()
@@ -2447,20 +2447,24 @@ function generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin, _
 
 
 		var MSECONDS_TO_ADD_MARGIN = 100
-		if (seconds2 < MSECONDS_TO_ADD_MARGIN) {
-			generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin)
-		} else {
-			//if too much time is passed
-			//add an additional block to bag, to simplify solution
-			//add margin
-			//console.log(seconds2 + " added margin to " + _margin);
-			generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin + 1)
 
-			//or just quit?
-			//console.log(seconds2 + " too much time. END.");
-			//gameStarted = true
-			//GENERATING = false
-		}
+		generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin)
+
+		//sam edit: moved generateLevel up to maybe make less confusing, commented out these statements
+		// if (seconds2 < MSECONDS_TO_ADD_MARGIN) {
+		// 	generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin)
+		// } else {
+		// 	//if too much time is passed
+		// 	//add an additional block to bag, to simplify solution
+		// 	//add margin
+		// 	//console.log(seconds2 + " added margin to " + _margin);
+		// 	generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin + 1)
+
+		// 	//or just quit?
+		// 	//console.log(seconds2 + " too much time. END.");
+		// 	//gameStarted = true
+		// 	//GENERATING = false
+		// }
 	}
 	else {
 
@@ -3141,8 +3145,8 @@ function mouseUp(e) {
 		showTutorial = false
 		saveData("showTutorial", "false")
 
-		//createLevel()
-		//gameStarted = false
+		//createLevel() //sam edit: should i add this back?
+		//gameStarted = false //what did this do?
 		isCinematic = true
 		endCinematicState = 0
 		setMessage([""])
