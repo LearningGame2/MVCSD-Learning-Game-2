@@ -131,11 +131,11 @@ function leaderboardRequest(){
     }
     */
     .header {
-	     padding:10px;
+	     padding-left:20px;
+       padding-top:0px;
 	     overflow:hidden;
 	     height:100%;
        color:white;
-       top:-10px;
        width: 100%;
        font-family: "Lucida Console", "Courier New", monospace;
 	  }
@@ -181,7 +181,7 @@ function leaderboardRequest(){
 
 <body style="background-color:black;">
 
-  <div style = "text-align:center; position:relative; top:30px; font-size:48px; color:white;">
+  <div style = "text-align:center; position:relative; top:25px; font-size:48px; color:white;">
      Press Button to Play
   </div>
   <div>
@@ -191,7 +191,7 @@ function leaderboardRequest(){
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
-  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
+  <div style = "text-align:center; position:relative; top:180px; font-size:48px; color:white;">
      Leaderboard
   </div>
   <div>
