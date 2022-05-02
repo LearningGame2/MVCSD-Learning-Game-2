@@ -122,8 +122,6 @@ function leaderboardRequest(){
     .slide-right {
       width: 100%;
       overflow: hidden;
-      max-width: 500px
-
     }
 
     .slide-right h1 {
@@ -158,8 +156,8 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<div class="header slide-right">
-  <span> <h1> Welcome,  <?php echo $_COOKIE['Username']?>! <h1> </span>
+<div class="header">
+  <span class="slide-right"> <h1> Welcome,  <?php echo $_COOKIE['Username']?>! <h1> </span>
   <span style="float:right;">
     <a href="More.php">
       Learn More About Us
