@@ -81,7 +81,7 @@ function leaderboardRequest(){
       margin: 0;
       position: absolute;
       top: 30%;
-      left: 40%;
+      left: 30%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
@@ -89,7 +89,15 @@ function leaderboardRequest(){
       margin: 0;
       position: absolute;
       top: 30%;
-      left: 60%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .button3 {
+      margin: 0;
+      position: absolute;
+      top: 30%;
+      left: 70%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
@@ -98,6 +106,9 @@ function leaderboardRequest(){
     }
     .button2:hover {
       background-color: red;
+    }
+    .button3:hover {
+      background-color: green;
     }
     /*
     header.page-header {
@@ -109,7 +120,7 @@ function leaderboardRequest(){
     }
     */
     .header {
-	     padding:20px;
+	     padding:10px;
 	     overflow:hidden;
 	     height:100%;
        color:white;
@@ -156,13 +167,8 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<div class="header">
-  <span class="slide-right"> <h1> Welcome,  <?php echo $_COOKIE['Username']?>! <h1> </span>
-  <span style="float:right;">
-    <a href="More.php">
-      Learn More About Us
-    </a>
-  </span>
+<div class="slide right">
+  <h1> Welcome,  <?php echo $_COOKIE['Username']?>! </h1>
 </div>
 
 <body style="background-color:black;">
@@ -177,6 +183,7 @@ function leaderboardRequest(){
   <div>
   <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
   <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>
+  <button type ="submit" onclick = "aboutUs()" class="button button3">Log out</button>
   </div>
 
   <div id="info2">
@@ -307,6 +314,9 @@ function leaderboardRequest(){
   function logOut(){
     window.location.href = "Login1.php"
     <?php session_destroy(); ?>
+  }
+  function aboutUs(){
+    window.location.href = "More.php"
   }
 
 </script>
