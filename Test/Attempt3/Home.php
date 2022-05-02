@@ -137,7 +137,7 @@ function leaderboardRequest(){
       overflow: hidden;
     }
 
-    .slide-right h1 {
+    .slide-right h2 {
       animation: 2s slide-right;
       animation-delay: 0s;
     }
@@ -170,12 +170,12 @@ function leaderboardRequest(){
 </head>
 
 <div class="header slide-right">
-  <h1> Welcome,  <?php echo $_COOKIE['Username']?>! </h1>
+  <h2> Welcome,  <?php echo $_COOKIE['Username']?>! </h2>
 </div>
 
 <body style="background-color:black;">
 
-  <div style = "text-align:center; position:relative; top:10px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace; font-weight: bold;">
+  <div style = "text-align:center; position:relative; top:10px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Press Button to Play
   </div>
   <div>
@@ -185,7 +185,7 @@ function leaderboardRequest(){
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
-  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace; font-weight: bold;">
+  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Leaderboard
   </div>
   <div>
