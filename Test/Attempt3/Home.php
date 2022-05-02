@@ -121,15 +121,6 @@ function leaderboardRequest(){
     .button4:hover {
       background-color: red;
     }
-    /*
-    header.page-header {
-    display: flex;
-    height: 50px;
-    min-width: 120px;
-    align-items: center;
-    color: black;
-    }
-    */
     .header {
 	     padding-left:20px;
        padding-top:0px;
@@ -191,7 +182,7 @@ function leaderboardRequest(){
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
-  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white;">
+  <div style = "text-align:center; position:relative; top:120px; font-size:48px; color:white;">
      Leaderboard
   </div>
   <div>
