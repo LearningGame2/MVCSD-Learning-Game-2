@@ -73,6 +73,7 @@ function leaderboardRequest(){
       cursor: pointer;
       font-family: "Lucida Console", "Courier New", monospace;
       font-size: 24px;
+      font-weight: bold;
       height:100px;
       width:250px;
       transition-duration: 0.4s;
