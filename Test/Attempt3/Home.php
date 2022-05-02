@@ -130,7 +130,7 @@ function leaderboardRequest(){
 	     height:100%;
        color:white;
        width: 100%;
-       font-weight: normal;
+       font-size: 28px;
        font-family: "Lucida Console", "Courier New", monospace;
 	  }
     .slide-right {
