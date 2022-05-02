@@ -7,16 +7,12 @@
 html, body{
     height: 100%;
     margin: 0;
-    background-image: url("/LG2Images/duck-meet-g84831808a_1920.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
 body{
     font-family:Garamond;
+    background-color:black;
 }
 
 main{
