@@ -48,7 +48,7 @@ main{
 
 .game-question-container{
     width: 80%;
-    height: 8rem;
+    height: 12rem;
     display: flex;
     align-items: center;
     justify-content: center;
