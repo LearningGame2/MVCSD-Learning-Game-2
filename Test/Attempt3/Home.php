@@ -158,7 +158,6 @@ function leaderboardRequest(){
       font-family: "Lucida Console", "Courier New", monospace;
     }
     .alignRight{
-      display:inline-block;
       margin-left:20px;
       margin-right: auto;
       margin-top:170px
@@ -167,6 +166,9 @@ function leaderboardRequest(){
       margin-left:auto;
       margin-right: 20px;
       margin-top:170px
+    }
+    .inLine{
+      display:inline-block;
     }
   </style>
 </head>
@@ -192,7 +194,7 @@ function leaderboardRequest(){
      Leaderboard
   </div>
 
-  <table class="alignLeft">
+  <table class="alignLeft inLine">
     <tr>
       <th>Player</th>
       <th>Score</th>
@@ -239,7 +241,7 @@ function leaderboardRequest(){
     </tr>
   </table>
 
-  <table class="alignRight">
+  <table class="alignRight inLine">
         <tr>
             <td> <span id = "IfPreviousScore"></span> </td>
         </tr>
