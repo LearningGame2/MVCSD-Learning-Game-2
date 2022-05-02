@@ -165,7 +165,7 @@ function leaderboardRequest(){
       font-family: "Lucida Console", "Courier New", monospace;
     }
     .center {
-      margin-left: auto;
+      margin-left:10px;
       margin-right: auto;
       margin-top:170px
     }
