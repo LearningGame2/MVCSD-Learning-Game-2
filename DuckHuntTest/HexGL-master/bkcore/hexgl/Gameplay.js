@@ -168,6 +168,8 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 	{
 		if(this.hud != null) {this.hud.display("Finish");
 		window.location.href = "../../LGAttempt3/Level4.php"}
+		let LG2multiplier = this.score
+		localStorage.setItem('cookieMiniGameMulti', LG2multiplier)
 		this.step = 100;
 		
 	}
@@ -176,6 +178,8 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 		if(this.hud != null) 
 		{this.hud.display("Destroyed");
 		window.location.href = "../../LGAttempt3/Level4.php"}
+		let LG2multiplier = this.score
+		localStorage.setItem('cookieMiniGameMulti', LG2multiplier)
 		this.step = 100;
 
 	}
