@@ -123,12 +123,13 @@ function leaderboardRequest(){
       background-color: red;
     }
     .header {
-	     padding-left:20px;
+	     padding-left:25px;
        padding-top:0px;
 	     overflow:hidden;
 	     height:100%;
        color:white;
        width: 100%;
+       font-weight: normal;
        font-family: "Lucida Console", "Courier New", monospace;
 	  }
     .slide-right {
@@ -240,6 +241,7 @@ function leaderboardRequest(){
      <span id = "IfPreviousStreak"> </span>
   </div>
 </div>
+
 </body>
 
 <script>
