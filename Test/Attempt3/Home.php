@@ -181,6 +181,7 @@ function leaderboardRequest(){
   <div style = "text-align:center; position:relative; top:10px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Press Button to Play
   </div>
+
   <div>
     <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
     <button type ="submit" onclick = "instructions()" class="button button2">Instructions</button>
@@ -238,15 +239,13 @@ function leaderboardRequest(){
       <td><span id="score10"></span></td>
     </tr>
   </table>
-</div>
-
-<div class="container">
-    <div style = "text-align:center; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
-       <span id = "IfPreviousScore"> </span>
-    </div>
-    <div style = "text-align:center; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
-       <span id = "IfPreviousStreak"> </span>
-    </div>
+  
+  <div style = "text-align:center; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+     <span id = "IfPreviousScore"> </span>
+  </div>
+  <div style = "text-align:center; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+     <span id = "IfPreviousStreak"> </span>
+  </div>
 </div>
 
 </body>
