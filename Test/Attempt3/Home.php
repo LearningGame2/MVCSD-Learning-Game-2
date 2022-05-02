@@ -200,15 +200,15 @@ function leaderboardRequest(){
       <th>Score</th>
     </tr>
     <tr>
-      <td><span id="player1"></span></td>
+      <td style="width:100px"><span id="player1"></span></td>
       <td><span id="score1"></span></td>
     </tr>
     <tr>
-      <td><span id="player2"></span></td>
+      <td style="width:100px"><span id="player2"></span></td>
       <td><span id="score2"></span></td>
     </tr>
     <tr>
-      <td><span id="player3"></span></td>
+      <td style="width:100px"><span id="player3"></span></td>
       <td><span id="score3"></span></td>
     </tr>
     <tr>
