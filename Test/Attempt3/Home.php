@@ -187,7 +187,7 @@ function leaderboardRequest(){
      Leaderboard
   </div>
 
-  <table class="alignCenter">
+  <table>
     <tr>
       <th>Player</th>
       <th>Score</th>
@@ -234,7 +234,7 @@ function leaderboardRequest(){
     </tr>
   </table>
 
-  <table class="alignCenter">
+  <table>
         <tr>
             <td> <span id = "IfPreviousScore"></span> </td>
         </tr>
