@@ -147,8 +147,7 @@ function leaderboardRequest(){
       }
     }
     table, th, td {
-      display:inline-block;
-      /*border: 2px solid white;*/
+      border: 2px solid white;
       border-collapse: collapse;
       margin-top:auto;
       margin-left:auto;
