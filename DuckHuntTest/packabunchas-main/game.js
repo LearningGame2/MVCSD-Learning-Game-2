@@ -1500,7 +1500,7 @@ function drawTexts() {
 	ctx.textAlign = "center";
 	let numPuzzles = 5; //sam edit: commit 694 i was only getting one level with 3, can i get 2 levels now?
 	//recently 1-->5
-	ctx.fillText(dText + currFormat(numPuzzles), pTextPos.x, pTextPos.y); //sam edit: took out currentPolyTextToShow, replaced w/ numPuzzles
+	//ctx.fillText(dText + currFormat(currentPolyTextToShow), pTextPos.x, pTextPos.y); //sam edit: took out currentPolyTextToShow, replaced w/ numPuzzles
 	ctx.globalAlpha = 1
 
 
@@ -3269,7 +3269,7 @@ function mouseUp(e) {
 		//and polyleft set to 1
 		//
 		if (polyLeft == 0) {
-			polyLeft = 1
+			polyLeft = 5 //sam edit: MAYBE THIS IS IT????
 			storyState = 3
 			saveData("storyState", storyState.toString())
 			currentPolyTextToShow = 5 //sam edit: last possibility for why only 1 level in cmt 694
@@ -3927,12 +3927,5 @@ setMessage(["Click to start!"], true)
 
 setStartingColors()
 setLoadingColor()
-
-//RESET GAME for testing purposes
-/*
-saveData("storyState", "0")
-saveData("polyLeft", 13)
-saveData("showTutorial", "true")
-*/
 
 update()
