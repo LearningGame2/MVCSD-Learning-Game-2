@@ -99,13 +99,25 @@ function leaderboardRequest(){
     .button2:hover {
       background-color: red;
     }
+    /*
     header.page-header {
     display: flex;
     height: 50px;
     min-width: 120px;
-    /*align-items: center;*/
+    align-items: center;
     color: black;
     }
+    */
+    .container {
+	     border:2px solid #000;
+	     padding:20px;
+	     overflow:hidden;
+	     height:100%;
+	  }
+    .container span {
+	     display:inline-block;
+	     *float:left;
+	  }
     table, th, td {
       border: 2px solid white;
       border-collapse: collapse;
@@ -124,14 +136,9 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<header class="page-header">
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</header>
-
 <div class="container">
-  <span style="float:left;"> Welcome,  <?php echo $_COOKIE['Username']?>! </span>
-  <span style="float:right">
+  <span style="color:white;"> Welcome,  <?php echo $_COOKIE['Username']?>! </span>
+  <span style="float:right; color:white;">
     <a href="More.php">
       Learn More About Us
     </a>
