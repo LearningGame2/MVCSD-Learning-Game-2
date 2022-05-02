@@ -1970,8 +1970,7 @@ function changeMode(_val) {
 		if (currentGameMode < 0) currentGameMode = gameModes.length - 1
 		if (currentGameMode > gameModes.length - 1) currentGameMode = 0
 		menuText = gameModes[currentGameMode]
-		//saveData("currentGameMode", currentGameMode.toString())
-		//sam edit: commenting out saveDatas
+		saveData("currentGameMode", currentGameMode.toString())
 	}
 }
 
@@ -3063,12 +3062,11 @@ function mouseUp(e) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
 			setStoryMessage([""])
 			storyState = 1
-			//saveData("storyState", storyState.toString())
-			//sam edit: commenting out saveDatas
+			saveData("storyState", storyState.toString())
 			polyLeft = 5
 			currentPolyTextToShow = 5 //sam edit: is this also causing it to be only one level in cmt 694?
 			//recently: changed both above lines 3-->5
-			//saveData("polyLeft", polyLeft.toString())
+			saveData("polyLeft", polyLeft.toString())
 			gotoMenu()
 			skipState = 6
 			animateMouth = false
@@ -3098,7 +3096,7 @@ function mouseUp(e) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
 			setStoryMessage([""])
 			storyState = 3
-			//saveData("storyState", storyState.toString())
+			saveData("storyState", storyState.toString())
 
 			gotoMenu()
 			animateMouth = false
@@ -3130,9 +3128,9 @@ function mouseUp(e) {
 			animateMouth = false
 		} else if (skipState == 3) {
 			//RESET GAME VAR ETC
-			// saveData("showTutorial", "true")
-			// saveData("storyState", "0")
-			// saveData("polyLeft", 10)
+			saveData("showTutorial", "true")
+			saveData("storyState", "0")
+			saveData("polyLeft", 10)
 			animateMouth = false
 			//saveData("muted", "false") //mute can stay as it is
 			location.reload();
@@ -3145,7 +3143,7 @@ function mouseUp(e) {
 		zzfx(...[effectVolume, , 155, .05, .23, .59, , .76, 8.2, , 120, .09, .15, .1, , , , .96, .02, .21]); //Win
 
 		showTutorial = false
-		//saveData("showTutorial", "false")
+		saveData("showTutorial", "false")
 
 		//createLevel() //sam edit: should i add this back?
 		//gameStarted = false //what did this do?
@@ -3162,7 +3160,7 @@ function mouseUp(e) {
 			setTimeout(function() {
 				//
 				polyLeft -= 1 //sam edit: changed numberOfPolyominos (noP?) --> 1
-				//saveData("polyLeft", polyLeft.toString())
+				saveData("polyLeft", polyLeft.toString())
 				if (polyLeft > 0) {
 					createLevel()
 				} else {
@@ -3211,7 +3209,7 @@ function mouseUp(e) {
 					// } else //sam edit
 							if (storyState == 3) {
 						storyState = 4
-						//saveData("storyState", storyState.toString())
+						saveData("storyState", storyState.toString())
 						state = "story-ending"
 						//setMessage(["Click to continue"], true)
 						canSkip = true
@@ -3263,7 +3261,7 @@ function mouseUp(e) {
 			//the middle story!
 			//so it's right to put it at story 3!
 			storyState = 3
-			//saveData("storyState", storyState.toString())
+			saveData("storyState", storyState.toString())
 		}
 
 		//In case player reloads page during ending
@@ -3273,11 +3271,11 @@ function mouseUp(e) {
 		if (polyLeft == 0) {
 			polyLeft = 1
 			storyState = 3
-			//saveData("storyState", storyState.toString())
+			saveData("storyState", storyState.toString())
 			currentPolyTextToShow = 5 //sam edit: last possibility for why only 1 level in cmt 694
 			//recently: 1-->5
 
-			//saveData("polyLeft", polyLeft.toString())
+			saveData("polyLeft", polyLeft.toString())
 		}
 
 
@@ -3534,9 +3532,9 @@ function touchmove(e) {
 //prefix to be sure and stay safe no other games use the same item name
 
 
-// function saveData(item, data) {
-// 	localStorage.setItem("packabunchas_" + item, data)
-// }
+function saveData(item, data) {
+	localStorage.setItem("packabunchas_" + item, data)
+}
 
 function loadData(item, _default) {
 	return localStorage.getItem("packabunchas_" + item) || _default
@@ -3554,14 +3552,14 @@ function mute() {
 		zzfxV = musicVolume
 		muted = true
 		music.suspend()
-		//saveData("muted", "true")
+		saveData("muted", "true")
 	} else {
 		muteButton.text = ""
 		musicVolume = .1
 		zzfxV = musicVolume
 		muted = false
 		music.resume()
-		//saveData("muted", "false")
+		saveData("muted", "false")
 	}
 }
 
