@@ -147,7 +147,6 @@ function leaderboardRequest(){
       }
     }
     table, th, td {
-      display:inline-block;
       border: 2px solid white;
       border-collapse: collapse;
       margin-top:auto;
@@ -159,6 +158,7 @@ function leaderboardRequest(){
       font-family: "Lucida Console", "Courier New", monospace;
     }
     .alignRight{
+      display:inline-block;
       margin-left:20px;
       margin-right: auto;
       margin-top:170px
