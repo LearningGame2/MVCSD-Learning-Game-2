@@ -1829,7 +1829,7 @@ function story22() {
 }
 
 function story32() {
-	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "We hope you enjoyed our" , "learning game!", " ", " ", "    - click to see your total score! - "
+	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "We hope you enjoyed our" , "learning game!", " ", " ", "    - click to go to Level 2! - "
 	])
 
 	console.log("entering story 32")
@@ -3532,13 +3532,15 @@ function touchmove(e) {
 //prefix to be sure and stay safe no other games use the same item name
 
 
-function saveData(item, data) {
-	localStorage.setItem("packabunchas_" + item, data)
-}
+//sam edit: i really hope no other games duplicate this because if this fixes the error on different browsers...it's not coming back
+// function saveData(item, data) {
+// 	localStorage.setItem("packabunchas_" + item, data)
+// }
 
-function loadData(item, _default) {
-	return localStorage.getItem("packabunchas_" + item) || _default
-}
+// function loadData(item, _default) {
+// 	return localStorage.getItem("packabunchas_" + item) || _default
+// }
+
 
 /*
 ===============================================   MUTE TOGGLE   ===============================================
