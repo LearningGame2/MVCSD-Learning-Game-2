@@ -158,7 +158,7 @@ function leaderboardRequest(){
     }
     .alignCenter{
       display:inline-block;
-      margin-left:auto;
+      margin-left:50%;
       margin-right: auto;
       margin-top:170px
     }
