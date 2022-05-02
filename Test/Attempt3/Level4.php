@@ -100,7 +100,7 @@ function promptRequest($numOfQuestions){
                 <h1>Question : <span id="question-number"></span> / 5</h1> <!--for 5 questions: changed from / 10 -->
             </div>
             <div>
-              <h1>Astronaut In Trouble Multiplier: <span id = "player-minigamemulti"></span></h1>
+              <h2>Astronaut In Trouble Multiplier: <span id = "player-minigamemulti"></span></h2>
             </div>
 
             <div class="game-question-container">
