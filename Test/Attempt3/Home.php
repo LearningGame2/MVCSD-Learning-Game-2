@@ -160,7 +160,7 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<div class="header">
+<div class="header slide-right">
   <span> <h1> Welcome,  <?php echo $_COOKIE['Username']?>! <h1> </span>
   <span style="float:right;">
     <a href="More.php">
