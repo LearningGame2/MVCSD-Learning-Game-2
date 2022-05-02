@@ -73,6 +73,7 @@ function leaderboardRequest(){
       cursor: pointer;
       font-family: "Lucida Console", "Courier New", monospace;
       font-size: 24px;
+      font-weight: bold;
       height:100px;
       width:250px;
       transition-duration: 0.4s;
@@ -123,24 +124,19 @@ function leaderboardRequest(){
       background-color: red;
     }
     .header {
-	     padding-left:25px;
-       padding-top:0px;
+	     padding:25px;
 	     overflow:hidden;
 	     height:100%;
        color:white;
        width: 100%;
-       font-weight: normal;
+       font-size: 28px;
        font-family: "Lucida Console", "Courier New", monospace;
 	  }
     .slide-right {
       overflow: hidden;
-    }
-
-    .slide-right h1 {
       animation: 2s slide-right;
       animation-delay: 0s;
     }
-
     @keyframes slide-right {
       from {
         margin-left: -500px;
@@ -151,6 +147,7 @@ function leaderboardRequest(){
       }
     }
     table, th, td {
+      display:inline-block;
       border: 2px solid white;
       border-collapse: collapse;
       margin-top:auto;
@@ -158,10 +155,11 @@ function leaderboardRequest(){
       width:40%;
       text-align:center;
       font-size:23px;
+      color:white;
       font-family: "Lucida Console", "Courier New", monospace;
     }
-    .center {
-      margin-left: auto;
+    .alignCenter{
+      margin-left:auto;
       margin-right: auto;
       margin-top:170px
     }
@@ -169,7 +167,7 @@ function leaderboardRequest(){
 </head>
 
 <div class="header slide-right">
-  <h1> Welcome,  <?php echo $_COOKIE['Username']?>! </h1>
+  Welcome,  <?php echo $_COOKIE['Username']?>!
 </div>
 
 <body style="background-color:black;">
@@ -177,6 +175,7 @@ function leaderboardRequest(){
   <div style = "text-align:center; position:relative; top:10px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Press Button to Play
   </div>
+
   <div>
     <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
     <button type ="submit" onclick = "instructions()" class="button button2">Instructions</button>
@@ -187,57 +186,67 @@ function leaderboardRequest(){
   <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Leaderboard
   </div>
-  <div>
-  <table style = "color:white;" class="center">
-  <tr>
-    <th>Player</th>
-    <th>Score</th>
-  </tr>
-  <tr>
-    <td><span id="player1"></span></td>
-    <td><span id="score1"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player2"></span></td>
-    <td><span id="score2"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player3"></span></td>
-    <td><span id="score3"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player4"></span></td>
-    <td><span id="score4"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player5"></span></td>
-    <td><span id="score5"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player6"></span></td>
-    <td><span id="score6"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player7"></span></td>
-    <td><span id="score7"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player8"></span></td>
-    <td><span id="score8"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player9"></span></td>
-    <td><span id="score9"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player10"></span></td>
-    <td><span id="score10"></span></td>
-  </tr>
-</table>
-  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
+
+  <table class="alignCenter">
+    <tr>
+      <th>Player</th>
+      <th>Score</th>
+    </tr>
+    <tr>
+      <td><span id="player1"></span></td>
+      <td><span id="score1"></span></td>
+    </tr>
+    <tr>
+      <td><span id="player2"></span></td>
+      <td><span id="score2"></span></td>
+    </tr>
+    <tr>
+      <td><span id="player3"></span></td>
+      <td><span id="score3"></span></td>
+    </tr>
+    <tr>
+      <td><span id="player4"></span></td>
+      <td><span id="score4"></span></td>
+    </tr>
+    <tr>
+      <td><span id="player5"></span></td>
+      <td><span id="score5"></span></td>
+    </tr>
+    <tr>
+      <td><span id="player6"></span></td>
+      <td><span id="score6"></span></td>
+    </tr>
+    <tr>
+      <td><span id="player7"></span></td>
+      <td><span id="score7"></span></td>
+    </tr>
+    <tr>
+      <td><span id="player8"></span></td>
+      <td><span id="score8"></span></td>
+    </tr>
+    <tr>
+      <td><span id="player9"></span></td>
+      <td><span id="score9"></span></td>
+    </tr>
+    <tr>
+      <td><span id="player10"></span></td>
+      <td><span id="score10"></span></td>
+    </tr>
+  </table>
+
+  <table class="alignCenter">
+        <tr>
+            <td>Cell content</td>
+            <td>Cell content</td>
+            <td>Cell content</td>
+        </tr>
+    </table>
+
+<div>
+  <div style = "text-align:center; font-size:28px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      <span id = "IfPreviousScore"> </span>
   </div>
-  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
+  <div style = "text-align:center; font-size:28px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      <span id = "IfPreviousStreak"> </span>
   </div>
 </div>
@@ -282,7 +291,7 @@ function leaderboardRequest(){
     document.getElementById("IfPreviousScore").innerHTML = "Your Last Score: " + parseInt(getCookie("cookieScore"));
   }
   if(getCookie("cookieHighStreak")!= null){
-    document.getElementById("IfPreviousScore").innerHTML = "Your Last Highest Streak: " + getCookie("cookieHighStreak");
+    document.getElementById("IfPreviousStreak").innerHTML = "Your Last Highest Streak: " + getCookie("cookieHighStreak");
   }
 
 
