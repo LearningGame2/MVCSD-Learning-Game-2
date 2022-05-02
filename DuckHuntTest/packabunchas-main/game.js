@@ -3130,7 +3130,7 @@ function mouseUp(e) {
 			//RESET GAME VAR ETC
 			saveData("showTutorial", "true")
 			saveData("storyState", "0")
-			saveData("polyLeft", 10)
+			saveData("polyLeft", 5) //sam edit: 10-->5
 			animateMouth = false
 			//saveData("muted", "false") //mute can stay as it is
 			location.reload();
@@ -3268,15 +3268,17 @@ function mouseUp(e) {
 		//state is set as pre-ending
 		//and polyleft set to 1
 		//
-		if (polyLeft == 0) {
-			polyLeft = 5 //sam edit: MAYBE THIS IS IT????
-			storyState = 3
-			saveData("storyState", storyState.toString())
-			currentPolyTextToShow = 5 //sam edit: last possibility for why only 1 level in cmt 694
-			//recently: 1-->5
 
-			saveData("polyLeft", polyLeft.toString())
-		}
+		//sam edit: commenting this out i can't fucking take it
+		// if (polyLeft == 0) {
+		// 	polyLeft = 5 //sam edit: MAYBE THIS IS IT????
+		// 	storyState = 3
+		// 	saveData("storyState", storyState.toString())
+		// 	currentPolyTextToShow = 5 //sam edit: last possibility for why only 1 level in cmt 694
+		// 	//recently: 1-->5
+
+		// 	saveData("polyLeft", polyLeft.toString())
+		// }
 
 
 		setTimeout(function() {
