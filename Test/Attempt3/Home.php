@@ -154,11 +154,12 @@ function leaderboardRequest(){
       width:40%;
       text-align:center;
       font-size:23px;
+      color:white;
       font-family: "Lucida Console", "Courier New", monospace;
     }
     .alignCenter{
       display:inline-block;
-      margin-left:50%;
+      margin-left:auto;
       margin-right: auto;
       margin-top:170px
     }
@@ -185,7 +186,7 @@ function leaderboardRequest(){
   <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Leaderboard
   </div>
-  <table style = "color:white;" class="alignCenter">
+  <table class="alignCenter">
     <tr>
       <th>Player</th>
       <th>Score</th>
