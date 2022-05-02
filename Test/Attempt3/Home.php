@@ -126,16 +126,14 @@ function leaderboardRequest(){
 
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <div>
-  <h1 style="text-align:left; color:white;"> <!--used to be text-align:center b4 i commented out the center in .page-header-->
-    Welcome,  <?php echo $_COOKIE['Username']?>!
+  <h1 style="color:white;"> <!--used to be text-align:center b4 i commented out the center in .page-header-->
+    <span> Welcome,  <?php echo $_COOKIE['Username']?>! </span>
     <span style="float:right; display:inline-block;">
       <a href="More.php">
         Learn More About Us
       </a>
     </span>
   </h1>
-</div>
 </header>
 
 <body style="background-color:black;">
