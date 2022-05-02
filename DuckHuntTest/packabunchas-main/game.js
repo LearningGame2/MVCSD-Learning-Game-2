@@ -2530,7 +2530,8 @@ function sendRandomMessage() {
 	shuffleArray(randomMessages)
 	setMessage(randomMessages.slice(0, 2), false)
 
-	helpTimeout = setTimeout(sendRandomMessage, 30000)
+	helpTimeout = setTimeout(sendRandomMessage, 1000)
+	//sam edit
 }
 
 function createLevel() {
@@ -3117,7 +3118,7 @@ function mouseUp(e) {
 			animateMouth = false
 		} else if (skipState == 1) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
-			story32()
+			//story32()
 			//firstTime=false; //uncomment this if commit 690 doesn't work
 			if (firstTime == false) //sam edit
 			{
@@ -3219,7 +3220,7 @@ function mouseUp(e) {
 						canSkip = true
 						animateMouth = true
 						setStoryMessage(["PACKABUNCHAS!!!", "We did it, Spacey!!!", " ", "WE ACTUALLY RESCUED ALL", " THOSE BLOCKYCHUMS!", " ",
-							"Let's celebrate!", " ", "(ﾉ^ヮ^)ﾉ*:・ﾟ✧"
+							"Let's celebrate!", " ", "(ﾉ^ヮ^)ﾉ*:・ﾟ✧"," ", "      - click to go to Level 2 -"
 						])
 
 
