@@ -182,15 +182,13 @@ function leaderboardRequest(){
      Press Button to Play
   </div>
 
-  <div class="container">
+  <div>
     <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
     <button type ="submit" onclick = "instructions()" class="button button2">Instructions</button>
     <button type ="submit" onclick = "aboutUs()" class="button button3">About Us</button>
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
-<div class="container">
-  <div class="container">
   <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Leaderboard
   </div>
@@ -240,16 +238,13 @@ function leaderboardRequest(){
       <td><span id="score10"></span></td>
     </tr>
   </table>
-</div>
-<div class="container">
+
   <div style = "text-align:center; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      <span id = "IfPreviousScore"> </span>
   </div>
   <div style = "text-align:center; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      <span id = "IfPreviousStreak"> </span>
   </div>
-</div>
-</div>
 
 </body>
 
