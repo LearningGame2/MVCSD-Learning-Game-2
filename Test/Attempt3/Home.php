@@ -148,13 +148,9 @@ function leaderboardRequest(){
     }
     .container{
       display:inline-block;
-      border:2px solid white;
-      padding:40px;
       overflow:hidden;
       width:80%;
       height:100%;
-      margin-left: auto;
-      margin-right: 10px;
     }
     table, th, td {
       border: 2px solid white;
@@ -166,10 +162,16 @@ function leaderboardRequest(){
       font-size:23px;
       font-family: "Lucida Console", "Courier New", monospace;
     }
-    .center {
+    .alignLeft{
       display:inline-block;
       margin-left:10px;
       margin-right: auto;
+      margin-top:170px
+    }
+    .alignRight{
+      display:inline-block;
+      margin-left:auto;
+      margin-right:10px;
       margin-top:170px
     }
   </style>
@@ -195,7 +197,7 @@ function leaderboardRequest(){
   <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Leaderboard
   </div>
-  <table style = "color:white;" class="center">
+  <table style = "color:white;" class="container alignLeft">
     <tr>
       <th>Player</th>
       <th>Score</th>
@@ -242,7 +244,7 @@ function leaderboardRequest(){
     </tr>
   </table>
 
-<div class="container">
+<div class="container alignRight">
   <div style = "text-align:center; font-size:28px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      <span id = "IfPreviousScore"> </span>
   </div>
