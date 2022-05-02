@@ -122,7 +122,6 @@ function leaderboardRequest(){
     .slide-right {
       width: 100%;
       overflow: hidden;
-      margin-left: 400px;
       max-width: 500px
 
     }
