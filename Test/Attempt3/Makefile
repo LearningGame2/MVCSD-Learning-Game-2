@@ -20,7 +20,6 @@ PutHTML:
 		cp Game.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		chmod 777 More.php
 		cp More.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
-		chmod 777 KenyonLogo.ico
 		cp LG2Images/KenyonLogo.ico /var/www/html/class/ssd/$(USER)/LGAttempt3/LG2Images/
 
 		echo "Current contents of your HTML directory: "
