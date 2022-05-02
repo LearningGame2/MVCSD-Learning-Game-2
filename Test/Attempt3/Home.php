@@ -81,7 +81,7 @@ function leaderboardRequest(){
       margin: 0;
       position: absolute;
       top: 30%;
-      left: 30%;
+      left: 20%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
@@ -89,7 +89,7 @@ function leaderboardRequest(){
       margin: 0;
       position: absolute;
       top: 30%;
-      left: 50%;
+      left: 40%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
@@ -97,7 +97,15 @@ function leaderboardRequest(){
       margin: 0;
       position: absolute;
       top: 30%;
-      left: 70%;
+      left: 60%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .button4 {
+      margin: 0;
+      position: absolute;
+      top: 30%;
+      left: 80%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
@@ -108,6 +116,9 @@ function leaderboardRequest(){
       background-color: green;
     }
     .button3:hover {
+      background-color: green;
+    }
+    .button4:hover {
       background-color: red;
     }
     /*
@@ -169,21 +180,14 @@ function leaderboardRequest(){
 
 <body style="background-color:black;">
 
-  <div id="info1">
-    Explain the levels & games here
-  </div>
-
   <div style = "text-align:center; position:relative; top:30px; font-size:48px; color:white;">
      Press Button to Play
   </div>
   <div>
     <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
-    <button type ="submit" onclick = "aboutUs()" class="button button2">About Us</button>
-    <button type ="submit" onclick = "logOut()" class="button button3">Log out</button>
-  </div>
-
-  <div id="info2">
-    Explain the scoring here and requirements to get to a game between levels
+    <button type ="submit" onclick = "instructions()" class="button button2">Instructions</button>
+    <button type ="submit" onclick = "aboutUs()" class="button button3">About Us</button>
+    <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
   <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
@@ -312,6 +316,9 @@ function leaderboardRequest(){
     <?php session_destroy(); ?>
   }
   function aboutUs(){
+    window.location.href = "More.php"
+  }
+  function instructions(){
     window.location.href = "More.php"
   }
 
