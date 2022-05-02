@@ -235,10 +235,11 @@ function leaderboardRequest(){
     <td><span id="score10"></span></td>
   </tr>
 </table>
-  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
+
+  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      <span id = "IfPreviousScore"> </span>
   </div>
-  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
+  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      <span id = "IfPreviousStreak"> </span>
   </div>
 </div>
@@ -283,7 +284,7 @@ function leaderboardRequest(){
     document.getElementById("IfPreviousScore").innerHTML = "Your Last Score: " + parseInt(getCookie("cookieScore"));
   }
   if(getCookie("cookieHighStreak")!= null){
-    document.getElementById("IfPreviousScore").innerHTML = "Your Last Highest Streak: " + getCookie("cookieHighStreak");
+    document.getElementById("IfPreviousStreak").innerHTML = "Your Last Highest Streak: " + getCookie("cookieHighStreak");
   }
 
 
