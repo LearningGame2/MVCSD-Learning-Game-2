@@ -146,6 +146,16 @@ function leaderboardRequest(){
         margin-left: 0%;
       }
     }
+    .container{
+      border:2px solid #000;
+      padding:20px;
+      overflow:hidden;
+      height:100%;
+    }
+    .container span {
+      display:inline-block;
+      *float:left;
+    }
     table, th, td {
       border: 2px solid white;
       border-collapse: collapse;
@@ -180,63 +190,68 @@ function leaderboardRequest(){
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
-  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
-     Leaderboard
-  </div>
-  <div>
-  <table style = "color:white;" class="center">
-  <tr>
-    <th>Player</th>
-    <th>Score</th>
-  </tr>
-  <tr>
-    <td><span id="player1"></span></td>
-    <td><span id="score1"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player2"></span></td>
-    <td><span id="score2"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player3"></span></td>
-    <td><span id="score3"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player4"></span></td>
-    <td><span id="score4"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player5"></span></td>
-    <td><span id="score5"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player6"></span></td>
-    <td><span id="score6"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player7"></span></td>
-    <td><span id="score7"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player8"></span></td>
-    <td><span id="score8"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player9"></span></td>
-    <td><span id="score9"></span></td>
-  </tr>
-  <tr>
-    <td><span id="player10"></span></td>
-    <td><span id="score10"></span></td>
-  </tr>
-</table>
+<div class="container">
+  <span>
+    <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+       Leaderboard
+    </div>
 
-  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
-     <span id = "IfPreviousScore"> </span>
-  </div>
-  <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
-     <span id = "IfPreviousStreak"> </span>
-  </div>
+    <table style = "color:white;" class="center">
+      <tr>
+        <th>Player</th>
+        <th>Score</th>
+      </tr>
+      <tr>
+        <td><span id="player1"></span></td>
+        <td><span id="score1"></span></td>
+      </tr>
+      <tr>
+        <td><span id="player2"></span></td>
+        <td><span id="score2"></span></td>
+      </tr>
+      <tr>
+        <td><span id="player3"></span></td>
+        <td><span id="score3"></span></td>
+      </tr>
+      <tr>
+        <td><span id="player4"></span></td>
+        <td><span id="score4"></span></td>
+      </tr>
+      <tr>
+        <td><span id="player5"></span></td>
+        <td><span id="score5"></span></td>
+      </tr>
+      <tr>
+        <td><span id="player6"></span></td>
+        <td><span id="score6"></span></td>
+      </tr>
+      <tr>
+        <td><span id="player7"></span></td>
+        <td><span id="score7"></span></td>
+      </tr>
+      <tr>
+        <td><span id="player8"></span></td>
+        <td><span id="score8"></span></td>
+      </tr>
+      <tr>
+        <td><span id="player9"></span></td>
+        <td><span id="score9"></span></td>
+      </tr>
+      <tr>
+        <td><span id="player10"></span></td>
+        <td><span id="score10"></span></td>
+      </tr>
+    </table>
+  <span>
+
+  <span style="float:right">
+    <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+       <span id = "IfPreviousScore"> </span>
+    </div>
+    <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+       <span id = "IfPreviousStreak"> </span>
+    </div>
+  </span>
 </div>
 
 </body>
