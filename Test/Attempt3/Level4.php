@@ -189,7 +189,10 @@ let cookieStreak = "cookieStreak"
 let cookieMiniGameMulti = "cookieMiniGameMulti"
 let cookieHighStreak = "cookieHighStreak"
 
+let miniGameTest = localStorage.getItem(cookieMiniGameMulti);
+console.log(miniGameTest)
 let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
+
 document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
 
 localStorage.setItem('cookieMiniGameMulti', 1)
