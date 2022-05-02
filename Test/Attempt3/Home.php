@@ -151,7 +151,7 @@ function leaderboardRequest(){
       border-collapse: collapse;
       margin-top:auto;
       margin-left:auto;
-      width:300px;
+      width:400px;
       text-align:center;
       font-size:23px;
       color:white;
