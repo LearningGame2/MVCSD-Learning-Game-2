@@ -106,6 +106,17 @@ function leaderboardRequest(){
     /*align-items: center;*/
     color: black;
     }
+    .container {
+	     border:2px solid #000;
+	     padding:20px;
+	     overflow:hidden;
+	     height:100%;
+       color: white;
+	   }
+    .container span {
+	     display:inline-block;
+	     *float:left;
+	   }
     table, th, td {
       border: 2px solid white;
       border-collapse: collapse;
@@ -126,14 +137,14 @@ function leaderboardRequest(){
 
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <h1 style="color:white;"> <!--used to be text-align:center b4 i commented out the center in .page-header-->
+  <div class="container">
     <span> Welcome,  <?php echo $_COOKIE['Username']?>! </span>
     <span style="float:right; display:inline-block;">
       <a href="More.php">
         Learn More About Us
       </a>
     </span>
-  </h1>
+  </div>
 </header>
 
 <body style="background-color:black;">
