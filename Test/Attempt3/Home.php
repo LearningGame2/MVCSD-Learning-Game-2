@@ -159,13 +159,13 @@ function leaderboardRequest(){
     }
     .alignRight{
       position: absolute;
-      top:200px;
-      right:10%;
+      top:300px;
+      right:15%;
     }
     .alignLeft{
       position: absolute;
-      top:200px;
-      left:10%;
+      top:300px;
+      left:15%;
     }
     .inLine{
       display:inline-block;
