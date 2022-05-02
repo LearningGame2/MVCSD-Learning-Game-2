@@ -135,10 +135,11 @@ function leaderboardRequest(){
 	     overflow:hidden;
 	     height:100%;
        color:white;
+       top:-10px;
+       width: 100%;
        font-family: "Lucida Console", "Courier New", monospace;
 	  }
     .slide-right {
-      width: 100%;
       overflow: hidden;
     }
 
