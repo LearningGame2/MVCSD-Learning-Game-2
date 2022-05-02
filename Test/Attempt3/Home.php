@@ -71,6 +71,7 @@ function leaderboardRequest(){
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
+      font-family: "Lucida Console", "Courier New", monospace;
       font-size: 24px;
       height:100px;
       width:250px;
@@ -182,7 +183,7 @@ function leaderboardRequest(){
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
-  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white; font-family: font-family: 'Lucida Console', 'Courier New', monospace;">
+  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Leaderboard
   </div>
   <div>
