@@ -93,7 +93,8 @@ lerpSpeed = 0.1
 mylatesttap = 0
 bottomTextText = ""
 
-polyLeft = parseInt(loadData("polyLeft", "3")) //sam edit: this might mess everything up, maybe why only 1 level in commit 694
+polyLeft = parseInt(loadData("polyLeft", "5")) //sam edit: this might mess everything up, maybe why only 1 level in commit 694
+//recently changed 3-->5
 currentPolyTextToShow = polyLeft
 
 
@@ -1497,8 +1498,9 @@ function drawTexts() {
 
 
 	ctx.textAlign = "center";
-	let numPuzzles = 1; //sam edit: commit 694 i was only getting one level with 3, can i get 2 levels now?
-	ctx.fillText(dText + currFormat(numPuzzles), pTextPos.x, pTextPos.y); //sam edit: took out currentPolyTextToShow, replaced w/ 3
+	let numPuzzles = 5; //sam edit: commit 694 i was only getting one level with 3, can i get 2 levels now?
+	//recently 1-->5
+	ctx.fillText(dText + currFormat(numPuzzles), pTextPos.x, pTextPos.y); //sam edit: took out currentPolyTextToShow, replaced w/ numPuzzles
 	ctx.globalAlpha = 1
 
 
@@ -3055,8 +3057,9 @@ function mouseUp(e) {
 			setStoryMessage([""])
 			storyState = 1
 			saveData("storyState", storyState.toString())
-			polyLeft = 3
-			currentPolyTextToShow = 3 //sam edit: is this also causing it to be only one level in cmt 694?
+			polyLeft = 5
+			currentPolyTextToShow = 5 //sam edit: is this also causing it to be only one level in cmt 694?
+			//recently: changed both above lines 3-->5
 			saveData("polyLeft", polyLeft.toString())
 			gotoMenu()
 			skipState = 6
@@ -3263,7 +3266,8 @@ function mouseUp(e) {
 			polyLeft = 1
 			storyState = 3
 			saveData("storyState", storyState.toString())
-			currentPolyTextToShow = 1 //sam edit: last possibility for why only 1 level in cmt 694
+			currentPolyTextToShow = 5 //sam edit: last possibility for why only 1 level in cmt 694
+			//recently: 1-->5
 
 			saveData("polyLeft", polyLeft.toString())
 		}

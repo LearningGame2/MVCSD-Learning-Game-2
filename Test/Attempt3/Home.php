@@ -103,7 +103,7 @@ function leaderboardRequest(){
     display: flex;
     height: 50px;
     min-width: 120px;
-    align-items: center;
+    /*align-items: center;*/
     color: black;
     }
     table, th, td {
@@ -126,7 +126,7 @@ function leaderboardRequest(){
 
 <header class="page-header">
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <h1 style="text-align:center; color:white;">
+  <h1 style="text-align:left; color:white;"> <!--used to be text-align:center b4 i commented out the center in .page-header-->
     Welcome,  <?php echo $_COOKIE['Username']?>!
   </h1>
     <span style="float:right">
@@ -137,6 +137,11 @@ function leaderboardRequest(){
 </header>
 
 <body style="background-color:black;">
+
+  <div id="info1">
+    Explain the levels & games here
+  </div>
+
   <div style = "text-align:center; position:relative; top:30px; font-size:48px; color:white;">
      Press Button to Play
   </div>
@@ -144,6 +149,11 @@ function leaderboardRequest(){
   <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
   <button type ="submit" onclick = "logOut()" class="button button2">Log out</button>
   </div>
+
+  <div id="info2">
+    Explain the scoring here and requirements to get to a game between levels
+  </div>
+
   <div style = "text-align:center; position:relative; top:185px; font-size:48px; color:white;">
      Leaderboard
   </div>
