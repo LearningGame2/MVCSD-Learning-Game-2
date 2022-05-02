@@ -113,7 +113,8 @@ function leaderboardRequest(){
 	     overflow:hidden;
 	     height:100%;
        color:white;
-       font-size:48px;
+       font-size:28px;
+       font-family: "Lucida Console", "Courier New", monospace;
 	  }
     .header span {
 	     display:inline-block;
