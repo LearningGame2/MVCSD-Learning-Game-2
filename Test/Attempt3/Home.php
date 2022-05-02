@@ -172,7 +172,7 @@ function leaderboardRequest(){
 
 <body style="background-color:black;">
 
-  <div style = "text-align:center; position:relative; top:10px; font-size:48px; color:white;">
+  <div style = "text-align:center; position:relative; top:10px; font-size:48px; color:white; font-family: "Lucida Console", "Courier New", monospace;">
      Press Button to Play
   </div>
   <div>
@@ -182,7 +182,7 @@ function leaderboardRequest(){
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
-  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white;">
+  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white; font-family: "Lucida Console", "Courier New", monospace;">
      Leaderboard
   </div>
   <div>
