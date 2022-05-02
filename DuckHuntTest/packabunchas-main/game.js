@@ -3537,9 +3537,9 @@ function touchmove(e) {
 // 	localStorage.setItem("packabunchas_" + item, data)
 // }
 
-// function loadData(item, _default) {
-// 	return localStorage.getItem("packabunchas_" + item) || _default
-// }
+function loadData(item, _default) {
+	return localStorage.getItem("packabunchas_" + item) || _default
+}
 
 
 /*
