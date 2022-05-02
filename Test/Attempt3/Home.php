@@ -159,12 +159,12 @@ function leaderboardRequest(){
     }
     .alignRight{
       position: absolute;
-      top:350px;
+      top:375px;
       right:15%;
     }
     .alignLeft{
       position: absolute;
-      top:350px;
+      top:375px;
       left:15%;
     }
     .inLine{
@@ -190,7 +190,7 @@ function leaderboardRequest(){
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
-  <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+  <div style = "text-align:center; position:absolute; top:150px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Leaderboard
   </div>
 
