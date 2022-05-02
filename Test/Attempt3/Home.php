@@ -147,11 +147,12 @@ function leaderboardRequest(){
       }
     }
     table, th, td {
+      display: inline;
       border: 2px solid white;
       border-collapse: collapse;
       margin-top:auto;
       margin-left:auto;
-      width:40%;
+      width:100%;
       text-align:center;
       font-size:23px;
       color:white;
