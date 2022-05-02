@@ -147,7 +147,6 @@ function leaderboardRequest(){
       }
     }
     table, th, td {
-      display:inline-block;
       border: 2px solid white;
       border-collapse: collapse;
       margin-top:auto;
@@ -236,21 +235,12 @@ function leaderboardRequest(){
 
   <table class="alignCenter">
         <tr>
-            <td>Cell content</td>
-            <td>Cell content</td>
-            <td>Cell content</td>
+            <td> <span id = "IfPreviousScore"></span> </td>
+        </tr>
+        <tr>
+            <td> <span id = "IfPreviousStreak"></span> </td>
         </tr>
     </table>
-
-<div>
-  <div style = "text-align:center; font-size:28px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
-     <span id = "IfPreviousScore"> </span>
-  </div>
-  <div style = "text-align:center; font-size:28px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
-     <span id = "IfPreviousStreak"> </span>
-  </div>
-</div>
-
 </body>
 
 <script>
