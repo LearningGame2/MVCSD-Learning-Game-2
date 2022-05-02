@@ -126,10 +126,6 @@ function leaderboardRequest(){
        color:white;
        font-family: "Lucida Console", "Courier New", monospace;
 	  }
-    .header span {
-	     display:inline-block;
-	     *float:left;
-	  }
     .slide-right {
       width: 100%;
       overflow: hidden;
@@ -167,7 +163,7 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<div class="header slide right">
+<div class="header slide-right">
   <h1> Welcome,  <?php echo $_COOKIE['Username']?>! </h1>
 </div>
 
