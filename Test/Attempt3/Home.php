@@ -108,13 +108,14 @@ function leaderboardRequest(){
     color: black;
     }
     */
-    .container {
-	     border:2px solid #000;
+    .header {
 	     padding:20px;
 	     overflow:hidden;
 	     height:100%;
+       color:white;
+       font-size:40px;
 	  }
-    .container span {
+    .header span {
 	     display:inline-block;
 	     *float:left;
 	  }
@@ -136,9 +137,9 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<div class="container">
-  <span style="color:white;"> Welcome,  <?php echo $_COOKIE['Username']?>! </span>
-  <span style="float:right; color:white;">
+<div class="header">
+  <span> Welcome,  <?php echo $_COOKIE['Username']?>! </span>
+  <span style="float:right;">
     <a href="More.php">
       Learn More About Us
     </a>
