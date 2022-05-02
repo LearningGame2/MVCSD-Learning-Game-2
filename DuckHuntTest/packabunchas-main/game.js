@@ -3159,7 +3159,7 @@ function mouseUp(e) {
 			endCinematicState = 1
 			setTimeout(function() {
 				//
-				polyLeft -= numberOfPolyominos
+				polyLeft -= 1 //sam edit: changed numberOfPolyominos (noP?) --> 1
 				saveData("polyLeft", polyLeft.toString())
 				if (polyLeft > 0) {
 					createLevel()
