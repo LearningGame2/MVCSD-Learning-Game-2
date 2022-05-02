@@ -186,6 +186,7 @@ function leaderboardRequest(){
   <div style = "text-align:center; position:relative; top:150px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Leaderboard
   </div>
+
   <table class="alignCenter">
     <tr>
       <th>Player</th>
@@ -235,14 +236,20 @@ function leaderboardRequest(){
 
   <table class="alignCenter">
         <tr>
-          <div style = "text-align:center; font-size:28px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
-             <span id = "IfPreviousScore"> </span>
-          </div>
-          <div style = "text-align:center; font-size:28px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
-             <span id = "IfPreviousStreak"> </span>
-          </div>
+            <td>Cell content</td>
+            <td>Cell content</td>
+            <td>Cell content</td>
         </tr>
     </table>
+
+<div>
+  <div style = "text-align:center; font-size:28px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+     <span id = "IfPreviousScore"> </span>
+  </div>
+  <div style = "text-align:center; font-size:28px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+     <span id = "IfPreviousStreak"> </span>
+  </div>
+</div>
 
 </body>
 
