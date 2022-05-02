@@ -2558,12 +2558,12 @@ function createLevel() {
 		}, 500)
 
 
-		if (gameModes[currentGameMode] == "Run it!") {
+		//if (gameModes[currentGameMode] == "Run it!") {
 			numberOfPolyominos = 4
 			sizeOfPolyominos = 4
 			mixed = false
 			margin = 2
-		} 
+		//} 
 		// else if (gameModes[currentGameMode] == "MIX") {
 		// 	numberOfPolyominos = 8
 		// 	sizeOfPolyominos = 5
