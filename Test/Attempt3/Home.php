@@ -113,7 +113,7 @@ function leaderboardRequest(){
 	     overflow:hidden;
 	     height:100%;
        color:white;
-       font-size:40px;
+       font-size:48px;
 	  }
     .header span {
 	     display:inline-block;
