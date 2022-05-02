@@ -113,7 +113,6 @@ function leaderboardRequest(){
 	     overflow:hidden;
 	     height:100%;
        color:white;
-       font-size:28px;
        font-family: "Lucida Console", "Courier New", monospace;
 	  }
     .header span {
@@ -130,7 +129,7 @@ function leaderboardRequest(){
 
     .slide-right h1 {
       animation: 2s slide-right;
-      animation-delay: 2s;
+      animation-delay: 0s;
     }
 
     @keyframes slide-right {
