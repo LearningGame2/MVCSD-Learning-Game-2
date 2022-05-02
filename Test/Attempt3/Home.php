@@ -152,15 +152,20 @@ function leaderboardRequest(){
       border-collapse: collapse;
       margin-top:auto;
       margin-left:auto;
-      width:60%;
+      width:100%;
       text-align:center;
       font-size:23px;
       color:white;
       font-family: "Lucida Console", "Courier New", monospace;
     }
-    .alignCenter{
-      margin-left:auto;
+    .alignRight{
+      margin-left:20px;
       margin-right: auto;
+      margin-top:170px
+    }
+    .alignLeft{
+      margin-left:auto;
+      margin-right: 20px;
       margin-top:170px
     }
   </style>
@@ -187,7 +192,7 @@ function leaderboardRequest(){
      Leaderboard
   </div>
 
-  <table>
+  <table class="alignLeft">
     <tr>
       <th>Player</th>
       <th>Score</th>
@@ -234,7 +239,7 @@ function leaderboardRequest(){
     </tr>
   </table>
 
-  <table>
+  <table class="alignRight">
         <tr>
             <td> <span id = "IfPreviousScore"></span> </td>
         </tr>
