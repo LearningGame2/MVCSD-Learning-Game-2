@@ -11,12 +11,7 @@ html, body{
 
 
 body{
-    font-family: 'Lucida Console', 'Courier New', monospace;
     background-color:black;
-    color:white;
-    text-align:center;
-    font-size:300%;
-    line-height: 100px
 }
 
 main{
