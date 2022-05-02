@@ -3405,7 +3405,7 @@ function mouseUp(e) {
 					storyTimeOut = setTimeout(function() {
 						skipState = 1
 						animateMouth = false
-					}, 6000)
+					}, 200)
 
 					//setTimeout(function() {
 
@@ -3417,7 +3417,7 @@ function mouseUp(e) {
 				}
 
 			}
-		}, 500)
+		}, 100)
 
 
 	}
