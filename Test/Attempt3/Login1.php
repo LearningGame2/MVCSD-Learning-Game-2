@@ -56,9 +56,9 @@
       <label style="color:white; font-family:Garamond"> Password: </label><input type = "password" name = "password" class = "box" /><br/><br />
       <button type = "submit" value = " Submit ">Submit</button>
     </form>
-    <form class = "login_form">
-      <button type = "submit" id = "welcome-back-button" onclick = "login()">Log in as <span id = "welcome-back-text"></span></button>
-   </form>
+    <div>
+      <button class = "button" type = "submit" id = "welcome-back-button" onclick = "login()" >Log in as <span id = "welcome-back-text"></span></button>
+    </div>
     <div style = "font-size:30px; color:red; margin-top:10px; text-align:center; position:relative; left:0%">
       <?php echo $error; ?>
     </div>
