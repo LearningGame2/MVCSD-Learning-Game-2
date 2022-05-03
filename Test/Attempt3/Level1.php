@@ -364,7 +364,7 @@ function handleNextQuestion() {
                 handleEndGame()//ends game if index number greater than 9 meaning we're already at the 8 question
             }
             resetOptionBackground()
-        }, 10000);
+        }, 5000);
 }
 
 //sets options background back to null after display the right/wrong colors
