@@ -74,8 +74,9 @@
   if(GovernmentName != null && Username != null){
    document.getElementById("welcome-back-text").innerHTML = GovernmentName;
   }
-  else{
+  else if(GovernmentName== null || Username == null){
     resetBtn.disabled="disabled";
+    console.log("disabled")
   }
 
   function login(){
