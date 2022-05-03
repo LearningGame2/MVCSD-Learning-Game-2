@@ -57,7 +57,6 @@
       <button type = "submit" value = " Submit ">Submit</button>
     </form>
     <div style="text-align:center;">
-      <h1 style="color:white"> --- OR --- </h1>
       <button class="button" type = "submit" id = "welcome-back-button" onclick = "login()" >Log in as <span id = "welcome-back-text"></span></button>
     </div>
     <div style = "font-size:30px; color:red; margin-top:10px; text-align:center; position:relative; left:0%">
