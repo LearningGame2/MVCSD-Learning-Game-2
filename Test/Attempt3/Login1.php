@@ -72,10 +72,10 @@
   console.log(Username);
   console.log("test")
   let resetBtn=document.getElementById("welcome-back-button");
-  if(GovernmentName != null && Username != null){
+  if(GovernmentName != "" && Username != ""){
    document.getElementById("welcome-back-text").innerHTML = GovernmentName;
   }
-  else if(GovernmentName== null || Username == null){
+  else if(GovernmentName== "" || Username == ""){
     resetBtn.disabled="disabled";
     console.log("disabled")
   }
