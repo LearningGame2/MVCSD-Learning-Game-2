@@ -60,9 +60,6 @@ function leaderboardRequest(){
   </title>
 
   <style>
-    *{
-      position:relative;
-    }
     .button {
       text-align: center;
       background-color: #197DDD;
@@ -84,7 +81,7 @@ function leaderboardRequest(){
     }
     .button1 {
       margin: 0;
-      position: absolute;
+      position:relative;
       top: 30%;
       left: 20%;
       -ms-transform: translate(-50%, -50%);
@@ -92,7 +89,7 @@ function leaderboardRequest(){
     }
     .button2 {
       margin: 0;
-      position: absolute;
+      position:relative;
       top: 30%;
       left: 40%;
       -ms-transform: translate(-50%, -50%);
