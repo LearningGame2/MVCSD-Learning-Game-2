@@ -86,6 +86,7 @@ function leaderboardRequest(){
       left: 20%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
+      overflow:hidden;
     }
     .button2 {
       margin: 0;
@@ -94,6 +95,7 @@ function leaderboardRequest(){
       left: 40%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
+      overflow:hidden;
     }
     .button3 {
       margin: 0;
@@ -102,6 +104,7 @@ function leaderboardRequest(){
       left: 60%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
+      overflow:hidden;
     }
     .button4 {
       margin: 0;
@@ -110,6 +113,7 @@ function leaderboardRequest(){
       left: 80%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
+      overflow:hidden;
     }
     .button1:hover {
       background-color: green;
@@ -190,13 +194,13 @@ function leaderboardRequest(){
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
-  <div class="inLine" style = "overflow:hidden; text-align:center; position:absolute; top:300px; left:220px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
-     <span> Leaderboard </span>
+  <div class="inLine" style"text-align:center; position:absolute; top:300px; left:220px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+     <span sytle="overflow:hidden;"> Leaderboard </span>
      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-     <span> Your Stats </span>
+     <span sytle="overflow:hidden;"> Your Stats </span>
   </div>
 
-  <table class="alignLeft inLine">
+  <table class="alignLeft inLine" sytle="overflow:hidden;">
     <tr>
       <th>Player</th>
       <th>Score</th>
@@ -243,7 +247,7 @@ function leaderboardRequest(){
     </tr>
   </table>
 
-  <table class="alignRight inLine">
+  <table class="alignRight inLine" sytle="overflow:hidden;">
         <tr>
             <td> <span id = "IfPreviousScore"></span> </td>
         </tr>
