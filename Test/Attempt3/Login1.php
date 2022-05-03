@@ -70,6 +70,7 @@
   let Username = getCookie("Username");
   console.log(GovernmentName);
   console.log(Username);
+  console.log("test")
   let resetBtn=document.getElementById("welcome-back-button");
   if(GovernmentName != null && Username != null){
    document.getElementById("welcome-back-text").innerHTML = GovernmentName;
