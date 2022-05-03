@@ -297,7 +297,7 @@ function leaderboardRequest(){
     document.getElementById("IfPreviousStreak").innerHTML = "Your Last Highest Streak: " + getCookie("cookieHighStreak");
   }
   if(getCookie("cookieHighStreak")== 0){
-    document.getElementById("IfPreviousScore").innerHTML = "No streak recorded yet";
+    document.getElementById("IfPreviousStreak").innerHTML = "No streak recorded yet";
   }
 
 
