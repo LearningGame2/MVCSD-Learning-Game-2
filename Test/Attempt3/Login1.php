@@ -72,10 +72,10 @@
   console.log(Username);
   if(GovernmentName != null && Username != null){
    document.getElementById("welcome-back-text").innerHTML = GovernmentName;
-   document.getElementById("test").hidden=false;
+   document.getElementById("welcome-back-button").hidden=false;
   }
   else{
-    document.getElementById("test").hidden=true;
+    document.getElementById("welcome-back-button").hidden=true;
   }
 
   function login(){
@@ -87,7 +87,7 @@
 
   function setCookie(cname, cvalue, exhours) {
   const d = new Date();
-  d.setTime(d.getTime() + (exdays*60*60*1000));
+  d.setTime(d.getTime() + (exhours*60*60*1000));
   let expires = "expires="+ d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
