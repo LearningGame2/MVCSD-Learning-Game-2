@@ -12,7 +12,7 @@
       $sql = "SELECT * FROM UserDatabase WHERE Username = '$myusername' and Passcode = '$mypassword'";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      
+
 
       $count = mysqli_num_rows($result);
 
@@ -22,9 +22,9 @@
          //session_register("myusername");
         $GovernmentName = $row['GovernmentName'];
         $DatabaseUsername =$row['Username'];
-         setcookie("GovernmentName", $GovernmentName, time() + (3600)); 
-         setcookie("Username", $DatabaseUsername, time() + (3600)); 
-        
+         setcookie("GovernmentName", $GovernmentName, time() + (3600));
+         setcookie("Username", $DatabaseUsername, time() + (3600));
+
          $error = "Login Sucessful";
          header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
       }else {
@@ -56,8 +56,8 @@
       <label style="color:white; font-family:Garamond"> Password: </label><input type = "password" name = "password" class = "box" /><br/><br />
       <button type = "submit" value = " Submit ">Submit</button>
     </form>
-    <div>
-      <button type = "submit" id = "welcome-back-button" onclick = "login()" >Log in as <span id = "welcome-back-text"></span></button>
+    <div style="text-align:center;">
+      <button class="button" type = "submit" id = "welcome-back-button" onclick = "login()" >Log in as <span id = "welcome-back-text"></span></button>
     </div>
     <div style = "font-size:30px; color:red; margin-top:10px; text-align:center; position:relative; left:0%">
       <?php echo $error; ?>
@@ -90,7 +90,7 @@
     window.location.href = "Home.php"
     }
   }
-   
+
 
   function setCookie(cname, cvalue, exhours) {
   const d = new Date();
