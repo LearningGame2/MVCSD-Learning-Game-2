@@ -74,9 +74,12 @@
   let resetBtn=document.getElementById("welcome-back-button");
   if(GovernmentName != "" && Username != ""){
    document.getElementById("welcome-back-text").innerHTML = GovernmentName;
+   resetBtn.hidden = false;
+
   }
   else if(GovernmentName== "" || Username == ""){
     resetBtn.disabled="disabled";
+    resetBtn.hidden = true;
     console.log("disabled")
   }
 
