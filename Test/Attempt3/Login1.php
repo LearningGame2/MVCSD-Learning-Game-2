@@ -70,7 +70,7 @@
   let Username = getCookie("Username");
   console.log(GovernmentName);
   console.log(Username);
-  if(GovernmentName !=NULL && Username != NULL){
+  if(GovernmentName != null && Username != null){
    document.getElementById("welcome-back-text").innerHTML = GovernmentName;
    document.getElementById("test").hidden=false;
   }
