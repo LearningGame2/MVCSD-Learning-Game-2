@@ -70,18 +70,20 @@
   let Username = getCookie("Username");
   console.log(GovernmentName);
   console.log(Username);
+  let resetBtn=document.getElementById("welcome-back-button");
   if(GovernmentName != null && Username != null){
    document.getElementById("welcome-back-text").innerHTML = GovernmentName;
-   document.getElementById("welcome-back-button").disabled=false;
   }
   else{
-    document.getElementById("welcome-back-button").disabled=true;
+    resetBtn.disabled="disabled";
   }
 
   function login(){
+    if(GovernmentName != null && Username != null){
     setCookie("GovernmentName",GovernmentName, 1);
     setCookie("Username",Username, 1);
     window.location.href = "Home.php"
+    }
   }
    
 
