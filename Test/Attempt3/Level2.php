@@ -388,7 +388,7 @@ if (amountCorrect>5){ //for 5 questions: changed from 8
         window.location.href = "../DuckHuntTest/astronautInTrouble-main/"
     }
     else{
-        window.location.href = "Level4.php"
+        window.location.href = "Level3.php"
     }
 }
 

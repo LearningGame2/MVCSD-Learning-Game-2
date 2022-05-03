@@ -77,7 +77,7 @@ function promptRequest($numOfQuestions){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="goFinalGame()">Test Complete!  Take me to the final game.</button>
+                    <button onclick="goENDGame()">Game Finished</button>
                 </div>
 
             </div>
@@ -394,8 +394,8 @@ function closeOptionModal() {
         document.getElementById('option-modal').style.display = "none"
 }
 
-function goFinalGame(){
-        window.location.href = "../DuckHuntTest/packabunchas-main/"
+function goEndGame(){
+        window.location.href = "EndGame.php"
 }
 
 function setCookie(cname, cvalue) {
