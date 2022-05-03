@@ -287,11 +287,17 @@ function leaderboardRequest(){
   document.getElementById("player10").innerHTML = testScores[0].Username;
   document.getElementById("score10").innerHTML = testScores[0].Highscore;
 
-  if(getCookie("cookieScore")!= null){
+  if(getCookie("cookieScore")!= 0){
     document.getElementById("IfPreviousScore").innerHTML = "Your Last Score: " + parseInt(getCookie("cookieScore"));
   }
-  if(getCookie("cookieHighStreak")!= null){
+  if(getCookie("cookieScore")== 0){
+    document.getElementById("IfPreviousScore").innerHTML = "No score recorded yet";
+  }
+  if(getCookie("cookieHighStreak")!= 0){
     document.getElementById("IfPreviousStreak").innerHTML = "Your Last Highest Streak: " + getCookie("cookieHighStreak");
+  }
+  if(getCookie("cookieScore")== 0){
+    document.getElementById("IfPreviousScore").innerHTML = "No streak recorded yet";
   }
 
 
