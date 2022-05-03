@@ -86,7 +86,6 @@ function leaderboardRequest(){
       left: 20%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      overflow:hidden;
     }
     .button2 {
       margin: 0;
@@ -95,7 +94,6 @@ function leaderboardRequest(){
       left: 40%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      overflow:hidden;
     }
     .button3 {
       margin: 0;
@@ -104,7 +102,6 @@ function leaderboardRequest(){
       left: 60%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      overflow:hidden;
     }
     .button4 {
       margin: 0;
@@ -113,7 +110,6 @@ function leaderboardRequest(){
       left: 80%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      overflow:hidden;
     }
     .button1:hover {
       background-color: green;
@@ -177,13 +173,13 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<div class="header slide-right" style="overflow:hidden;">
+<div class="header slide-right">
   Welcome,  <?php echo $_COOKIE['Username']?>!
 </div>
 
 <body style="background-color:black;">
 
-  <div style = "overflow:hidden; text-align:center; position:relative; top:10px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+  <div style = "text-align:center; position:relative; top:10px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Press Button to Play
   </div>
 
@@ -194,13 +190,13 @@ function leaderboardRequest(){
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
-  <div class="inLine" style"text-align:center; position:absolute; top:300px; left:220px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
-     <span sytle="overflow:hidden;"> Leaderboard </span>
+  <div class="inLine" style = "text-align:center; position:absolute; top:300px; left:220px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+     <span> Leaderboard </span>
      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-     <span sytle="overflow:hidden;"> Your Stats </span>
+     <span> Your Stats </span>
   </div>
 
-  <table class="alignLeft inLine" sytle="overflow:hidden;">
+  <table class="alignLeft inLine">
     <tr>
       <th>Player</th>
       <th>Score</th>
@@ -247,7 +243,7 @@ function leaderboardRequest(){
     </tr>
   </table>
 
-  <table class="alignRight inLine" sytle="overflow:hidden;">
+  <table class="alignRight inLine">
         <tr>
             <td> <span id = "IfPreviousScore"></span> </td>
         </tr>
