@@ -60,6 +60,9 @@ function leaderboardRequest(){
   </title>
 
   <style>
+    *{
+      position:relative;
+    }
     .button {
       text-align: center;
       background-color: #197DDD;
