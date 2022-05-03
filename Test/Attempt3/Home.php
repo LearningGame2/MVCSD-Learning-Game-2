@@ -82,7 +82,7 @@ function leaderboardRequest(){
     .button1 {
       margin: 0;
       position:relative;
-      top: 30%;
+      top: 40%;
       left: 20%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
@@ -97,7 +97,7 @@ function leaderboardRequest(){
     }
     .button3 {
       margin: 0;
-      position: absolute;
+      position:relative;
       top: 30%;
       left: 60%;
       -ms-transform: translate(-50%, -50%);
