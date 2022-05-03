@@ -78,9 +78,10 @@ body{
 
 }
 .button {
-    background-color: #4CAF50; /* Green */
+    background-color: blue; /*blue */
     border: none;
     color: white;
+    align-items:  center;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
