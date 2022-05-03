@@ -81,15 +81,15 @@ function leaderboardRequest(){
     }
     .button1 {
       margin: 0;
-      position:relative;
-      top: 40%;
+      position:absolute;
+      top: 30%;
       left: 20%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
     .button2 {
       margin: 0;
-      position:relative;
+      position:absolute;
       top: 30%;
       left: 40%;
       -ms-transform: translate(-50%, -50%);
@@ -97,7 +97,7 @@ function leaderboardRequest(){
     }
     .button3 {
       margin: 0;
-      position:relative;
+      position:absolute;
       top: 30%;
       left: 60%;
       -ms-transform: translate(-50%, -50%);
@@ -105,7 +105,7 @@ function leaderboardRequest(){
     }
     .button4 {
       margin: 0;
-      position: absolute;
+      position:absolute;
       top: 30%;
       left: 80%;
       -ms-transform: translate(-50%, -50%);
