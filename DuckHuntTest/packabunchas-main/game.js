@@ -1842,6 +1842,7 @@ function story32() {
 
 	//setMessage(["Click to continue"], true)
 	//
+	
 	skipState = 2
 	animateMouth = true
 	storyTimeOut = setTimeout(function() {
@@ -2530,7 +2531,7 @@ function sendRandomMessage() {
 	shuffleArray(randomMessages)
 	setMessage(randomMessages.slice(0, 2), false)
 
-	helpTimeout = setTimeout(sendRandomMessage, 1000)
+	helpTimeout = setTimeout(sendRandomMessage, 10000)
 	//sam edit
 }
 
@@ -3219,7 +3220,7 @@ function mouseUp(e) {
 						//setMessage(["Click to continue"], true)
 						canSkip = true
 						animateMouth = true
-						setStoryMessage(["PACKABUNCHAS!!!", "We did it, Spacey!!!", " ", "WE ACTUALLY RESCUED ALL", " THOSE BLOCKYCHUMS!", " ",
+						setStoryMessage(["We did it, Spacey!!!", "WE ACTUALLY RESCUED THEM ALL!",
 							"Let's celebrate!", " ", "(ﾉ^ヮ^)ﾉ*:・ﾟ✧"," ", "      - click to go to Level 2 -"
 						])
 

@@ -329,7 +329,7 @@ function leaderboardRequest(){
     window.location.href = "More.php"
   }
   function instructions(){
-    window.location.href = "More.php"
+    window.location.href = "Instructions.php"
   }
 
 </script>
