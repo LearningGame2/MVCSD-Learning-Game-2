@@ -179,7 +179,7 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 		{this.hud.display("Destroyed");
 		window.location.href = "../../LGAttempt3/Level4.php"}
 		let LG2multiplier = this.score
-		localStorage.setItem('cookieMiniGameMulti', LG2multiplier)
+		localStorage.setItem('cookieMiniGameMulti',1)
 		this.step = 100;
 
 	}
