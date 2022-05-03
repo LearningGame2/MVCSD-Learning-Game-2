@@ -130,8 +130,8 @@ function checkUpdateLeaderboard(){
 
 <body style="background-color:black">
     <h1 style="text-align:center; color:white; font-family: 'Lucida Console', 'Courier New', monospace; font-size:350%;"> GAME OVER! </h1>
-    <h3 style="text-align:center; color:white; font-family: 'Lucida Console', 'Courier New', monospace; font-size:350%;"> FINAL SCORE: <span id = "final-score"></span> </h3>
-    <h3 style="text-align:center; color:white; font-family: 'Lucida Console', 'Courier New', monospace; font-size:350%;"> HIGHEST STREAK: <span id = "high-streak"></span> </h3>
+    <h3 style="text-align:center; color:white; font-family: 'Lucida Console', 'Courier New', monospace; font-size:250%;"> FINAL SCORE: <span id = "final-score"></span> </h3>
+    <h3 style="text-align:center; color:white; font-family: 'Lucida Console', 'Courier New', monospace; font-size:250%;"> HIGHEST STREAK: <span id = "high-streak"></span> </h3>
     <div style="text-align:center;">
         <h1 style="color:white; font-family: 'Lucida Console', 'Courier New', monospace;"> Good Try, <?php echo $_COOKIE['Username'] ?>!</h1>
     </div>
