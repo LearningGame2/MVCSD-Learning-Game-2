@@ -260,10 +260,13 @@ let questionArray = fillQuestions();
 let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
 let cookieHighStreak = "cookieHighStreak"
+let cookieMiniGameMulti = "cookieMiniGameMulti"
 
 setCookie(cookieScore, 0);
 setCookie(cookieStreak, 0);
 setCookie(cookieHighStreak,0);
+
+localStorage.setItem('cookieMiniGameMulti', 1)
 
 console.log(document.cookie); //cookie checker
 
@@ -428,7 +431,12 @@ function closeOptionModal() {
 }
 
 function nextLevel(){
-        window.location.href = "Level2.php"
+    if (amountCorrect>6){
+            window.location.href = "../DuckHuntTest/packabunchas-main/"
+        }
+        else{
+            window.location.href = "Level2.php"
+        }
 }
 
 function setCookie(cname, cvalue) {

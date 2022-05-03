@@ -165,10 +165,14 @@ let questionArray = fillQuestions();
 let cookieScore = "cookieScore"
 let cookieStreak = "cookieStreak"
 let cookieHighStreak = "cookieHighStreak"
+let cookieMiniGameMulti = "cookieMiniGameMulti"
 
 let playerScore = parseInt(getCookie(cookieScore))
 let playerStreak = parseInt(getCookie(cookieStreak))
 let playerHighStreak = parseInt(getCookie(cookieHighStreak))
+
+let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
+localStorage.setItem('cookieMiniGameMulti', 1)
 
 let levelMultiplier = 2
 let questionNumber = 1 //holds the current question number
