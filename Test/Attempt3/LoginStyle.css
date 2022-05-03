@@ -74,7 +74,18 @@ body{
     border-radius: 3px;
     border: 1px solid silver;
     display: none;
-
-
 }
-
+.button {
+    margin: 45px 0 30px 0;
+    height: 45px;
+    width: 365px;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: blue;
+    border-radius: 3px;
+    border: 1px solid #3949AB;
+    transition: .2s;
+}
