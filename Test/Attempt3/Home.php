@@ -173,13 +173,13 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<div class="header slide-right">
+<div class="header slide-right" style="overflow:hidden;">
   Welcome,  <?php echo $_COOKIE['Username']?>!
 </div>
 
 <body style="background-color:black;">
 
-  <div style = "text-align:center; position:relative; top:10px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+  <div style = "overflow:hidden; text-align:center; position:relative; top:10px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Press Button to Play
   </div>
 
@@ -190,7 +190,7 @@ function leaderboardRequest(){
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
-  <div class="inLine" style = "text-align:center; position:absolute; top:300px; left:220px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+  <div class="inLine" style = "overflow:hidden; text-align:center; position:absolute; top:300px; left:220px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      <span> Leaderboard </span>
      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
      <span> Your Stats </span>
