@@ -72,10 +72,10 @@
   console.log(Username);
   if(GovernmentName != null && Username != null){
    document.getElementById("welcome-back-text").innerHTML = GovernmentName;
-   document.getElementById("welcome-back-button").hidden=false;
+   document.getElementById("welcome-back-button").disabled=false;
   }
   else{
-    document.getElementById("welcome-back-button").hidden=true;
+    document.getElementById("welcome-back-button").disabled=true;
   }
 
   function login(){
