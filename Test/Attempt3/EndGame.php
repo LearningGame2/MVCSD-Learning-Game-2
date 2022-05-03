@@ -1,10 +1,10 @@
 <?php
 session_start();
-// if(intval($_COOKIE['Checkpoint'])!=5){
-//     header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
-// }
-// setcookie("Checkpoint",6);
-//
+if(intval($_COOKIE['Checkpoint'])!=5){
+    header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
+}
+setcookie("Checkpoint",6);
+
 
 
 if(!isset($_COOKIE['Username'])){
