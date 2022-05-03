@@ -82,6 +82,7 @@ body{
     border: none;
     color: white;
     align-items:  center;
+    position: relative;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
