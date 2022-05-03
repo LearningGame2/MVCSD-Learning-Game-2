@@ -57,7 +57,7 @@
       <button type = "submit" value = " Submit ">Submit</button>
     </form>
     <div>
-      <button class = "button" type = "submit" id = "welcome-back-button" onclick = "login()" >Log in as <span id = "welcome-back-text"></span></button>
+      <button type = "submit" id = "welcome-back-button" onclick = "login()" >Log in as <span id = "welcome-back-text"></span></button>
     </div>
     <div style = "font-size:30px; color:red; margin-top:10px; text-align:center; position:relative; left:0%">
       <?php echo $error; ?>
