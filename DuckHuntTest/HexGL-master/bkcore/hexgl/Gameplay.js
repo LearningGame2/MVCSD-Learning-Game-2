@@ -157,7 +157,14 @@ bkcore.hexgl.Gameplay.prototype.start = function(opts)
 
 bkcore.hexgl.Gameplay.prototype.end = function(result)
 {
-	this.score = this.timer.getElapsedTime();
+	if (this.timer.getElapsedTime()<270)
+	{
+		this.score = 270-this.timer.getElapsedTime();
+	}
+	else
+	{
+		this.score = 1;
+	}
 	this.finishTime = this.timer.time.elapsed;
 	this.timer.start();
 	this.result = result;
@@ -177,6 +184,7 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 	{
 		if(this.hud != null) 
 		{this.hud.display("Destroyed");
+		//sam edit: setTimeout?
 		window.location.href = "../../LGAttempt3/Level4.php"}
 		let LG2multiplier = this.score
 		localStorage.setItem('cookieMiniGameMulti',1)

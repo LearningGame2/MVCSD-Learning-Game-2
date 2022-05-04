@@ -1814,44 +1814,45 @@ function draw() {
 */
 
 
-function story22() {
-	setStoryMessage(["More precisely 13.312", "but that isn't a problem", "for the PACKABUNCHAS!", " ",
-		"We are not in a hurry", "after all, and you know", "what they say:",
-		"puzzles keep our brain young", "and agile!"
-	])
+// function story22() {
+// 	setStoryMessage(["More precisely 13.312", "but that isn't a problem", "for the PACKABUNCHAS!", " ",
+// 		"We are not in a hurry", "after all, and you know", "what they say:",
+// 		"puzzles keep our brain young", "and agile!"
+// 	])
 
 
 
-	//setMessage(["Click to continue"], true)
-	//
-	skipState = 2
-	animateMouth = true
-	storyTimeOut = setTimeout(function() {
-		animateMouth = false
-		skipState = 3
-	}, 9500)
-}
+// 	//setMessage(["Click to continue"], true)
+// 	//
+// 	skipState = 2
+// 	animateMouth = true
+// 	storyTimeOut = setTimeout(function() {
+// 		animateMouth = false
+// 		skipState = 3
+// 	}, 9500)
+// }
 
-function story32() {
-	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "Well done, " , "learning game!", " ", " ", "    - click to go to Level 2! - "
-	])
+// function story32() {
+// 	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "Well done, " , "learning game!", " ", " ", "    - click to go to Level 2! - "
+// 	])
 
-	console.log("entering story 32")
-	firstTime = false;
-	console.log(window.firstTime);
+// 	console.log("entering story 32")
+// 	firstTime = false;
+// 	console.log(window.firstTime);
 
-	//setMessage(["Click to continue"], true)
-	//
-	skipState = 2
-	animateMouth = true
-	storyTimeOut = setTimeout(function() {
-		animateMouth = false
-		storyTimeOut = setTimeout(function() {
-			skipState = 3
-		}, 3000)
-	}, 7000)
+// 	//setMessage(["Click to continue"], true)
+// 	//
+	
+// 	skipState = 2
+// 	animateMouth = true
+// 	storyTimeOut = setTimeout(function() {
+// 		animateMouth = false
+// 		storyTimeOut = setTimeout(function() {
+// 			skipState = 3
+// 		}, 3000)
+// 	}, 7000)
 
-}
+// }
 
 
 function story12() {
@@ -2498,7 +2499,7 @@ function generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin, _
 			} else {
 				sendRandomMessage()
 			}
-		}, 1000)
+		}, 30000)
 
 
 
@@ -2530,7 +2531,7 @@ function sendRandomMessage() {
 	shuffleArray(randomMessages)
 	setMessage(randomMessages.slice(0, 2), false)
 
-	helpTimeout = setTimeout(sendRandomMessage, 1000)
+	helpTimeout = setTimeout(sendRandomMessage, 30000)
 	//sam edit
 }
 
@@ -3118,8 +3119,23 @@ function mouseUp(e) {
 			animateMouth = false
 		} else if (skipState == 1) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
-			story32()
-			//firstTime=false; //uncomment this if commit 690 doesn't work
+
+			//story32(): pasted here
+			setMessage(["Click to continue"], true)
+	
+			skipState = 2
+			animateMouth = true
+			storyTimeOut = setTimeout(function()
+			{
+				animateMouth = false
+				storyTimeOut = setTimeout(function()
+				{
+					skipState = 3
+				}, 3000)
+			}, 7000)
+
+			
+			firstTime=false; //uncomment this if commit 690 doesn't work
 			if (firstTime == false) //sam edit
 			{
 				window.location.href = "https://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php" //sam edit
@@ -3131,6 +3147,11 @@ function mouseUp(e) {
 			clearTimeout(storyMessage.timeout)
 			skipState = 3
 			animateMouth = false
+
+			if (firstTime == false) //sam edit
+			{
+				window.location.href = "https://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php" //sam edit
+			}
 		} else if (skipState == 3) {
 			//RESET GAME VAR ETC
 			saveData("showTutorial", "true")
@@ -3219,7 +3240,7 @@ function mouseUp(e) {
 						//setMessage(["Click to continue"], true)
 						canSkip = true
 						animateMouth = true
-						setStoryMessage(["PACKABUNCHAS!!!", "We did it, Spacey!!!", " ", "WE ACTUALLY RESCUED ALL", " THOSE BLOCKYCHUMS!", " ",
+						setStoryMessage(["We did it, Spacey!!!", "WE ACTUALLY RESCUED THEM ALL!",
 							"Let's celebrate!", " ", "(ﾉ^ヮ^)ﾉ*:・ﾟ✧"," ", "      - click to go to Level 2 -"
 						])
 

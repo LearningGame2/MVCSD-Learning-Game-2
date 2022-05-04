@@ -184,7 +184,7 @@ function leaderboardRequest(){
 
   <div>
     <button type ="submit" onclick = "goToGame()" class="button button1">Play</button>
-    <button type ="submit" onclick = "instructions()" class="button button2">Instructions</button>
+    <button type ="submit" onclick = "instructions()" class="button button2">Instructions<br>— read this!</button>
     <button type ="submit" onclick = "aboutUs()" class="button button3">About Us</button>
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
@@ -328,7 +328,7 @@ function leaderboardRequest(){
     window.location.href = "More.php"
   }
   function instructions(){
-    window.location.href = "More.php"
+    window.location.href = "Instructions.php"
   }
 
 </script>
