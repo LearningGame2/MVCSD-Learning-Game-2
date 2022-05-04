@@ -60,6 +60,10 @@ function leaderboardRequest(){
   </title>
 
   <style>
+    .container {
+      width:100%;
+      height:100%
+    }
     .button {
       text-align: center;
       background-color: #197DDD;
@@ -174,6 +178,7 @@ function leaderboardRequest(){
 </head>
 
 <body style="background-color:black;">
+  <div class="containter">
   <div class="header slide-right">
     Welcome,  <?php echo $_COOKIE['Username']?>!
   </div>
@@ -250,6 +255,7 @@ function leaderboardRequest(){
             <td> <span id = "IfPreviousStreak"></span> </td>
         </tr>
     </table>
+  </div>
 </body>
 
 <script>
