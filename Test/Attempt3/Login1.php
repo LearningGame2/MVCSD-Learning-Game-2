@@ -65,8 +65,8 @@
     </div>
   </div>
 </body>
-<script>
 
+<script>
   let GovernmentName = getCookie("GovernmentName");
   let Username = getCookie("Username");
   let Display = "--- OR ---";
@@ -93,7 +93,6 @@
     }
   }
 
-
   function setCookie(cname, cvalue, exhours) {
   const d = new Date();
   d.setTime(d.getTime() + (exhours*60*60*1000));
@@ -117,4 +116,5 @@
          return "";
   }
 </script>
+
 </html>
