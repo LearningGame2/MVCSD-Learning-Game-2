@@ -124,7 +124,7 @@ function promptRequest($numOfQuestions){
         </div>
     <!-- end of modal of quiz details-->
 
-        <div class="game-quiz-container" style = "position:relative; top:-75px">
+        <div class="game-quiz-container" style = "position:relative; top:-100px">
 
             <div class="game-details-container">
                 <h1>Score : <span id="player-score"></span></h1>
