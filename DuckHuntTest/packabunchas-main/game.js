@@ -1814,23 +1814,23 @@ function draw() {
 */
 
 
-function story22() {
-	setStoryMessage(["More precisely 13.312", "but that isn't a problem", "for the PACKABUNCHAS!", " ",
-		"We are not in a hurry", "after all, and you know", "what they say:",
-		"puzzles keep our brain young", "and agile!"
-	])
+// function story22() {
+// 	setStoryMessage(["More precisely 13.312", "but that isn't a problem", "for the PACKABUNCHAS!", " ",
+// 		"We are not in a hurry", "after all, and you know", "what they say:",
+// 		"puzzles keep our brain young", "and agile!"
+// 	])
 
 
 
-	//setMessage(["Click to continue"], true)
-	//
-	skipState = 2
-	animateMouth = true
-	storyTimeOut = setTimeout(function() {
-		animateMouth = false
-		skipState = 3
-	}, 9500)
-}
+// 	//setMessage(["Click to continue"], true)
+// 	//
+// 	skipState = 2
+// 	animateMouth = true
+// 	storyTimeOut = setTimeout(function() {
+// 		animateMouth = false
+// 		skipState = 3
+// 	}, 9500)
+// }
 
 function story32() {
 	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "Well done, " , "learning game!", " ", " ", "    - click to go to Level 2! - "
@@ -2531,7 +2531,7 @@ function sendRandomMessage() {
 	shuffleArray(randomMessages)
 	setMessage(randomMessages.slice(0, 2), false)
 
-	helpTimeout = setTimeout(sendRandomMessage, 10000)
+	helpTimeout = setTimeout(sendRandomMessage, 30000)
 	//sam edit
 }
 
