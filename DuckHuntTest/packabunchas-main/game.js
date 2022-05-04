@@ -1832,27 +1832,27 @@ function draw() {
 // 	}, 9500)
 // }
 
-function story32() {
-	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "Well done, " , "learning game!", " ", " ", "    - click to go to Level 2! - "
-	])
+// function story32() {
+// 	setStoryMessage(["THANKS FOR PLAYING!!!", " ", " ", "Well done, " , "learning game!", " ", " ", "    - click to go to Level 2! - "
+// 	])
 
-	console.log("entering story 32")
-	firstTime = false;
-	console.log(window.firstTime);
+// 	console.log("entering story 32")
+// 	firstTime = false;
+// 	console.log(window.firstTime);
 
-	//setMessage(["Click to continue"], true)
-	//
+// 	//setMessage(["Click to continue"], true)
+// 	//
 	
-	skipState = 2
-	animateMouth = true
-	storyTimeOut = setTimeout(function() {
-		animateMouth = false
-		storyTimeOut = setTimeout(function() {
-			skipState = 3
-		}, 3000)
-	}, 7000)
+// 	skipState = 2
+// 	animateMouth = true
+// 	storyTimeOut = setTimeout(function() {
+// 		animateMouth = false
+// 		storyTimeOut = setTimeout(function() {
+// 			skipState = 3
+// 		}, 3000)
+// 	}, 7000)
 
-}
+// }
 
 
 function story12() {
@@ -3119,7 +3119,7 @@ function mouseUp(e) {
 			animateMouth = false
 		} else if (skipState == 1) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
-			story32()
+			//story32()
 			//firstTime=false; //uncomment this if commit 690 doesn't work
 			if (firstTime == false) //sam edit
 			{
