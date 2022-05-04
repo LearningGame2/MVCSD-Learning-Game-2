@@ -183,6 +183,7 @@ function promptRequest($numOfQuestions){
 
         </div>
     </main>
+</body>
 
 <script>
 //making a class of question object to fill questions array
@@ -452,7 +453,5 @@ function getCookie(cname) {
          return "";
 }
 </script>
-
-</body>
 
 </html>
