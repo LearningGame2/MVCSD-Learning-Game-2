@@ -18,15 +18,15 @@
       font-size: 24px;
       font-weight: bold;
       height:100px;
-      width:250px;
+      width:300px;
       transition-duration: 0.4s;
       border: 2px solid white;
     }
     .button1 {
       margin: 0;
       position:absolute;
-      top:100;
-      right:0;
+      top:100px;
+      right:0px;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
@@ -34,9 +34,11 @@
       background-color: green;
     }
     .thing{
+        position:relative;
         margin-top:150px;
     }
     .lvls{
+        position:relative;
         margin-top:25px;
     }
 
@@ -60,9 +62,10 @@
             <ul>
                 <li>Double click on a shape to rotate (make sure you click hard on your Chromebooks!)
                 <li>Click and drag shapes into the box so that they cover all the empty squares and don't go outside of the box
-                <li>Tips: start with sections that only certain pieces could fill, if a piece doesn't work in an orientation then take them out and try each one by one,<br>
-                and keep at it!  They all have at least one solution.
+                <li>Tips: start with sections that only certain pieces could fill, if a piece doesn't work in an orientation,<br>
+                take them out and try each one by one, and keep at it!  They all have at least one solution.
             </ul>
+            <br>
             HexGL: stay on track and don't crash...
             <ul>
                 <li>Press up arrow key to increase engine power
@@ -70,11 +73,13 @@
                 <li>You only have a limited amount of health and you can't get it back, so be cautious rather than speedy!<br>
                     Otherwise, you won't get a score multiplier
             </ul>
+            <br>
             Astronaut: You have one objective — survive in the vacuum of space.
             <ul>
                 <li>Press space to jump, and not too early!
                 <li>Don't fall between the ships
             </ul>
+            <br>
             Duck Hunt: This one's a classic.  You know the drill.
             <ul>
                 <li>Click to shoot the ducks

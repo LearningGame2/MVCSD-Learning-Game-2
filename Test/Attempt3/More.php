@@ -58,4 +58,9 @@
             <li>Duck Hunt, a classic Nintendo game remade for the web browser experience by Matt Surabian
         </ul>
     </body>
+
+    <script>
+        
+    </script>
+
 </html>
