@@ -56,7 +56,8 @@
       <label style="color:white; font-family:Garamond"> Password: </label><input type = "password" name = "password" class = "box" /><br/><br />
       <button type = "submit" value = " Submit ">Submit</button>
     </form>
-    <div style="text-align:center; top:-20px;">
+    <div style="text-align:center;">
+      <h1 style="color:white; font-family:Garamond;" id = "welcome-back-message"></h1>
       <button class="button" type = "submit" id = "welcome-back-button" onclick = "login()" >Log in as <span id = "welcome-back-text"></span></button>
     </div>
     <div style = "font-size:30px; color:red; margin-top:10px; text-align:center; position:relative; left:0%">
@@ -68,6 +69,7 @@
 
   let GovernmentName = getCookie("GovernmentName");
   let Username = getCookie("Username");
+  let Display = "--- OR ---";
   console.log(GovernmentName);
   console.log(Username);
   console.log("test")
@@ -75,7 +77,7 @@
   if(GovernmentName != "" && Username != ""){
    document.getElementById("welcome-back-text").innerHTML = GovernmentName;
    resetBtn.hidden = false;
-
+   document.getElementById("welcome-back-message").innerHTML = Display;
   }
   else if(GovernmentName== "" || Username == ""){
     resetBtn.disabled="disabled";
