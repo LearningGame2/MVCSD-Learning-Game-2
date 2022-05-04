@@ -95,5 +95,11 @@
         </body>
     </div>
 
+    <script>
+        function phoneHome(){
+            window.location.href="Home.php";
+        }
+    </script>
+
 
 </html>

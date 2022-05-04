@@ -9,22 +9,56 @@
     </head>
 
     <style>
-        .header{
-            margin-left: -80px;
 
-        }
-        .infoP{
-            margin-right: 100px;
-            margin-left: 100px;
-        }
-        .creds{
-            margin-left: -35px;
-        }
-        .games{
-            margin-left: -35px;
-            color: rgb(91, 75, 105);
-        }
+    .button {
+      text-align: center;
+      background-color: #197DDD;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      font-family: "Lucida Console", "Courier New", monospace;
+      font-size: 24px;
+      font-weight: bold;
+      height:100px;
+      width:400px;
+      transition-duration: 0.4s;
+      border: 2px solid white;
+    }
+    .button1 {
+      margin: 0;
+      position:absolute;
+      top:100px;
+      right:0px;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .button1:hover {
+      background-color: green;
+    }
+    .header{
+        margin-left: -80px;
+        position:relative;
+        margin-top:100px;
+    }
+    .infoP{
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+    .creds{
+        margin-left: -35px;
+    }
+    .games{
+        margin-left: -35px;
+        color: rgb(91, 75, 105);
+    }
     </style>
+
+    <button type="submit" onclick="sendIt()" class="button button1">Take me home!</button>
 
     <h1 class="header">
         Some background info on this project: <br><br>
@@ -60,7 +94,9 @@
     </body>
 
     <script>
-        
+        function sendIt(){
+            window.location.href="Home.php";
+        }
     </script>
 
 </html>
