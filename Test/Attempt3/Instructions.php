@@ -33,16 +33,23 @@
     .button1:hover {
       background-color: green;
     }
+    .thing{
+        margin-top:150px;
+    }
+    .lvls{
+        margin-top:175px;
+    }
+
 
     </style>
 
     <button type="submit" onclick="phoneHome()" class="button button1">Take me back home!</button>
-
-    <h1>
+   
+    <h1 class="thing">
         You're gonna wanna read this...
     </h1>
-    
-    <div id="lvls">
+
+    <div class="lvls">
         <body>
             The levels of the game are pretty self-explanatory: you've all taken multiple-choice questions before!
         </body>
