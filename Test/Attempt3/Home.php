@@ -336,7 +336,6 @@ function leaderboardRequest(){
   function instructions(){
     window.location.href = "Instructions.php"
   }
-
 </script>
 
 </html>

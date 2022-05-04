@@ -124,7 +124,7 @@ function promptRequest($numOfQuestions){
         </div>
     <!-- end of modal of quiz details-->
 
-        <div class="game-quiz-container" style = "position:relative; top:-100px">
+        <div class="game-quiz-container" style = "position:relative; top:-150px">
 
             <div class="game-details-container">
                 <h1>Score : <span id="player-score"></span></h1>
@@ -184,12 +184,7 @@ function promptRequest($numOfQuestions){
         </div>
     </main>
 
-
 <script>
-
-
-
-
 //making a class of question object to fill questions array
 class Question {
     constructor (question, optionA, optionB, optionC, optionD, correctOption) {
@@ -351,8 +346,6 @@ function checkForAnswer() {
         })
 }
 
-
-
 //called when the next button is called
 function handleNextQuestion() {
         checkForAnswer() //check if player picked right or wrong option
@@ -458,7 +451,6 @@ function getCookie(cname) {
         }
          return "";
 }
-
 </script>
 
 </body>
