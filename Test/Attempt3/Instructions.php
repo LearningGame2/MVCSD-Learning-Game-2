@@ -59,9 +59,18 @@
 
     <div class="lvls">
         <body>
-            The levels of the game are pretty self-explanatory: you've all taken multiple-choice questions before!
+            The levels of the game are pretty self-explanatory: you've all taken multiple-choice questions before!<br>
+            This is all math that you know, and we're asking you to apply it.  In between levels, you'll play 4 games:<br>
+            Packabunchas, HexGL, Astronaut, and Duck Hunt, which are described below and have instructions.<br>
+            All of them, except Packabunchas, will add a multiplier to your score that depends on how well you do in the game: <br>
+            for HexGL, the time you finish under 5 minutes, for Astronaut, the number of ships you jump, and for Duck Hunt,<br>
+            how many points you score in the game divided by 500.  However, you don't get to play these games if you don't<br>
+            work hard!  You have to score well enough on each level before a game in order to play it.  We'll let you<br>
+            find out how well...now go flex those mathematical muscles!
         </body>
     </div>
+    <br><br>
+    <h2>Instructions</h2>
     <div class="how-to-play">
         <body>
             Packabunchas: fit the shapes into the box!
@@ -72,7 +81,7 @@
                 take them out and try each one by one, and keep at it!  They all have at least one solution.
             </ul>
             <br>
-            HexGL: stay on track and don't crash...
+            HexGL: keep your spaceship on track and don't crash...
             <ul>
                 <li>Press up arrow key to increase engine power
                 <li>Use side arrow keys to navigate the course

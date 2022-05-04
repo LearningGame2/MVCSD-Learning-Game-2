@@ -60,6 +60,9 @@
 
     <button type="submit" onclick="sendIt()" class="button button1">Take me home!</button>
 
+    <canvas id="myCanvas" width="578" height="200">Canvas not supported in this browser</canvas>
+    <script src="wigginSt.js"></script>
+
     <h1 class="header">
         Some background info on this project: <br><br>
     </h1>
