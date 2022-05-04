@@ -25,7 +25,7 @@
     .button1 {
       margin: 0;
       position:absolute;
-      top:0;
+      top:100;
       right:0;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
