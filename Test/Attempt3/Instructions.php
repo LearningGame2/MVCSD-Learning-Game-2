@@ -18,7 +18,7 @@
       font-size: 24px;
       font-weight: bold;
       height:100px;
-      width:300px;
+      width:400px;
       transition-duration: 0.4s;
       border: 2px solid white;
     }
