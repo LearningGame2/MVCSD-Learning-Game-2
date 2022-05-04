@@ -2499,7 +2499,7 @@ function generateLevel(_numberOfPolyominos, _numberOfPolyominoBlocks, _margin, _
 			} else {
 				sendRandomMessage()
 			}
-		}, 1000)
+		}, 30000)
 
 
 
