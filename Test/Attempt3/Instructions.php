@@ -26,7 +26,7 @@
       margin: 0;
       position:absolute;
       top:100px;
-      right:0px;
+      right:-100px;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
