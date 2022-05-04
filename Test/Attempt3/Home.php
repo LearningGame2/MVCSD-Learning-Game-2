@@ -173,11 +173,10 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<div class="header slide-right">
-  Welcome,  <?php echo $_COOKIE['Username']?>!
-</div>
-
 <body style="background-color:black;">
+  <div class="header slide-right">
+    Welcome,  <?php echo $_COOKIE['Username']?>!
+  </div>
 
   <div style = "text-align:center; position:relative; top:10px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Press Button to Play
