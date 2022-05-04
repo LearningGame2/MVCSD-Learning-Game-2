@@ -25,8 +25,8 @@
     .button1 {
       margin: 0;
       position:absolute;
-      top: 30%;
-      left: 20%;
+      top:0;
+      right:0;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
@@ -37,7 +37,7 @@
         margin-top:150px;
     }
     .lvls{
-        margin-top:175px;
+        margin-top:25px;
     }
 
 
