@@ -4,7 +4,7 @@
 
     <style>
     .button {
-      text-align: right;
+      text-align: center;
       background-color: #197DDD;
       border: none;
       color: white;
@@ -35,11 +35,17 @@
     }
     .thing{
         position:relative;
-        margin-top:150px;
+        margin-top:100px;
+        font-family: "Gill Sans", sans-serif;
     }
     .lvls{
         position:relative;
         margin-top:25px;
+        font-family: "Trebuchet MS", sans-serif;
+    }
+    .how-to-play{
+        position:relative;
+        font-family:"Trebuchet MS", sans-serif;
     }
 
 
@@ -56,7 +62,7 @@
             The levels of the game are pretty self-explanatory: you've all taken multiple-choice questions before!
         </body>
     </div>
-    <div id="how-to-play">
+    <div class="how-to-play">
         <body>
             Packabunchas: fit the shapes into the box!
             <ul>
