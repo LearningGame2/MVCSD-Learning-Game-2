@@ -192,7 +192,6 @@ input[type=radio]:checked ~ .option {
     background: none;
     outline: none;
     border: 1px solid rgb(252, 242, 241);
-    top:-20px;
     color: white;
     font-size: 1.1rem;
     cursor: pointer;

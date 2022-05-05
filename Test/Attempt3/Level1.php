@@ -116,7 +116,7 @@ function promptRequest($numOfQuestions){
                     <p style="position:relative;top:-20px;"><span id="remarks"></span></p>
                 </div>
 
-                <div class="modal-button-container">
+                <div class="modal-button-container" style="top:-20px">
                     <button type = "submit" onclick = "nextLevel()">LEVEL 2</button>
                 </div>
 
