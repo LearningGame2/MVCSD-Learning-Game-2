@@ -248,24 +248,24 @@ function leaderboardRequest(){
   </table>
 
   <table class="alignRight inLine">
+
         <tr>
             <td> <span id = "IfPreviousScore"></span> </td>
         </tr>
         <tr>
             <td> <span id = "IfPreviousStreak"></span> </td>
         </tr>
-    </table>
 
-  <div>
-  <table class="alignRight inLine">
+        <tr class="break"><td colspan="2"></td></tr>
+
         <tr>
             <td>All time highscore: <span id = "AllTimeScore"></span> </td>
         </tr>
         <tr>
             <td>All time longest streak: <span id = "AllTimeSreak"></span> </td>
         </tr>
+
     </table>
-  </div>
   </div>
 </body>
 
