@@ -180,7 +180,7 @@ function leaderboardRequest(){
 <body style="background-color:black;">
   <div class="containter">
   <div class="header slide-right">
-    Welcome,  <?php echo $_COOKIE['Username']?>!
+    Welcome,  <?php echo $_COOKIE['GovernmentName']?>!
   </div>
 
   <div style = "text-align:center; position:relative; top:10px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
