@@ -44,7 +44,7 @@
 </head>
 
 <body>
-  <div class ="container" style = "position:relative; top:-10px;">
+  <div class ="container" style = "position:relative; top:-80px;">
     <h1 style="text-align:center; color:white; font-family:Garamond; font-size:350%; position:relative; top:-10px;">
       Welcome Back!
     </h1>
@@ -65,8 +65,8 @@
     </div>
   </div>
 </body>
-<script>
 
+<script>
   let GovernmentName = getCookie("GovernmentName");
   let Username = getCookie("Username");
   let Display = "--- OR ---";
@@ -93,7 +93,6 @@
     }
   }
 
-
   function setCookie(cname, cvalue, exhours) {
   const d = new Date();
   d.setTime(d.getTime() + (exhours*60*60*1000));
@@ -117,4 +116,5 @@
          return "";
   }
 </script>
+
 </html>

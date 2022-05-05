@@ -60,6 +60,10 @@ function leaderboardRequest(){
   </title>
 
   <style>
+    .container {
+      width:100%;
+      height:100%
+    }
     .button {
       text-align: center;
       background-color: #197DDD;
@@ -173,11 +177,11 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<div class="header slide-right">
-  Welcome,  <?php echo $_COOKIE['Username']?>!
-</div>
-
 <body style="background-color:black;">
+  <div class="containter">
+  <div class="header slide-right">
+    Welcome,  <?php echo $_COOKIE['Username']?>!
+  </div>
 
   <div style = "text-align:center; position:relative; top:10px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Press Button to Play
@@ -251,6 +255,7 @@ function leaderboardRequest(){
             <td> <span id = "IfPreviousStreak"></span> </td>
         </tr>
     </table>
+  </div>
 </body>
 
 <script>
@@ -331,7 +336,6 @@ function leaderboardRequest(){
   function instructions(){
     window.location.href = "Instructions.php"
   }
-
 </script>
 
 </html>

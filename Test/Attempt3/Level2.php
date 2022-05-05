@@ -57,7 +57,7 @@ function promptRequest($numOfQuestions){
 </head>
 
 <body onload="NextQuestion(0)">
-  <h1 style="color:white; text-align:center; font-family: 'Lucida Console', 'Courier New', monospace; font-size:300%; line-height: 100px">
+  <h1 style="color:white; text-align:center; font-family: 'Lucida Console', 'Courier New', monospace; font-size:300%; line-height: 120px">
     Level 2
   </h1>
     <main>
@@ -84,7 +84,7 @@ function promptRequest($numOfQuestions){
         </div>
     <!-- end of modal of quiz details-->
 
-        <div class="game-quiz-container" style = "position:relative; top:-75px">
+        <div class="game-quiz-container" style = "position:relative; top:-150px">
 
             <div class="game-details-container">
                 <h1>Score : <span id="player-score"></span></h1>
@@ -324,7 +324,7 @@ function handleNextQuestion() {
                 handleEndGame()//ends game if index number greater than 9 meaning we're already at the 10th question
             }
             resetOptionBackground()
-        }, 2000);
+        }, 10);
 }
 
 //sets options background back to null after display the right/wrong colors
