@@ -370,7 +370,7 @@ function handleEndGame() {
         const playerGrade = (amountCorrect / 7) * 100
 
         if (amountCorrect>5){
-            document.getElementById("minigame-check").innerHTML = "Astronaut in Trouble!!";
+            document.getElementById("minigame-check").innerHTML = "HexGL!!";
             document.getElementById("minigame-check").style.color = "white";
         }
         else{
