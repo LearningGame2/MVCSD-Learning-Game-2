@@ -255,6 +255,17 @@ function leaderboardRequest(){
             <td> <span id = "IfPreviousStreak"></span> </td>
         </tr>
     </table>
+
+  <div>
+  <table class="alignRight inLine">
+        <tr>
+            <td>All time highscore: <span id = "AllTimeScore"></span> </td>
+        </tr>
+        <tr>
+            <td>All time longest streak: <span id = "AllTimeSreak"></span> </td>
+        </tr>
+    </table>
+  </div>
   </div>
 </body>
 
@@ -292,6 +303,8 @@ function leaderboardRequest(){
   document.getElementById("player10").innerHTML = testScores[0].Username;
   document.getElementById("score10").innerHTML = testScores[0].Highscore;
 
+
+
   if(getCookie("cookieScore")!= 0){
     document.getElementById("IfPreviousScore").innerHTML = "Your Last Score: " + parseInt(getCookie("cookieScore"));
   }
@@ -304,6 +317,9 @@ function leaderboardRequest(){
   if(getCookie("cookieHighStreak")== 0){
     document.getElementById("IfPreviousStreak").innerHTML = "No streak recorded yet";
   }
+
+  document.getElementById("AllTimeScore").innerHTML = parseInt(getCookie("AllTimeScore"));
+  document.getElementById("AllTimeStreak").innerHTML = parseInt(getCookie("AllTimeStreak"));
 
 
   function getCookie(cname) {

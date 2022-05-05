@@ -22,8 +22,13 @@
          //session_register("myusername");
         $GovernmentName = $row['GovernmentName'];
         $DatabaseUsername =$row['Username'];
+        $AllTimeStreak =$row['Highscore'];
+        $AllTimeScore =$row['LongestStreak'];
+
          setcookie("GovernmentName", $GovernmentName, time() + (3600));
          setcookie("Username", $DatabaseUsername, time() + (3600));
+         setcookie("AllTimeStreak", $AllTimeScore, time() + (3600));
+         setcookie("AllTimeStreak", $AllTimeStreak, time() + (3600));
 
          $error = "Login Sucessful";
          header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
