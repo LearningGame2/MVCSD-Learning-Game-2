@@ -317,6 +317,9 @@ function leaderboardRequest(){
   if(getCookie("cookieHighStreak")== 0){
     document.getElementById("IfPreviousStreak").innerHTML = "No streak recorded yet";
   }
+  
+  console.log(parseInt(getCookie("AllTimeScore")));
+  console.log(parseInt(getCookie("AllTimeStreak")))
 
   document.getElementById("AllTimeScore").innerHTML = parseInt(getCookie("AllTimeScore"));
   document.getElementById("AllTimeStreak").innerHTML = parseInt(getCookie("AllTimeStreak"));
