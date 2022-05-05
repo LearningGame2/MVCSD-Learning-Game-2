@@ -90,9 +90,10 @@ function promptRequest($numOfQuestions){
                 <h1>Score : <span id="player-score"></span></h1>
                 <h1>Current Streak : <span id = "player-streak"></span></h1>
                 <h1>Question : <span id="question-number"></span> / 8</h1>
-
             </div>
-
+            <div id = "sucessful-minigame-check" class="game-details-container" style="justify-content:center;">
+              <h1>Packabunchas: <span id = "player-minigamemulti"></span></h1>
+            </div>
             <div class="game-question-container">
                 <h1 id="display-question"></h1>
             </div>
@@ -171,7 +172,9 @@ let playerScore = parseInt(getCookie(cookieScore))
 let playerStreak = parseInt(getCookie(cookieStreak))
 let playerHighStreak = parseInt(getCookie(cookieHighStreak))
 
+
 let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
+document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
 localStorage.setItem('cookieMiniGameMulti', 1)
 
 let levelMultiplier = 2
