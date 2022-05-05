@@ -27,7 +27,7 @@
 
          setcookie("GovernmentName", $GovernmentName, time() + (3600));
          setcookie("Username", $DatabaseUsername, time() + (3600));
-         setcookie("AllTimeStreak", $AllTimeScore, time() + (3600));
+         setcookie("AllTimeScore", $AllTimeScore, time() + (3600));
          setcookie("AllTimeStreak", $AllTimeStreak, time() + (3600));
 
          $error = "Login Sucessful";
