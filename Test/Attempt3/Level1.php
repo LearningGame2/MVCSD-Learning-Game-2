@@ -113,10 +113,10 @@ function promptRequest($numOfQuestions){
                     <p>Right Answers : <span id="right-answers"></span></p>
                     <p>Grade : <span id="grade-percentage"></span>%</p>
                     <p>Score : <span id="score"></span></p>
-                    <p style="position:relative;top:-20px;"><span id="remarks"></span></p>
+                    <p ><span id="remarks"></span></p>
                 </div>
 
-                <div class="modal-button-container" style="top:-20px">
+                <div class="modal-button-container">
                     <button type = "submit" onclick = "nextLevel()">LEVEL 2</button>
                 </div>
 
