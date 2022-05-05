@@ -130,7 +130,6 @@ function promptRequest($numOfQuestions){
                 <h1>Score : <span id="player-score"></span></h1>
                 <h1>Current Streak : <span id = "player-streak"></span></h1>
                 <h1>Question : <span id="question-number"></span> / 8</h1>
-
             </div>
 
             <div class="game-question-container">
