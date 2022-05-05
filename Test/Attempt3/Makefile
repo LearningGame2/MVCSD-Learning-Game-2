@@ -8,6 +8,7 @@ USER= Game2
 all: PutHTML
 
 PutHTML:
+		cp -r LG2Images /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level2.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level3.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
@@ -17,7 +18,6 @@ PutHTML:
 		cp Home.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Login1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp LoginStyle.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
-		cp -r LG2Images /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Game.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		chmod 777 More.php
 		cp More.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
