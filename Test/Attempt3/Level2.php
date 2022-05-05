@@ -77,7 +77,7 @@ function promptRequest($numOfQuestions){
                 </div>
 
                 <div class="modal-button-container">
-                    <button onclick="nextLevel()">Next Level</button>
+                    <button onclick="nextLevel()"><span id="minigame-check"></span></button>
                 </div>
 
             </div>
@@ -362,6 +362,14 @@ function handleEndGame() {
             remarkColor = "green"
         }
         const playerGrade = Math.round((amountCorrect / 8) * 100)
+
+        if (amountCorrect>6){
+            document.getElementById("minigame-check").innerHTML = "Astronaut in Trouble!!";
+            document.getElementById("minigame-check").style.color = "white";
+        }
+        else{
+            document.getElementById("minigame-check").innerHTML = "Next Level";
+        }
 
         //data to display to score board
         document.getElementById('remarks').innerHTML = remark
