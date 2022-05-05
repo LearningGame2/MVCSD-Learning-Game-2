@@ -159,7 +159,7 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 {
 	if (this.timer.getElapsedTime()<270)
 	{
-		this.score = 270-this.timer.getElapsedTime();
+		this.score = Math.round((300-this.timer.getElapsedTime())/5);
 	}
 	else
 	{

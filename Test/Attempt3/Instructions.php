@@ -79,6 +79,7 @@
                 <li>Click and drag shapes into the box so that they cover all the empty squares and don't go outside of the box
                 <li>Tips: start with sections that only certain pieces could fill, if a piece doesn't work in an orientation,<br>
                 take them out and try each one by one, and keep at it!  They all have at least one solution.
+                <li>You receive a 3x multiplier for getting to this game — if you did well enough on rounding to reach it
             </ul>
             <br>
             HexGL: keep your spaceship on track and don't crash...
