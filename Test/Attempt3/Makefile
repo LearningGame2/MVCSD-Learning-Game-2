@@ -17,7 +17,7 @@ PutHTML:
 		cp Home.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Login1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp LoginStyle.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
-		cp duck-meet-g84831808a_1920.jpg /var/www/html/class/ssd/$(USER)/LGAttempt3/
+		cp -r LG2Images /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Game.css /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		chmod 777 More.php
 		cp More.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
