@@ -3124,6 +3124,8 @@ function mouseUp(e) {
 			//setMessage(["Click to continue"], true)
 			//LAST THING: maybe uncomment this?
 			//:)!
+
+			firstTime=false; //uncomment this if commit 690 doesn't work
 	
 			skipState = 2
 			animateMouth = true
@@ -3136,8 +3138,6 @@ function mouseUp(e) {
 				}, 3000)
 			}, 7000)
 
-			
-			firstTime=false; //uncomment this if commit 690 doesn't work
 			if (firstTime == false) //sam edit
 			{
 				window.location.href = "https://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php" //sam edit
@@ -3242,7 +3242,7 @@ function mouseUp(e) {
 						//setMessage(["Click to continue"], true)
 						canSkip = true
 						animateMouth = true
-						setStoryMessage(["We did it, Spacey!!!", "WE ACTUALLY RESCUED THEM ALL!",
+						setStoryMessage(["We did it, Spacey!!!", "WE RESCUED THEM ALL!",
 							"Let's celebrate!", " ", "(ﾉ^ヮ^)ﾉ*:・ﾟ✧"," ", "      - click to go to Level 2 -"
 						])
 
