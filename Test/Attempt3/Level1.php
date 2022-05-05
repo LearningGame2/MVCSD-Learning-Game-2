@@ -113,7 +113,7 @@ function promptRequest($numOfQuestions){
                     <p>Right Answers : <span id="right-answers"></span></p>
                     <p>Grade : <span id="grade-percentage"></span>%</p>
                     <p>Score : <span id="score"></span></p>
-                    <p ><span id="remarks"></span></p>
+                    <p style="position:relative;top:-20px;"><span id="remarks"></span></p>
                 </div>
 
                 <div class="modal-button-container">
