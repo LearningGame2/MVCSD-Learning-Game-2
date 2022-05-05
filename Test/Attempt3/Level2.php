@@ -89,7 +89,7 @@ function promptRequest($numOfQuestions){
             <div class="game-details-container">
                 <h1>Score : <span id="player-score"></span></h1>
                 <h1>Current Streak : <span id = "player-streak"></span></h1>
-                <h1>Question : <span id="question-number"></span> / 10</h1>
+                <h1>Question : <span id="question-number"></span> / 8</h1>
 
             </div>
 
@@ -187,10 +187,10 @@ question object with the results from the parse*/
 //post: returns questions array
 function fillQuestions()
 {
-    const questions = [10];
-    var phpPrompt = JSON.parse('<?php echo promptRequest(10);?>');
+    const questions = [8];
+    var phpPrompt = JSON.parse('<?php echo promptRequest(8);?>');
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 8; i++) {
         var prompt = phpPrompt[i];
         console.log(prompt);
         qPrompt = prompt[1];
@@ -284,7 +284,7 @@ function checkForAnswer() {
                 amountCorrect++
                 indexNumber++ //adding 1 to index so has to display next question..
                 //set to delay question number till when next question loads
-                if (questionNumber < 10){
+                if (questionNumber < 8){
                   setTimeout(() => {
                       questionNumber++
                   }, 10)//used to be 1000
@@ -299,7 +299,7 @@ function checkForAnswer() {
                 indexNumber++
                 playerStreak = 0
                 //set to delay question number till when next question loads
-                if (questionNumber < 10){
+                if (questionNumber < 8){
                   setTimeout(() => {
                       questionNumber++
                   }, 10)//used to be 1000
@@ -316,12 +316,12 @@ function handleNextQuestion() {
         unCheckRadioButtons()
         //delays next question displaying for a second just for some effects so questions don't rush in on player
         setTimeout(() => {
-            if (indexNumber <= 9) {
-            //displays next question as long as index number isn't greater than 9, remember index number starts from 0, so index 9 is question 10
+            if (indexNumber <= 7) {
+            //displays next question as long as index number isn't greater than 7, remember index number starts from 0, so index 7 is question 8
                 NextQuestion(indexNumber)
             }
             else {
-                handleEndGame()//ends game if index number greater than 9 meaning we're already at the 10th question
+                handleEndGame()//ends game if index number greater than 9 meaning we're already at the 8th question
             }
             resetOptionBackground()
         }, 10);
@@ -353,15 +353,15 @@ function handleEndGame() {
             remark = "You can do better!"
             remarkColor = "red"
         }
-        else if (amountCorrect >= 4 && amountCorrect < 9) {
+        else if (amountCorrect >= 4 && amountCorrect < 7) {
             remark = "Keep practicing!"
             remarkColor = "orange"
         }
-        else if (amountCorrect >= 10) {
+        else if (amountCorrect >= 8) {
             remark = "Excellent! Keep up the good work."
             remarkColor = "green"
         }
-        const playerGrade = (amountCorrect / 10) * 100
+        const playerGrade = Math.round((amountCorrect / 8) * 100)
 
         if (amountCorrect>6){
             document.getElementById("minigame-check").innerHTML = "Astronaut in Trouble!!";

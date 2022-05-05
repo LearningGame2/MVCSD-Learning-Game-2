@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-// if(intval($_COOKIE['Checkpoint'])!=2){
-//     header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
-// }
-// setcookie("Checkpoint", 3);
+if(intval($_COOKIE['Checkpoint'])!=2){
+    header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
+}
+setcookie("Checkpoint", 3);
 
 if(!isset($_COOKIE['Username'])){
   header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Login1.php");
@@ -367,7 +367,7 @@ function handleEndGame() {
             remark = "Excellent! Keep up the good work."
             remarkColor = "green"
         }
-        const playerGrade = (amountCorrect / 7) * 100
+        const playerGrade = Math.round((amountCorrect / 7) * 100)
 
         if (amountCorrect>5){
             document.getElementById("minigame-check").innerHTML = "HexGL!!";
