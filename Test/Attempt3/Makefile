@@ -22,8 +22,8 @@ PutHTML:
 		cp More.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		chmod 777 Instructions.php
 		cp Instructions.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
-		cp LG2Images/KenyonLogo.ico /var/www/html/class/ssd/$(USER)/LGAttempt3/LG2Images/
-		cp LG2Images/duck-meet-g84831808a_1920.jpg /var/www/html/class/ssd/$(USER)/LGAttempt3/LG2Images/
+		cp -r LG2Images /var/www/html/class/ssd/$(USER)/LGAttempt3/
+
 
 		echo "Current contents of your HTML directory: "
 		ls -l /var/www/html/class/ssd/$(USER)/LGAttempt3/
