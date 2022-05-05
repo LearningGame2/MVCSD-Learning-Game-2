@@ -3121,7 +3121,9 @@ function mouseUp(e) {
 			zzfx(...[effectVolume, , 21, .02, , .04, 1, 2.15, 42, , , , , , 1, , , , , .96]); //Button click
 
 			//story32(): pasted here
-			setMessage(["Click to continue"], true)
+			//setMessage(["Click to continue"], true)
+			//LAST THING: maybe uncomment this?
+			//:)!
 	
 			skipState = 2
 			animateMouth = true
