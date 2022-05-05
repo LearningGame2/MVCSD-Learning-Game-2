@@ -22,8 +22,8 @@
          //session_register("myusername");
         $GovernmentName = $row['GovernmentName'];
         $DatabaseUsername =$row['Username'];
-        $AllTimeStreak =$row['Highscore'];
-        $AllTimeScore =$row['LongestStreak'];
+        $AllTimeScore =$row['Highscore'];
+        $AllTimeStreak =$row['LongestStreak'];
 
          setcookie("GovernmentName", $GovernmentName, time() + (3600));
          setcookie("Username", $DatabaseUsername, time() + (3600));
@@ -74,6 +74,9 @@
 <script>
   let GovernmentName = getCookie("GovernmentName");
   let Username = getCookie("Username");
+  let AllTimeScore = getCookie("AllTimeScore");
+  let AllTimeStreak = getCookie("AllTimeStreak");
+
   let Display = "--- OR ---";
   console.log(GovernmentName);
   console.log(Username);
@@ -94,6 +97,8 @@
     if(GovernmentName != null && Username != null){
     setCookie("GovernmentName",GovernmentName, 1);
     setCookie("Username",Username, 1);
+    setCookie("AllTimeScore",AllTimeScore, 1);
+    setCookie("AllTimeStreak",AllTimeStreak, 1);
     window.location.href = "Home.php"
     }
   }
