@@ -407,7 +407,7 @@ function createGame([spritePlayer, spriteR, fullIcon, spriteBg]){
         let LG2multiplier = Math.floor(SCORE.point/100)+1;
         localStorage.setItem('cookieMiniGameMulti', LG2multiplier);
 
-        window.location.href = "../../LGAttempt3"
+        window.location.href = "../.."
 
         // const CURR_SCORE = SCORE.point;
         // let MAX_SCORE = getCookie('MAX_SCORE');
