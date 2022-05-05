@@ -318,8 +318,8 @@ function leaderboardRequest(){
     document.getElementById("IfPreviousStreak").innerHTML = "No streak recorded yet";
   }
 
-  document.getElementById("AllTimeScore").innerHTML = parseInt(getCookie("AllTimeScore");
-  document.getElementById("AllTimeStreak").innerHTML = parseInt(getCookie("AllTimeStreak");
+  document.getElementById("AllTimeScore").innerHTML = parseInt(getCookie("AllTimeScore"));
+  document.getElementById("AllTimeStreak").innerHTML = parseInt(getCookie("AllTimeStreak"));
 
 
   function getCookie(cname) {
