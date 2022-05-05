@@ -92,6 +92,50 @@ function checkUpdateLeaderboard(){
     }
 }
 
+function checkIndividualStats(){
+  $conn = connect();
+  $returnValue = 0;
+  $usernameStats = $_COOKIE['Username'];
+  $sql = "SELECT * FROM UserDatabase WHERE Username = '$usernameStats'";
+  $result = mysqli_query($conn,$sql);
+  $stats = mysqli_fetch_assoc($result);
+  $StudentID = $stats['StudentID'];
+  $checkDBScore = $stats['Highscore'];
+  $checkDBStreak = $stats['LongestStreak'];
+
+  $playerScore = intval($_COOKIE['cookieScore']);
+  $playerStreak = intval($_COOKIE['cookieHighStreak']);
+
+
+
+  if($playerScore> $checkDBScore){
+    $returnValue = $returnValue + 1;
+    $sql = "UPDATE UserDatabase SET Highscore = '$playerScore' WHERE StudentID = '$StudentID'";
+    if (mysqli_query($conn, $sql)) {
+      echo "Record edit successfully";
+  }
+  else {
+      echo "Error editing record: " . mysqli_error($conn);
+  }
+  }
+
+
+  if($playerStreak > $checkDBStreak){
+    $returnValue = $rturnValue + 2;
+    $sql = "UPDATE UserDatabase SET LongestStreak = '$playerStreak' WHERE StudentID = '$StudentID'";
+    if (mysqli_query($conn, $sql)) {
+      echo "Record edit successfully";
+  }
+  else {
+      echo "Error editing record: " . mysqli_error($conn);
+  }  
+  }
+
+  mysqli_close($conn);
+
+  return $returnValue;
+}
+
 ?>
 
 
@@ -157,6 +201,9 @@ document.getElementById("high-streak").innerHTML = playerHighStreak
 //changed from ID to Id
 
 let UpdateLeaderboard = parseInt('<?php checkUpdateLeaderboard() ?>')
+let UpdateIndividualStats = parseINT('<?php checkIndividualStats() ?>')
+
+console.log("update leaderboard message: " + UpdateLeaderboard);
 if(UpdateLeaderboard == 0){
     document.getElementById("update-leaderboard-message").innerHTML = "Awesome Job!"
 }
