@@ -399,6 +399,13 @@ function handleEndGame() {
             remarkColor = "green"
         }
         const playerGrade = Math.round((amountCorrect / 8) * 100)
+        if (amountCorrect>7){
+            document.getElementById("minigame-check").innerHTML = "HexGL!!";
+            document.getElementById("minigame-check").style.color = "white";
+        }
+        else{
+            document.getElementById("minigame-check").innerHTML = "Next Level";
+        }
 
         //data to display to score board
         document.getElementById('remarks').innerHTML = remark
@@ -425,8 +432,9 @@ function closeOptionModal() {
 }
 
 function nextLevel(){
-    if (amountCorrect>6){
+    if (amountCorrect>7){
             window.location.href = "../DuckHuntTest/packabunchas-main/"
+            localStorage.setItem('cookieMiniGameMulti', 3)
         }
         else{
             window.location.href = "Level2.php"
