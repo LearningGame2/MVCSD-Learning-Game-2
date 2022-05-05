@@ -256,7 +256,7 @@ function leaderboardRequest(){
             <td> <span id = "IfPreviousStreak"></span> </td>
         </tr>
 
-        <tr class="break"><td colspan="2"></td></tr>
+        <tr class="break"><td colspan="20"></td></tr>
 
         <tr>
             <td>All time highscore: <span id = "AllTimeScore"></span> </td>
