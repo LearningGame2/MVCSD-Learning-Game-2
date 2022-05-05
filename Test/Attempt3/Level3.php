@@ -367,10 +367,10 @@ function handleEndGame() {
             remark = "Excellent! Keep up the good work."
             remarkColor = "green"
         }
-        const playerGrade = (amountCorrect / 7) * 100
+        const playerGrade = Math.round((amountCorrect / 7) * 100)
 
         if (amountCorrect>5){
-            document.getElementById("minigame-check").innerHTML = "Astronaut in Trouble!!";
+            document.getElementById("minigame-check").innerHTML = "HexGL!!";
             document.getElementById("minigame-check").style.color = "white";
         }
         else{
