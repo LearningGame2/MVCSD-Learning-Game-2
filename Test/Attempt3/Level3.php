@@ -56,7 +56,7 @@ function promptRequest($numOfQuestions){
   </title>
 </head>
 
-<body onload="NextQuestion(0)">
+<body style="background-image:url('./LG2Images/duck-meet.jpg')" onload="NextQuestion(0)">
   <h1 style="color:white; text-align:center; font-family: 'Lucida Console', 'Courier New', monospace; font-size:300%; line-height: 120px">
     Level 3
   </h1>
