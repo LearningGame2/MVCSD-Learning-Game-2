@@ -290,10 +290,10 @@ function NextQuestion(index) {
 
 //Make correct answer sound
 const winningBleep = new Audio();
-winningBleep.scr = "./winning-bleeps.wav";
+winningBleep.scr = "/LG2Sounds/winning-bleeps.wav";
 //Make incorrect answer sound
 const losingBleep = new Audio();
-losingBleep.scr = "./losing-bleeps.wav";
+losingBleep.scr = "/LG2Sounds/losing-bleeps.wav";
 
 function checkForAnswer() {
         const currentQuestion = questionArray[indexNumber] //gets current Question
