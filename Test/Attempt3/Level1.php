@@ -309,7 +309,7 @@ function playWinningAudio() {
 
 function playLosingAudio() {
   losingBleep.play();
-} 
+}
 
 function checkForAnswer() {
         const currentQuestion = questionArray[indexNumber] //gets current Question
@@ -344,7 +344,7 @@ function checkForAnswer() {
                 if (questionNumber < 8){
                   setTimeout(() => {
                       questionNumber++
-                  }, 10)//used to be 1000
+                  }, 2000)//used to be 1000
                 }
 
             }
