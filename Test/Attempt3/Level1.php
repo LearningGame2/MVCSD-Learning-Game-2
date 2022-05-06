@@ -288,13 +288,18 @@ function NextQuestion(index) {
         document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
 }
 
+//Make correct answer sound
+const winningBleep = new Audio();
+winningBleep.scr = "/LG2Sounds/winning-bleeps.wav";
+//Make incorrect answer sound
+const losingBleep = new Audio();
+losingBleep.scr = "/LG2Sounds/losing-bleeps.wav";
 
 function checkForAnswer() {
         const currentQuestion = questionArray[indexNumber] //gets current Question
         const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
         const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
         let correctOption = null
-
         options.forEach((option) => {
             if (option.value === currentQuestionAnswer) {
                 //get's correct's radio input with correct answer
@@ -311,6 +316,7 @@ function checkForAnswer() {
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
+                winningBleep.play();
                 playerScore = playerScore + ((1 + playerStreak) * levelMultiplier)
                 playerStreak++
                 amountCorrect++
@@ -331,6 +337,7 @@ function checkForAnswer() {
                 const wrongLabelId = option.labels[0].id
                 document.getElementById(wrongLabelId).style.backgroundColor = "red"
                 document.getElementById(correctOption).style.backgroundColor = "green"
+                losingBleep.play();
                 wrongAttempt++ //adds 1 to wrong attempts
                 indexNumber++
                 playerStreak = 0
@@ -433,7 +440,7 @@ function nextLevel(){
     if (amountCorrect>7){
             localStorage.setItem('cookieMiniGameMulti', 3)
             window.location.href = "../DuckHuntTest/packabunchas-main/"
-            
+
         }
         else{
             window.location.href = "Level2.php"
