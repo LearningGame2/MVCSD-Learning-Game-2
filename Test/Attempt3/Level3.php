@@ -56,7 +56,7 @@ function promptRequest($numOfQuestions){
   </title>
 </head>
 
-<body style="background-image:url('./LG2Images/hex-lines.jpg')" onload="NextQuestion(0)">
+<body style="background-image:url('./LG2Images/hex-lines.jpg'); background-size:cover;" onload="NextQuestion(0)">
 
   <audio id="correctAnswerSound">
     <source src="./LG2Sounds/winning-bleeps.wav" type="audio/wav">
