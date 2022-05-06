@@ -431,8 +431,9 @@ function closeOptionModal() {
 
 function nextLevel(){
     if (amountCorrect>7){
-            window.location.href = "../DuckHuntTest/packabunchas-main/"
             localStorage.setItem('cookieMiniGameMulti', 3)
+            window.location.href = "../DuckHuntTest/packabunchas-main/"
+            
         }
         else{
             window.location.href = "Level2.php"
