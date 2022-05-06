@@ -65,6 +65,16 @@ function promptRequest($numOfQuestions){
 
 
 <body style="background-image: url('./LG2Images/duck-meet.jpg')" onload="NextQuestion(0)">
+
+  <audio id="correctAnswerSound">
+    <source src="./LG2Sounds/winning-bleeps.wav" type="audio/wav">
+  </audio>
+
+  <audio id="incorrectAnswerSound">
+    <source src="./LG2Sounds/losing-bleeps.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
   <h1 style="color:white; text-align:center; font-family: 'Lucida Console', 'Courier New', monospace; font-size:300%; line-height: 120px">
     Level 4
   </h1>
@@ -268,6 +278,17 @@ function NextQuestion(index) {
 
 }
 
+//Answer Sound
+var winningBleep = document.getElementById("correctAnswerSound");
+var losingBleep = document.getElementById("incorrectAnswerSound");
+
+function playWinningAudio() {
+  winningBleep.play();
+}
+
+function playLosingAudio() {
+  losingBleep.play();
+}
 
 function checkForAnswer() {
         const currentQuestion = questionArray[indexNumber] //gets current Question
@@ -291,6 +312,7 @@ function checkForAnswer() {
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
+                playWinningAudio()
                 playerScore = playerScore + ((1 + playerStreak) * levelMultiplier*playerMiniGameMulti) //adding to player's score
                 playerStreak++
                 if(playerStreak>playerHighStreak){
@@ -310,6 +332,7 @@ function checkForAnswer() {
                 const wrongLabelId = option.labels[0].id
                 document.getElementById(wrongLabelId).style.backgroundColor = "red"
                 document.getElementById(correctOption).style.backgroundColor = "green"
+                playLosingAudio();
                 wrongAttempt++ //adds 1 to wrong attempts
                 indexNumber++
                 playerStreak = 0
