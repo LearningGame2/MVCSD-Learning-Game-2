@@ -157,7 +157,7 @@ bkcore.hexgl.Gameplay.prototype.start = function(opts)
 
 bkcore.hexgl.Gameplay.prototype.end = function(result)
 {
-	if (this.timer.getElapsedTime()<270)
+	if (this.timer.getElapsedTime()<300)
 	{
 		this.score = Math.round((300-this.timer.getElapsedTime())/5);
 	}
