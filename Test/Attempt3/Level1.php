@@ -344,7 +344,7 @@ function checkForAnswer() {
                 if (questionNumber < 8){
                   setTimeout(() => {
                       questionNumber++
-                  }, 2000)//used to be 1000
+                  }, 10)//used to be 1000
                 }
 
             }
@@ -362,7 +362,7 @@ function checkForAnswer() {
                 if (questionNumber < 8){
                   setTimeout(() => {
                       questionNumber++
-                  }, 2000)//used to be 1000
+                  }, 10)//used to be 1000
                 }
             }
         })
@@ -382,7 +382,7 @@ function handleNextQuestion() {
                 handleEndGame()//ends game if index number greater than 9 meaning we're already at the 8 question
             }
             resetOptionBackground()
-        }, 10);
+        }, 2000);
 }
 
 //sets options background back to null after display the right/wrong colors
