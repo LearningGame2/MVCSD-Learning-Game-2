@@ -99,8 +99,7 @@ function promptRequest($numOfQuestions){
 <body onload="NextQuestion(0)">
 
   <audio id="correctAnswerSound">
-    <source src="/winning-bleeps.wav" type="audio/wav">
-    Your browser does not support the audio element.
+    <source src="/LG2Sounds/winning-bleeps.wav" type="audio/wav">
   </audio>
 
   <audio id="incorrectAnswerSound">
