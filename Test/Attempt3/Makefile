@@ -9,6 +9,7 @@ all: PutHTML
 
 PutHTML:
 		cp -r LG2Images /var/www/html/class/ssd/$(USER)/LGAttempt3/
+		cp -r LG2Sounds /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level2.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level3.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
