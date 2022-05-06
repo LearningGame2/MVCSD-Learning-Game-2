@@ -362,7 +362,7 @@ function checkForAnswer() {
                 if (questionNumber < 8){
                   setTimeout(() => {
                       questionNumber++
-                  }, 10)//used to be 1000
+                  }, 2000)//used to be 1000
                 }
             }
         })
