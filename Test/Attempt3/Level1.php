@@ -96,7 +96,7 @@ function promptRequest($numOfQuestions){
 
 </head>
 
-<body style="background-image: url('./LG2Images/tetris-blocks.jpg')" onload="NextQuestion(0)">
+<body style="background-image:url('./LG2Images/tetris-blocks.jpg'); background-size:cover;" onload="NextQuestion(0)">
 
   <audio id="correctAnswerSound">
     <source src="./LG2Sounds/winning-bleeps.wav" type="audio/wav">
