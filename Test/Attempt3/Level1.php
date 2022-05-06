@@ -177,7 +177,7 @@ function promptRequest($numOfQuestions){
             </div>
 
             <div class="next-button-container">
-                <button onclick="handleNextQuestion()" onmousedown="winningBleep.play()">Submit</button>
+                <button onclick="winningBleep.play() handleNextQuestion()">Submit</button>
             </div>
 
         </div>
@@ -186,8 +186,8 @@ function promptRequest($numOfQuestions){
 
 <script>
 //Make correct answer sound
-var winningBleep = new Audio();
-winningBleep.src = "winning-bleeps.wav"
+const winningBleep = new Audio();
+winningBleep.scr = "./winning-bleeps.wav";
 
 //making a class of question object to fill questions array
 class Question {
