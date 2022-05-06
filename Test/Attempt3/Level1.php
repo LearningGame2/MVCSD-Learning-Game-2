@@ -177,7 +177,7 @@ function promptRequest($numOfQuestions){
             </div>
 
             <div class="next-button-container">
-                <button onclick="handleNextQuestion()">Submit</button>
+                <button onclick="handleNextQuestion()" onmousedown="winningBleep.play()">Submit</button>
             </div>
 
         </div>
@@ -185,6 +185,10 @@ function promptRequest($numOfQuestions){
 </body>
 
 <script>
+//Make correct answer sound
+var winningBleep = new Audio();
+winningBleep.src = "winning-bleeps.wav"
+
 //making a class of question object to fill questions array
 class Question {
     constructor (question, optionA, optionB, optionC, optionD, correctOption) {
@@ -433,7 +437,7 @@ function nextLevel(){
     if (amountCorrect>7){
             localStorage.setItem('cookieMiniGameMulti', 3)
             window.location.href = "../DuckHuntTest/packabunchas-main/"
-            
+
         }
         else{
             window.location.href = "Level2.php"
