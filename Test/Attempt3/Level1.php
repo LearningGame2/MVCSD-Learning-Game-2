@@ -97,6 +97,17 @@ function promptRequest($numOfQuestions){
 </head>
 
 <body onload="NextQuestion(0)">
+
+  <audio id="correctAnswerSound">
+    <source src="winning-bleeps.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio id="incorrectAnswerSound">
+    <source src="losing-bleeps.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
   <h1 style="color:white; text-align:center; font-family: 'Lucida Console', 'Courier New', monospace; font-size:300%; line-height:120px;">
     Level 1
   </h1>
@@ -288,12 +299,17 @@ function NextQuestion(index) {
         document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
 }
 
-//Make correct answer sound
-const winningBleep = new Audio();
-winningBleep.scr = "/LG2Sounds/winning-bleeps.wav";
-//Make incorrect answer sound
-const losingBleep = new Audio();
-losingBleep.scr = "/LG2Sounds/losing-bleeps.wav";
+//Answer Sound
+var winningBleep = document.getElementById("correctAnswerSound");
+var losingBleep = document.getElementById("incorrectAnswerSound");
+
+function playWinningAudio() {
+  winningBleep.play();
+}
+
+function playLosingAudio() {
+  losingBleep.play();
+} 
 
 function checkForAnswer() {
         const currentQuestion = questionArray[indexNumber] //gets current Question
@@ -316,7 +332,7 @@ function checkForAnswer() {
         options.forEach((option) => {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
-                winningBleep.play();
+                playWinningAudio()
                 playerScore = playerScore + ((1 + playerStreak) * levelMultiplier)
                 playerStreak++
                 amountCorrect++
@@ -337,7 +353,7 @@ function checkForAnswer() {
                 const wrongLabelId = option.labels[0].id
                 document.getElementById(wrongLabelId).style.backgroundColor = "red"
                 document.getElementById(correctOption).style.backgroundColor = "green"
-                losingBleep.play();
+                playLosingAudio();
                 wrongAttempt++ //adds 1 to wrong attempts
                 indexNumber++
                 playerStreak = 0
