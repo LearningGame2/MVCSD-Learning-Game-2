@@ -187,7 +187,7 @@ function promptRequest($numOfQuestions){
             </div>
 
             <div class="next-button-container">
-                <button onclick="playWinningAudio()">Submit</button>
+                <button onclick="handleNextQuestion()">Submit</button>
             </div>
 
         </div>
