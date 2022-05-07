@@ -46,7 +46,7 @@ function individualStatsRequest(){
   $GovernmentName = $_COOKIE['GovernmentName'];
   $sql = "SELECT * FROM UserDatabase WHERE Username = '$Username' and GovernmentName = '$GovernmentName'";
   $result = mysqli_query($conn,$sql);
-  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+  $row = mysqli_fetch_assoc($result);
 
   $AllTimeScore =$row['Highscore'];
   $AllTimeStreak =$row['LongestStreak'];
