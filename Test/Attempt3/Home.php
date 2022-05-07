@@ -21,6 +21,22 @@ function connect() {
   return $conn;
 }//Connection Function
 
+$conn = connect();
+setcookie("TEST", 9, time()+(3600));
+
+$Username = $_COOKIE['Username'];
+$sql = "SELECT * FROM UserDatabase WHERE Username = '$Username'";
+$result = mysqli_query($conn,$sql);
+$row = mysqli_fetch_assoc($result);
+
+$AllTimeScore =$row['Highscore'];
+$AllTimeStreak =$row['LongestStreak'];
+
+setcookie("AllTimeScore", $AllTimeScore, time() + (3600));
+setcookie("AllTimeStreak", $AllTimeStreak, time() + (3600));
+
+mysqli_close($conn);
+
 
 
 function leaderboardRequest(){
@@ -41,22 +57,7 @@ function leaderboardRequest(){
 
 
 
-  $conn = connect();
-  setcookie("TEST", 9, time()+(3600));
-
-  $Username = $_COOKIE['Username'];
-  $sql = "SELECT * FROM UserDatabase WHERE Username = '$Username'";
-  $result = mysqli_query($conn,$sql);
-  $row = mysqli_fetch_assoc($result);
-
-  $AllTimeScore =$row['Highscore'];
-  $AllTimeStreak =$row['LongestStreak'];
-
-  setcookie("AllTimeScore", $AllTimeScore, time() + (3600));
-  setcookie("AllTimeStreak", $AllTimeStreak, time() + (3600));
-
-  mysqli_close($conn);
-
+  
 
 
 ?>
