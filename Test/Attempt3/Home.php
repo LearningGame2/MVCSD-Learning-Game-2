@@ -39,13 +39,21 @@ function leaderboardRequest(){
   return json_encode($scores);
 }
 
-// function getName() {
-//   $conn = connect();
-//   $currentUser = $_SESSION['login'];
-//   $sql = "SELECT DISTINCT GovernmentName FROM UserDatabase WHERE Username = '$currentUser'";
-//   $result = mysqli_query($conn,$sql);
-//   return $result;
-// }
+function individualStatsRequest(){
+  $conn = connect();
+
+  $Username = $_COOKIE['Username'];
+  $GovernmentName = $_COOKIE['GovernmentName'];
+  $sql = "SELECT * FROM UserDatabase WHERE Username = '$Username' and GovernmentName = '$GovernmentName'";
+  $result = mysqli_query($conn,$sql);
+  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+  $AllTimeScore =$row['Highscore'];
+  $AllTimeStreak =$row['LongestStreak'];
+
+  setcookie("AllTimeScore", $AllTimeScore, time() + (3600));
+  setcookie("AllTimeStreak", $AllTimeStreak, time() + (3600));
+}
 
 
 ?>
@@ -270,7 +278,8 @@ function leaderboardRequest(){
 </body>
 
 <script>
-  console.log(document.cookie)
+  <?php individualStatsRequest() ?>;
+
   var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
 
   document.getElementById("player1").innerHTML = testScores[9].Username;
@@ -317,9 +326,6 @@ function leaderboardRequest(){
   if(getCookie("cookieHighStreak")== 0){
     document.getElementById("IfPreviousStreak").innerHTML = "No streak recorded yet";
   }
-
-  console.log(parseInt(getCookie("AllTimeScore")));
-  console.log(parseInt(getCookie("AllTimeStreak")));
 
   document.getElementById("AllTimeScore").innerHTML = parseInt(getCookie("AllTimeScore"));
   document.getElementById("AllTimeStreak").innerHTML = parseInt(getCookie("AllTimeStreak"));

@@ -22,13 +22,13 @@
          //session_register("myusername");
         $GovernmentName = $row['GovernmentName'];
         $DatabaseUsername =$row['Username'];
-        $AllTimeScore =$row['Highscore'];
-        $AllTimeStreak =$row['LongestStreak'];
+        //$AllTimeScore =$row['Highscore'];
+        //$AllTimeStreak =$row['LongestStreak'];
 
          setcookie("GovernmentName", $GovernmentName, time() + (3600));
          setcookie("Username", $DatabaseUsername, time() + (3600));
-         setcookie("AllTimeScore", $AllTimeScore, time() + (3600));
-         setcookie("AllTimeStreak", $AllTimeStreak, time() + (3600));
+         //setcookie("AllTimeScore", $AllTimeScore, time() + (3600));
+         //setcookie("AllTimeStreak", $AllTimeStreak, time() + (3600));
 
          $error = "Login Sucessful";
          header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
@@ -62,7 +62,7 @@
       <button type = "submit" value = " Submit ">Submit</button>
     </form>
     <div style="text-align:center;">
-      <h1 style="color:white; font-family:Garamond;" id = "welcome-back-message"></h1>
+      <h1 style="color:white; font-family:Garamond;font-size: 20px;" id = "welcome-back-message"></h1>
       <button class="button" type = "submit" id = "welcome-back-button" onclick = "login()" >Log in as <span id = "welcome-back-text"></span></button>
     </div>
     <div style = "font-size:30px; color:red; margin-top:10px; text-align:center; position:relative; left:0%">
@@ -74,8 +74,8 @@
 <script>
   let GovernmentName = getCookie("GovernmentName");
   let Username = getCookie("Username");
-  let AllTimeScore = getCookie("AllTimeScore");
-  let AllTimeStreak = getCookie("AllTimeStreak");
+  //let AllTimeScore = getCookie("AllTimeScore");
+  //let AllTimeStreak = getCookie("AllTimeStreak");
 
   let Display = "--- OR ---";
   console.log(GovernmentName);
@@ -97,8 +97,8 @@
     if(GovernmentName != null && Username != null){
     setCookie("GovernmentName",GovernmentName, 1);
     setCookie("Username",Username, 1);
-    setCookie("AllTimeScore",AllTimeScore, 1);
-    setCookie("AllTimeStreak",AllTimeStreak, 1);
+    //setCookie("AllTimeScore",AllTimeScore, 1);
+    //setCookie("AllTimeStreak",AllTimeStreak, 1);
     window.location.href = "Home.php"
     }
   }
