@@ -44,7 +44,7 @@ function individualStatsRequest(){
 
   $Username = $_COOKIE['Username'];
   $GovernmentName = $_COOKIE['GovernmentName'];
-  $sql = "SELECT * FROM UserDatabase WHERE Username = '$Username' and GovernmentName = '$GovernmentName'";
+  $sql = "SELECT * FROM UserDatabase WHERE Username = '$Username' AND GovernmentName = '$GovernmentName'";
   $result = mysqli_query($conn,$sql);
   $row = mysqli_fetch_assoc($result);
 
@@ -55,12 +55,6 @@ function individualStatsRequest(){
   setcookie("AllTimeStreak", $AllTimeStreak, time() + (3600));
 
   mysqli_close($conn);
-
-
-   //$AllTimeScore =$row['Highscore'];
-   //$AllTimeStreak =$row['LongestStreak'];
-   //setcookie("AllTimeScore", $AllTimeScore, time() + (3600));
-   //setcookie("AllTimeStreak", $AllTimeStreak, time() + (3600));
 }
 
 
