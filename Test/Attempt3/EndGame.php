@@ -56,9 +56,9 @@ function checkUpdateLeaderboard(){
         }
     }
 
-    if($checkLeaderboardScore >= 0 && $checkLeaderboardScore<= 9){ //Leaderboard      also changed this from else if to if
+    if($checkLeaderboardScore >= 0 && $checkLeaderboardScore<= 9){ //Leaderboard      
         $conn = connect();
-        $sql = "DELETE FROM Leaderboard WHERE Username = '$deleteName' and Highscore = '$deleteScore' and GameID = '$deleteID'"; //changed Highscore from Passcode (vestigial from copied code?)
+        $sql = "DELETE FROM Leaderboard WHERE Username = '$deleteName' and Highscore = '$deleteScore' and GameID = '$deleteID'"; //Delete worst one
         if (mysqli_query($conn, $sql)) {
             echo "Record deleted successfully";
         }
@@ -66,25 +66,31 @@ function checkUpdateLeaderboard(){
             echo "Error deleting record: " . mysqli_error($conn);
         }
 
-        //changed login to be in double quotes...maybe chaining ' ' and " " is the problem?  idk this code feels like it should work
-        //i know SESSION login already wasn't working but login was blue and not orange when we had ' ' whereas it was orange in Home.php
+        $sql = "UPDATE UserDatabase SET Newest = 0 WHERE Newest = 1";//Making previous newest no longer newest
+        if (mysqli_query($conn, $sql)) {
+          echo "Record edit successfully";
+        }
+        else {
+          echo "Error editing record: " . mysqli_error($conn);
+         }
+        
+
         $seshLogin = $_COOKIE['Username'];
-        $sql = "INSERT INTO Leaderboard (Username, Highscore) VALUES ('$seshLogin', '$playerScore')";
+        $sql = "INSERT INTO Leaderboard (Username, Highscore, Newest) VALUES ('$seshLogin', '$playerScore',1)";
         if (mysqli_query($conn, $sql)) {
             echo "Record inserted successfully";
         }
         else {
             echo "Error inserting record: " . mysqli_error($conn);
         }
-        mysqli_close($conn);
 
-
+        
+         mysqli_close($conn);
         //Return conditionals
         if($checkLeaderboardScore==9){//All time new highscore!!!!11!!1!!!
             return 2;
         }
         else{return 1;}//On leaderboard, respectable dude
-
     }
 
     else if($checkLeaderboardScore < 0){ // Did not make leaderboard, rip bozo
