@@ -22,6 +22,7 @@ function connect() {
 }//Connection Function
 
 
+//PULL INDIVIDUAL STATS
 $conn = connect();
 setcookie("TEST", 9, time()+(3600));
 
@@ -37,7 +38,7 @@ setcookie("AllTimeScore", $AllTimeScore, time() + (3600));
 setcookie("AllTimeStreak", $AllTimeStreak, time() + (3600));
 
 mysqli_close($conn);
-
+//PULL INDIVIDUAL STATS
 
 
 function leaderboardRequest(){
@@ -283,8 +284,6 @@ function leaderboardRequest(){
 </body>
 
 <script>
-  //let statsRequest = '<?php //echo individualStatsRequest(); ?>';
-
   var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
 
   document.getElementById("player1").innerHTML = testScores[9].Username;
