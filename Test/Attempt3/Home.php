@@ -285,7 +285,7 @@ function leaderboardRequest(){
 
 <script>
   var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
-
+  
   document.getElementById("player1").innerHTML = testScores[9].Username;
   document.getElementById("score1").innerHTML = testScores[9].Highscore;
 
@@ -315,6 +315,59 @@ function leaderboardRequest(){
 
   document.getElementById("player10").innerHTML = testScores[0].Username;
   document.getElementById("score10").innerHTML = testScores[0].Highscore;
+
+  if(testScores[0].Newest == 1){
+  document.getElementById("player10").style.color = "blue";
+  document.getElementById("score10").style.color = "blue";
+  console.log("Tenth entry");
+  }
+  if(testScores[1].Newest == 1){
+  document.getElementById("player9").style.color = "blue";
+  document.getElementById("score9").style.color = "blue";
+  console.log("Ninth entry");
+  }
+  if(testScores[2].Newest == 1){
+  document.getElementById("player8").style.color = "blue";
+  document.getElementById("score8").style.color = "blue";
+  console.log("Eighth entry");
+  }
+  if(testScores[3].Newest == 1){
+  document.getElementById("player7").style.color = "blue";
+  document.getElementById("score7").style.color = "blue";
+  console.log("Seventh entry");
+  }
+  if(testScores[4].Newest == 1){
+  document.getElementById("player6").style.color = "blue";
+  document.getElementById("score6").style.color = "blue";
+  console.log("Sixth entry");
+  }
+  if(testScores[5].Newest == 1){
+  document.getElementById("player5").style.color = "blue";
+  document.getElementById("score5").style.color = "blue";
+  console.log("Fifth entry");
+  }
+  if(testScores[6].Newest == 1){
+  document.getElementById("player4").style.color = "blue";
+  document.getElementById("score4").style.color = "blue";
+  console.log("Fourth entry");
+  }
+  if(testScores[7].Newest == 1){
+  document.getElementById("player3").style.color = "blue";
+  document.getElementById("score3").style.color = "blue";
+  console.log("Third entry");
+  }
+  if(testScores[8].Newest == 1){
+  document.getElementById("player2").style.color = "blue";
+  document.getElementById("score2").style.color = "blue";
+  console.log("Second entry");
+  }
+  if(testScores[9].Newest == 1){
+  document.getElementById("player1").style.color = "blue";
+  document.getElementById("score1").style.color = "blue";
+  console.log("First entry");
+  }
+
+
 
 
 
