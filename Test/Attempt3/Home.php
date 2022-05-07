@@ -43,8 +43,7 @@ function individualStatsRequest(){
   $conn = connect();
 
   $Username = $_COOKIE['Username'];
-  $GovernmentName = $_COOKIE['GovernmentName'];
-  $sql = "SELECT * FROM UserDatabase WHERE Username = '$Username' AND GovernmentName = '$GovernmentName'";
+  $sql = "SELECT * FROM UserDatabase WHERE Username = '$Username'";
   $result = mysqli_query($conn,$sql);
   $row = mysqli_fetch_assoc($result);
 
