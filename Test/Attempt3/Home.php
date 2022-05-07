@@ -53,6 +53,14 @@ function individualStatsRequest(){
 
   setcookie("AllTimeScore", $AllTimeScore, time() + (3600));
   setcookie("AllTimeStreak", $AllTimeStreak, time() + (3600));
+
+  mysqli_close($conn);
+
+
+   //$AllTimeScore =$row['Highscore'];
+   //$AllTimeStreak =$row['LongestStreak'];
+   //setcookie("AllTimeScore", $AllTimeScore, time() + (3600));
+   //setcookie("AllTimeStreak", $AllTimeStreak, time() + (3600));
 }
 
 
@@ -278,7 +286,7 @@ function individualStatsRequest(){
 </body>
 
 <script>
-  <?php individualStatsRequest() ?>;
+  <?php individualStatsRequest(); ?>;
 
   var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
 
