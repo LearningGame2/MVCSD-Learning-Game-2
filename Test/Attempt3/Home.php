@@ -221,58 +221,58 @@ function leaderboardRequest(){
       <th>Score</th>
     </tr>
     <tr>
-      <td style = "font-size:35px; color:gold;">1</td>
+      <td style = "font-size:35px; color:gold;"><span id="newleft1"></span>1<span id="newright1"></span></td>
       <td><span style = "font-size:35px; color:gold;" id="player1"></span></td>
       <td><span style = "font-size:35px; color:gold;" id="score1"></span></td>
      
     </tr>
     <tr>
-      <td style = "font-size:30px; color:silver;">2</td>
+      <td style = "font-size:30px; color:silver;"><span id="newleft2"></span>2<span id="newright2"></span></td>
       <td><span style = "font-size:30px; color:silver;" id="player2"></span></td>
       <td><span style = "font-size:30px; color:silver;" id="score2"></span></td>
     </tr>
     <tr>
-      <td style = "font-size:25px; color:#CD7F32;">3</td>
+      <td style = "font-size:25px; color:#CD7F32;"><span id="newleft3"></span>3<span id="newright3"></span></td>
       <td><span style = "font-size:25px; color:#CD7F32;" id="player3"></span></td>
       <td><span style = "font-size:25px; color:#CD7F32;" id="score3"></span></td>
     </tr>
     <tr>
-      <td>4</td>
+      <td><span id="newleft4"></span>4<span id="newright4"></span></td>
       <td><span id="player4"></span></td>
       <td><span id="score4"></span></td>
     </tr>
     <tr>
-      <td>5</td>
+      <td><span id="newleft5"></span>5<span id="newright5"></span></td>
       <td><span id="player5"></span></td>
       <td><span id="score5"></span></td>
       
     </tr>
     <tr>
-      <td>6</td>
+      <td><span id="newleft6"></span>6<span id="newright6"></span></td>
       <td><span id="player6"></span></td>
       <td><span id="score6"></span></td>
       
     </tr>
     <tr>
-      <td>7</td>
+      <td><span id="newleft7"></span>7<span id="newright7"></span></td>
       <td><span id="player7"></span></td>
       <td><span id="score7"></span></td>
       
     </tr>
     <tr>
-      <td>8</td>
+      <td><span id="newleft8"></span>8<span id="newright8"></span></td>
       <td><span id="player8"></span></td>
       <td><span id="score8"></span></td>
       
     </tr>
     <tr>
-      <td>9</td>
+      <td><span id="newleft9"></span>9<span id="newright9"></span></td>
       <td><span id="player9"></span></td>
       <td><span id="score9"></span></td>
       
     </tr>
     <tr>
-      <td>10</td>
+      <td><span id="newleft10"></span>10<span id="newright10"></span></td>
       <td><span id="player10"></span></td>
       <td><span id="score10"></span></td>
       
@@ -309,14 +309,9 @@ function leaderboardRequest(){
 
   document.getElementById("player2").innerHTML = testScores[8].Username;
   document.getElementById("score2").innerHTML = testScores[8].Highscore;
-  document.getElementById("player2").style.color = "silver";
-  document.getElementById("score2").style.color = "silver";
 
   document.getElementById("player3").innerHTML = testScores[7].Username;
   document.getElementById("score3").innerHTML = testScores[7].Highscore;
-  document.getElementById("player3").style.color = "#CD7F32";
-  document.getElementById("score3").style.color = "#CD7F32";
-
 
   document.getElementById("player4").innerHTML = testScores[6].Username;
   document.getElementById("score4").innerHTML = testScores[6].Highscore;
@@ -340,53 +335,53 @@ function leaderboardRequest(){
   document.getElementById("score10").innerHTML = testScores[0].Highscore;
 
   if(testScores[0].Newest == 1){
-  document.getElementById("player10").style.color = "blue";
-  document.getElementById("score10").style.color = "blue";
+  document.getElementById("newright10").innerHTML = "*";
+  document.getElementById("newleft10").innerHTML = "*";
   console.log("Tenth entry");
   }
   if(testScores[1].Newest == 1){
-  document.getElementById("player9").style.color = "blue";
-  document.getElementById("score9").style.color = "blue";
+  document.getElementById("newright9").innerHTML = "*";
+  document.getElementById("newleft9").innerHTML = "*";
   console.log("Ninth entry");
   }
   if(testScores[2].Newest == 1){
-  document.getElementById("player8").style.color = "blue";
-  document.getElementById("score8").style.color = "blue";
+  document.getElementById("newright8").innerHTML = "*";
+  document.getElementById("newleft8").innerHTML = "*";
   console.log("Eighth entry");
   }
   if(testScores[3].Newest == 1){
-  document.getElementById("player7").style.color = "blue";
-  document.getElementById("score7").style.color = "blue";
+  document.getElementById("newright7").innerHTML = "*";
+  document.getElementById("newleft7").innerHTML = "*";
   console.log("Seventh entry");
   }
   if(testScores[4].Newest == 1){
-  document.getElementById("player6").style.color = "blue";
-  document.getElementById("score6").style.color = "blue";
+  document.getElementById("newright6").innerHTML = "*";
+  document.getElementById("newleft6").innerHTML = "*";
   console.log("Sixth entry");
   }
   if(testScores[5].Newest == 1){
-  document.getElementById("player5").style.color = "blue";
-  document.getElementById("score5").style.color = "blue";
+  document.getElementById("newright5").innerHTML = "*";
+  document.getElementById("newleft5").innerHTML = "*";
   console.log("Fifth entry");
   }
   if(testScores[6].Newest == 1){
-  document.getElementById("player4").style.color = "blue";
-  document.getElementById("score4").style.color = "blue";
+  document.getElementById("newright4").innerHTML = "*";
+  document.getElementById("newleft4").innerHTML = "*";
   console.log("Fourth entry");
   }
   if(testScores[7].Newest == 1){
-  document.getElementById("player3").style.color = "blue";
-  document.getElementById("score3").style.color = "blue";
+  document.getElementById("newright3").innerHTML = "*";
+  document.getElementById("newleft3").innerHTML = "*";
   console.log("Third entry");
   }
   if(testScores[8].Newest == 1){
-  document.getElementById("player2").style.color = "blue";
-  document.getElementById("score2").style.color = "blue";
+  document.getElementById("newright2").innerHTML = "*";
+  document.getElementById("newleft2").innerHTML = "*";
   console.log("Second entry");
   }
   if(testScores[9].Newest == 1){
-  document.getElementById("player1").style.color = "blue";
-  document.getElementById("score1").style.color = "blue";
+  document.getElementById("newright1").innerHTML = "*";
+  document.getElementById("newleft1").innerHTML = "*";
   console.log("First entry");
   }
 
