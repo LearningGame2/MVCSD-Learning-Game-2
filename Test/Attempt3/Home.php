@@ -288,12 +288,19 @@ function leaderboardRequest(){
   
   document.getElementById("player1").innerHTML = testScores[9].Username;
   document.getElementById("score1").innerHTML = testScores[9].Highscore;
+  document.getElementById("player1").style.color = "gold";
+  document.getElementById("score1").style.color = "gold";
 
   document.getElementById("player2").innerHTML = testScores[8].Username;
   document.getElementById("score2").innerHTML = testScores[8].Highscore;
+  document.getElementById("player2").style.color = "silver";
+  document.getElementById("score2").style.color = "silver";
 
   document.getElementById("player3").innerHTML = testScores[7].Username;
   document.getElementById("score3").innerHTML = testScores[7].Highscore;
+  document.getElementById("player3").style.color = "#CD7F32";
+  document.getElementById("score3").style.color = "#CD7F32";
+
 
   document.getElementById("player4").innerHTML = testScores[6].Username;
   document.getElementById("score4").innerHTML = testScores[6].Highscore;
