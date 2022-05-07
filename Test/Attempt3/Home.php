@@ -286,7 +286,7 @@ function individualStatsRequest(){
 </body>
 
 <script>
-  <?php echo individualStatsRequest(); ?>;
+  let statsRequest = '<?php echo individualStatsRequest(); ?>';
 
   var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
 
