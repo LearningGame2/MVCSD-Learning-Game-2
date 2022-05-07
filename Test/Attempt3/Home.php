@@ -40,7 +40,7 @@ function leaderboardRequest(){
 }
 
 
-function individualStatsRequest(){
+
   $conn = connect();
   setcookie("TEST", 9, time()+(3600));
 
@@ -56,7 +56,7 @@ function individualStatsRequest(){
   setcookie("AllTimeStreak", $AllTimeStreak, time() + (3600));
 
   mysqli_close($conn);
-}
+
 
 
 ?>
