@@ -21,6 +21,7 @@ function connect() {
   return $conn;
 }//Connection Function
 
+
 $conn = connect();
 setcookie("TEST", 9, time()+(3600));
 
@@ -282,7 +283,7 @@ function leaderboardRequest(){
 </body>
 
 <script>
-  let statsRequest = '<?php echo individualStatsRequest(); ?>';
+  //let statsRequest = '<?php //echo individualStatsRequest(); ?>';
 
   var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
 
