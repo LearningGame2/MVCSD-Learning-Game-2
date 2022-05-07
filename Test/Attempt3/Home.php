@@ -218,46 +218,57 @@ function leaderboardRequest(){
     <tr>
       <th>Player</th>
       <th>Score</th>
+      <th>Rank</th>
     </tr>
     <tr>
       <td><span style = "font-size:35px; color:gold;" id="player1"></span></td>
       <td><span style = "font-size:35px; color:gold;" id="score1"></span></td>
+      <td style = "font-size:35px; color:gold;">1</td>
     </tr>
     <tr>
       <td><span style = "font-size:30px; color:silver;" id="player2"></span></td>
       <td><span style = "font-size:30px; color:silver;" id="score2"></span></td>
+      <td style = "font-size:30px; color:silver;">2</td>
     </tr>
     <tr>
       <td><span style = "font-size:25px; color:#CD7F32;" id="player3"></span></td>
       <td><span style = "font-size:25px; color:#CD7F32;" id="score3"></span></td>
+      <td style = "font-size:25px; color:#CD7F32;">3</td>
     </tr>
     <tr>
       <td><span id="player4"></span></td>
       <td><span id="score4"></span></td>
+      <td>4</td>
     </tr>
     <tr>
       <td><span id="player5"></span></td>
       <td><span id="score5"></span></td>
+      <td>5</td>
     </tr>
     <tr>
       <td><span id="player6"></span></td>
       <td><span id="score6"></span></td>
+      <td>6</td>
     </tr>
     <tr>
       <td><span id="player7"></span></td>
       <td><span id="score7"></span></td>
+      <td>7</td>
     </tr>
     <tr>
       <td><span id="player8"></span></td>
       <td><span id="score8"></span></td>
+      <td>8</td>
     </tr>
     <tr>
       <td><span id="player9"></span></td>
       <td><span id="score9"></span></td>
+      <td>9</td>
     </tr>
     <tr>
       <td><span id="player10"></span></td>
       <td><span id="score10"></span></td>
+      <td>10</td>
     </tr>
   </table>
 
