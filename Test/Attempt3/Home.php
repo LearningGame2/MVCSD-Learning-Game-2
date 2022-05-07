@@ -38,6 +38,7 @@ function leaderboardRequest(){
   mysqli_close($conn);
   return json_encode($scores);
 }
+setcookie("TEST", 8, time()+(3600));
 
 function individualStatsRequest(){
   $conn = connect();
