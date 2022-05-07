@@ -66,10 +66,7 @@ function checkUpdateLeaderboard(){
             echo "Error deleting record: " . mysqli_error($conn);
         }
 
-
-        $newSet = 0;
-        $oldSet = 1;
-        $sql = "UPDATE UserDatabase SET Newest = '$newSet' WHERE Newest = '$oldSet'";//Making previous newest no longer newest
+        $sql = "UPDATE Leaderboard SET Newest = '0' WHERE Newest = '1'";//Making previous newest no longer newest
         if (mysqli_query($conn, $sql)) {
           echo "Record edit successfully";
         }
