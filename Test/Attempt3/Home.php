@@ -220,16 +220,16 @@ function leaderboardRequest(){
       <th>Score</th>
     </tr>
     <tr>
-      <td><span style = "font-size:30px; color:gold;" id="player1"></span></td>
-      <td><span style = "font-size:30px; color:gold;" id="score1"></span></td>
+      <td><span style = "font-size:35px; color:gold;" id="player1"></span></td>
+      <td><span style = "font-size:35px; color:gold;" id="score1"></span></td>
     </tr>
     <tr>
-      <td><span id="player2"></span></td>
-      <td><span id="score2"></span></td>
+      <td><span style = "font-size:30px; color:silver;" id="player2"></span></td>
+      <td><span style = "font-size:30px; color:silver;" id="score2"></span></td>
     </tr>
     <tr>
-      <td><span id="player3"></span></td>
-      <td><span id="score3"></span></td>
+      <td><span style = "font-size:25px; color:#CD7F32;" id="player3"></span></td>
+      <td><span style = "font-size:25px; color:#CD7F32;" id="score3"></span></td>
     </tr>
     <tr>
       <td><span id="player4"></span></td>
