@@ -66,13 +66,15 @@ function checkUpdateLeaderboard(){
             echo "Error deleting record: " . mysqli_error($conn);
         }
 
-        // $sql = "UPDATE UserDatabase SET Newest = 0 WHERE Newest = 1";//Making previous newest no longer newest
-        // if (mysqli_query($conn, $sql)) {
-        //   echo "Record edit successfully";
-        // }
-        // else {
-        //   echo "Error editing record: " . mysqli_error($conn);
-        // }
+        $sql = "UPDATE UserDatabase SET Newest = '0' WHERE Newest = '1'";//Making previous newest no longer newest
+        if (mysqli_query($conn, $sql)) {
+          echo "Record edit successfully";
+        }
+        else {
+          echo "Error editing record: " . mysqli_error($conn);
+        }
+    
+      
 
 
         $seshLogin = $_COOKIE['Username'];
@@ -208,7 +210,7 @@ document.getElementById("high-streak").innerHTML = playerHighStreak
 //changed from ID to Id
 
 let UpdateLeaderboard = parseInt('<?php checkUpdateLeaderboard() ?>')
-let UpdateIndividualStats = parseINT('<?php checkIndividualStats() ?>')
+let UpdateIndividualStats = parseInt('<?php checkIndividualStats() ?>')
 
 console.log("update leaderboard message: " + UpdateLeaderboard);
 if(UpdateLeaderboard == 0){
