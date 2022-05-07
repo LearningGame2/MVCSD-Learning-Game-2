@@ -220,8 +220,8 @@ function leaderboardRequest(){
       <th>Score</th>
     </tr>
     <tr>
-      <td><span style = "font-size:30px;" id="player1"></span></td>
-      <td><span style = "font-size:30px;" id="score1"></span></td>
+      <td><span style = "font-size:30px; color:gold;" id="player1"></span></td>
+      <td><span style = "font-size:30px; color:gold;" id="score1"></span></td>
     </tr>
     <tr>
       <td><span id="player2"></span></td>
@@ -288,8 +288,6 @@ function leaderboardRequest(){
   
   document.getElementById("player1").innerHTML = testScores[9].Username;
   document.getElementById("score1").innerHTML = testScores[9].Highscore;
-  document.getElementById("player1").style.color = "gold;";
-  document.getElementById("score1").style.color = "gold;";
 
   document.getElementById("player2").innerHTML = testScores[8].Username;
   document.getElementById("score2").innerHTML = testScores[8].Highscore;
