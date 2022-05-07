@@ -65,9 +65,18 @@ function checkUpdateLeaderboard(){
         else {
             echo "Error deleting record: " . mysqli_error($conn);
         }
+        
+        $sql = "UPDATE UserDatabase SET Newest = 0 WHERE Newest = 1";//Making previous newest no longer newest
+        if (mysqli_query($conn, $sql)) {
+          echo "Record edit successfully";
+        }
+        else {
+          echo "Error editing record: " . mysqli_error($conn);
+        }
+
 
         $seshLogin = $_COOKIE['Username'];
-        $sql = "INSERT INTO Leaderboard (Username, Highscore, Newest) VALUES ('$seshLogin', '$playerScore',1)";
+        $sql = "INSERT INTO Leaderboard (Username, Highscore, Newest) VALUES ('$seshLogin', '$playerScore','1')";
         if (mysqli_query($conn, $sql)) {
             echo "Record inserted successfully";
         }
