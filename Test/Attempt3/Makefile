@@ -8,8 +8,6 @@ USER= Game2
 all: PutHTML
 
 PutHTML:
-		cp -r LG2Images /var/www/html/class/ssd/$(USER)/LGAttempt3/
-		cp -r LG2Sounds /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level1.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level2.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		cp Level3.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
@@ -24,6 +22,8 @@ PutHTML:
 		cp Instructions.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		chmod 777 More.php
 		cp More.php /var/www/html/class/ssd/$(USER)/LGAttempt3/
+		cp -r LG2Images /var/www/html/class/ssd/$(USER)/LGAttempt3/
+		cp -r LG2Sounds /var/www/html/class/ssd/$(USER)/LGAttempt3/
 		
 		echo "Current contents of your HTML directory: "
 		ls -l /var/www/html/class/ssd/$(USER)/LGAttempt3/
