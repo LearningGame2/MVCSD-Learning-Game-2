@@ -177,12 +177,12 @@ function leaderboardRequest(){
     }
     .alignRight{
       position: absolute;
-      top:370px;
+      top:365px;
       right:10%;
     }
     .alignLeft{
       position: absolute;
-      top:370px;
+      top:365px;
       left:10%;
     }
     .inLine{
@@ -210,7 +210,7 @@ function leaderboardRequest(){
 
   <div class="inLine" style = "text-align:center; position:absolute; top:300px; left:220px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      <span> Leaderboard </span>
-     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
      <span> Your Stats </span>
   </div>
 
