@@ -177,12 +177,12 @@ function leaderboardRequest(){
     }
     .alignRight{
       position: absolute;
-      top:365px;
+      top:360px;
       right:10%;
     }
     .alignLeft{
       position: absolute;
-      top:365px;
+      top:360px;
       left:10%;
     }
     .inLine{
