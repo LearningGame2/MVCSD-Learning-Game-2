@@ -59,7 +59,7 @@ function leaderboardRequest(){
 
 
 
-  
+
 
 
 ?>
@@ -177,12 +177,12 @@ function leaderboardRequest(){
     }
     .alignRight{
       position: absolute;
-      top:375px;
+      top:370px;
       right:10%;
     }
     .alignLeft{
       position: absolute;
-      top:375px;
+      top:370px;
       left:10%;
     }
     .inLine{
@@ -224,7 +224,7 @@ function leaderboardRequest(){
       <td style = "font-size:35px; color:gold;"><span id="newleft1"></span>1<span id="newright1"></span></td>
       <td><span style = "font-size:35px; color:gold;" id="player1"></span></td>
       <td><span style = "font-size:35px; color:gold;" id="score1"></span></td>
-     
+
     </tr>
     <tr>
       <td style = "font-size:30px; color:silver;"><span id="newleft2"></span>2<span id="newright2"></span></td>
@@ -245,37 +245,37 @@ function leaderboardRequest(){
       <td><span id="newleft5"></span>5<span id="newright5"></span></td>
       <td><span id="player5"></span></td>
       <td><span id="score5"></span></td>
-      
+
     </tr>
     <tr>
       <td><span id="newleft6"></span>6<span id="newright6"></span></td>
       <td><span id="player6"></span></td>
       <td><span id="score6"></span></td>
-      
+
     </tr>
     <tr>
       <td><span id="newleft7"></span>7<span id="newright7"></span></td>
       <td><span id="player7"></span></td>
       <td><span id="score7"></span></td>
-      
+
     </tr>
     <tr>
       <td><span id="newleft8"></span>8<span id="newright8"></span></td>
       <td><span id="player8"></span></td>
       <td><span id="score8"></span></td>
-      
+
     </tr>
     <tr>
       <td><span id="newleft9"></span>9<span id="newright9"></span></td>
       <td><span id="player9"></span></td>
       <td><span id="score9"></span></td>
-      
+
     </tr>
     <tr>
       <td><span id="newleft10"></span>10<span id="newright10"></span></td>
       <td><span id="player10"></span></td>
       <td><span id="score10"></span></td>
-      
+
     </tr>
   </table>
 
@@ -303,7 +303,7 @@ function leaderboardRequest(){
 
 <script>
   var testScores = JSON.parse('<?php echo leaderboardRequest();?>');
-  
+
   document.getElementById("player1").innerHTML = testScores[9].Username;
   document.getElementById("score1").innerHTML = testScores[9].Highscore;
 
