@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title>Getting Started</title>
 
-    <style>
+<title>Instructions</title>
+
+<style>
     .button {
       text-align: center;
       background-color: #197DDD;
@@ -33,7 +34,7 @@
     .button1:hover {
       background-color: green;
     }
-    .thing{
+    .heading{
         position:relative;
         margin-top:100px;
         font-family: "Gill Sans", sans-serif;
@@ -47,32 +48,28 @@
         position:relative;
         font-family:"Trebuchet MS", sans-serif;
     }
+</style>
 
-
-    </style>
-
-    <button type="submit" onclick="phoneHome()" class="button button1">Take me back home!</button>
-   
-    <h1 class="thing">
-        You're gonna wanna read this...
+<body>
+    <h1 class="heading">
+        You're gonna want to read this...
     </h1>
 
     <div class="lvls">
-        <body>
-            The levels of the game are pretty self-explanatory: you've all taken multiple-choice questions before!<br>
-            This is all math that you know, and we're asking you to apply it.  In between levels, you'll play 4 games:<br>
-            Packabunchas, HexGL, Astronaut, and Duck Hunt, which are described below and have instructions.<br>
-            All of them, except Packabunchas, will add a multiplier to your score that depends on how well you do in the game: <br>
-            for HexGL, the time you finish under 5 minutes, for Astronaut, the number of ships you jump, and for Duck Hunt,<br>
-            how many points you score in the game divided by 500.  However, you don't get to play these games if you don't<br>
-            work hard!  You have to score well enough on each level before a game in order to play it.  We'll let you<br>
-            find out how well...now go flex those mathematical muscles!
-        </body>
+        The levels of the game are pretty self-explanatory: you've all taken multiple-choice questions before!<br>
+        This is all math that you know, and we're asking you to apply it.  In between levels, you'll play 4 games:<br>
+        Packabunchas, HexGL, Astronaut, and Duck Hunt, which are described below and have instructions.<br>
+        All of them, except Packabunchas, will add a multiplier to your score that depends on how well you do in the game: <br>
+        for HexGL, the time you finish under 5 minutes, for Astronaut, the number of ships you jump, and for Duck Hunt,<br>
+        how many points you score in the game divided by 500.  However, you don't get to play these games if you don't<br>
+        work hard!  You have to score well enough on each level before a game in order to play it.  We'll let you<br>
+        find out how well...now go flex those mathematical muscles!
     </div>
+    
     <br><br>
     <h2>Instructions</h2>
     <div class="how-to-play">
-        <body>
+
             Packabunchas: fit the shapes into the box!
             <ul>
                 <li>Double click on a shape to rotate (make sure you click hard on your Chromebooks!)
@@ -102,14 +99,15 @@
                 <li>Don't waste your anmo
                 <li>See if you can hit two with one shot!
             </ul>
-        </body>
+            <button type="submit" onclick="phoneHome()" class="button button1">Take me back home!</button>
+
     </div>
+</body>
 
-    <script>
-        function phoneHome(){
-            window.location.href="Home.php";
-        }
-    </script>
-
+<script>
+    function phoneHome(){
+        window.location.href="Home.php";
+    }
+</script>
 
 </html>
