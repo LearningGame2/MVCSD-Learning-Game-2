@@ -68,7 +68,7 @@
 
     <br><br>
 
-    <h2>Instructions:</h2>
+    <h2 style="position:relative; top:100px;">Instructions:</h2>
     <div style="margin-left:30px; position:relative; top:100px;">
         Packabunchas: fit the shapes into the box!
         <ul>
