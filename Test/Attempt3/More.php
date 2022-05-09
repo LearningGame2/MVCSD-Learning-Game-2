@@ -85,8 +85,8 @@
       </p>
     </div>
 
+    <h1 style="position:relative; top:100px;">Credits:</h1>
     <div style="margin-left:30px; position:relative; top:100px;">
-        <h1>Credits:</h1>
         <ul class="games">
             <li>Packabunchas, a colorful puzzle game by Mattia Fortunati
             <li>Astronaut in Trouble, a simple pixel side-scroller by Douglas Lopes
