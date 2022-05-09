@@ -10,6 +10,9 @@
 </head>
 
 <style>
+    body{
+      margin:100px;
+    }
     .button {
       text-align: center;
       background-color: #197DDD;
@@ -40,6 +43,11 @@
     .button1:hover {
       background-color: green;
     }
+    .heading{
+        position:relative;
+        margin-top:100px;
+        font-family: "Gill Sans", sans-serif;
+    }
     .games{
         margin-left: -35px;
         color: rgb(91, 75, 105);
@@ -52,11 +60,11 @@
         <button type="submit" onclick="returnHome()" class="button button1">Return Home!</button>
     </div>
 
-    <div>
-        <h1>Some background info on this project:</h1>
+    <div style="position:relative; top:100px;">
+        <h1 class="heading">Some background info on this project:</h1>
     </div>
 
-    <div id="b1">
+    <div style="margin-left:30px; position:relative; top:100px;">
       <p>
         This website was produced by 3 students of Kenyon College: Connor Dailey, Mason Fishell, and Sam Rabieh, for the class Software
         and Systems Design with Professor James Skon.  It is a collaboration with Wiggin St. Elementary School, created for the learning
@@ -65,7 +73,7 @@
       <p>
     </div>
 
-    <div id="b2">
+    <div style="margin-left:30px; position:relative; top:100px;">
       <p>
         However, this would not have been possible coding entirely on our own from the ground up.  We did a lot of hard work putting together
         the different parts of our project — and believe us, there are a lot of parts to it — and we wrote the code for the actual website all
@@ -79,7 +87,7 @@
       </p>
     </div>
 
-    <div>
+    <div style="margin-left:30px; position:relative; top:100px;">
         <h1>Credits:</h1>
         <ul class="games">
             <li>Packabunchas, a colorful puzzle game by Mattia Fortunati
