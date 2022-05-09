@@ -47,7 +47,7 @@
         <button type="submit" onclick="returnHome()" class="button button1">Return Home!</button>
     </div>
 
-    <div style="min-height:100px">
+    <div style="position:relative;top:-100px;">
         <h1 class="heading">
             You're gonna want to read this...
         </h1>
