@@ -47,13 +47,13 @@
         <button type="submit" onclick="returnHome()" class="button button1">Return Home!</button>
     </div>
 
-    <div style="position:relative;top:100px;">
+    <div style="position:relative; top:100px;">
         <h1 class="heading">
             You're gonna want to read this...
         </h1>
     </div>
 
-    <div style="margin-left:30px;">
+    <div style="margin-left:30px; position:relative; top:100px;">
         <p>
             The levels of the game are pretty self-explanatory: you've all taken multiple-choice questions before!<br>
             This is all math that you know, and we're asking you to apply it.  In between levels, you'll play 4 games:<br>
@@ -69,7 +69,7 @@
     <br><br>
 
     <h2>Instructions:</h2>
-    <div style="margin-left:30px;">
+    <div style="margin-left:30px; position:relative; top:100px;">
         Packabunchas: fit the shapes into the box!
         <ul>
             <li>Double click on a shape to rotate (make sure you click hard on your Chromebooks!)
