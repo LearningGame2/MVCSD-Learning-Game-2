@@ -25,7 +25,7 @@ function connect() {
 function promptRequest($numOfQuestions){
     $questions = array();
     for ($x = 0; $x <= $numOfQuestions; $x++) {
-        $rowNumber = rand(1550,1610);
+        $rowNumber = rand(1400,1799);
         $prompt = "";
         $conn = connect();
         $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
