@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if(intval($_COOKIE['Checkpoint'])!=4){
-    header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
-}
+// if(intval($_COOKIE['Checkpoint'])!=4){
+//     header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
+// }
 setcookie("Checkpoint", 5);
 
 if(!isset($_COOKIE['Username'])){
@@ -25,7 +25,7 @@ function connect() {
 function promptRequest($numOfQuestions){
     $questions = array();
     for ($x = 0; $x <= $numOfQuestions; $x++) {
-        $rowNumber = rand(1000,1399);
+        $rowNumber = rand(1400,1799);
         $prompt = "";
         $conn = connect();
         $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
