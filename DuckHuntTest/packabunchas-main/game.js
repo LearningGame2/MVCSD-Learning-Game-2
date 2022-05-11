@@ -73,8 +73,8 @@ pTextPos = {
 
 
 //sam edit: useful
-numberOfPolyominos = 4
-sizeOfPolyominos = 4
+numberOfPolyominos = 1
+sizeOfPolyominos = 4 //???
 mixed = false
 //starting additional area spaces
 margin = 0
@@ -95,7 +95,7 @@ lerpSpeed = 0.1
 mylatesttap = 0
 bottomTextText = ""
 
-polyLeft = 5;
+polyLeft = 1;
 //polyLeft = parseInt(loadData("polyLeft", "5")) //sam edit: this might mess everything up, maybe why only 1 level in commit 694
 //recently changed 3-->5
 currentPolyTextToShow = polyLeft
@@ -252,8 +252,8 @@ function update() {
 	}
 
 	//"animate" score change
-	if (currentPolyTextToShow > polyLeft) {
-		currentPolyTextToShow -= 1
+	if (currentPolyTextToShow < polyLeft) {
+		currentPolyTextToShow += 1
 	}
 
 	checkIfPiecesOutside()
@@ -2561,7 +2561,7 @@ function createLevel() {
 
 
 		//if (gameModes[currentGameMode] == "Run it!") {
-			numberOfPolyominos = 4
+			numberOfPolyominos = 1
 			sizeOfPolyominos = 4
 			mixed = false
 			margin = 2
@@ -2589,7 +2589,7 @@ function createLevel() {
 		// 	margin = 0
 		// }
 
-		if (polyLeft < numberOfPolyominos) {
+		if (polyLeft > numberOfPolyominos) {
 			numberOfPolyominos = polyLeft
 		}
 
@@ -3069,8 +3069,8 @@ function mouseUp(e) {
 			setStoryMessage([""])
 			storyState = 1
 			saveData("storyState", storyState.toString())
-			polyLeft = 5
-			currentPolyTextToShow = 5 //sam edit: is this also causing it to be only one level in cmt 694?
+			polyLeft = 1
+			currentPolyTextToShow = 1 //sam edit: is this also causing it to be only one level in cmt 694?
 			//recently: changed both above lines 3-->5
 			saveData("polyLeft", polyLeft.toString())
 			gotoMenu()
@@ -3158,7 +3158,7 @@ function mouseUp(e) {
 			//RESET GAME VAR ETC
 			saveData("showTutorial", "true")
 			saveData("storyState", "0")
-			saveData("polyLeft", 5) //sam edit: 10-->5
+			saveData("polyLeft", 1) //sam edit: 10-->5
 			animateMouth = false
 			//saveData("muted", "false") //mute can stay as it is
 			location.reload();
@@ -3187,9 +3187,9 @@ function mouseUp(e) {
 			endCinematicState = 1
 			setTimeout(function() {
 				//
-				polyLeft -= 1 //sam edit: changed numberOfPolyominos (noP?) --> 1
+				polyLeft += 1 //sam edit: changed numberOfPolyominos (noP?) --> 1
 				saveData("polyLeft", polyLeft.toString())
-				if (polyLeft > 0) {
+				if (polyLeft < 6) {
 					createLevel()
 				} else {
 					isCinematic = false
