@@ -3140,7 +3140,7 @@ function mouseUp(e) {
 
 			if (firstTime == false) //sam edit
 			{
-				window.location.href = "https://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php" //sam edit
+				window.location.href = "http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php" //sam edit
 			}
 		} else if (skipState == 2) {
 			if (storyTimeOut != null) clearTimeout(storyTimeOut)
@@ -3152,7 +3152,7 @@ function mouseUp(e) {
 
 			if (firstTime == false) //sam edit
 			{
-				window.location.href = "https://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php" //sam edit
+				window.location.href = "http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php" //sam edit
 			}
 		} else if (skipState == 3) {
 			//RESET GAME VAR ETC
@@ -3189,7 +3189,7 @@ function mouseUp(e) {
 				//
 				polyLeft += 1 //sam edit: changed numberOfPolyominos (noP?) --> 1
 				saveData("polyLeft", polyLeft.toString())
-				if (polyLeft < 6) {
+				if (polyLeft < 5) {
 					createLevel()
 				} else {
 					isCinematic = false
@@ -3240,11 +3240,12 @@ function mouseUp(e) {
 						saveData("storyState", storyState.toString())
 						state = "story-ending"
 						//setMessage(["Click to continue"], true)
-						canSkip = true
+						canSkip = false
 						animateMouth = true
 						setStoryMessage(["We did it, Spacey!!!", "WE RESCUED THEM ALL!",
 							"Let's celebrate!", " ", "(ﾉ^ヮ^)ﾉ*:・ﾟ✧"," ", "      - click to go to Level 2 -"
 						])
+						
 
 
 

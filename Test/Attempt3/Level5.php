@@ -25,7 +25,7 @@ function connect() {
 function promptRequest($numOfQuestions){
     $questions = array();
     for ($x = 0; $x <= $numOfQuestions; $x++) {
-        $rowNumber = rand(1400,1799);
+        $rowNumber = rand(1000,1399);
         $prompt = "";
         $conn = connect();
         $sql = "SELECT * FROM QuestionDatabase WHERE QuestionNumber = '$rowNumber'";
@@ -189,7 +189,7 @@ localStorage.setItem('cookieMiniGameMulti', 1)
 document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
 
 
-console.log(document.cookie)
+console.log(document.cookie) //in level 4, this is playerMiniGameMulti?
 
 let levelMultiplier = 5
 let questionNumber = 1 //holds the current question number
