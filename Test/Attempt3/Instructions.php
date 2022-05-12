@@ -82,7 +82,7 @@
     </div>
   </div>
 
-    <h1 style="position:relative; top:20px; font-family: 'Lucida Console', 'Courier New', monospace;">Instructions:</h1>
+  <h1 style="position:relative; top:20px; font-family: 'Lucida Console', 'Courier New', monospace;">Instructions:</h1>
     <div style="margin-left:30px; position:relative; top:20px; font-size:22px; font-family: 'Lucida Console', 'Courier New', monospace;">
     <div class="container">
         <h3> Packabunchas: fit the shapes into the box! </h3>
@@ -99,6 +99,17 @@
       </div>
         <br>
     <div class="container">
+        <h3> Astronaut: You have one objective — survive in the vacuum of space. </h3>
+        <div style="text-align:center; top:200px;">
+            <img src="./LG2Images/AstronautInTrouble.jpg" width="659" height="408">
+        </div>
+        <ul>
+            <li>Press space to jump, and not too early!
+            <li>Don't fall between the ships
+        </ul>
+    </div>
+        <br>
+    <div class="container">
         <h3> HexGL: keep your spaceship on track and don't crash... </h3>
         <div style="text-align:center; top:200px;">
             <img src="./LG2Images/HexGL.jpg" width="719" height="409">
@@ -111,17 +122,6 @@
         </ul>
     </div>
         <br>
-    <div class="container">
-        <h3> Astronaut: You have one objective — survive in the vacuum of space. </h3>
-        <div style="text-align:center; top:200px;">
-            <img src="./LG2Images/AstronautInTrouble.jpg" width="659" height="408">
-        </div>
-        <ul>
-            <li>Press space to jump, and not too early!
-            <li>Don't fall between the ships
-        </ul>
-    </div>
-        <br>
   <div class="container">
         <h3> Duck Hunt: This one's a classic.  You know the drill. </h3>
         <div style="text-align:center; top:200px;">
@@ -129,7 +129,7 @@
         </div>
         <ul>
             <li>Click to shoot the ducks
-            <li>Don't waste your anmo
+            <li>Don't waste your ammo
             <li>See if you can hit two with one shot!
         </ul>
   </div>
