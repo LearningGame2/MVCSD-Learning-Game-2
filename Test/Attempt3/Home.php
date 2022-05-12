@@ -199,7 +199,7 @@ function leaderboardRequest(){
     Welcome,  <?php echo $_COOKIE['GovernmentName']?>!
   </div>
 
-  <div style = "text-align:center; position:relative; top:10px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+  <div style = "text-align:center; position:relative; top:10px; font-weight:bold; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      Press Button to Play
   </div>
 
@@ -211,7 +211,7 @@ function leaderboardRequest(){
   </div>
 
 
-  <div class="inLine" style = "text-align:center; position:absolute; top:300px; left:220px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
+  <div class="inLine" style = "text-align:center; position:absolute; top:300px; left:220px; font-weight:bold; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      <span> Leaderboard </span>
      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
      <span> Your Stats </span>
