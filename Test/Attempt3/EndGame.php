@@ -158,6 +158,10 @@ function checkIndividualStats(){
     Game Over
   </title>
   <style>
+    body {
+      background-color: #4158D0;
+      background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    }
     .button {
       text-align: center;
       background-color:#0093E9;
@@ -176,17 +180,27 @@ function checkIndividualStats(){
       border: 2px solid white;
     }
     .button:hover {
-      background-color: green;
+      background-color:#2ECC71;
+    }
+    .container {
+      border: 2px solid white;
+      border-radius:12px;
+      padding: 15px 32px;
+      background-color:#0093E9;
+      background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     }
   </style>
+
 </head>
 
-<body style="background-color:black">
+<body>
     <h1 style="text-align:center; color:white; font-family: 'Lucida Console', 'Courier New', monospace; font-size:350%;"> GAME OVER! </h1>
-    <h3 style="text-align:center; color:white; font-family: 'Lucida Console', 'Courier New', monospace; font-size:250%;"> FINAL SCORE: <span id = "final-score"></span> </h3>
-    <h3 style="text-align:center; color:white; font-family: 'Lucida Console', 'Courier New', monospace; font-size:250%;"> HIGHEST STREAK: <span id = "high-streak"></span> </h3>
-    <div style="text-align:center;">
-        <h1 style="color:white; font-family: 'Lucida Console', 'Courier New', monospace;"> Good Try, <?php echo $_COOKIE['Username'] ?>!</h1>
+    <div class="container">
+      <h3 style="text-align:center; color:white; font-family: 'Lucida Console', 'Courier New', monospace; font-size:250%;"> FINAL SCORE: <span id = "final-score"></span> </h3>
+      <h3 style="text-align:center; color:white; font-family: 'Lucida Console', 'Courier New', monospace; font-size:250%;"> HIGHEST STREAK: <span id = "high-streak"></span> </h3>
+      <div style="text-align:center;">
+          <h1 style="color:white; font-family: 'Lucida Console', 'Courier New', monospace;"> Good Try, <?php echo $_COOKIE['Username'] ?>!</h1>
+      </div>
     </div>
     <div>
         <h1><span id = "update-leaderboard-message"></span></h1>

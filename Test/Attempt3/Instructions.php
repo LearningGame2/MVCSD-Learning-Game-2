@@ -61,7 +61,7 @@
         <button type="submit" onclick="returnHome()" class="button button1">Return Home!</button>
     </div>
 
-  <div class="container" style="top:100px;">
+  <div class="container">
     <div style="position:relative;">
         <h1 class="heading">
             You're gonna want to read this...
