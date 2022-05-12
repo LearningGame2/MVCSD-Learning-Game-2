@@ -156,7 +156,8 @@ bkcore.hexgl.Gameplay.prototype.start = function(opts)
 }
 
 bkcore.hexgl.Gameplay.prototype.end = function(result)
-{
+{	
+	console.log(getElapsedTime());
 	if (this.timer.getElapsedTime()<300)
 	{
 		this.score = Math.round((300-this.timer.getElapsedTime())/5);
@@ -177,7 +178,8 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 		let LG2multiplier = this.score
 		localStorage.setItem('cookieMiniGameMulti', LG2multiplier)
 		this.step = 100;
-		window.location.href = "../../LGAttempt3/Level4.php"}
+		//window.location.href = "../../LGAttempt3/Level4.php"
+	}
 		
 	}
 	else if(result == this.results.DESTROYED)
