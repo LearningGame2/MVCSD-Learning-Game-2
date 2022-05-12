@@ -70,7 +70,7 @@
     <h1 style="position:relative; top:100px; font-family: 'Lucida Console', 'Courier New', monospace;">Instructions:</h1>
     <div style="margin-left:30px; position:relative; top:100px; font-size:22px; font-family: 'Lucida Console', 'Courier New', monospace;">
         Packabunchas: fit the shapes into the box!
-        <img src="Packabunchas.jpeg">
+        <img src="Packabunchas.jpeg" width="460" height="345">
         <ul>
             <li>Double click on a shape to rotate (make sure you click hard on your Chromebooks!)
             <li>Click and drag shapes into the box so that they cover all the empty squares and don't go outside of the box
