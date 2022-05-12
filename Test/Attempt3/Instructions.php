@@ -94,7 +94,7 @@
         <br>
         <h3> Astronaut: You have one objective — survive in the vacuum of space. </h3>
         <div style="text-align:center; top:200px;">
-            <img src="./LG2Images/AstronautInTrouble.jpg" width="2639" height="1633">
+            <img src="./LG2Images/AstronautInTrouble.jpg" width="659" height="408">
         </div>
         <ul>
             <li>Press space to jump, and not too early!
@@ -103,7 +103,7 @@
         <br>
         <h3> Duck Hunt: This one's a classic.  You know the drill. </h3>
         <div style="text-align:center; top:200px;">
-            <img src="./LG2Images/DuckHunt.jpg" width="2880" height="1797">
+            <img src="./LG2Images/DuckHunt.jpg" width="720" height="449">
         </div>
         <ul>
             <li>Click to shoot the ducks
