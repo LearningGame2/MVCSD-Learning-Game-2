@@ -83,7 +83,7 @@
         <br>
         <h3> HexGL: keep your spaceship on track and don't crash... </h3>
         <div style="text-align:center; top:200px;">
-            <img src="./LG2Images/HexGL.jpg" width="331" height="609">
+            <img src="./LG2Images/HexGL.jpg" width="719" height="409">
         </div>
         <ul>
             <li>Press up arrow key to increase engine power
