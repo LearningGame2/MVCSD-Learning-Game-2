@@ -191,7 +191,7 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<body style="background-color:black;">
+<body style="background:linear-gradient(#eeaeca, #94bbe9);">
   <div class="containter">
   <div class="header slide-right">
     Welcome,  <?php echo $_COOKIE['GovernmentName']?>!
