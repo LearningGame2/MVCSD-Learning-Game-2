@@ -82,6 +82,7 @@ function leaderboardRequest(){
       text-align: center;
       background-color:#663399;
       border: none;
+      border-radius: 12px;
       color: white;
       padding: 15px 32px;
       text-decoration: none;
