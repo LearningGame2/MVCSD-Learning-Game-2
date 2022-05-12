@@ -71,7 +71,7 @@
     <div style="margin-left:30px; position:relative; top:100px; font-size:22px; font-family: 'Lucida Console', 'Courier New', monospace;">
         Packabunchas: fit the shapes into the box!
         <div style="text-align:center;">
-            <img src="./LG2Images/Packabunchas.jpg" width="924" height="1636">
+            <img src="./LG2Images/Packabunchas.jpg" width="231" height="409">
         </div>
         <ul>
             <li>Double click on a shape to rotate (make sure you click hard on your Chromebooks!)
