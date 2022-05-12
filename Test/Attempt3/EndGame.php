@@ -56,7 +56,7 @@ function checkUpdateLeaderboard(){
         }
     }
 
-    if($checkLeaderboardScore >= 0 && $checkLeaderboardScore<= 9){ //Leaderboard      
+    if($checkLeaderboardScore >= 0 && $checkLeaderboardScore<= 9){ //Leaderboard
         $conn = connect();
         $sql = "DELETE FROM Leaderboard WHERE Username = '$deleteName' and Highscore = '$deleteScore' and GameID = '$deleteID'"; //Delete worst one
         if (mysqli_query($conn, $sql)) {
@@ -73,8 +73,8 @@ function checkUpdateLeaderboard(){
         else {
           echo "Error editing record: " . mysqli_error($conn);
         }
-    
-      
+
+
 
 
         $seshLogin = $_COOKIE['Username'];
@@ -137,7 +137,7 @@ function checkIndividualStats(){
   }
   else {
       echo "Error editing record: " . mysqli_error($conn);
-  }  
+  }
   }
 
   mysqli_close($conn);
@@ -160,7 +160,7 @@ function checkIndividualStats(){
   <style>
     .button {
       text-align: center;
-      background-color: #197DDD;
+      background-color:#0093E9;
       border: none;
       color: white;
       padding: 15px 32px;
