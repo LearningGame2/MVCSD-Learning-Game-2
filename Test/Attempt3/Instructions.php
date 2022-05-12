@@ -11,7 +11,7 @@
     }
     .button {
       text-align: center;
-      background-color:#663399;
+      background-color:rgb(64, 0, 128);
       border: 2px solid white;
       border-radius:12px;
       color: white;
