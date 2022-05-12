@@ -57,7 +57,7 @@ body{
     font-weight: bold;
     background: blue;
     border-radius: 3px;
-    border: 1px solid #3949AB;
+    border: 1px solid white;
     transition: .2s;
 }
 .login_form button:hover{
@@ -87,7 +87,7 @@ body{
     font-weight: bold;
     background: blue;
     border-radius: 3px;
-    border: 1px solid #3949AB;
+    border: 1px solid white;
     transition: .2s;
 }
 .button:hover{
