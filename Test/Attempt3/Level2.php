@@ -186,7 +186,7 @@ let playerHighStreak = parseInt(getCookie(cookieHighStreak))
 let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
 console.log(playerMiniGameMulti);
 document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
-//localStorage.setItem('cookieMiniGameMulti', 1)
+localStorage.setItem('cookieMiniGameMulti', 1)
 
 let levelMultiplier = 2
 let questionNumber = 1 //holds the current question number
