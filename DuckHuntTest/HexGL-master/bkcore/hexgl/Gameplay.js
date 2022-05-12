@@ -186,7 +186,7 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 		localStorage.setItem('cookieMiniGameMulti', LG2multiplier)
 		this.step = 100;
 		console.log("Nietzsche is based.");
-		//window.location.href = "../../LGAttempt3/Level4.php"
+		window.location.href = "../../LGAttempt3/Level4.php"
 	}
 		
 	}
@@ -198,7 +198,7 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 		LG2multiplier = 1;
 		localStorage.setItem('cookieMiniGameMulti',1)
 		this.step = 100;
-		//window.location.href = "../../LGAttempt3/Level4.php"
+		window.location.href = "../../LGAttempt3/Level4.php"
 	}
 
 	}

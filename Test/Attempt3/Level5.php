@@ -102,7 +102,7 @@ function promptRequest($numOfQuestions){
                 <h1>Question : <span id="question-number"></span> / 5</h1> <!--for 5 questions: changed from / 10 -->
             </div>
             <div class="game-details-container" style="justify-content:center;">
-                <h1>Duck Hunter Multiplier: <span id = "player-minigamemulti"></span></h1>
+                <h1 id = "multiplier-message">Duck Hunter Multiplier: <span id = "player-minigamemulti"></span></h1>
             </div>
 
             <div class="game-question-container">
@@ -180,6 +180,7 @@ let cookieMiniGameMulti = "cookieMiniGameMulti"
 let cookieHighStreak = "cookieHighStreak"
 
 let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
+
 let playerScore = parseInt(getCookie(cookieScore))
 let playerStreak = parseInt(getCookie(cookieStreak))
 let playerHighStreak = parseInt(getCookie(cookieHighStreak))
@@ -187,6 +188,11 @@ let playerHighStreak = parseInt(getCookie(cookieHighStreak))
 localStorage.setItem('cookieMiniGameMulti', 1)
 
 document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
+if(playerMiniGameMulti == 1){
+    document.getElementById("player-minigamemulti").hidden = true;
+    document.getElementById("multiplier-message").hidden = true;
+    
+}
 
 
 console.log(document.cookie) //in level 4, this is playerMiniGameMulti?
