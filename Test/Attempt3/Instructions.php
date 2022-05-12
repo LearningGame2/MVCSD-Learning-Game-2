@@ -10,7 +10,7 @@
       background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     }
     img {
-      border: 5px solid #555;
+      border: 5px solid white;
     }
     .button {
       text-align: center;
