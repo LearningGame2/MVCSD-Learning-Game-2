@@ -130,13 +130,13 @@ function leaderboardRequest(){
       transform: translate(-50%, -50%);
     }
     .button1:hover {
-      background-color: green;
+      background-color:#2ECC71;
     }
     .button2:hover {
-      background-color: green;
+      background-color:#2ECC71;
     }
     .button3:hover {
-      background-color: green;
+      background-color:#2ECC71;
     }
     .button4:hover {
       background-color: red;
