@@ -65,7 +65,7 @@
       <h1 style="color:white; font-family:Garamond;font-size: 20px;" id = "welcome-back-message"></h1>
       <button class="button" type = "submit" id = "welcome-back-button" onclick = "login()" >Log in as <span id = "welcome-back-text"></span></button>
     </div>
-    <div style = "font-size:30px; color:red; margin-top:10px; text-align:center; position:relative; left:0%">
+    <div style = "font-size:30px; color:red; margin-top:10px; font-family:Garamond; text-align:center; position:relative; left:0%">
       <?php echo $error; ?>
     </div>
   </div>
