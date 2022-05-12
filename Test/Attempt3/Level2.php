@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if(intval($_COOKIE['Checkpoint'])!=1){
-    header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
-}
+// if(intval($_COOKIE['Checkpoint'])!=1){
+//     header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
+// }
 setcookie("Checkpoint", 2);
 
 if(!isset($_COOKIE['Username'])){
@@ -185,7 +185,7 @@ let playerHighStreak = parseInt(getCookie(cookieHighStreak))
 
 let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
 document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
-localStorage.setItem('cookieMiniGameMulti', 1)
+//localStorage.setItem('cookieMiniGameMulti', 1)
 
 let levelMultiplier = 2
 let questionNumber = 1 //holds the current question number
