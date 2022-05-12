@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-// if(intval($_COOKIE['Checkpoint'])!=1){
-//     header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
-// }
+if(intval($_COOKIE['Checkpoint'])!=1){
+    header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
+}
 setcookie("Checkpoint", 2);
 
 if(!isset($_COOKIE['Username'])){
@@ -102,7 +102,7 @@ function promptRequest($numOfQuestions){
                 <h1>Question : <span id="question-number"></span> / 8</h1>
             </div>
             <div id = "sucessful-minigame-check" class="game-details-container" style="justify-content:center;">
-              <h1>Packabunchas: <span id = "player-minigamemulti"></span></h1>
+              <h1>Packabunchas multiplier: <span id = "player-minigamemulti"></span></h1>
             </div>
             <div class="game-question-container">
                 <h1 id="display-question"></h1>
@@ -184,8 +184,9 @@ let playerHighStreak = parseInt(getCookie(cookieHighStreak))
 
 
 let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
+console.log(playerMiniGameMulti);
 document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
-//localStorage.setItem('cookieMiniGameMulti', 1)
+
 
 let levelMultiplier = 2
 let questionNumber = 1 //holds the current question number
@@ -301,7 +302,7 @@ function checkForAnswer() {
             if (option.checked === true && option.value === currentQuestionAnswer) {
                 document.getElementById(correctOption).style.backgroundColor = "green"
                 playWinningAudio()
-                playerScore = playerScore + ((1 + playerStreak) * levelMultiplier) //adding to player's score
+                playerScore = playerScore + ((1 + playerStreak) * levelMultiplier*playerMiniGameMulti) //adding to player's score
                 playerStreak++
                 if(playerStreak>playerHighStreak){
                     playerHighStreak = playerStreak
@@ -373,6 +374,7 @@ function unCheckRadioButtons() {
 function handleEndGame() {
         let remark = null
         let remarkColor = null
+        localStorage.setItem('cookieMiniGameMulti', 1)
 
         // condition check for player remark and remark color
         if (amountCorrect <= 3) {
