@@ -102,7 +102,7 @@ function promptRequest($numOfQuestions){
                 <h1>Question : <span id="question-number"></span> / 7</h1> <!--for 7 questions: changed from / 10 -->
             </div>
             <div class="game-details-container" style="justify-content:center;">
-              <h1>Astronaut in Trouble Multiplier: <span id = "player-minigamemulti"></span></h1>
+              <h1 id = "multiplier-message">Astronaut in Trouble Multiplier: <span id = "player-minigamemulti"></span></h1>
             </div>
 
             <div class="game-question-container">
@@ -184,6 +184,11 @@ let playerHighStreak = parseInt(getCookie(cookieHighStreak))
 
 let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
 document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
+if(playerMiniGameMulti == 1){
+    document.getElementById("player-minigamemulti").hidden = true;
+    document.getElementById("multiplier-message").hidden = true;
+    
+}
 localStorage.setItem('cookieMiniGameMulti', 1)
 
 let levelMultiplier = 3
