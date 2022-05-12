@@ -164,7 +164,7 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 
 	let LG2multiplier = 1;
 
-	if (this.timer.getElapsedTime()<300)
+	if ((this.timer.getElapsedTime().m*60)+this.timer.getElapsedTime().s<300)
 	{
 		let gameTimeSeconds = (this.timer.getElapsedTime().m*60)+this.timer.getElapsedTime().s;
 		LG2multiplier = Math.round((300-gameTimeSeconds)/5);
