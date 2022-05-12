@@ -52,6 +52,13 @@
     .games{
         margin-left: -35px;
     }
+    .container {
+      border: 2px solid white;
+      border-radius:12px;
+      padding: 15px 32px;
+      background-color:#0093E9;
+      background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    }
 </style>
 
 <body>
@@ -59,7 +66,7 @@
     <div style="text-align:center;">
         <button type="submit" onclick="returnHome()" class="button button1">Return Home!</button>
     </div>
-
+  <div class="container">
     <div style="position:relative; top:100px;">
         <h1 class="heading">Some background info on this project:</h1>
     </div>
@@ -86,7 +93,9 @@
         between the levels of the quiz, and we think we succeeded.  Enjoy!
       </p>
     </div>
+  </div>
 
+  <div class="container">
     <h1 style="position:relative; top:100px;">Credits:</h1>
     <div style="margin-left:30px; position:relative; font-size:22px; top:100px;">
         <ul class="games">
@@ -96,6 +105,7 @@
             <li>Duck Hunt, a classic Nintendo game remade for the web browser experience by Matt Surabian
         </ul>
     </div>
+  </div>
 
     <br><br>
 
