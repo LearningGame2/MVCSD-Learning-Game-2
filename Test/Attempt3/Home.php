@@ -72,6 +72,7 @@ function leaderboardRequest(){
   <title>
     Learning Game 2
   </title>
+  <link rel="icon" type="image/x-icon" href="../LGAttempt3/LG2Images/KenyonLogo.ico">
 
   <style>
     body {

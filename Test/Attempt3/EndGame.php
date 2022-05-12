@@ -157,6 +157,8 @@ function checkIndividualStats(){
   <title>
     Game Over
   </title>
+  <link rel="icon" type="image/x-icon" href="../LGAttempt3/LG2Images/KenyonLogo.ico">
+  
   <style>
     body {
       background-color: #4158D0;
