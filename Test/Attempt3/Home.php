@@ -139,7 +139,7 @@ function leaderboardRequest(){
       background-color:#2ECC71;
     }
     .button4:hover {
-      background-color: red;
+      background-color:crimson;
     }
     .header {
 	     padding:25px;
