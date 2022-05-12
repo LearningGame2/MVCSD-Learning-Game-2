@@ -54,7 +54,7 @@
         <button type="submit" onclick="returnHome()" class="button button1">Return Home!</button>
     </div>
 
-  <div style="border: 2px solid white; border-radius:12px; padding: 15px 32px;">
+  <div style="border: 2px solid white; border-radius:12px; padding: 15px 32px; background-color:#0093E9; background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);">
     <div style="position:relative;">
         <h1 class="heading">
             You're gonna want to read this...
