@@ -51,6 +51,7 @@
         <button type="submit" onclick="returnHome()" class="button button1">Return Home!</button>
     </div>
 
+  <div style="border: 2px solid white;">
     <div style="position:relative; top:100px;">
         <h1 class="heading">
             You're gonna want to read this...
@@ -69,6 +70,7 @@
             find out how well...now go flex those mathematical muscles!
         </p>
     </div>
+  </div>
 
     <h1 style="position:relative; top:100px; font-family: 'Lucida Console', 'Courier New', monospace;">Instructions:</h1>
     <div style="margin-left:30px; position:relative; top:100px; font-size:22px; font-family: 'Lucida Console', 'Courier New', monospace;">
