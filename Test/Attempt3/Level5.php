@@ -54,6 +54,7 @@ function promptRequest($numOfQuestions){
   <title>
     Level 5
   </title>
+  <link rel="icon" type="image/x-icon" href="../LGAttempt3/LG2Images/KenyonLogo.ico">
 </head>
 
 <body style="background-image:url('./LG2Images/book-shelf.jpg'); background-size:cover;" onload="NextQuestion(0)">

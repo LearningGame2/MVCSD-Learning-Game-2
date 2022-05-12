@@ -45,6 +45,7 @@
 <head>
   <meta charset = "UTF-8">
   <title>Login Form</title>
+  <link rel="icon" type="image/x-icon" href="../LGAttempt3/LG2Images/KenyonLogo.ico">
   <link rel="stylesheet" href="LoginStyle.css">
 </head>
 

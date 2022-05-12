@@ -2,6 +2,7 @@
 <html lang="en">
 
 <title>Instructions</title>
+<link rel="icon" type="image/x-icon" href="../LGAttempt3/LG2Images/KenyonLogo.ico">
 
 <style>
     body{
