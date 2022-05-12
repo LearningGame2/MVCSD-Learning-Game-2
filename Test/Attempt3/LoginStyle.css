@@ -17,7 +17,7 @@ body{
     margin-top: 150px;
     width: 450px;
     height: 450px;
-    background:linear-gradient(#e66465, #9198e5);
+    background:linear-gradient(#e66465, #9198e5, 0.1);
     border-radius: 5px;
 }
 .label{
