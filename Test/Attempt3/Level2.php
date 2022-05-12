@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-// if(intval($_COOKIE['Checkpoint'])!=1){
-//     header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
-// }
+if(intval($_COOKIE['Checkpoint'])!=1){
+    header("location: http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Home.php");
+}
 setcookie("Checkpoint", 2);
 
 if(!isset($_COOKIE['Username'])){
@@ -186,7 +186,7 @@ let playerHighStreak = parseInt(getCookie(cookieHighStreak))
 let playerMiniGameMulti = parseInt(localStorage.getItem(cookieMiniGameMulti))
 console.log(playerMiniGameMulti);
 document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
-localStorage.setItem('cookieMiniGameMulti', 1)
+
 
 let levelMultiplier = 2
 let questionNumber = 1 //holds the current question number
@@ -374,6 +374,7 @@ function unCheckRadioButtons() {
 function handleEndGame() {
         let remark = null
         let remarkColor = null
+        localStorage.setItem('cookieMiniGameMulti', 1)
 
         // condition check for player remark and remark color
         if (amountCorrect <= 3) {
