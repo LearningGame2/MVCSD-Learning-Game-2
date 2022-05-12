@@ -6,11 +6,14 @@
 <style>
     body{
       margin:100px;
+      background-color:#0093E9;
+      background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     }
     .button {
       text-align: center;
-      background-color: #197DDD;
-      border: none;
+      background-color:#663399;
+      border: 2px solid white;
+      border-radius:12px;
       color: white;
       padding: 15px 32px;
       text-decoration: none;
@@ -42,7 +45,7 @@
     }
 </style>
 
-<body style="background-color: #0093E9; background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);">
+<body>
 
     <div style="text-align:center;">
         <button type="submit" onclick="returnHome()" class="button button1">Return Home!</button>

@@ -81,7 +81,6 @@ function leaderboardRequest(){
     .button {
       text-align: center;
       background-color:#663399;
-      border: none;
       border-radius: 12px;
       color: white;
       padding: 15px 32px;
@@ -149,6 +148,7 @@ function leaderboardRequest(){
        color:white;
        width: 100%;
        font-size: 28px;
+       font-weight:bold;
        font-family: "Lucida Console", "Courier New", monospace;
 	  }
     .slide-right {
@@ -167,6 +167,7 @@ function leaderboardRequest(){
     }
     table, th, td {
       border: 2px solid white;
+      border-radius:8px;
       border-collapse: collapse;
       margin-top:auto;
       margin-left:auto;
