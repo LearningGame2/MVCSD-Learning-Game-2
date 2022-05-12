@@ -40,7 +40,7 @@
       transform:translate(-50%, -50%);
     }
     .button1:hover {
-      background-color: green;
+      background-color:#2ECC71;
     }
     .heading{
         position:relative;
@@ -63,7 +63,7 @@
         <h1 class="heading">Some background info on this project:</h1>
     </div>
 
-    <div style="margin-left:30px; position:relative; top:100px;">
+    <div style="margin-left:30px; font-size:22px; position:relative; top:100px;">
       <p>
         This website was produced by 3 students of Kenyon College: Connor Dailey, Mason Fishell, and Sam Rabieh, for the class Software
         and Systems Design with Professor James Skon.  It is a collaboration with Wiggin St. Elementary School, created for the learning
@@ -72,7 +72,7 @@
       <p>
     </div>
 
-    <div style="margin-left:30px; position:relative; top:100px;">
+    <div style="margin-left:30px; font-size:22px; position:relative; top:100px;">
       <p>
         However, this would not have been possible coding entirely on our own from the ground up.  We did a lot of hard work putting together
         the different parts of our project — and believe us, there are a lot of parts to it — and we wrote the code for the actual website all
@@ -87,7 +87,7 @@
     </div>
 
     <h1 style="position:relative; top:100px;">Credits:</h1>
-    <div style="margin-left:30px; position:relative; top:100px;">
+    <div style="margin-left:30px; position:relative; font-size:22px; top:100px;">
         <ul class="games">
             <li>Packabunchas, a colorful puzzle game by Mattia Fortunati
             <li>Astronaut in Trouble, a simple pixel side-scroller by Douglas Lopes
