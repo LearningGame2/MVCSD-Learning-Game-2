@@ -38,7 +38,7 @@
     .heading{
         position:relative;
         margin-top:100px;
-        font-family: "Gill Sans", sans-serif;
+        font-family: "Lucida Console", "Courier New", monospace;
     }
 </style>
 
@@ -67,7 +67,7 @@
         </p>
     </div>
 
-    <h1 style="position:relative; top:100px; font-family: "Gill Sans", sans-serif;">Instructions:</h1>
+    <h1 style="position:relative; top:100px; font-family: "Lucida Console", "Courier New", monospace;">Instructions:</h1>
     <div style="margin-left:30px; position:relative; top:100px; font-size:22px">
         Packabunchas: fit the shapes into the box!
         <ul>
