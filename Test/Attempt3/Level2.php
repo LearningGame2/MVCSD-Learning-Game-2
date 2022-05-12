@@ -101,7 +101,7 @@ function promptRequest($numOfQuestions){
                 <h1>Question : <span id="question-number"></span> / 8</h1>
             </div>
             <div id = "sucessful-minigame-check" class="game-details-container" style="justify-content:center;">
-              <h1>Packabunchas multiplier: <span id = "player-minigamemulti"></span></h1>
+              <h1 id = "multiplier-message">Packabunchas multiplier: <span id = "player-minigamemulti"></span></h1>
             </div>
             <div class="game-question-container">
                 <h1 id="display-question"></h1>
@@ -188,6 +188,8 @@ console.log(playerMiniGameMulti);
 document.getElementById("player-minigamemulti").innerHTML = playerMiniGameMulti;
 if(playerMiniGameMulti == 1){
     document.getElementById("player-minigamemulti").hidden = true;
+    document.getElementById("multiplier-message").hidden = true;
+    
 }
 
 let levelMultiplier = 2
