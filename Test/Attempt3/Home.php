@@ -74,13 +74,17 @@ function leaderboardRequest(){
   </title>
 
   <style>
+    body {
+      background-color: #4158D0;
+      background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    }
     .container {
       width:100%;
       height:100%
     }
     .button {
       text-align: center;
-      background-color:#D4AF37;
+      background-color:#FFDF00;
       border-radius: 12px;
       color: white;
       padding: 15px 32px;
@@ -175,7 +179,8 @@ function leaderboardRequest(){
       text-align:center;
       font-size:23px;
       color:white;
-      background-color:#4B0082;
+      background-color:#0093E9;
+      background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
       font-family: "Lucida Console", "Courier New", monospace;
     }
     .alignRight{
@@ -194,7 +199,7 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<body style="background-color:#0093E9; background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);">
+<body>
   <div class="containter">
   <div class="header slide-right">
     Welcome,  <?php echo $_COOKIE['GovernmentName']?>!
