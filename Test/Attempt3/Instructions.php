@@ -42,7 +42,7 @@
     }
 </style>
 
-<body>
+<body style="background:linear-gradient(#e66465, #9198e5);">
 
     <div style="text-align:center;">
         <button type="submit" onclick="returnHome()" class="button button1">Return Home!</button>
