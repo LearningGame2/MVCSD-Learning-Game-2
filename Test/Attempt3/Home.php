@@ -208,6 +208,7 @@ function leaderboardRequest(){
     <button type ="submit" onclick = "logOut()" class="button button4">Log out</button>
   </div>
 
+<div style="border: 3px solid white">
   <div class="inLine" style = "text-align:center; position:absolute; top:300px; left:220px; font-size:48px; color:white; font-family: 'Lucida Console', 'Courier New', monospace;">
      <span> Leaderboard </span>
      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -278,6 +279,7 @@ function leaderboardRequest(){
 
     </tr>
   </table>
+</div>
 
   <table class="alignRight inLine">
 

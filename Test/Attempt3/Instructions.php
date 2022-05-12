@@ -33,7 +33,7 @@
       transform:translate(-50%, -50%);
     }
     .button1:hover {
-      background-color:green;
+      background-color:#2ECC71;
     }
     .heading{
         position:relative;
