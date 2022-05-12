@@ -80,7 +80,7 @@ function leaderboardRequest(){
     }
     .button {
       text-align: center;
-      background-color:#FFFACD;
+      background-color:#DAA520
       border-radius: 12px;
       color: white;
       padding: 15px 32px;
