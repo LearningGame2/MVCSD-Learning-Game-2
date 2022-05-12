@@ -190,7 +190,8 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 		let LG2multiplier = this.score
 		localStorage.setItem('cookieMiniGameMulti',1)
 		this.step = 100;
-		window.location.href = "../../LGAttempt3/Level4.php"}
+		//window.location.href = "../../LGAttempt3/Level4.php"
+	}
 
 	}
 }
