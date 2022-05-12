@@ -75,6 +75,7 @@
     </div>
   </div>
 
+  <div style="border: 2px solid white; border-radius:12px; padding: 15px 32px;">
     <h1 style="position:relative; top:20px; font-family: 'Lucida Console', 'Courier New', monospace;">Instructions:</h1>
     <div style="margin-left:30px; position:relative; top:20px; font-size:22px; font-family: 'Lucida Console', 'Courier New', monospace;">
         <h3> Packabunchas: fit the shapes into the box! </h3>
@@ -88,7 +89,9 @@
             take them out and try each one by one, and keep at it!  They all have at least one solution.
             <li>You receive a 3x multiplier for getting to this game — if you did well enough on rounding to reach it
         </ul>
+  </div>
         <br>
+  <div style="border: 2px solid white; border-radius:12px; padding: 15px 32px;">
         <h3> HexGL: keep your spaceship on track and don't crash... </h3>
         <div style="text-align:center; top:200px;">
             <img src="./LG2Images/HexGL.jpg" width="719" height="409">
@@ -99,7 +102,9 @@
             <li>You only have a limited amount of health and you can't get it back, so be cautious rather than speedy!<br>
                 Otherwise, you won't get a score multiplier
         </ul>
+  </div>
         <br>
+  <div style="border: 2px solid white; border-radius:12px; padding: 15px 32px;">
         <h3> Astronaut: You have one objective — survive in the vacuum of space. </h3>
         <div style="text-align:center; top:200px;">
             <img src="./LG2Images/AstronautInTrouble.jpg" width="659" height="408">
@@ -108,7 +113,9 @@
             <li>Press space to jump, and not too early!
             <li>Don't fall between the ships
         </ul>
+  </div>
         <br>
+  <div style="border: 2px solid white; border-radius:12px; padding: 15px 32px;">
         <h3> Duck Hunt: This one's a classic.  You know the drill. </h3>
         <div style="text-align:center; top:200px;">
             <img src="./LG2Images/DuckHunt.jpg" width="720" height="449">
@@ -118,7 +125,9 @@
             <li>Don't waste your anmo
             <li>See if you can hit two with one shot!
         </ul>
-    </div>
+  </div>
+
+  </div>
 
     <br><br>
 </body>
