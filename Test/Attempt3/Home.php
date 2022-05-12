@@ -80,7 +80,7 @@ function leaderboardRequest(){
     }
     .button {
       text-align: center;
-      background-color:#663399;
+      background-color:rgb(64, 0, 128);
       border-radius: 12px;
       color: white;
       padding: 15px 32px;
@@ -194,7 +194,7 @@ function leaderboardRequest(){
   </style>
 </head>
 
-<body style="background-color: #0093E9; background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);">
+<body style="background-color:#0093E9; background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);">
   <div class="containter">
   <div class="header slide-right">
     Welcome,  <?php echo $_COOKIE['GovernmentName']?>!
