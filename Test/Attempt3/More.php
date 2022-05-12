@@ -67,8 +67,8 @@
     <div style="text-align:center;">
         <button type="submit" onclick="returnHome()" class="button button1">Return Home!</button>
     </div>
-  <div class="container">
-    <div style="position:relative; top:100px;">
+  <div class="container" style="position:relative; top:100px;">
+    <div>
         <h1 class="heading">Some background info on this project:</h1>
     </div>
 
@@ -96,7 +96,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container" style="position:relative; top:100px;">
     <h1 style="position:relative; top:100px;">Credits:</h1>
     <div style="margin-left:30px; position:relative; font-size:22px; top:100px;">
         <ul class="games">
