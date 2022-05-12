@@ -69,7 +69,7 @@
 
     <h1 style="position:relative; top:100px; font-family: 'Lucida Console', 'Courier New', monospace;">Instructions:</h1>
     <div style="margin-left:30px; position:relative; top:100px; font-size:22px; font-family: 'Lucida Console', 'Courier New', monospace;">
-        <h4> Packabunchas: fit the shapes into the box! </h4>
+        <h3> Packabunchas: fit the shapes into the box! </h3>
         <div style="text-align:center; top:200px;">
             <img src="./LG2Images/Packabunchas.jpg" width="331" height="609">
         </div>
