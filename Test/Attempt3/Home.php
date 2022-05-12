@@ -175,7 +175,7 @@ function leaderboardRequest(){
       text-align:center;
       font-size:23px;
       color:white;
-      background-color:#663399;
+      background-color:rgb(64, 0, 128);
       font-family: "Lucida Console", "Courier New", monospace;
     }
     .alignRight{
