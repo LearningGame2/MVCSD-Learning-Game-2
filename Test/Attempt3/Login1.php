@@ -48,7 +48,7 @@
   <link rel="stylesheet" href="LoginStyle.css">
 </head>
 
-<body style="background:linear-gradient(#e66465, #9198e5);">
+<body>
   <div class ="container" style = "position:relative; top:-80px;">
     <h1 style="text-align:center; color:white; font-family:Garamond; font-size:350%; position:relative; top:-10px;">
       Welcome Back!
