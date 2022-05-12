@@ -46,6 +46,13 @@
         margin-top:100px;
         font-family: "Lucida Console", "Courier New", monospace;
     }
+    .container {
+      border: 2px solid white;
+      border-radius:12px;
+      padding: 15px 32px;
+      background-color:#0093E9;
+      background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    }
 </style>
 
 <body>
@@ -54,7 +61,7 @@
         <button type="submit" onclick="returnHome()" class="button button1">Return Home!</button>
     </div>
 
-  <div style="border: 2px solid white; border-radius:12px; padding: 15px 32px; background-color:#0093E9; background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);">
+  <div class="container">
     <div style="position:relative;">
         <h1 class="heading">
             You're gonna want to read this...
@@ -77,7 +84,7 @@
 
     <h1 style="position:relative; top:20px; font-family: 'Lucida Console', 'Courier New', monospace;">Instructions:</h1>
     <div style="margin-left:30px; position:relative; top:20px; font-size:22px; font-family: 'Lucida Console', 'Courier New', monospace;">
-    <div style="border: 2px solid white; border-radius:12px; padding: 15px 32px;">
+    <div class="container">
         <h3> Packabunchas: fit the shapes into the box! </h3>
         <div style="text-align:center; top:200px;">
             <img src="./LG2Images/Packabunchas.jpg" width="331" height="609">
@@ -91,7 +98,7 @@
         </ul>
       </div>
         <br>
-    <div style="border: 2px solid white; border-radius:12px; padding: 15px 32px;">
+    <div class="container">
         <h3> HexGL: keep your spaceship on track and don't crash... </h3>
         <div style="text-align:center; top:200px;">
             <img src="./LG2Images/HexGL.jpg" width="719" height="409">
@@ -104,7 +111,7 @@
         </ul>
     </div>
         <br>
-    <div style="border: 2px solid white; border-radius:12px; padding: 15px 32px;">
+    <div class="container">
         <h3> Astronaut: You have one objective — survive in the vacuum of space. </h3>
         <div style="text-align:center; top:200px;">
             <img src="./LG2Images/AstronautInTrouble.jpg" width="659" height="408">
@@ -115,7 +122,7 @@
         </ul>
     </div>
         <br>
-  <div style="border: 2px solid white; border-radius:12px; padding: 15px 32px;">
+  <div class="container">
         <h3> Duck Hunt: This one's a classic.  You know the drill. </h3>
         <div style="text-align:center; top:200px;">
             <img src="./LG2Images/DuckHunt.jpg" width="720" height="449">
