@@ -51,7 +51,7 @@
         <button type="submit" onclick="returnHome()" class="button button1">Return Home!</button>
     </div>
 
-  <div style="border: 2px solid white; padding-bottom: 5px;">
+  <div style="border: 2px solid white; padding-bottom:100px;">
     <div style="position:relative; top:100px;">
         <h1 class="heading">
             You're gonna want to read this...
