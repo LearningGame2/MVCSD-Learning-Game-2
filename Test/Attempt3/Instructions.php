@@ -54,7 +54,7 @@
         </h1>
     </div>
 
-    <div style="margin-left:30px; position:relative; top:100px; font-size:20px">
+    <div style="margin-left:30px; position:relative; top:100px; font-size:22px">
         <p>
             The levels of the game are pretty self-explanatory: you've all taken multiple-choice questions before!
             This is all math that you know, and we're asking you to apply it.  In between levels, you'll play 4 games:
@@ -67,8 +67,8 @@
         </p>
     </div>
 
-    <h2 style="position:relative; top:100px;">Instructions:</h2>
-    <div style="margin-left:30px; position:relative; top:100px;">
+    <h1 style="position:relative; top:100px; font-family: "Gill Sans", sans-serif;">Instructions:</h1>
+    <div style="margin-left:30px; position:relative; top:100px; font-size:22px">
         Packabunchas: fit the shapes into the box!
         <ul>
             <li>Double click on a shape to rotate (make sure you click hard on your Chromebooks!)
