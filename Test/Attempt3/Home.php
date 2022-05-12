@@ -167,6 +167,7 @@ function leaderboardRequest(){
     }
     table, th, td {
       border: 2px solid white;
+      border-radius:8px;
       border-collapse: collapse;
       margin-top:auto;
       margin-left:auto;
