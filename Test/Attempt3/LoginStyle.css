@@ -10,14 +10,14 @@ body{
     justify-content: center;
     display: flex;
     font-family: sans-serif;
-    background:linear-gradient(#e66465, #9198e5);
+    background:linear-gradient(#eeaeca, #94bbe9);
 }
 .container{
     position: relative;
     margin-top: 150px;
     width: 450px;
     height: 450px;
-    background:linear-gradient(#e66465, #9198e5, 0.1);
+    background:linear-gradient(#eeaeca, #94bbe9, 0.0);
     border-radius: 5px;
 }
 .label{
