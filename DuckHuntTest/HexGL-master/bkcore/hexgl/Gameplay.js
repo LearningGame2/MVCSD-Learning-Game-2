@@ -157,20 +157,23 @@ bkcore.hexgl.Gameplay.prototype.start = function(opts)
 
 bkcore.hexgl.Gameplay.prototype.end = function(result)
 {	
-	console.log("mins: " + this.timer.getElapsedTime().h);
+	console.log("mins: " + this.timer.getElapsedTime().m);
 	console.log("secs: " + this.timer.getElapsedTime().s);
 	console.log("millisecs: " + this.timer.getElapsedTime().ms);
-	console.log("PENIS");
-	console.log(this.timer.getElapsedTime());
+	console.log("PENIS BONER");
+
+	let LG2multiplier = 1;
 
 	if (this.timer.getElapsedTime()<300)
 	{
-		this.score = Math.round((300-this.timer.getElapsedTime())/5);
+		let gameTimeSeconds = (this.timer.getElapsedTime().m*60)+this.timer.getElapsedTime().s;
+		LG2multiplier = Math.round((300-gameTimeSeconds)/5);
+		console.log("LG2multiplier: " + LG2multiplier);
 	}
-	else
-	{
-		this.score = 1;
-	}
+	// else
+	// {
+	// 	LG2multiplier = 1;
+	// }
 	this.finishTime = this.timer.time.elapsed;
 	this.timer.start();
 	this.result = result;
@@ -180,9 +183,9 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 	if(result == this.results.FINISH)
 	{
 		if(this.hud != null) {this.hud.display("Finish");
-		let LG2multiplier = this.score
 		localStorage.setItem('cookieMiniGameMulti', LG2multiplier)
 		this.step = 100;
+		console.log("Nietzsche is based.");
 		//window.location.href = "../../LGAttempt3/Level4.php"
 	}
 		
@@ -192,7 +195,7 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 		if(this.hud != null) 
 		{this.hud.display("Destroyed");
 		//sam edit: setTimeout?
-		let LG2multiplier = this.score
+		LG2multiplier = 1;
 		localStorage.setItem('cookieMiniGameMulti',1)
 		this.step = 100;
 		//window.location.href = "../../LGAttempt3/Level4.php"
