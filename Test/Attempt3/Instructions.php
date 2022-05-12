@@ -54,7 +54,7 @@
         </h1>
     </div>
 
-    <div style="margin-left:30px; position:relative; top:100px;">
+    <div style="margin-left:30px; position:relative; top:100px; font-size:25px">
         <p>
             The levels of the game are pretty self-explanatory: you've all taken multiple-choice questions before!
             This is all math that you know, and we're asking you to apply it.  In between levels, you'll play 4 games:
