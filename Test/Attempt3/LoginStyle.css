@@ -57,7 +57,7 @@ body{
     outline: none;
     cursor: pointer;
     font-weight: bold;
-    background:rgb(64, 0, 128);
+    background:#0093E9;
     border-radius: 3px;
     border: 1px solid white;
     transition: .2s;
@@ -87,7 +87,7 @@ body{
     outline: none;
     cursor: pointer;
     font-weight: bold;
-    background:rgb(64, 0, 128);
+    background:#0093E9;
     border-radius: 3px;
     border: 1px solid white;
     transition: .2s;
