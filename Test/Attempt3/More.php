@@ -12,8 +12,8 @@
 <style>
     body{
       margin:100px;
-      background-color:#0093E9;
-      background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+      background-color: #4158D0;
+      background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
       font-family: "Lucida Console", "Courier New", monospace;
     }
     .button {
