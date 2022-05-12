@@ -160,6 +160,8 @@ bkcore.hexgl.Gameplay.prototype.end = function(result)
 	console.log("mins: " + this.timer.getElapsedTime().h);
 	console.log("secs: " + this.timer.getElapsedTime().s);
 	console.log("millisecs: " + this.timer.getElapsedTime().ms);
+	console.log("PENIS");
+	console.log(this.timer.getElapsedTime());
 
 	if (this.timer.getElapsedTime()<300)
 	{
