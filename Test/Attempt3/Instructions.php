@@ -69,7 +69,7 @@
 
     <h1 style="position:relative; top:100px; font-family: 'Lucida Console', 'Courier New', monospace;">Instructions:</h1>
     <div style="margin-left:30px; position:relative; top:100px; font-size:22px; font-family: 'Lucida Console', 'Courier New', monospace;">
-        <h4> Packabunchas: fit the shapes into the box! </h4>
+        <h3> Packabunchas: fit the shapes into the box! </h3>
         <div style="text-align:center; top:200px;">
             <img src="./LG2Images/Packabunchas.jpg" width="331" height="609">
         </div>
@@ -81,7 +81,7 @@
             <li>You receive a 3x multiplier for getting to this game — if you did well enough on rounding to reach it
         </ul>
         <br>
-        HexGL: keep your spaceship on track and don't crash...
+        <h3> HexGL: keep your spaceship on track and don't crash... </h3>
         <ul>
             <li>Press up arrow key to increase engine power
             <li>Use side arrow keys to navigate the course
@@ -89,13 +89,13 @@
                 Otherwise, you won't get a score multiplier
         </ul>
         <br>
-        Astronaut: You have one objective — survive in the vacuum of space.
+        <h3> Astronaut: You have one objective — survive in the vacuum of space. </h3>
         <ul>
             <li>Press space to jump, and not too early!
             <li>Don't fall between the ships
         </ul>
         <br>
-        Duck Hunt: This one's a classic.  You know the drill.
+        <h3> Duck Hunt: This one's a classic.  You know the drill. </h3>
         <ul>
             <li>Click to shoot the ducks
             <li>Don't waste your anmo
