@@ -72,7 +72,7 @@
         <h1 class="heading">Some background info on this project:</h1>
     </div>
 
-    <div style="margin-left:30px; font-size:22px; position:relative; top:100px;">
+    <div style="margin-left:30px; font-size:22px; position:relative;">
       <p>
         This website was produced by 3 students of Kenyon College: Connor Dailey, Mason Fishell, and Sam Rabieh, for the class Software
         and Systems Design with Professor James Skon.  It is a collaboration with Wiggin St. Elementary School, created for the learning
@@ -95,6 +95,8 @@
       </p>
     </div>
   </div>
+
+  <br><br>
 
   <div class="container" style="position:relative; top:100px;">
     <h1 style="position:relative;">Credits:</h1>
