@@ -18,7 +18,7 @@
     }
     .button {
       text-align: center;
-      background-color:rgb(64, 0, 128);
+      background-color:#0093E9;
       border: 2px solid white;
       border-radius:12px;
       color: white;
