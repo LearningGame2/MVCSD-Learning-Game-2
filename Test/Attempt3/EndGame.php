@@ -158,7 +158,7 @@ function checkIndividualStats(){
     Game Over
   </title>
   <link rel="icon" type="image/x-icon" href="../LGAttempt3/LG2Images/KenyonLogo.ico">
-  
+
   <style>
     body {
       background-color: #4158D0;
@@ -167,7 +167,6 @@ function checkIndividualStats(){
     .button {
       text-align: center;
       background-color:#0093E9;
-      border: none;
       color: white;
       padding: 15px 32px;
       text-decoration: none;
@@ -180,6 +179,7 @@ function checkIndividualStats(){
       width: 400px;
       transition-duration: 0.4s;
       border: 2px solid white;
+      border-radius: 12px;
     }
     .button:hover {
       background-color:#2ECC71;
