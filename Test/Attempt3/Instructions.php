@@ -9,6 +9,9 @@
       background-color:#0093E9;
       background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     }
+    img {
+      border: 5px solid #555;
+    }
     .button {
       text-align: center;
       background-color:rgb(64, 0, 128);
