@@ -3150,6 +3150,8 @@ function mouseUp(e) {
 			skipState = 3
 			animateMouth = false
 
+			firstTime = false;
+
 			if (firstTime == false) //sam edit
 			{
 				window.location.href = "http://cslab.kenyon.edu/class/ssd/Game2/LGAttempt3/Level2.php" //sam edit
@@ -3240,7 +3242,7 @@ function mouseUp(e) {
 						saveData("storyState", storyState.toString())
 						state = "story-ending"
 						//setMessage(["Click to continue"], true)
-						canSkip = false
+						canSkip = true
 						animateMouth = true
 						setStoryMessage(["We did it, Spacey!!!", "WE RESCUED THEM ALL!",
 							"Let's celebrate!", " ", "(ﾉ^ヮ^)ﾉ*:・ﾟ✧"," ", "      - click to go to Level 2 -"
